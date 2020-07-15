@@ -36,6 +36,7 @@
 }
 
 .landing {
+    padding: 0 1rem;
     position: absolute;
     top: 0;
     bottom: 0;
