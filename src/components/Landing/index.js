@@ -1,6 +1,7 @@
 import React from "react"
 import SoftupLogo from "../../images/softup-logo.svg"
 import ArrowDown from "../../images/arrow-down.svg"
+import BurgerMenuIcon from "../../images/burger.svg"
 import SEO from "../seo"
 import landingStyles from "./landing.module.css"
 
@@ -8,8 +9,9 @@ export const Landing = () => {
   return (
     <div className={landingStyles.landing}>
       <SEO title="Home"/>
-      <div className={landingStyles.iconDiv}>
-        <SoftupLogo className={landingStyles.iconStyle}/>
+      <div className={landingStyles.logoBurger}>
+        <SoftupLogo className={landingStyles.softupLogo}/>
+        <BurgerMenuIcon className={landingStyles.burgerLogo}/>
       </div>
       <div className={landingStyles.slogan}>
         <div className={landingStyles.sloganTitle}>
