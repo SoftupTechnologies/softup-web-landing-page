@@ -1,7 +1,4 @@
 .slogan {
-    position: absolute;
-    bottom: 45vh;
-    width: calc(20rem + 16vw);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,8 +16,10 @@
 }
 
 .sloganDesc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 500px;
     text-align: center;
-    max-width: calc(80%);
     font-family: Comfortaa, sans-serif;
     font-weight: 300;
     line-height: 1.2;
@@ -29,12 +28,7 @@
 }
 
 .iconDiv {
-    position: absolute;
-    top: 1vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
 }
 
 .iconStyle {
@@ -42,13 +36,18 @@
 }
 
 .landing {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 .arrow {
-    position: absolute;
-    bottom: 4vh;
-    max-width: calc(2.5rem);
+    max-width: 45px;
+    overflow: hidden;
 }
