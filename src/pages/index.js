@@ -1,12 +1,12 @@
 import React from "react"
 import { Landing } from "../components/Landing"
-import { Services } from "../components/Services"
+import { Expertise } from "../components/Expertise"
 import { PageWrapper } from "../components/PageWrapper"
 
 const IndexPage = () => (
   <PageWrapper>
     <Landing/>
-    <Services/>
+    <Expertise/>
   </PageWrapper>
 )
 

@@ -34,7 +34,6 @@
 }
 
 .softupLogo {
-    max-height: 60px;
 }
 
 .burgerLogo {
@@ -52,5 +51,4 @@
 .arrow {
     max-width: 45px;
     overflow: hidden;
-    padding: 0.5rem 1rem;
 }
