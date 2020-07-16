@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import SEO from "../seo"
 import landingStyles from "./landing.module.css"
-import { ArrowDownButton, BurgerAndIcon, Slogan } from "./components"
+import { BurgerAndIcon, Slogan } from "./components"
 
 const desc = "You have the vision for a stunning digital experience. We’re the software design and engineering team that can bring it to life."
 const sloganTitle = "EMPOWERING IDEAS"
@@ -18,7 +18,7 @@ export const Landing = () => {
       <SEO title="Home"/>
       <BurgerAndIcon/>
       <Slogan description={desc} slogan={sloganTitle}/>
-      <ArrowDownButton/>
+      <div/>
     </div>
   )
 }
