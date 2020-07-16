@@ -21,14 +21,14 @@
 .benchmarkCategory {
     color: #4b4a4a;
     font-family: Comfortaa, sans-serif;
-    font-size: 3.0vh;
+    font-size: calc(1vw + 2vh);
     border-bottom: 1px solid #656464;
     padding-bottom: 10px;
 }
 
 .benchmarkNumber {
     font-family: Comfortaa, sans-serif;
-    font-size: 3.0vh;
+    font-size: calc(3vw + 2vh);
     font-weight: 300;
     font-stretch: normal;
     font-style: normal;
