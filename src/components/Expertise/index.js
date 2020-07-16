@@ -11,12 +11,27 @@ const CompanyNumber = ({ number, category }) => {
 }
 
 export const Expertise = () => {
+  const companyBenchmark = [
+    {
+      category: "EMPLOYEES",
+      number: "20"
+    },
+    {
+      category: "PROJECTS",
+      number: "45"
+    },
+    {
+      category: "CLIENTS",
+      number: "30"
+    }
+  ]
   return (
     <div id="expertise" className={expertiseStyles.expertiseContainer}>
       <div className={expertiseStyles.companyNumbers}>
-        <CompanyNumber number={"20"} category={"EMPLOYEES"}/>
-        <CompanyNumber number={"45"} category={"PROJECTS"}/>
-        <CompanyNumber number={"30"} category={"CLIENTS"}/>
+        {companyBenchmark.map(({ number, category }, index) => (
+            <CompanyNumber key={index} number={number} category={category}/>
+          )
+        )}
       </div>
     </div>
   )

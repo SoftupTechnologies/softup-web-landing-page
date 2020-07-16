@@ -17,7 +17,7 @@ export const Slogan = ({ slogan, description }) => {
   )
 }
 
-export const BurgerAndIcon = () => {
+export const BurgerAndLogo = () => {
   return (
     <div className={landingStyles.logoBurger}>
       <SoftupLogo className={landingStyles.softupLogo}/>
