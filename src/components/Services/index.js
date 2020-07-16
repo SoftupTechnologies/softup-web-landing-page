@@ -2,6 +2,8 @@ import React from "react"
 
 export const Services = () => {
   return (
-    <h3>Services</h3>
+    <div id="services" style={{ height: '100vh', color: "white" }}>
+      Test
+    </div>
   )
 }
