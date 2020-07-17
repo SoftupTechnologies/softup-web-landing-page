@@ -7,9 +7,9 @@ import { graphql } from "gatsby"
 
 const IndexPage = ({ data }) => (
   <PageWrapper>
-    <Landing data={data}/>
-    <Accordion/>
-    <Expertise/>
+    <Landing data={data} />
+    <Accordion />
+    <Expertise />
   </PageWrapper>
 )
 
@@ -17,7 +17,7 @@ export default IndexPage
 
 export const query = graphql`
   query {
-    file(relativePath: {eq: "gatsby-icon.png"}) {
+    file(relativePath: { eq: "gatsby-icon.png" }) {
       childImageSharp {
         fixed(width: 30) {
           base64

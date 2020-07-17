@@ -8,10 +8,10 @@ export const Landing = ({ data }) => {
   const { t } = useTranslation()
   return (
     <div className={landingStyles.landing}>
-      <SEO title="Home"/>
-      <MenuHeader data={data}/>
-      <Slogan description={t("sloganDescription")} slogan={t("sloganTitle")}/>
-      <div style={{ height: "15vh" }}/>
+      <SEO title="Home" />
+      <MenuHeader data={data} />
+      <Slogan description={t("sloganDescription")} slogan={t("sloganTitle")} />
+      <div style={{ height: "15vh" }} />
     </div>
   )
 }
