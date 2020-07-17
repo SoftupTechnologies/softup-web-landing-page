@@ -1,36 +1,27 @@
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
+import langSwitchStyles from "./lang-switch.module.css"
 
-import deLogo from "images/de.png"
-import enLogo from "images/en.png"
-
-export const LanguageMenu = (props) => {
+export const LanguageMenu = ({ data }) => {
   const { t, i18n } = useTranslation()
 
   const [values, setValues] = useState({
-    language: 'en'
-  });
+    language: "en"
+  })
 
-  function handleChange(event) {
-    i18n.changeLanguage(event.target.value)
-
-    setValues(oldValues => ({
-      ...oldValues,
-      [event.target.name]: event.target.value,
-    }));
+  async function handleChange (lang) {
+    await i18n.changeLanguage(lang)
+    setValues({ language: lang })
   }
 
-  return(
-    <Select
-      value={values.language}
-      onChange={(e) => handleChange(e)}
-      disableUnderline
-      inputProps={{
-        name: 'language'
-      }}
-    >
-      <MenuItem value={'en'}><img src={enLogo} alt="EN" /></MenuItem>
-      <MenuItem value={'de'}><img src={deLogo} alt="DE" /></MenuItem>
-    </Select>
+  return (
+    <div className={langSwitchStyles.langMenu}>
+      <div className={langSwitchStyles.langButton} onClick={() => handleChange("en")}>
+        EN
+      </div>
+      <div className={langSwitchStyles.langButton} onClick={() => handleChange("de")}>
+        DE
+      </div>
+    </div>
   )
 }

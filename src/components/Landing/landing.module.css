@@ -1,3 +1,24 @@
+.landing {
+    margin-right: 2vh;
+    margin-left: 2vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menuHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.leftPlaceholder {
+    flex: 1;
+}
+
 .slogan {
     display: flex;
     flex-direction: column;
@@ -38,16 +59,6 @@
 
 .burgerLogo {
     color: #19a0ff;
-}
-
-.landing {
-    margin-right: 2vh;
-    margin-left: 2vh;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .arrow {

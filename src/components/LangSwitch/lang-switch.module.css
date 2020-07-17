@@ -1,0 +1,21 @@
+.langButton {
+    margin: 0.3vh;
+    width: 3vh;
+    height: 3vh;
+    border-radius: 50%;
+    font-size: 1.5vh;
+    text-align: center;
+    line-height: 3vh;
+    background: #6d789e;
+    font-family: BebasNeue, sans-serif;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.langMenu {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: flex-end;
+}

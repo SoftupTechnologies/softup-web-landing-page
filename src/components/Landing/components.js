@@ -3,6 +3,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 import SoftupLogo from "../../images/softup-logo.svg"
 import BurgerMenuIcon from "../../images/burger.svg"
 import React from "react"
+import { LanguageMenu } from "../LangSwitch"
 
 export const Slogan = ({ slogan, description }) => {
   return (
@@ -17,13 +18,17 @@ export const Slogan = ({ slogan, description }) => {
   )
 }
 
-export const BurgerAndLogo = () => {
+export const MenuHeader = ({data}) => {
   return (
-    <div className={landingStyles.logoBurger}>
-      <SoftupLogo className={landingStyles.softupLogo}/>
-      <AnchorLink offset='100' to="/#expertise">
-        <BurgerMenuIcon className={landingStyles.burgerLogo}/>
-      </AnchorLink>
+    <div className={landingStyles.menuHeader}>
+      <div className={landingStyles.leftPlaceholder}/>
+      <div className={landingStyles.logoBurger}>
+        <SoftupLogo className={landingStyles.softupLogo}/>
+        <AnchorLink offset='100' to="/#expertise">
+          <BurgerMenuIcon className={landingStyles.burgerLogo}/>
+        </AnchorLink>
+      </div>
+      <LanguageMenu className={landingStyles.langMenu} data={data}/>
     </div>
   )
 }
