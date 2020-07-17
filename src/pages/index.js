@@ -7,7 +7,6 @@ import { Accordion } from "../components/Accordion"
 const IndexPage = () => (
   <PageWrapper>
     <Landing />
-    <Accordion />
     <Expertise />
   </PageWrapper>
 )

@@ -3,15 +3,21 @@ import SEO from "../seo"
 import landingStyles from "./landing.module.css"
 import { MenuHeader, Slogan } from "./components"
 import { useTranslation } from "react-i18next"
+import StyledBackgroundSection from "../background"
 
 export const Landing = () => {
   const { t } = useTranslation()
   return (
-    <div className={landingStyles.landing}>
-      <SEO title="Home" />
-      <MenuHeader />
-      <Slogan description={t("sloganDescription")} slogan={t("sloganTitle")} />
-      <div style={{ height: "15vh" }} />
-    </div>
+    <StyledBackgroundSection>
+      <div className={landingStyles.landing}>
+        <SEO title="Home" />
+        <MenuHeader />
+        <Slogan
+          description={t("sloganDescription")}
+          slogan={t("sloganTitle")}
+        />
+        <div style={{ flex: 1 }} />
+      </div>
+    </StyledBackgroundSection>
   )
 }
