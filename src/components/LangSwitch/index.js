@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 import langSwitchStyles from "./lang-switch.module.css"
 
-export const LanguageMenu = ({ data }) => {
+export const LanguageMenu = () => {
   const { t, i18n } = useTranslation()
 
   const [values, setValues] = useState({

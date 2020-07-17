@@ -14,7 +14,7 @@ export const Slogan = ({ slogan, description }) => {
   )
 }
 
-export const MenuHeader = ({ data }) => {
+export const MenuHeader = () => {
   return (
     <div className={landingStyles.menuHeader}>
       <div className={landingStyles.leftPlaceholder} />
@@ -24,7 +24,7 @@ export const MenuHeader = ({ data }) => {
           <BurgerMenuIcon className={landingStyles.burgerLogo} />
         </AnchorLink>
       </div>
-      <LanguageMenu data={data} />
+      <LanguageMenu />
     </div>
   )
 }
