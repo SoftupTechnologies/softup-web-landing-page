@@ -26,6 +26,7 @@ module.exports = {
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-eslint`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {

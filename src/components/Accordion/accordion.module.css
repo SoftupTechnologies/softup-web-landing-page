@@ -1,0 +1,31 @@
+.accordionContainer {
+    height: 80vh;
+    display: flex;
+}
+
+.disabledContainer {
+    transition: .3s;
+    border: 1px solid #4b4a4a;
+}
+
+.enabledContainer {
+    border: 1px solid #4b4a4a;
+    flex: 1;
+}
+
+.enabledTitle {
+    color: #19a0ff;
+}
+
+.disabledTitle {
+    color: #333333;
+}
+
+.disabledContent {
+    display: none;
+}
+
+.enabledContent {
+    display: block;
+    color: white;
+}

@@ -8,6 +8,7 @@ const IndexPage = () => (
   <PageWrapper>
     <Landing />
     <CompanyNumbers />
+    <Accordion />
   </PageWrapper>
 )
 

@@ -1,8 +1,8 @@
 .companyNumContainer {
-    height: 100vh;
     border-top: 1px solid #4b4a4a;
     display: flex;
     flex-direction: column;
+    height: 20vh;
 }
 
 .companyNumbers {
@@ -13,6 +13,7 @@
 
 .benchmarkGroup {
     margin-top: 2vh;
+    margin-bottom: 2vh;
     display: flex;
     flex-direction: column;
     align-items: center;
