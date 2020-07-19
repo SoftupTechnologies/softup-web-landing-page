@@ -1,16 +1,16 @@
 import React from "react"
-import expertiseStyles from "./expertise.module.css"
+import companyStyles from "./company-numbers.module.css"
 
 const CompanyNumber = ({ number, category }) => {
   return (
-    <div className={expertiseStyles.benchmarkGroup}>
-      <div className={expertiseStyles.benchmarkNumber}>{number}</div>
-      <div className={expertiseStyles.benchmarkCategory}>{category}</div>
+    <div className={companyStyles.benchmarkGroup}>
+      <div className={companyStyles.benchmarkNumber}>{number}</div>
+      <div className={companyStyles.benchmarkCategory}>{category}</div>
     </div>
   )
 }
 
-export const Expertise = () => {
+export const CompanyNumbers = () => {
   const companyBenchmark = [
     {
       category: "EMPLOYEES",
@@ -26,8 +26,8 @@ export const Expertise = () => {
     },
   ]
   return (
-    <div id="expertise" className={expertiseStyles.expertiseContainer}>
-      <div className={expertiseStyles.companyNumbers}>
+    <div id="company-numbers" className={companyStyles.companyNumContainer}>
+      <div className={companyStyles.companyNumbers}>
         {companyBenchmark.map(({ number, category }, index) => (
           <CompanyNumber key={index} number={number} category={category} />
         ))}

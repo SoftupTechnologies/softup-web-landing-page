@@ -20,7 +20,7 @@ export const MenuHeader = () => {
       <div className={landingStyles.leftPlaceholder} />
       <div className={landingStyles.logoBurger}>
         <SoftupLogo className={landingStyles.softupLogo} />
-        <AnchorLink offset="100" to="/#expertise">
+        <AnchorLink offset="100" to="/#company-numbers">
           <BurgerMenuIcon className={landingStyles.burgerLogo} />
         </AnchorLink>
       </div>
