@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import accordionStyles from "./accordion.module.css"
 import PropTypes from "prop-types"
+import { CompanyNumbers } from "../CompanyNumbers"
 
 const accSlides = [
   {
@@ -102,6 +103,18 @@ export const Accordion = () => {
           setSlideInfo={setSlideInfo}
         />
       ))}
+    </div>
+  )
+}
+
+export const AccordionMenu = () => {
+  return (
+    <div
+      id={"accordion-menu"}
+      className={accordionStyles.accordionMenuContainer}
+    >
+      <CompanyNumbers />
+      <Accordion />
     </div>
   )
 }

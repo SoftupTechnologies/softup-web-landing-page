@@ -1,19 +1,24 @@
 import i18next from "i18next"
 
+import locales from "../locales/de/translations.json"
+
+import locales0 from "../locales/en/translations.json"
+
 i18next.init({
   fallbackLng: "en",
   resources: {
     de: {
-      translations: require("../locales/de/translations.json"),
+      translations: locales,
     },
     en: {
-      translations: require("../locales/en/translations.json"),
+      translations: locales0,
     },
   },
   ns: ["translations"],
   defaultNS: "translations",
   returnObjects: true,
-  debug: process.env.NODE_ENV === "development",
+  // eslint-disable-next-line no-undef
+  debug: "development" === process.env.NODE_ENV,
   interpolation: {
     escapeValue: false, // not needed for react!!
   },

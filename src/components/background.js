@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import styled from "styled-components"
+import PropTypes from "prop-types"
 
 import BackgroundImage from "gatsby-background-image"
 
@@ -32,6 +33,10 @@ const BackgroundSection = ({ children }) => (
     }}
   />
 )
+
+BackgroundSection.propTypes = {
+  children: PropTypes.object,
+}
 
 const StyledBackgroundSection = styled(BackgroundSection)`
   width: 100%;

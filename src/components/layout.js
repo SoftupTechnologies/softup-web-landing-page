@@ -23,6 +23,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <div>{data}</div>
       <div>{children}</div>
     </>
   )
