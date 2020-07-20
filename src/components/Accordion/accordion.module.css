@@ -4,28 +4,53 @@
 }
 
 .disabledContainer {
+    padding: 10px;
+    flex: 0;
+    width: 5vh;
+    display: flex;
+    align-items: flex-end;
+    white-space: nowrap;
     transition: .3s;
     border: 1px solid #4b4a4a;
 }
 
 .enabledContainer {
+    padding: 10vw;
     border: 1px solid #4b4a4a;
     flex: 1;
 }
 
+.disabledRotation {
+}
+
+.enabledRotation {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+}
+
+
 .enabledTitle {
+    font-family: Comfortaa, sans-serif;
+    font-size: 1.5em;
+    padding-bottom: 1vh;
     color: #19a0ff;
 }
 
 .disabledTitle {
-    color: #333333;
+    font-family: Comfortaa, sans-serif;
+    transition: 0.3s;
+    color: #7d7d7d;
 }
 
 .disabledContent {
-    display: none;
+    position: absolute; top: -9999px; left: -9999px;
 }
 
 .enabledContent {
-    display: block;
-    color: white;
+    font-family: Comfortaa, sans-serif;
+    transition: 1s;
+    color: #9a9a9a;
 }

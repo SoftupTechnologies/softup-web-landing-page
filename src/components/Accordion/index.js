@@ -4,27 +4,26 @@ import PropTypes from "prop-types"
 
 const accSlides = [
   {
-    title: "Title 1",
-    content: <h4>sjdfkjslkdfjkalsjdfklajslkdfjsdkljfklsdfjklsd</h4>,
+    title: "services",
+    content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
   {
-    title: "Title 2",
-    content: <h4>sjdfkjslkdfjkalsjdfklajslkdfjsdkljfklsdfjklsd</h4>,
+    title: "expertise",
+    content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
   {
-    title: "Title 3",
-    content: <h4>sjdfkjslkdfjkalsjdfklajslkdfjsdkljfklsdfjklsd</h4>,
+    title: "portfolio",
+    content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
   {
-    title: "Title 3",
-    content: <h4>sjdfkjslkdfjkalsjdfklajslkdfjsdkljfklsdfjklsd</h4>,
+    title: "career",
+    content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
   {
-    title: "Title 3",
-    content: <h4>sjdfkjslkdfjkalsjdfklajslkdfjsdkljfklsdfjklsd</h4>,
+    title: "blog",
+    content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
 ]
-
 
 export const AccordionSlide = ({
   title,
@@ -35,12 +34,14 @@ export const AccordionSlide = ({
 }) => {
   let style = {
     slideContainer: accordionStyles.disabledContainer,
+    rotateStyle: accordionStyles.enabledRotation,
     title: accordionStyles.disabledTitle,
     slideContent: accordionStyles.disabledContent,
-  };
+  }
 
   if (slideInfo.activeSlideNumber === componentId) {
     style.slideContainer = accordionStyles.enabledContainer
+    style.rotateStyle = accordionStyles.disabledRotation
     style.title = accordionStyles.enabledTitle
     style.slideContent = accordionStyles.enabledContent
   }
@@ -53,12 +54,10 @@ export const AccordionSlide = ({
 
   return (
     <div onClick={toggleAccordion} className={style.slideContainer}>
-      <div className={style.title}>{title}</div>
-      <div
-        className={style.slideContent}
-      >
-        {content}
+      <div className={style.rotateStyle}>
+        <div className={style.title}>{title}</div>
       </div>
+      <div className={style.slideContent}>{content}</div>
     </div>
   )
 }

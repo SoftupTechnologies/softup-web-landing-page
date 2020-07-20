@@ -1,5 +1,6 @@
 import React from "react"
 import companyStyles from "./company-numbers.module.css"
+import PropTypes from "prop-types"
 
 const CompanyNumber = ({ number, category }) => {
   return (
@@ -34,4 +35,9 @@ export const CompanyNumbers = () => {
       </div>
     </div>
   )
+}
+
+CompanyNumber.propTypes = {
+  number: PropTypes.string,
+  category: PropTypes.string,
 }
