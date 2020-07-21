@@ -1,36 +1,36 @@
 import React, { useState } from "react"
-import accordionStyles from "./accordion.module.css"
+import "./accordion.scss"
 import PropTypes from "prop-types"
 import { CompanyNumbers } from "../CompanyNumbers"
 
 const accSlides = [
   {
     number: "01",
-    title: "services",
+    title: "services.",
     content:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
   {
     number: "02",
-    title: "expertise",
+    title: "expertise.",
     content:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
   {
     number: "03",
-    title: "portfolio",
+    title: "portfolio.",
     content:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
   {
     number: "04",
-    title: "career",
+    title: "career.",
     content:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
   {
     number: "05",
-    title: "blog",
+    title: "blog.",
     content:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
@@ -47,26 +47,24 @@ export const AccordionSlide = ({
   let fillerDiv = <></>
 
   let style = {
-    slideContainer: accordionStyles.disabledContainer,
-    rotateStyle: accordionStyles.enabledRotation,
-    title: accordionStyles.disabledTitle,
-    slideContent: accordionStyles.disabledContent,
+    slideContainer: "disabledContainer",
+    title: "disabledTitle",
+    slideContent: "disabledContent",
   }
 
   if (slideInfo.activeSlideNumber === componentId) {
-    style.slideContainer = accordionStyles.enabledContainer
-    style.rotateStyle = accordionStyles.disabledRotation
-    style.title = accordionStyles.enabledTitle
-    style.slideContent = accordionStyles.enabledContent
+    style.slideContainer = "enabledContainer"
+    style.title = "enabledTitle"
+    style.slideContent = "enabledContent"
+    fillerDiv = <div className={"bottom"} />
   }
 
   if (slideInfo.activeSlideNumber === null) {
-    style.slideContainer = accordionStyles.initialContainer
-    style.rotateStyle = accordionStyles.disabledRotation
-    style.title = accordionStyles.initialTitle
-    style.slideContent = accordionStyles.disabledContent
+    style.slideContainer = "initialContainer"
+    style.title = "initialTitle"
+    style.slideContent = "disabledContent"
 
-    fillerDiv = <div />
+    fillerDiv = <div className={"bottom"} />
   }
 
   const toggleAccordion = () => {
@@ -77,11 +75,11 @@ export const AccordionSlide = ({
 
   return (
     <div onClick={toggleAccordion} className={style.slideContainer}>
-      <div className={accordionStyles.number}>{number}</div>
-      <div className={style.rotateStyle}>
+      <div className={"number"}>{number}</div>
+      <div className={"contentAndTitle"}>
         <div className={style.title}>{title}</div>
+        <div className={style.slideContent}>{content}</div>
       </div>
-      <div className={style.slideContent}>{content}</div>
       {fillerDiv}
     </div>
   )
@@ -91,7 +89,7 @@ export const Accordion = () => {
   const [slideInfo, setSlideInfo] = useState({ activeSlideNumber: null })
 
   return (
-    <div className={accordionStyles.accordionContainer}>
+    <div className={"accordionContainer"}>
       {accSlides.map((slide, index) => (
         <AccordionSlide
           componentId={index}
@@ -109,10 +107,7 @@ export const Accordion = () => {
 
 export const AccordionMenu = () => {
   return (
-    <div
-      id={"accordion-menu"}
-      className={accordionStyles.accordionMenuContainer}
-    >
+    <div id={"accordion-menu"} className={"accordionMenuContainer"}>
       <CompanyNumbers />
       <Accordion />
     </div>

@@ -23,6 +23,7 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-sass`,
     `gatsby-plugin-anchor-links`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
