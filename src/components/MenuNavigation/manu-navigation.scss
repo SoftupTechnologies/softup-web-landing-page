@@ -1,4 +1,25 @@
 .menuNavigationDiv {
   display: flex;
   flex-direction: row;
+  border-bottom: 1px solid #4b4a4a;
+  align-items: center;
+
+  padding: 1vw;
 }
+
+.logo {
+  margin-left: calc((1 / 6)*100%);
+}
+
+.menuLinkDiv {
+  padding-left: calc(((3 / 7)*100vw) );
+  a {
+    color: #ffffff;
+  }
+
+  .link {
+    padding: 10px;
+  }
+
+}
+

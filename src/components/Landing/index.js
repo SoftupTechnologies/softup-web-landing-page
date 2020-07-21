@@ -11,15 +11,15 @@ export const Landing = () => {
   return (
     <StyledBackgroundSection>
       <PageLayout enableMargins={true}>
-      <div className={landingStyles.landing}>
-        <SEO title="Home" />
-        <MenuHeader />
-        <Slogan
-          description={t("sloganDescription")}
-          slogan={t("sloganTitle")}
-        />
-        <div style={{ flex: 1 }} />
-      </div>
+        <div className={landingStyles.landing}>
+          <SEO title="Home" />
+          <MenuHeader />
+          <Slogan
+            description={t("sloganDescription")}
+            slogan={t("sloganTitle")}
+          />
+          <div style={{ flex: 1 }} />
+        </div>
       </PageLayout>
     </StyledBackgroundSection>
   )

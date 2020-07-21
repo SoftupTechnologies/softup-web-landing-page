@@ -9,8 +9,8 @@
 .menuHeader {
     flex: 1;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: flex-start;;
     width: 100%;
 }
 
@@ -49,14 +49,16 @@
 
 .logoBurger {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
 
 .softupLogo {
+    margin-top: 1vh;
 }
 
 .burgerLogo {
+    text-align: center;
     color: #19a0ff;
 }
 

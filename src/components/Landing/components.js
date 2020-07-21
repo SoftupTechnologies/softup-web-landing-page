@@ -1,10 +1,11 @@
 import landingStyles from "./landing.module.css"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import SoftupLogo from "../../images/softup-logo.svg"
 import BurgerMenuIcon from "../../images/burger.svg"
 import React from "react"
 import PropTypes from "prop-types"
 import { LanguageMenu } from "../LangSwitch"
+import { Link } from "../../../.cache/gatsby-browser-entry"
+import SoftupLogoSvg from "../../images/softup-logo.svg"
 
 export const Slogan = ({ slogan, description }) => {
   return (
@@ -15,17 +16,29 @@ export const Slogan = ({ slogan, description }) => {
   )
 }
 
+const SoftupLogo = () => {
+  return (
+    <Link to={"/"} className={landingStyles.softupLogo}>
+      <SoftupLogoSvg />
+    </Link>
+  )
+}
+
 export const MenuHeader = () => {
   return (
     <div className={landingStyles.menuHeader}>
-      <div className={landingStyles.leftPlaceholder} />
       <div className={landingStyles.logoBurger}>
-        <SoftupLogo className={landingStyles.softupLogo} />
-        <AnchorLink offset="100" to="/#accordion-menu">
-          <BurgerMenuIcon className={landingStyles.burgerLogo} />
-        </AnchorLink>
+        <div className={landingStyles.leftPlaceholder} />
+        <SoftupLogo />
+        <LanguageMenu />
       </div>
-      <LanguageMenu />
+      <AnchorLink
+        className={landingStyles.burgerLogo}
+        offset="100"
+        to="/#accordion-menu"
+      >
+        <BurgerMenuIcon />
+      </AnchorLink>
     </div>
   )
 }
