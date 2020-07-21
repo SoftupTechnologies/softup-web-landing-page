@@ -4,9 +4,10 @@ import langSwitchStyles from "./lang-switch.module.css"
 
 export const LanguageMenu = () => {
   const { i18n } = useTranslation()
+  const lang = i18n.language
 
   const [values, setValues] = useState({
-    language: "en",
+    language: lang,
   })
 
   async function handleChange(lang) {

@@ -1,32 +1,36 @@
 import i18next from "i18next"
+import Backend from "i18next-http-backend"
+import LanguageDetector from "i18next-browser-languagedetector"
+import { initReactI18next } from "react-i18next"
 
-import locales from "../locales/de/translations.json"
+import deLocales from "../locales/de/translations.json"
 
-import locales0 from "../locales/en/translations.json"
+import enLocales from "../locales/en/translations.json"
 
-i18next.init({
-  fallbackLng: "en",
-  resources: {
-    de: {
-      translations: locales,
+i18next
+  .use(Backend)
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    fallbackLng: "en-US",
+    resources: {
+      de: {
+        translations: deLocales,
+      },
+      en: {
+        translations: enLocales,
+      },
     },
-    en: {
-      translations: locales0,
+    ns: ["translations"],
+    defaultNS: "translations",
+    returnObjects: true,
+    // eslint-disable-next-line no-undef
+    debug: "development" === process.env.NODE_ENV,
+    react: {
+      wait: true,
     },
-  },
-  ns: ["translations"],
-  defaultNS: "translations",
-  returnObjects: true,
-  // eslint-disable-next-line no-undef
-  debug: "development" === process.env.NODE_ENV,
-  interpolation: {
-    escapeValue: false, // not needed for react!!
-  },
-  react: {
-    wait: true,
-  },
-})
+  })
 
-i18next.languages = ["de", "en"]
+i18next.languages = ["en", "us"]
 
 export default i18next

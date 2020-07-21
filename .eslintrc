@@ -1,7 +1,9 @@
 {
   "parser": "babel-eslint",
   "rules": {
-    "strict": 0
+    "strict": 0,
+    "no-unused-vars": "warn",
+    "no-console": "warn"
   },
   "extends": [
     "eslint:recommended",
