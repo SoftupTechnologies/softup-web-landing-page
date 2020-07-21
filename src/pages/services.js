@@ -1,12 +1,11 @@
 import React from "react"
-import PageWrapper from "../components/PageWrapper"
+import PageLayout from "../components/PageLayout"
 import MenuNavigation from "../components/MenuNavigation"
 
 const Services = () => (
-  <PageWrapper>
+  <PageLayout enableMargins={true}>
     <MenuNavigation />
-    <h4 style={{ color: "#ffffff" }}>Services</h4>
-  </PageWrapper>
+  </PageLayout>
 )
 
 export default Services

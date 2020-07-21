@@ -1,13 +1,13 @@
 import React from "react"
 import { Landing } from "../components/Landing"
-import PageWrapper from "../components/PageWrapper"
+import PageLayout from "../components/PageLayout"
 import { AccordionMenu } from "../components/Accordion"
 
 const IndexPage = () => (
-  <PageWrapper>
+  <PageLayout>
     <Landing />
     <AccordionMenu />
-  </PageWrapper>
+  </PageLayout>
 )
 
 export default IndexPage

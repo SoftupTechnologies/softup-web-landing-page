@@ -1,11 +1,11 @@
 .langButton {
     margin: 0.2vh;
-    width: 4vh;
-    height: 4vh;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    font-size: 1.5vh;
+    font-size: 15px;
     text-align: center;
-    line-height: 4vh;
+    line-height: 30px;
     font-family: BebasNeue, sans-serif;
     color: #ffffff;
     cursor: pointer;

@@ -9,6 +9,8 @@
         transition: color 0.5s;
         text-decoration: none;
         color: #7d7d7d;
+        pointer-events: none;
+        cursor: default;
     }
     .initialContainer:hover,
     .disabledContainer:hover {
@@ -17,11 +19,24 @@
             color: #19a0ff;
         }
     }
+    .enabledTitle {
+        font-family: Comfortaa, sans-serif;
+        font-size: calc(2vw + 1rem);
+        padding-bottom: 1vw;
+        a:link,
+        a:visited,
+        a:hover,
+        a:active {
+            color: #19a0ff;
+            pointer-events: visible;
+            cursor: pointer;
+        }
+    }
 }
 
 .initialTitle {
     font-family: Comfortaa, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.6em;
     padding-bottom: 1vh;
 }
 
@@ -35,25 +50,13 @@
     border: 1px solid #4b4a4a;
 }
 
-.enabledTitle {
-    font-family: Comfortaa, sans-serif;
-    font-size: calc(2vw + 1rem);
-    padding-bottom: 1vw;
-    a:link,
-    a:visited,
-    a:hover,
-    a:active {
-        color: #19a0ff;
-    }
-}
-
 .disabledContent {
     color: transparent;
     position: absolute; top: -9999px; left: -9999px;
 }
 
 .enabledContent {
-    transition: .5s ease-in-out;
+    transition: color .5s ease-in-out;
     word-wrap: break-spaces;
     font-family: Comfortaa, sans-serif;
     color: #b4b4b4;
@@ -80,16 +83,6 @@
     .disabledTitle {
         font-size: 1.5rem;
         font-family: Comfortaa, sans-serif;
-        a:link,
-        a:visited,
-        a:hover,
-        a:active {
-            pointer-events: none;
-            cursor: default;
-            transition: color 0.4s, font-size 0.4s;
-            text-decoration: none;
-            color: #7d7d7d;
-        }
     }
 
     .enabledContainer {
