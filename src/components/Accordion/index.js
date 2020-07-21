@@ -54,6 +54,7 @@ export const AccordionSlide = ({
 
   if (slideInfo.activeSlideNumber === componentId) {
     style.slideContainer = "enabledContainer"
+    style.contentAndTitle = "enabledContentAndTitle"
     style.title = "enabledTitle"
     style.slideContent = "enabledContent"
     fillerDiv = <div className={"bottom"} />
@@ -76,7 +77,7 @@ export const AccordionSlide = ({
   return (
     <div onClick={toggleAccordion} className={style.slideContainer}>
       <div className={"number"}>{number}</div>
-      <div className={"contentAndTitle"}>
+      <div className={style.contentAndTitle}>
         <div className={style.title}>{title}</div>
         <div className={style.slideContent}>{content}</div>
       </div>
