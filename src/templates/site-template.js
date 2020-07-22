@@ -1,13 +1,15 @@
+/* eslint-disable */
 import React from "react"
 import PropTypes from "prop-types"
 import MenuNavigation from "../components/MenuNavigation"
 import { useTranslation } from "react-i18next"
 import "./site.scss"
 
-const WideTabs = () => {
-  return(
-    <h3 className={"wideTabs"}>Wide Tabs</h3>
-  )
+const WideTabs = ({data}) => {
+  const tabItems = data.map((item, index) => (
+    <div key={index} className={"tabName"}>{item.tabName}</div>
+  ))
+  return (<div className={"tabDiv"}>{tabItems}</div>)
 }
 
 let componentContainer = {
@@ -16,10 +18,10 @@ let componentContainer = {
 
 
 const generateContent = (pageContent) => {
-  const components = pageContent.map((content, index) => {
+  const components = pageContent?.map((content, index) => {
     const DesiredComponent = componentContainer[content.component];
     return(
-      <DesiredComponent key={index} />
+      <DesiredComponent key={index} data={content.data} />
     )
   })
   return(
@@ -37,7 +39,7 @@ const BasicTemplate = ({ pageContext }) => {
       <div className={"bodyTitleDiv"}>
         <div className={"title"}>{t(pageContext.title)}</div>
       </div>
-      {generateContent(pageContext.content)}
+      {generateContent(pageContext?.content)}
     </div>
   )
 }
