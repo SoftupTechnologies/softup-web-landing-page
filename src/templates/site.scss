@@ -1,0 +1,19 @@
+.bodyTitleDiv {
+  align-items: center;
+  font-family: Comfortaa, sans-serif;
+  font-size: 3rem;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  height: 25vh;
+  .title {
+    color: #ffffff;
+    text-decoration: underline;
+    text-decoration-color: #19a0ff;
+    grid-column-start: 2;
+  }
+
+}
+
+.wideTabs {
+  background-color: #19a0ff;
+}

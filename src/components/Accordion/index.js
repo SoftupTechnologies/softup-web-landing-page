@@ -71,7 +71,7 @@ export const Accordion = () => {
           componentId={index}
           key={index}
           title={slide.title}
-          content={slide.content}
+          content={slide.accordionContent}
           number={slide.number}
           slideInfo={slideInfo}
           setSlideInfo={setSlideInfo}
