@@ -13,7 +13,7 @@ const PageLayout = ({ children, enableMargins }) => {
 }
 
 PageLayout.propTypes = {
-  children: PropTypes.array,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   enableMargins: PropTypes.bool,
 }
 

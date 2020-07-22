@@ -19,7 +19,7 @@ export const Slogan = ({ slogan, description }) => {
 const SoftupLogo = () => {
   return (
     <Link to={"/"} className={landingStyles.logo}>
-      <SoftupLogoSvg/>
+      <SoftupLogoSvg />
     </Link>
   )
 }
@@ -27,8 +27,8 @@ const SoftupLogo = () => {
 export const MenuHeader = () => {
   return (
     <div className={landingStyles.menuHeader}>
-        <SoftupLogo/>
-        <LanguageMenu/>
+      <SoftupLogo />
+      <LanguageMenu />
       <AnchorLink
         offset="100"
         to="/#accordion-menu"
@@ -42,5 +42,5 @@ export const MenuHeader = () => {
 
 Slogan.propTypes = {
   slogan: PropTypes.string,
-  description: PropTypes.string
+  description: PropTypes.string,
 }

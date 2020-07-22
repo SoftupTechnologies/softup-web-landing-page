@@ -1,8 +1,8 @@
 .menuNavigationDiv {
-  margin: auto 1vw auto 1vw;
   display: grid;
-  grid-template-columns: 20% 70% 10% ;
-  align-items:center
+  grid-template-columns: 15% 75% 10% ;
+  align-items:center;
+  border-bottom: 1px solid #4b4a4a;
 }
 
 .logo {
@@ -14,13 +14,20 @@
   text-align: right;
   grid-column-start: 2;
   grid-row-start: 1;
-  a {
+  a:hover,
+  a:link,
+  a:visited,
+  a:active {
+    font-family: Comfortaa, sans-serif;
     white-space:nowrap;
     color: #ffffff;
+    transition: color 0.5s;
+    text-decoration: none;
+    font-size: 1rem;
   }
 
   .link {
-    padding: 10px;
+    padding: 1vw;
   }
 
 }

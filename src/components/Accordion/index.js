@@ -3,8 +3,8 @@ import "./accordion.scss"
 import PropTypes from "prop-types"
 import { CompanyNumbers } from "../CompanyNumbers"
 import { Link } from "gatsby"
-import { accSlides } from "../../data"
 import { useTranslation } from "react-i18next"
+import navData from "../../../content/page-data.json"
 
 export const AccordionSlide = ({
   link,
@@ -65,7 +65,7 @@ export const Accordion = () => {
 
   return (
     <div className={"accordionContainer"}>
-      {accSlides.map((slide, index) => (
+      {navData.map((slide, index) => (
         <AccordionSlide
           link={slide.link}
           componentId={index}
@@ -94,7 +94,7 @@ AccordionSlide.propTypes = {
   link: PropTypes.string,
   number: PropTypes.string,
   title: PropTypes.string,
-  content: PropTypes.object,
+  content: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   slideInfo: PropTypes.object,
   setSlideInfo: PropTypes.func,
   componentId: PropTypes.number,

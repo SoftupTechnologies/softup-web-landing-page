@@ -17,4 +17,5 @@
     justify-content: flex-end;
     grid-column-start: 3;
     grid-row-start: 1;
+    padding-right: 1vh;
 }
