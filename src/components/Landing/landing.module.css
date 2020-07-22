@@ -1,21 +1,14 @@
 .landing {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: 40% 20% 40%;
+    margin: 1vh 1vw auto 1vw;
 }
 
 .menuHeader {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;;
-    width: 100%;
-}
-
-.leftPlaceholder {
-    flex: 1;
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
 }
 
 .slogan {
@@ -43,26 +36,18 @@
     font-family: Comfortaa, sans-serif;
     font-weight: 300;
     line-height: 1.2;
-    letter-spacing: -0.8px;
     color: #aaaaaa;
 }
 
-.logoBurger {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.softupLogo {
-    margin-top: 1vh;
+.language {
+    color: red;
+    grid-column-start: 2;
 }
 
 .burgerLogo {
-    text-align: center;
-    color: #19a0ff;
-}
-
-.arrow {
-    max-width: 45px;
-    overflow: hidden;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

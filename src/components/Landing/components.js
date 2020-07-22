@@ -5,7 +5,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { LanguageMenu } from "../LangSwitch"
 import { Link } from "../../../.cache/gatsby-browser-entry"
-import SoftupLogoSvg from "../../images/softup-logo.svg"
+import SoftupLogoSvg from "../../images/softup-logo-crop.svg"
 
 export const Slogan = ({ slogan, description }) => {
   return (
@@ -18,8 +18,8 @@ export const Slogan = ({ slogan, description }) => {
 
 const SoftupLogo = () => {
   return (
-    <Link to={"/"} className={landingStyles.softupLogo}>
-      <SoftupLogoSvg />
+    <Link to={"/"}>
+      <SoftupLogoSvg/>
     </Link>
   )
 }
@@ -27,23 +27,21 @@ const SoftupLogo = () => {
 export const MenuHeader = () => {
   return (
     <div className={landingStyles.menuHeader}>
-      <div className={landingStyles.logoBurger}>
-        <div className={landingStyles.leftPlaceholder} />
-        <SoftupLogo />
-        <LanguageMenu />
+      <div className={landingStyles.burgerLogo}>
+        <SoftupLogo/>
+        <AnchorLink
+          offset="100"
+          to="/#accordion-menu"
+        >
+          <BurgerMenuIcon/>
+        </AnchorLink>
       </div>
-      <AnchorLink
-        className={landingStyles.burgerLogo}
-        offset="100"
-        to="/#accordion-menu"
-      >
-        <BurgerMenuIcon />
-      </AnchorLink>
+      <LanguageMenu/>
     </div>
   )
 }
 
 Slogan.propTypes = {
   slogan: PropTypes.string,
-  description: PropTypes.string,
+  description: PropTypes.string
 }

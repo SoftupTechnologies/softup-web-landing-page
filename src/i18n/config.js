@@ -21,6 +21,7 @@ i18next
         translations: enLocales,
       },
     },
+    keySeparator: false,
     ns: ["translations"],
     defaultNS: "translations",
     returnObjects: true,

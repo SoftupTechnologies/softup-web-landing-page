@@ -10,7 +10,7 @@ export const Landing = () => {
   const { t } = useTranslation()
   return (
     <StyledBackgroundSection>
-      <PageLayout enableMargins={true}>
+      <PageLayout>
         <div className={landingStyles.landing}>
           <SEO title="Home" />
           <MenuHeader />
@@ -18,7 +18,6 @@ export const Landing = () => {
             description={t("sloganDescription")}
             slogan={t("sloganTitle")}
           />
-          <div style={{ flex: 1 }} />
         </div>
       </PageLayout>
     </StyledBackgroundSection>

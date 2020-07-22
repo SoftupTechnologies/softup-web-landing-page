@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { CompanyNumbers } from "../CompanyNumbers"
 import { Link } from "gatsby"
 import { accSlides } from "../../data"
+import { useTranslation } from "react-i18next"
 
 export const AccordionSlide = ({
   link,
@@ -14,6 +15,7 @@ export const AccordionSlide = ({
   setSlideInfo,
   componentId,
 }) => {
+  const { t } = useTranslation()
   let fillerDiv = <></>
 
   let style = {
@@ -49,7 +51,7 @@ export const AccordionSlide = ({
       <div className={"number"}>{number}</div>
       <div className={style.contentAndTitle}>
         <div className={style.title}>
-          <Link to={link}>{title}</Link>
+          <Link to={link}>{t(title)}</Link>
         </div>
         <div className={style.slideContent}>{content}</div>
       </div>

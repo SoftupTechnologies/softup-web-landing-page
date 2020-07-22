@@ -1,19 +1,21 @@
 .menuNavigationDiv {
-  display: flex;
-  flex-direction: row;
-  border-bottom: 1px solid #4b4a4a;
-  align-items: center;
-
-  padding: 1vw;
+  margin: auto 1vw auto 1vw;
+  display: grid;
+  grid-template-columns: 20% 70% 10% ;
+  align-items:center
 }
 
 .logo {
-  margin-left: calc((1 / 6)*100%);
+  grid-column-start: 2;
+  grid-row-start: 1;
 }
 
 .menuLinkDiv {
-  padding-left: calc(((3 / 7)*100vw) );
+  text-align: right;
+  grid-column-start: 2;
+  grid-row-start: 1;
   a {
+    white-space:nowrap;
     color: #ffffff;
   }
 
