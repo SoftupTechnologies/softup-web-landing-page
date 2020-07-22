@@ -18,7 +18,7 @@ export const Slogan = ({ slogan, description }) => {
 
 const SoftupLogo = () => {
   return (
-    <Link to={"/"}>
+    <Link to={"/"} className={landingStyles.logo}>
       <SoftupLogoSvg/>
     </Link>
   )
@@ -27,16 +27,15 @@ const SoftupLogo = () => {
 export const MenuHeader = () => {
   return (
     <div className={landingStyles.menuHeader}>
-      <div className={landingStyles.burgerLogo}>
         <SoftupLogo/>
-        <AnchorLink
-          offset="100"
-          to="/#accordion-menu"
-        >
-          <BurgerMenuIcon/>
-        </AnchorLink>
-      </div>
-      <LanguageMenu/>
+        <LanguageMenu/>
+      <AnchorLink
+        offset="100"
+        to="/#accordion-menu"
+        className={landingStyles.burgerIcon}
+      >
+        <BurgerMenuIcon />
+      </AnchorLink>
     </div>
   )
 }

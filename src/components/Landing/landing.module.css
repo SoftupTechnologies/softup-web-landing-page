@@ -2,13 +2,16 @@
     height: 100vh;
     display: grid;
     grid-template-rows: 40% 20% 40%;
-    margin: 1vh 1vw auto 1vw;
+    margin: auto 1vw auto 1vw;
 }
 
 .menuHeader {
+    align-items: center;
+    text-align: center;
     grid-row-start: 1;
     display: grid;
     grid-template-columns: 45% 10% 45%;
+    grid-template-rows: 20% 80%;
 }
 
 .slogan {
@@ -40,14 +43,19 @@
 }
 
 .language {
-    color: red;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    text-align: center;
+}
+
+.logo {
+    text-align: center;
+    grid-row-start: 1;
     grid-column-start: 2;
 }
 
-.burgerLogo {
+.burgerIcon {
+    align-self: flex-start;
+    grid-row-start: 2;
     grid-column-start: 2;
-    grid-row-start: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
