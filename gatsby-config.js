@@ -31,7 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Comfortaa`, `source sans pro`],
+        fonts: [`Comfortaa\:300,400,400i,700`, `source sans pro`],
         display: "swap",
       },
     },

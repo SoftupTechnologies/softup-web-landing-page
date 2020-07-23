@@ -10,27 +10,81 @@
         "data": [
           {
             "tabName": "product development.",
-            "items": [
+            "content": [
               {
-                "title": "Product Expertise",
-                "description": "Our team has over 20 years of experience helping DAX companies innovate and launch new products and business lines. We will guide your company through all the steps of the product development cycle from the idea generation, concept development, feasibility study, customer validation and testing, all the way to market launch."
-              },
-              {
-                "title": "Product Development",
-                "description": "Finding a market fit is always a challenge. The earlier it is found the higher will be the chances of your company being successful. We use lean methodology in order to build the right products with the least amount of time and effort spent. We test for market fit early and often using data-driven product development. Iterating and adjusting quickly will allow you to learn about your customer sooner rather than later, thus ensuring a great start in the long product journey."
+                "component": "numberedParagraph",
+                "data": {
+                  "items": [
+                    {
+                      "title": "Product Expertise",
+                      "description": "Our team has over 20 years of experience helping DAX companies innovate and launch new products and business lines. We will guide your company through all the steps of the product development cycle from the idea generation, concept development, feasibility study, customer validation and testing, all the way to market launch."
+                    },
+                    {
+                      "title": "Product Development",
+                      "description": "Finding a market fit is always a challenge. The earlier it is found the higher will be the chances of your company being successful. We use lean methodology in order to build the right products with the least amount of time and effort spent. We test for market fit early and often using data-driven product development. Iterating and adjusting quickly will allow you to learn about your customer sooner rather than later, thus ensuring a great start in the long product journey."
+                    }
+                  ]
+                }
               }
             ]
           },
           {
             "tabName": "extended team.",
-            "items": [
+            "content": [
               {
-                "title": "Product Expertise",
-                "description": "Our team has over 20 years of experience helping DAX companies innovate and launch new products and business lines. We will guide your company through all the steps of the product development cycle from the idea generation, concept development, feasibility study, customer validation and testing, all the way to market launch."
-              },
+                "component": "numberedParagraph",
+                "data": {
+                  "items": [
+                    {
+                      "title": "Super Team",
+                      "description": "Finished her are its honoured drawings nor. Pretty see mutual thrown all not edward ten. Particular an boisterous up he reasonably frequently. Several any had enjoyed shewing studied two. Up intention remainder sportsmen behaviour ye happiness. Few again any alone style added abode ask. Nay projecting unpleasing boisterous eat discovered solicitude. Own six moments produce elderly pasture far arrival. Hold our year they ten upon. Gentleman contained so intention sweetness in on resolving."
+                    },
+                    {
+                      "title": "Excellent Knowledge",
+                      "description": "Finding a market fit is always a challenge. The earlier it is found the higher will be the chances of your company being successful. We use lean methodology in order to build the right products with the least amount of time and effort spent. We test for market fit early and often using data-driven product development. Iterating and adjusting quickly will allow you to learn about your customer sooner rather than later, thus ensuring a great start in the long product journey."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "tabName": "workshops.",
+            "content": [
               {
-                "title": "Product Development",
-                "description": "Finding a market fit is always a challenge. The earlier it is found the higher will be the chances of your company being successful. We use lean methodology in order to build the right products with the least amount of time and effort spent. We test for market fit early and often using data-driven product development. Iterating and adjusting quickly will allow you to learn about your customer sooner rather than later, thus ensuring a great start in the long product journey."
+                "component": "numberedParagraph",
+                "data": {
+                  "items": [
+                    {
+                      "title": "Super Team",
+                      "description": "Finished her are its honoured drawings nor. Pretty see mutual thrown all not edward ten. Particular an boisterous up he reasonably frequently. Several any had enjoyed shewing studied two. Up intention remainder sportsmen behaviour ye happiness. Few again any alone style added abode ask. Nay projecting unpleasing boisterous eat discovered solicitude. Own six moments produce elderly pasture far arrival. Hold our year they ten upon. Gentleman contained so intention sweetness in on resolving."
+                    },
+                    {
+                      "title": "Excellent Knowledge",
+                      "description": "Finding a market fit is always a challenge. The earlier it is found the higher will be the chances of your company being successful. We use lean methodology in order to build the right products with the least amount of time and effort spent. We test for market fit early and often using data-driven product development. Iterating and adjusting quickly will allow you to learn about your customer sooner rather than later, thus ensuring a great start in the long product journey."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "tabName": "mvp in 10 days.",
+            "content": [
+              {
+                "component": "numberedParagraph",
+                "data": {
+                  "items": [
+                    {
+                      "title": "Super Team",
+                      "description": "Finished her are its honoured drawings nor. Pretty see mutual thrown all not edward ten. Particular an boisterous up he reasonably frequently. Several any had enjoyed shewing studied two. Up intention remainder sportsmen behaviour ye happiness. Few again any alone style added abode ask. Nay projecting unpleasing boisterous eat discovered solicitude. Own six moments produce elderly pasture far arrival. Hold our year they ten upon. Gentleman contained so intention sweetness in on resolving."
+                    },
+                    {
+                      "title": "Excellent Knowledge",
+                      "description": "Finding a market fit is always a challenge. The earlier it is found the higher will be the chances of your company being successful. We use lean methodology in order to build the right products with the least amount of time and effort spent. We test for market fit early and often using data-driven product development. Iterating and adjusting quickly will allow you to learn about your customer sooner rather than later, thus ensuring a great start in the long product journey."
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -42,7 +96,54 @@
     "link": "/expertise",
     "number": "02",
     "title": "expertise.",
-    "accordionContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    "accordionContent": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "content": [
+      {
+        "component": "horizontalTabs",
+        "data": [
+          {
+            "tabName": "product development. 1",
+            "content": [
+              {
+                "component": "numberedParagraph",
+                "data": {
+                  "items": [
+                    {
+                      "title": "Product Expertise",
+                      "description": "Our team has over 20 years of experience helping DAX companies innovate and launch new products and business lines. We will guide your company through all the steps of the product development cycle from the idea generation, concept development, feasibility study, customer validation and testing, all the way to market launch."
+                    },
+                    {
+                      "title": "Product Development",
+                      "description": "Finding a market fit is always a challenge. The earlier it is found the higher will be the chances of your company being successful. We use lean methodology in order to build the right products with the least amount of time and effort spent. We test for market fit early and often using data-driven product development. Iterating and adjusting quickly will allow you to learn about your customer sooner rather than later, thus ensuring a great start in the long product journey."
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "tabName": "product development. 2",
+            "content": [
+              {
+                "component": "numberedParagraph",
+                "data": {
+                  "items": [
+                    {
+                      "title": "Product Expertise",
+                      "description": "Our team has over 20 years of experience helping DAX companies innovate and launch new products and business lines. We will guide your company through all the steps of the product development cycle from the idea generation, concept development, feasibility study, customer validation and testing, all the way to market launch."
+                    },
+                    {
+                      "title": "Product Development",
+                      "description": "Finding a market fit is always a challenge. The earlier it is found the higher will be the chances of your company being successful. We use lean methodology in order to build the right products with the least amount of time and effort spent. We test for market fit early and often using data-driven product development. Iterating and adjusting quickly will allow you to learn about your customer sooner rather than later, thus ensuring a great start in the long product journey."
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "link": "/portfolio",
