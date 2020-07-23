@@ -56,12 +56,8 @@
                 "data": {
                   "items": [
                     {
-                      "title": "Super Team",
-                      "description": "Finished her are its honoured drawings nor. Pretty see mutual thrown all not edward ten. Particular an boisterous up he reasonably frequently. Several any had enjoyed shewing studied two. Up intention remainder sportsmen behaviour ye happiness. Few again any alone style added abode ask. Nay projecting unpleasing boisterous eat discovered solicitude. Own six moments produce elderly pasture far arrival. Hold our year they ten upon. Gentleman contained so intention sweetness in on resolving."
-                    },
-                    {
-                      "title": "Excellent Knowledge",
-                      "description": "Finding a market fit is always a challenge. The earlier it is found the higher will be the chances of your company being successful. We use lean methodology in order to build the right products with the least amount of time and effort spent. We test for market fit early and often using data-driven product development. Iterating and adjusting quickly will allow you to learn about your customer sooner rather than later, thus ensuring a great start in the long product journey."
+                      "title": "Workshops",
+                      "description": "Turpis massa tincidunt dui ut ornare lectus sit. Suscipit adipiscing bibendum est ultricies integer quis. Enim facilisis gravida neque convallis. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Ultrices in iaculis nunc sed augue lacus viverra vitae congue. Urna duis convallis convallis tellus. In hac habitasse platea dictumst quisque sagittis purus sit."
                     }
                   ]
                 }
@@ -77,11 +73,11 @@
                   "items": [
                     {
                       "title": "Super Team",
-                      "description": "Finished her are its honoured drawings nor. Pretty see mutual thrown all not edward ten. Particular an boisterous up he reasonably frequently. Several any had enjoyed shewing studied two. Up intention remainder sportsmen behaviour ye happiness. Few again any alone style added abode ask. Nay projecting unpleasing boisterous eat discovered solicitude. Own six moments produce elderly pasture far arrival. Hold our year they ten upon. Gentleman contained so intention sweetness in on resolving."
+                      "description": "Laoreet sit amet cursus sit amet dictum sit. In aliquam sem fringilla ut morbi tincidunt augue interdum. Faucibus turpis in eu mi. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Cursus metus aliquam eleifend mi in. Interdum velit laoreet id donec. Euismod nisi porta lorem mollis aliquam ut. Id nibh tortor id aliquet lectus proin. In fermentum posuere urna nec tincidunt."
                     },
                     {
                       "title": "Excellent Knowledge",
-                      "description": "Finding a market fit is always a challenge. The earlier it is found the higher will be the chances of your company being successful. We use lean methodology in order to build the right products with the least amount of time and effort spent. We test for market fit early and often using data-driven product development. Iterating and adjusting quickly will allow you to learn about your customer sooner rather than later, thus ensuring a great start in the long product journey."
+                      "description": "Tincidunt nunc pulvinar sapien et ligula. Vel orci porta non pulvinar neque. Vel turpis nunc eget lorem dolor sed viverra ipsum. Donec massa sapien faucibus et molestie ac feugiat sed lectus. Vitae elementum curabitur vitae nunc sed velit. Convallis posuere morbi leo urna. Ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia. Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. A diam sollicitudin tempor id. Erat imperdiet sed euismod nisi porta lorem mollis."
                     }
                   ]
                 }
@@ -102,19 +98,19 @@
         "component": "horizontalTabs",
         "data": [
           {
-            "tabName": "product development. 1",
+            "tabName": "Our expertise",
             "content": [
               {
                 "component": "numberedParagraph",
                 "data": {
                   "items": [
                     {
-                      "title": "Product Expertise",
-                      "description": "Our team has over 20 years of experience helping DAX companies innovate and launch new products and business lines. We will guide your company through all the steps of the product development cycle from the idea generation, concept development, feasibility study, customer validation and testing, all the way to market launch."
+                      "title": "Best product ever",
+                      "description": "In ante metus dictum at tempor commodo. Mattis pellentesque id nibh tortor id. Eget mauris pharetra et ultrices neque ornare. Nec feugiat nisl pretium fusce id velit ut tortor. Viverra justo nec ultrices dui sapien eget mi. At in tellus integer feugiat scelerisque varius. Risus viverra adipiscing at in tellus. Proin fermentum leo vel orci porta. Ullamcorper eget nulla facilisi etiam dignissim. Amet massa vitae tortor condimentum lacinia quis vel."
                     },
                     {
-                      "title": "Product Development",
-                      "description": "Finding a market fit is always a challenge. The earlier it is found the higher will be the chances of your company being successful. We use lean methodology in order to build the right products with the least amount of time and effort spent. We test for market fit early and often using data-driven product development. Iterating and adjusting quickly will allow you to learn about your customer sooner rather than later, thus ensuring a great start in the long product journey."
+                      "title": "Workaholics",
+                      "description": " Dignissim suspendisse in est ante in nibh mauris. Tristique senectus et netus et malesuada fames. Id ornare arcu odio ut sem nulla pharetra diam. Elementum nibh tellus molestie nunc non blandit. Convallis tellus id interdum velit. Nisl condimentum id venenatis a condimentum vitae sapien. Ac felis donec et odio. Et egestas quis ipsum suspendisse ultrices. Non tellus orci ac auctor augue mauris augue neque. Tellus at urna condimentum mattis pellentesque id nibh."
                     }
                   ]
                 }

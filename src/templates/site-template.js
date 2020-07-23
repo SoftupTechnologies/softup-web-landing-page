@@ -87,7 +87,7 @@ const BasicTemplate = ({ pageContext }) => {
   const { t } = useTranslation()
   return (
     <div>
-      <MenuNavigation menuItems={pageContext.menuItems} />
+      <MenuNavigation menuItems={pageContext.menuItems} activeMenuItem={pageContext.title}/>
       <div className={"bodyTitleDiv"}>
         <div className={"title"}>{t(pageContext.title)}</div>
       </div>

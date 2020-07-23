@@ -5,6 +5,7 @@ import "./manu-navigation.scss"
 import { Link } from "../../../.cache/gatsby-browser-entry"
 import { useTranslation } from "react-i18next"
 import PropTypes from "prop-types"
+import classNames from "classnames"
 
 const SoftupLogo = () => {
   return (
@@ -14,24 +15,30 @@ const SoftupLogo = () => {
   )
 }
 
-const MenuLinks = ({ menuItems }) => {
+const MenuLinks = ({ menuItems, activeMenuItem }) => {
   const { t } = useTranslation()
   return (
     <div className={"menuLinkDiv"}>
-      {menuItems.map((item, index) => (
-        <Link className={"link"} key={index} to={item.link}>
-          {t(item.title)}
-        </Link>
-      ))}
+      {menuItems.map((item, index) => {
+        let classes = classNames({
+          link: true,
+          enabledMenuItem: item.title === activeMenuItem,
+        })
+        return (
+          <Link className={classes} key={index} to={item.link}>
+            {t(item.title)}
+          </Link>
+        )
+      })}
     </div>
   )
 }
 
-const MenuNavigation = ({ menuItems }) => {
+const MenuNavigation = ({ menuItems, activeMenuItem }) => {
   return (
     <div className={"menuNavigationDiv"}>
       <SoftupLogo />
-      <MenuLinks menuItems={menuItems} />
+      <MenuLinks menuItems={menuItems} activeMenuItem={activeMenuItem}/>
       <LanguageMenu />
     </div>
   )
@@ -44,6 +51,7 @@ MenuLinks.propTypes = {
       link: PropTypes.string,
     })
   ),
+  activeMenuItem: PropTypes.string
 }
 
 MenuNavigation.propTypes = {
@@ -53,6 +61,7 @@ MenuNavigation.propTypes = {
       link: PropTypes.string,
     })
   ),
+  activeMenuItem: PropTypes.string
 }
 
 export default MenuNavigation

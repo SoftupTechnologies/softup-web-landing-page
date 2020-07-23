@@ -1,7 +1,7 @@
 .menuNavigationDiv {
   display: grid;
-  grid-template-columns: 15% 75% 10% ;
-  align-items:center;
+  grid-template-columns: 15% 75% 10%;
+  align-items: center;
   border-bottom: 1px solid #4b4a4a;
 }
 
@@ -14,13 +14,21 @@
   text-align: right;
   grid-column-start: 2;
   grid-row-start: 1;
-  a:hover,
+
   a:link,
   a:visited,
   a:active {
+    &:hover {
+      color: #cdcdcd;
+    }
+
+    &.enabledMenuItem {
+      color: #ffffff;
+    }
+
     font-family: Comfortaa, sans-serif;
-    white-space:nowrap;
-    color: #ffffff;
+    white-space: nowrap;
+    color: #898989;
     transition: color 0.5s;
     text-decoration: none;
     font-size: 0.95rem;
@@ -28,6 +36,7 @@
 
   .link {
     padding: 1vw;
+
   }
 
 }
