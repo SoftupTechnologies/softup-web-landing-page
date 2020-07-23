@@ -22,7 +22,6 @@
 }
 
 .paragraphDiv {
-
   grid-column-start: 2;
 
   .paragraph {
@@ -42,22 +41,23 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .wideTabsDiv {
+
   .tabContent {
-    .enabledTabContent {
-      display: grid;
-      grid-template-columns: 15% 70% 15%;
-      padding-top: 5vh;
-      color: #ffffff;
-
-      grid-column-start: 2;
-    }
-
-    .disabledTabContent {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
+    animation: fadeIn 1.2s;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    padding-top: 5vh;
+    grid-column-start: 2;
   }
 
   .tabTitles {

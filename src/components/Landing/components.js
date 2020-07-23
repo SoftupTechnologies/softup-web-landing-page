@@ -28,7 +28,7 @@ export const MenuHeader = () => {
   return (
     <div className={landingStyles.menuHeader}>
       <SoftupLogo />
-      <LanguageMenu />
+      <LanguageMenu gridColumnStart={"3"} />
       <AnchorLink
         offset="100"
         to="/#accordion-menu"

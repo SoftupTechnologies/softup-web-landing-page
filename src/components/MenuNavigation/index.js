@@ -38,8 +38,8 @@ const MenuNavigation = ({ menuItems, activeMenuItem }) => {
   return (
     <div className={"menuNavigationDiv"}>
       <SoftupLogo />
-      <MenuLinks menuItems={menuItems} activeMenuItem={activeMenuItem}/>
-      <LanguageMenu />
+      <MenuLinks menuItems={menuItems} activeMenuItem={activeMenuItem} />
+      <LanguageMenu gridColumnStart={"4"} />
     </div>
   )
 }
@@ -51,7 +51,7 @@ MenuLinks.propTypes = {
       link: PropTypes.string,
     })
   ),
-  activeMenuItem: PropTypes.string
+  activeMenuItem: PropTypes.string,
 }
 
 MenuNavigation.propTypes = {
@@ -61,7 +61,7 @@ MenuNavigation.propTypes = {
       link: PropTypes.string,
     })
   ),
-  activeMenuItem: PropTypes.string
+  activeMenuItem: PropTypes.string,
 }
 
 export default MenuNavigation

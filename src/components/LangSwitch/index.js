@@ -1,8 +1,9 @@
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 import langSwitchStyles from "./lang-switch.module.css"
+import PropTypes from "prop-types"
 
-export const LanguageMenu = () => {
+export const LanguageMenu = ({ gridColumnStart }) => {
   const { i18n } = useTranslation()
   const lang = i18n.language
 
@@ -16,7 +17,10 @@ export const LanguageMenu = () => {
   }
 
   return (
-    <div className={langSwitchStyles.langMenu}>
+    <div
+      className={langSwitchStyles.langMenu}
+      style={{ gridColumnStart: gridColumnStart }}
+    >
       <div
         className={langSwitchStyles.langButton}
         onClick={() => handleChange("en")}
@@ -41,4 +45,8 @@ export const LanguageMenu = () => {
       </div>
     </div>
   )
+}
+
+LanguageMenu.propTypes = {
+  gridColumnStart: PropTypes.string,
 }

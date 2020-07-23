@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import MenuNavigation from "../components/MenuNavigation"
 import { useTranslation } from "react-i18next"
@@ -14,9 +14,17 @@ const generateContent = pageContent => {
   return <React.Fragment>{components}</React.Fragment>
 }
 
+const TabContent = ({ itemToBeRendered }) => {
+  return (
+    <div className={"tabContent"} key={Math.random()}>
+      {generateContent(itemToBeRendered.content)}
+    </div>
+  )
+}
+
 const WideTabs = ({ data }) => {
   const [selectedTab, setSetSelectedTab] = useState({
-    selected: data[0].tabName,
+    selected: data[0]?.tabName,
   })
   const tabTitles = (
     <div className={"tabTitles"}>
@@ -37,38 +45,23 @@ const WideTabs = ({ data }) => {
       })}
     </div>
   )
-  const tabContent = (
-    <div className={"tabContent"}>
-      {data.map((item, index) => {
-        const tabEnabled = item.tabName === selectedTab.selected
-        let classes = classNames({
-          tabContent: true,
-          enabledTabContent: tabEnabled,
-          disabledTabContent: !tabEnabled,
-        })
-        return (
-          <div key={index} className={classes}>
-            {generateContent(item?.content)}
-          </div>
-        )
-      })}
-    </div>
+  const itemToBeRendered = data.find(
+    item => item.tabName === selectedTab.selected
   )
-  const mainContainer = (
+  return (
     <div className={"wideTabsDiv"}>
       {tabTitles}
-      {tabContent}
+      <TabContent itemToBeRendered={itemToBeRendered} />
     </div>
   )
-  return mainContainer
 }
 
 const NumberedParagraph = ({ data }) => {
   return (
     <div className={"paragraphDiv"}>
-      {data.items.map(item => {
+      {data?.items.map((item, index) => {
         return (
-          <div className={"paragraph"}>
+          <div className={"paragraph"} key={index}>
             <div className={"paragraphTitle"}>{item.title}</div>
             <div className={"paragraphContent"}>{item.description}</div>
           </div>
@@ -87,7 +80,10 @@ const BasicTemplate = ({ pageContext }) => {
   const { t } = useTranslation()
   return (
     <div>
-      <MenuNavigation menuItems={pageContext.menuItems} activeMenuItem={pageContext.title}/>
+      <MenuNavigation
+        menuItems={pageContext.menuItems}
+        activeMenuItem={pageContext.title}
+      />
       <div className={"bodyTitleDiv"}>
         <div className={"title"}>{t(pageContext.title)}</div>
       </div>
