@@ -56,14 +56,25 @@ const WideTabs = ({ data }) => {
   )
 }
 
+const formatNumber = num => {
+  const stringNum = parseInt(num, 10).toString()
+  if (stringNum.length <= 2) {
+    return `0${stringNum}`
+  }
+  return stringNum
+}
+
 const NumberedParagraph = ({ data }) => {
   return (
     <div className={"paragraphDiv"}>
       {data?.items.map((item, index) => {
         return (
           <div className={"paragraph"} key={index}>
-            <div className={"paragraphTitle"}>{item.title}</div>
-            <div className={"paragraphContent"}>{item.description}</div>
+            <div className={"paragraphNumber"}>{formatNumber(index + 1)}</div>
+            <div className={"titleAndContent"}>
+              <div className={"paragraphTitle"}>{item.title}</div>
+              <div className={"paragraphContent"}>{item.description}</div>
+            </div>
           </div>
         )
       })}
