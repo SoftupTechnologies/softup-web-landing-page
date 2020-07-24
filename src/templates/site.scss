@@ -32,7 +32,6 @@
     text-decoration-color: #19a0ff;
     grid-column-start: 2;
   }
-
 }
 
 .paragraphDiv {
@@ -72,15 +71,6 @@
 }
 
 .wideTabsDiv {
-
-  .tabContent {
-    animation: fadeIn 1.2s;
-    display: grid;
-    grid-template-columns: 5% 90% 5%;
-    padding-top: 5vh;
-    grid-column-start: 2;
-  }
-
   .tabTitles {
     background-color: #1e1e1e;
     display: flex;
@@ -116,102 +106,25 @@
   }
 }
 
-@media (min-width: 1200px) {
-  .bodyTitleDiv {
-    align-items: center;
-    font-family: Comfortaa, sans-serif;
-    font-size: 3rem;
+@media (min-width: 679px) {
+  .tabContent {
+    animation: fadeIn 1.2s;
     display: grid;
-    grid-template-columns: 15% 85%;
-    height: 25vh;
-
-    .title {
-      color: #ffffff;
-      text-decoration: underline;
-      text-decoration-color: #19a0ff;
-      grid-column-start: 2;
-    }
-
-  }
-
-  .paragraphDiv {
+    grid-template-columns: 15% 70% 15%;
+    padding-top: 5vh;
     grid-column-start: 2;
-
-    .paragraph {
-      padding-top: 4vh;
-    }
-
-    .titleAndContent {
-      display: flex;
-      flex-direction: column;
-      transform: translate(40px, -40px);
-      background-color: #0f0f0f;
-      padding: 10px;
-      max-width: calc(100% - 40px);
-    }
-
-    .paragraphNumber {
-      font-family: Caviar, sans-serif;
-      font-size: 5rem;
-      line-height: 1.2;
-      color: #ffffff;
-    }
-
-    .paragraphTitle {
-      font-size: 1.2rem;
-      font-family: Comfortaa, sans-serif;
-      font-weight: 400;
-      color: #19a0ff;
-    }
-
-    .paragraphContent {
-      font-family: Comfortaa, sans-serif;
-      color: #7f7f7f;
-    }
   }
 
-  .wideTabsDiv {
+}
 
-    .tabContent {
-      animation: fadeIn 1.2s;
-      display: grid;
-      grid-template-columns: 15% 70% 15%;
-      padding-top: 5vh;
-      grid-column-start: 2;
-    }
 
-    .tabTitles {
-      background-color: #1e1e1e;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      border-top: 3px solid #19a0ff;
-      font-family: Comfortaa, sans-serif;
-
-      .tabName {
-        font-size: 1.4rem;
-        word-spacing: 100vw;
-        padding-right: 10px;
-        word-break: break-all;
-        text-align: right;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 23vh;
-        color: #ffffff;
-      }
-
-      .tabName:hover,
-      .enabledTitle {
-        background-color: #19a0ff;
-        color: #000000;
-        cursor: pointer;
-      }
-
-      @include not-last-child('div') {
-        border-right: 5px solid #0f0f0f;
-      }
-    }
+@media (max-width: 678px) {
+  .tabContent {
+    animation: fadeIn 1.2s;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    padding-top: 5vh;
+    grid-column-start: 2;
   }
+
 }
