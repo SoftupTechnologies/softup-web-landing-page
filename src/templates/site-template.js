@@ -96,10 +96,12 @@ const BasicTemplate = ({ pageContext }) => {
         menuItems={pageContext.menuItems}
         activeMenuItem={pageContext.title}
       />
-      <div className={"bodyTitleDiv"}>
-        <div className={"title"}>{t(pageContext.title)}</div>
+      <div className={"pageTemplate"}>
+        <div className={"bodyTitleDiv"}>
+          <div className={"title"}>{t(pageContext.title)}</div>
+        </div>
+        {generateContent(pageContext?.content)}
       </div>
-      {generateContent(pageContext?.content)}
       <Footer />
     </div>
   )

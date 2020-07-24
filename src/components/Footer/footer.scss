@@ -1,3 +1,7 @@
+.email {
+  color: #19a0ff;
+}
+
 .footerGrid {
   border-top: solid 1px #333333;
   display: grid;
@@ -11,6 +15,7 @@
 
     .footerLogo {
       width: 70px;
+      min-width: 30px;
       align-self: center;
     }
 
