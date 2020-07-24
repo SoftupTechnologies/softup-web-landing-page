@@ -5,6 +5,7 @@ import MenuNavigation from "../components/MenuNavigation"
 import { useTranslation } from "react-i18next"
 import "./site.scss"
 import classNames from "classnames"
+import { Footer } from "../components/Footer"
 
 const generateContent = pageContent => {
   const components = pageContent?.map((content, index) => {
@@ -99,6 +100,7 @@ const BasicTemplate = ({ pageContext }) => {
         <div className={"title"}>{t(pageContext.title)}</div>
       </div>
       {generateContent(pageContext?.content)}
+      <Footer />
     </div>
   )
 }

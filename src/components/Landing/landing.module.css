@@ -1,129 +1,67 @@
-/* MOBILE */
+.landing {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 40% 20% 40%;
+}
 
-@media (max-width: 600px) {
-    .landing {
-        height: 100vh;
-        display: grid;
-        grid-template-rows: 40% 20% 40%;
-    }
+.menuHeader {
+    align-items: center;
+    justify-items: center;
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 20% 80%;
+}
 
-    .menuHeader {
-        align-items: center;
-        text-align: center;
-        grid-row-start: 1;
-        display: grid;
-        grid-template-columns: 25% 50% 25%;
-        grid-template-rows: 20% 80%;
-    }
+.logo {
+    align-self: center;
+    width: 70px;
+    grid-row-start: 1;
+    grid-column-start: 2;
+}
 
-    .slogan {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    .sloganTitle {
-        letter-spacing: 1.05pt;
-        text-align: center;
-        font-family: Comfortaa, sans-serif;
-        font-size: calc(1.6rem + 1.8vw);
-        font-weight: bold;
-        line-height: 1.2;
-        color: #ffffff;
-        word-break: break-word;
-    }
+.sloganTitle {
+    letter-spacing: 1.05pt;
+    text-align: center;
+    font-family: Comfortaa, sans-serif;
+    font-size: calc(1.6rem + 1.8vw);
+    font-weight: bold;
+    line-height: 1.2;
+    color: #ffffff;
+    word-break: break-word;
+}
 
-    .sloganDesc {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 500px;
-        text-align: center;
-        font-family: Comfortaa, sans-serif;
-        font-weight: 300;
-        line-height: 1.2;
-        color: #aaaaaa;
-    }
+.sloganDesc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 500px;
+    text-align: center;
+    font-family: Comfortaa, sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #aaaaaa;
+}
 
-    .language {
-        grid-column-start: 3;
-        grid-row-start: 1;
-        text-align: center;
-    }
+.language {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    text-align: center;
+}
 
-    .logo {
-        text-align: center;
-        grid-row-start: 1;
-        grid-column-start: 2;
-    }
 
-    .burgerIcon {
-        align-self: flex-start;
-        grid-row-start: 2;
-        grid-column-start: 2;
-    }
+.burgerIcon {
+    align-self: flex-start;
+    grid-row-start: 2;
+    grid-column-start: 2;
 }
 
 /* DESKTOP */
-@media (min-width: 601px) {
-    .landing {
-        height: 100vh;
-        display: grid;
-        grid-template-rows: 40% 20% 40%;
-    }
-
-    .menuHeader {
-        align-items: center;
-        text-align: center;
-        grid-row-start: 1;
-        display: grid;
-        grid-template-columns: 45% 10% 45%;
-        grid-template-rows: 20% 80%;
-    }
-
-    .slogan {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .sloganTitle {
-        letter-spacing: 1.05pt;
-        text-align: center;
-        font-family: Comfortaa, sans-serif;
-        font-size: calc(1.6rem + 1.8vw);
-        font-weight: bold;
-        line-height: 1.2;
-        color: #ffffff;
-        word-break: break-word;
-    }
-
-    .sloganDesc {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 500px;
-        text-align: center;
-        font-family: Comfortaa, sans-serif;
-        font-weight: 300;
-        line-height: 1.2;
-        color: #aaaaaa;
-    }
-
-    .language {
-        grid-column-start: 3;
-        grid-row-start: 1;
-        text-align: center;
-    }
-
-    .logo {
-        text-align: center;
-        grid-row-start: 1;
-        grid-column-start: 2;
-    }
-
-    .burgerIcon {
-        align-self: flex-start;
-        grid-row-start: 2;
-        grid-column-start: 2;
-    }
+@media (min-width: 768px) {
 
 }

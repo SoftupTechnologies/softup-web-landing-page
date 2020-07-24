@@ -1,11 +1,12 @@
 .menuNavigationDiv {
   display: grid;
-  grid-template-columns: 15% 15% 55% 15%;
+  grid-template-columns: 5% 20% 50% 20% 5%;
   align-items: center;
   border-bottom: 1px solid #4b4a4a;
 }
 
 .logo {
+  width: 70px;
   grid-column-start: 2;
   grid-row-start: 1;
 }
@@ -37,3 +38,39 @@
 
 }
 
+@media (min-width: 768px) {
+  .menuNavigationDiv {
+    display: grid;
+    grid-template-columns: 15% 15% 55% 15%;
+    align-items: center;
+    border-bottom: 1px solid #4b4a4a;
+  }
+
+  .menuLinkDiv {
+    text-align: right;
+    grid-column-start: 3;
+    grid-row-start: 1;
+
+    a:link,
+    a:visited,
+    a:active {
+      &:hover {
+        color: #b4b4b4;
+      }
+      &.enabledMenuItem {
+        color: #ffffff;
+      }
+      font-family: Comfortaa, sans-serif;
+      white-space: nowrap;
+      color: #7d7d7d;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .link {
+      padding: 1vw;
+    }
+
+  }
+
+}
