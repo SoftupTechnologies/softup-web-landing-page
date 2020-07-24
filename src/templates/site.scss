@@ -81,17 +81,16 @@
     padding-top: 5vh;
     grid-column-start: 2;
   }
+
   .tabTitles {
     background-color: #1e1e1e;
     display: flex;
-    justify-content: space-between;
     flex-direction: row;
     border-top: 4px solid #19a0ff;
     font-family: Comfortaa, sans-serif;
 
     .tabName {
-      word-break: keep-all;
-      word-spacing: 100vw;
+      line-height: calc(1rem + 1vw);
       padding-right: 10px;
       text-align: right;
       flex: 1;
@@ -118,7 +117,7 @@
   .tabName {
     padding-left: 5px;
     font-size: calc(0.8vw + 1rem);
-    height: 25vh;
+    height: 22vh;
   }
   .tabContent {
     grid-template-columns: 15% 70% 15%;
@@ -130,7 +129,7 @@
 @media (max-width: 678px) {
   .tabName {
     padding-left: 5px;
-    height: 20vh;
+    height: 18vh;
   }
   .tabContent {
     grid-template-columns: 5% 90% 5%;

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import MenuNavigation from "../components/MenuNavigation"
 import { useTranslation } from "react-i18next"
@@ -10,7 +10,7 @@ import { Footer } from "../components/Footer"
 const generateContent = pageContent => {
   const components = pageContent?.map((content, index) => {
     const DesiredComponent = componentContainer[content.component]
-    return <DesiredComponent key={index} data={content.data} />
+    return <DesiredComponent key={index} data={content.data}/>
   })
   return <React.Fragment>{components}</React.Fragment>
 }
@@ -23,16 +23,36 @@ const TabContent = ({ itemToBeRendered }) => {
   )
 }
 
+const breakLongWords = (str) => {
+  const words = str.split(/\s+/)
+  const container = []
+  let lines = ""
+  for (let i = 0; i < words.length; ++i) {
+    if(lines.length > 7){
+      container.push(lines + '<br/>')
+      lines = words[i]
+    }
+    if(i === words.length - 1){
+      container.push(words[i])
+    }
+    lines = lines + ' ' + words[i]
+  }
+  return (
+    <div  dangerouslySetInnerHTML={{ __html: container.join(' ') }}/>
+  )
+}
+
 const WideTabs = ({ data }) => {
+  const { t } = useTranslation()
   const [selectedTab, setSetSelectedTab] = useState({
-    selected: data[0]?.tabName,
+    selected: data[0]?.tabName
   })
   const tabTitles = (
     <div className={"tabTitles"}>
       {data.map((item, index) => {
         let classes = classNames({
           tabName: true,
-          enabledTitle: item.tabName === selectedTab.selected,
+          enabledTitle: item.tabName === selectedTab.selected
         })
         return (
           <div
@@ -40,7 +60,7 @@ const WideTabs = ({ data }) => {
             key={index}
             className={classes}
           >
-            {item.tabName}
+            {breakLongWords(t(item.tabName))}
           </div>
         )
       })}
@@ -52,7 +72,7 @@ const WideTabs = ({ data }) => {
   return (
     <div className={"wideTabsDiv"}>
       {tabTitles}
-      <TabContent itemToBeRendered={itemToBeRendered} />
+      <TabContent itemToBeRendered={itemToBeRendered}/>
     </div>
   )
 }
@@ -66,6 +86,7 @@ const formatNumber = num => {
 }
 
 const NumberedParagraph = ({ data }) => {
+  const { t } = useTranslation()
   return (
     <div className={"paragraphDiv"}>
       {data?.items.map((item, index) => {
@@ -73,8 +94,8 @@ const NumberedParagraph = ({ data }) => {
           <div className={"paragraph"} key={index}>
             <div className={"paragraphNumber"}>{formatNumber(index + 1)}</div>
             <div className={"titleAndContent"}>
-              <div className={"paragraphTitle"}>{item.title}</div>
-              <div className={"paragraphContent"}>{item.description}</div>
+              <div className={"paragraphTitle"}>{t(item.title)}</div>
+              <div className={"paragraphContent"}>{t(item.description)}</div>
             </div>
           </div>
         )
@@ -85,7 +106,7 @@ const NumberedParagraph = ({ data }) => {
 
 let componentContainer = {
   horizontalTabs: WideTabs,
-  numberedParagraph: NumberedParagraph,
+  numberedParagraph: NumberedParagraph
 }
 
 const BasicTemplate = ({ pageContext }) => {
@@ -102,13 +123,13 @@ const BasicTemplate = ({ pageContext }) => {
         </div>
         {generateContent(pageContext?.content)}
       </div>
-      <Footer />
+      <Footer/>
     </div>
   )
 }
 
 BasicTemplate.propTypes = {
-  pageContext: PropTypes.object,
+  pageContext: PropTypes.object
 }
 
 export default BasicTemplate

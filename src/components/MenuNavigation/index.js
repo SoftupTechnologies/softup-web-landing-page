@@ -19,7 +19,7 @@ const MenuLinks = ({ menuItems, activeMenuItem }) => {
   const { t } = useTranslation()
   return (
     <div className={"menuLinkDiv"}>
-      {menuItems.map((item, index) => {
+      {menuItems?.map((item, index) => {
         let classes = classNames({
           link: true,
           enabledMenuItem: item.title === activeMenuItem,

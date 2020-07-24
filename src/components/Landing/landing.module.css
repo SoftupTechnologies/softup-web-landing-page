@@ -5,11 +5,11 @@
 }
 
 .menuHeader {
+    height: 10vh;
     align-items: center;
     grid-row-start: 1;
     display: grid;
     grid-template-columns: 25% 50% 25%;
-    grid-template-rows: 17% 83%;
 }
 
 .logo {
