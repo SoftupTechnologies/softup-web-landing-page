@@ -4,17 +4,66 @@
   justify-content: space-evenly;
   align-items: center;
   height: max-content;
+  border-top: solid 1px #333333;
 }
 
 .question {
   color: #7d7d7d;
-  padding: 10px;
+  padding: 70px;
   font-weight: 300;
   font-size: 2rem;
   line-height: 2rem;
   font-family: "Comfortaa", sans-serif;
-  .whiteProject{
+
+  .whiteProject {
     font-weight: bold;
     color: #ffffff;
+  }
+}
+
+.submitButton {
+  max-width: 80px;
+  min-width: 80px;
+  transform: translate(-42px, 50px);
+  overflow: hidden;
+}
+
+.submitForm {
+  padding-left: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.emailForm {
+  font-family: Comfortaa, sans-serif;
+  border-left: solid 5px #333333;
+  border-right: solid 5px #333333;
+  border-top: solid 5px #333333;
+  align-items: center;
+  margin-bottom: 0;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputField {
+  padding-top: 40px;
+  &:focus, &focus-active {
+    outline: none;
+  }
+  border: none;
+  margin: 10px;
+  color: #ffffff;
+  border-bottom: 1px solid #333333;
+  background-color: #0f0f0f;
+}
+
+@media (min-width: 678px) {
+  .inputField {
+    max-width: 700px;
+    width: 500px;
   }
 }

@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next"
 import "./site.scss"
 import classNames from "classnames"
 import { Footer } from "../components/Footer"
+import { ContactUs } from "../components/Contact"
 
 const generateContent = pageContent => {
   const components = pageContent?.map((content, index) => {
@@ -125,6 +126,7 @@ const BasicTemplate = ({ pageContext }) => {
         </div>
         {generateContent(pageContext?.content)}
       </div>
+      <ContactUs />
       <Footer/>
     </div>
   )

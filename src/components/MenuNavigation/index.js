@@ -1,6 +1,6 @@
 import React from "react"
 import { LanguageMenu } from "../LangSwitch"
-import SoftupLogoSvg from "../../images/softup-logo-crop.svg"
+import SoftupLogoSvg from "../../images/softup-logo.svg"
 import "./manu-navigation.scss"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"

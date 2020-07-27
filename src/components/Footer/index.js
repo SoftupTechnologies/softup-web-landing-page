@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import SoftupLogoSvg from "../../images/softup-logo-crop.svg"
+import SoftupLogoSvg from "../../images/softup-logo.svg"
 import "./footer.scss"
 
 const SoftupLogo = () => {
