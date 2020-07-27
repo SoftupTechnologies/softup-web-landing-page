@@ -26,19 +26,21 @@ const TabContent = ({ itemToBeRendered }) => {
 const breakLongWords = (str) => {
   const words = str.split(/\s+/)
   const container = []
-  let lines = ""
-  for (let i = 0; i < words.length; ++i) {
-    if(lines.length > 7){
-      container.push(lines + '<br/>')
-      lines = words[i]
+  let line = ""
+  words.forEach((word, index) => {
+    console.log(line)
+    if(line !== "") {
+      line = line + '<br/>' + word
+    } else {
+      line = word;
     }
-    if(i === words.length - 1){
-      container.push(words[i])
+    if (line.length > 8 || index === words.length - 1) {
+      container.push(line)
+      line = ""
     }
-    lines = lines + ' ' + words[i]
-  }
+  })
   return (
-    <div  dangerouslySetInnerHTML={{ __html: container.join(' ') }}/>
+    <div dangerouslySetInnerHTML={{ __html: container.join(" ") }}/>
   )
 }
 
