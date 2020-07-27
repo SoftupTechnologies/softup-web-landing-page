@@ -15,7 +15,7 @@
     .initialContainer:hover,
     .disabledContainer:hover {
         cursor: pointer;
-        a {
+        a, .number {
             color: #19a0ff;
         }
     }
@@ -35,6 +35,7 @@
 }
 
 .initialTitle {
+    text-align: right;
     font-family: Comfortaa, sans-serif;
     font-size: 1.6em;
     padding-bottom: 1vh;
@@ -149,7 +150,6 @@
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-between;
         border: 1px solid #4b4a4a;
     }

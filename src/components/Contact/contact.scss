@@ -26,6 +26,9 @@
   min-width: 80px;
   transform: translate(-42px, 50px);
   overflow: hidden;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .submitForm {
