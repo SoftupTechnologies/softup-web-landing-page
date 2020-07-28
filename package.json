@@ -40,7 +40,7 @@
     "eslint-loader": "^4.0.2",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-react": "^7.20.3",
-    "gatsby-cli": "^2.12.65",
+    "gatsby-cli": "^2.12.67",
     "gatsby-plugin-eslint": "^2.0.8",
     "prettier": "2.0.5"
   },
