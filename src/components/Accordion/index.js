@@ -14,7 +14,7 @@ export const AccordionSlide = ({
   content,
   slideInfo,
   setSlideInfo,
-  componentId
+  componentId,
 }) => {
   const { t } = useTranslation()
   const slideIsActive = slideInfo.activeSlideNumber === componentId
@@ -23,18 +23,18 @@ export const AccordionSlide = ({
   let sliderDivClasses = classNames({
     slideContainer: true,
     inactive: !slideIsActive,
-    uninitialized: uninitializedSlides
+    uninitialized: uninitializedSlides,
   })
 
   let titleClasses = classNames({
     title: true,
     active: slideIsActive,
-    inactive: !slideIsActive
+    inactive: !slideIsActive,
   })
 
   const toggleAccordion = () => {
     setSlideInfo({
-      activeSlideNumber: componentId
+      activeSlideNumber: componentId,
     })
   }
 
@@ -75,8 +75,8 @@ export const Accordion = () => {
 export const AccordionMenu = () => {
   return (
     <div id={"accordion-menu"} className={"accordionMenuContainer"}>
-      <CompanyNumbers/>
-      <Accordion/>
+      <CompanyNumbers />
+      <Accordion />
     </div>
   )
 }
@@ -88,5 +88,5 @@ AccordionSlide.propTypes = {
   content: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   slideInfo: PropTypes.object,
   setSlideInfo: PropTypes.func,
-  componentId: PropTypes.number
+  componentId: PropTypes.number,
 }
