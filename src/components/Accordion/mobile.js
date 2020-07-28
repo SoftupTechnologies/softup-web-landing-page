@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "./accordion.scss"
+import "./mobile.scss"
 import PropTypes from "prop-types"
 import { CompanyNumbers } from "../CompanyNumbers"
 import { Link } from "gatsby"
@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next"
 import navData from "../../../content/page-data.json"
 import classNames from "classnames"
 
-export const AccordionSlide = ({
+export const MobileAccordionSlide = ({
   link,
   number,
   title,
@@ -21,7 +21,7 @@ export const AccordionSlide = ({
   const uninitializedSlides = slideInfo.activeSlideNumber === null
 
   let sliderDivClasses = classNames({
-    slideContainer: true,
+    mobileSlideContainer: true,
     inactive: !slideIsActive,
     uninitialized: uninitializedSlides,
   })
@@ -40,24 +40,24 @@ export const AccordionSlide = ({
 
   return (
     <div onClick={toggleAccordion} className={sliderDivClasses}>
-      <div className={"number"}>{number}</div>
       <div className={"contentAndTitle"}>
         <div className={titleClasses}>
           <Link to={link}>{t(title)}</Link>
         </div>
         {slideIsActive ? <div className={"slideContent"}>{content}</div> : null}
       </div>
+      <div className={"number"}>{number}</div>
     </div>
   )
 }
 
-export const Accordion = () => {
+const MobileAccordion = () => {
   const [slideInfo, setSlideInfo] = useState({ activeSlideNumber: null })
 
   return (
-    <div className={"accordionContainer"}>
+    <div className={"mobileAccordionContainer"}>
       {navData.map((slide, index) => (
-        <AccordionSlide
+        <MobileAccordionSlide
           link={slide.link}
           componentId={index}
           key={index}
@@ -72,16 +72,16 @@ export const Accordion = () => {
   )
 }
 
-export const DesktopAccordionMenu = () => {
+export const MobileAccordionMenu = () => {
   return (
-    <div id={"accordion-menu"} className={"accordionMenuContainer"}>
+    <div id={"accordion-menu"} className={"mobileAccordionMenuContainer"}>
       <CompanyNumbers />
-      <Accordion />
+      <MobileAccordion />
     </div>
   )
 }
 
-AccordionSlide.propTypes = {
+MobileAccordionSlide.propTypes = {
   link: PropTypes.string,
   number: PropTypes.string,
   title: PropTypes.string,

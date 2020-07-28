@@ -1,0 +1,70 @@
+.mobileAccordionMenuContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileAccordionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileSlideContainer {
+  color: #7f7f7f;
+  border-top: solid 1px #333333;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10px 0 10px;
+  .number {
+    padding-top: 10px;
+  }
+  .contentAndTitle {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-family: Comfortaa, sans-serif;
+  }
+
+  &.inactive {
+    align-items: center;
+    .number {
+      padding-top: 0;
+    }
+  }
+  &.uninitialized {
+    align-items: center;
+    .number {
+      padding-top: 0;
+    }
+  }
+
+  .title {
+    padding: 5px 0 5px 0;
+    color: #19a0ff;
+    font-family: Comfortaa, sans-serif;
+    font-size: 1.5rem;
+
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      color: #19a0ff;
+      pointer-events: visible;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    &.inactive {
+      a:hover,
+      a:link,
+      a:visited,
+      a:active {
+        transition: color .8s;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #7d7d7d;
+        pointer-events: none;
+        cursor: default;
+      }
+    }
+  }
+}
