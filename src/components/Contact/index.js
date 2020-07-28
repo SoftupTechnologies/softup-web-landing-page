@@ -9,18 +9,30 @@ export const ContactUs = () => {
     <div className={"contactUsDiv"}>
       <div className={"question"}>
         <div>
-          Want to start a <br/>
+          Want to start a <br />
           <a className={"whiteProject"}>project</a> with us?
         </div>
       </div>
       <div className={"submitForm"}>
         <form action="" method="post" className={"emailForm"}>
-          <input type={"text"} placeholder={t("name")} className={"inputField"}/>
-          <input type={"email"} placeholder={t("e-mail")} className={"inputField"}/>
-          <input type={"text"} placeholder={t("phone number")} className={"inputField"}/>
+          <input
+            type={"text"}
+            placeholder={t("name")}
+            className={"inputField"}
+          />
+          <input
+            type={"email"}
+            placeholder={t("e-mail")}
+            className={"inputField"}
+          />
+          <input
+            type={"text"}
+            placeholder={t("phone number")}
+            className={"inputField"}
+          />
         </form>
         {/* eslint-disable-next-line no-undef */}
-        <div className={"submitButton"} onClick={() => (console.log("submit"))}><SubmitButton/></div>
+        {/*<div className={"submitButton"} onClick={() => (console.log("submit"))}><SubmitButton/></div>*/}
       </div>
     </div>
   )

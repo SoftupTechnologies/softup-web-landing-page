@@ -1,35 +1,11 @@
-@font-face {
-  font-family: "Caviar";
-  src: url('../fonts/caviar_dreams/CaviarDreams.ttf');
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@mixin not-last-child($selector) {
-  & #{$selector}:not(:last-child) {
-    @content;
-  }
-}
-
-.pageTemplate {
-  min-height: 60vh;
-}
-
 .bodyTitleDiv {
   align-items: center;
   font-family: Comfortaa, sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   display: grid;
-  grid-template-columns: 15% 85%;
-  height: 25vh;
-
+  grid-template-columns: 5% 95%;
+  height: 15vh;
+  padding-bottom: 5vh;
   .title {
     color: #ffffff;
     text-decoration: underline;
@@ -38,101 +14,11 @@
   }
 }
 
-.paragraphDiv {
-  grid-column-start: 2;
-
-  .paragraph {
-    padding-top: 4vh;
-  }
-
-  .titleAndContent {
-    display: flex;
-    flex-direction: column;
-    transform: translate(25px, -40px);
-    background-color: #0f0f0f;
-    padding: 10px;
-    max-width: calc(100% - 25px);
-  }
-
-  .paragraphNumber {
-    font-family: Caviar, sans-serif;
-    font-size: 5rem;
-    line-height: 1.2;
-    color: #ffffff;
-  }
-
-  .paragraphTitle {
-    font-size: 1.2rem;
-    font-family: Comfortaa, sans-serif;
-    font-weight: 400;
-    color: #19a0ff;
-  }
-
-  .paragraphContent {
-    font-family: Comfortaa, sans-serif;
-    color: #7f7f7f;
-  }
-}
-
-.wideTabsDiv {
-  .tabContent {
-    animation: fadeIn 1.2s;
-    display: grid;
-    padding-top: 5vh;
-    grid-column-start: 2;
-  }
-
-  .tabTitles {
-    background-color: #1e1e1e;
-    display: flex;
-    flex-direction: row;
-    border-top: 4px solid #19a0ff;
-    font-family: Comfortaa, sans-serif;
-
-    .tabName {
-      line-height: calc(1rem + 1vw);
-      padding-right: 10px;
-      text-align: right;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      color: #ffffff;
-    }
-
-    .tabName:hover,
-    .enabledTitle {
-      background-color: #19a0ff;
-      color: #000000;
-      cursor: pointer;
-    }
-
-    @include not-last-child('div') {
-      border-right: 5px solid #0f0f0f;
-    }
-  }
-}
 
 @media (min-width: 679px) {
-  .tabName {
-    padding-left: 5px;
-    font-size: calc(0.8vw + 1rem);
-    height: 22vh;
+  .bodyTitleDiv {
+    grid-template-columns: 15% 85%;
+    height: 25vh;
+    font-size: 3rem;
   }
-  .tabContent {
-    grid-template-columns: 15% 70% 15%;
-  }
-
-}
-
-
-@media (max-width: 678px) {
-  .tabName {
-    padding-left: 5px;
-    height: 18vh;
-  }
-  .tabContent {
-    grid-template-columns: 5% 90% 5%;
-  }
-
 }

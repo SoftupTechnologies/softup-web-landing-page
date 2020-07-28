@@ -10,7 +10,8 @@ import SoftupLogoSvg from "../../images/softup-logo.svg"
 export const Slogan = ({ slogan, description }) => {
   return (
     <div className={landingStyles.slogan}>
-      <span className={landingStyles.sloganTitle}>{slogan}<span className={landingStyles.point}/></span>
+      {/*<span className={landingStyles.sloganTitle}>{slogan}<span className={landingStyles.point}/></span>*/}
+      {<span className={landingStyles.sloganTitle}>{slogan}</span>}
       <div className={landingStyles.sloganDesc}>{description}</div>
     </div>
   )

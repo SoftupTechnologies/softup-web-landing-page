@@ -1,23 +1,22 @@
 import React from "react"
 import { LanguageMenu } from "../LangSwitch"
 import SoftupLogoSvg from "../../images/softup-logo.svg"
-import "./manu-navigation.scss"
+import "./mobile.scss"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 import PropTypes from "prop-types"
 import classNames from "classnames"
-import { isMobile } from "../helpers"
-import MobileNavigation from "./mobile"
+import Burger from "../../images/burger.svg"
 
 const SoftupLogo = () => {
   return (
-    <Link to={"/"} className={"logo"}>
+    <Link to={"/"} className={"mobileSoftupLogo"}>
       <SoftupLogoSvg />
     </Link>
   )
 }
 
-const MenuLinks = ({ menuItems, activeMenuItem }) => {
+const MobileMenuLinks = ({ menuItems, activeMenuItem }) => {
   const { t } = useTranslation()
   return (
     <div className={"menuLinkDiv"}>
@@ -36,24 +35,17 @@ const MenuLinks = ({ menuItems, activeMenuItem }) => {
   )
 }
 
-const MenuNavigation = ({ menuItems, activeMenuItem }) => {
-  // eslint-disable-next-line no-undef
-  console.log(isMobile)
-  if (isMobile) {
-    return (
-      <MobileNavigation menuItems={menuItems} activeMenuItem={activeMenuItem} />
-    )
-  }
+const MobileNavigation = ({ menuItems, activeMenuItem }) => {
   return (
-    <div className={"menuNavigationDiv"}>
-      <SoftupLogo />
-      <MenuLinks menuItems={menuItems} activeMenuItem={activeMenuItem} />
-      <LanguageMenu gridColumnStart={"4"} />
+    <div className={"mobileMenuDiv"}>
+      <SoftupLogo className={"mobileSoftupLogo"} />
+      <Burger />
+      {/*<MobileMenuLinks menuItems={menuItems} activeMenuItem={activeMenuItem} />*/}
     </div>
   )
 }
 
-MenuLinks.propTypes = {
+MobileMenuLinks.propTypes = {
   menuItems: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
@@ -63,7 +55,7 @@ MenuLinks.propTypes = {
   activeMenuItem: PropTypes.string,
 }
 
-MenuNavigation.propTypes = {
+MobileNavigation.propTypes = {
   menuItems: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
@@ -73,4 +65,4 @@ MenuNavigation.propTypes = {
   activeMenuItem: PropTypes.string,
 }
 
-export default MenuNavigation
+export default MobileNavigation

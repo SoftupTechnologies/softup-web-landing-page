@@ -29,6 +29,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-eslint`,
     {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: `softup-website-v3`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [`Comfortaa\:300,400,400i,700`, `source sans pro`, `Bebas Neue`],

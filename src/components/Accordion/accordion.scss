@@ -1,7 +1,6 @@
 .accordionMenuContainer {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     a:hover,
     a:link,
     a:visited,
@@ -115,6 +114,9 @@
 /* desktop */
 
 @media (min-width: 601px) {
+    .accordionMenuContainer{
+        height: 100vh;
+    }
     .accordionContainer {
         flex: 1;
         display: flex;
