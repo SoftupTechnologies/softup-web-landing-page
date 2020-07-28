@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useState } from "react"
 import PropTypes from "prop-types"
 import MenuNavigation from "../components/MenuNavigation"
@@ -10,20 +9,27 @@ import { generateContent } from "../components/helpers"
 
 const BasicTemplate = ({ pageContext }) => {
   const { t } = useTranslation()
+  const [menuType, setMenuType] = useState({ showMobileMenu: false })
   return (
     <div>
       <MenuNavigation
         menuItems={pageContext.menuItems}
         activeMenuItem={pageContext.title}
+        menuType={menuType}
+        setMenuType={setMenuType}
       />
-      <div className={"pageTemplate"}>
-        <div className={"bodyTitleDiv"}>
-          <div className={"title"}>{t(pageContext.title)}</div>
-        </div>
-        {generateContent(pageContext?.content)}
-      </div>
-      <ContactUs />
-      <Footer />
+      {!menuType.showMobileMenu ? (
+        <React.Fragment>
+          <div className={"pageTemplate"}>
+            <div className={"bodyTitleDiv"}>
+              <div className={"title"}>{t(pageContext.title)}</div>
+            </div>
+            {generateContent(pageContext?.content)}
+          </div>
+          <ContactUs />
+          <Footer />
+        </React.Fragment>
+      ) : null}
     </div>
   )
 }

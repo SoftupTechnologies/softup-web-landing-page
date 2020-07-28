@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next"
 import React from "react"
 import { formatNumber } from "../helpers"
 import PropTypes from "prop-types"
-import './numbered-paragraph.scss'
+import "./numbered-paragraph.scss"
 
 export const NumberedParagraph = ({ data }) => {
   const { t } = useTranslation()

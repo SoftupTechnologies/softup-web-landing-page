@@ -1,5 +1,4 @@
 import React from "react"
-import { LanguageMenu } from "../LangSwitch"
 import SoftupLogoSvg from "../../images/softup-logo.svg"
 import "./mobile.scss"
 import { Link } from "gatsby"
@@ -11,48 +10,82 @@ import Burger from "../../images/burger.svg"
 const SoftupLogo = () => {
   return (
     <Link to={"/"} className={"mobileSoftupLogo"}>
-      <SoftupLogoSvg />
+      <SoftupLogoSvg/>
     </Link>
+  )
+}
+
+const NumberUnderlined = ({ number, isActive }) => {
+  let classes = classNames({
+    mobileMenuNumber: true,
+    mobileMenuNumberActive: isActive
+  })
+  return (
+    <span className={classes}>{number}</span>
   )
 }
 
 const MobileMenuLinks = ({ menuItems, activeMenuItem }) => {
   const { t } = useTranslation()
   return (
-    <div className={"menuLinkDiv"}>
-      {menuItems?.map((item, index) => {
-        let classes = classNames({
-          link: true,
-          enabledMenuItem: item.title === activeMenuItem,
-        })
-        return (
-          <Link className={classes} key={index} to={item.link}>
-            {t(item.title)}
-          </Link>
-        )
-      })}
+    <div className={"centerLinks"}>
+      <div className={"mobileMenuLinksDiv"}>
+        {menuItems?.map((item, index) => {
+          let classes = classNames({
+            link: true,
+            enabledMenuItem: item.title === activeMenuItem
+          })
+          return (
+            <Link className={classes} key={index} to={item.link}>
+              <NumberUnderlined number={item.number} isActive={item.title === activeMenuItem}/>
+              {t(item.title)}
+            </Link>
+          )
+        })}
+      </div>
     </div>
   )
 }
 
-const MobileNavigation = ({ menuItems, activeMenuItem }) => {
+const MobileNavigation = ({
+  menuItems,
+  activeMenuItem,
+  setMenuType,
+  menuType
+}) => {
   return (
-    <div className={"mobileMenuDiv"}>
-      <SoftupLogo className={"mobileSoftupLogo"} />
-      <Burger />
-      {/*<MobileMenuLinks menuItems={menuItems} activeMenuItem={activeMenuItem} />*/}
+    <div>
+      <div className={"mobileMenuDiv"}>
+        <SoftupLogo className={"mobileSoftupLogo"}/>
+        <Burger
+          onClick={() =>
+            setMenuType({ showMobileMenu: !menuType.showMobileMenu })
+          }
+        />
+      </div>
+      {menuType.showMobileMenu ? (
+        <MobileMenuLinks
+          menuItems={menuItems}
+          activeMenuItem={activeMenuItem}
+        />
+      ) : null}
     </div>
   )
+}
+
+NumberUnderlined.propTypes = {
+  number: PropTypes.string,
+  isActive: PropTypes.bool
 }
 
 MobileMenuLinks.propTypes = {
   menuItems: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
-      link: PropTypes.string,
+      link: PropTypes.string
     })
   ),
-  activeMenuItem: PropTypes.string,
+  activeMenuItem: PropTypes.string
 }
 
 MobileNavigation.propTypes = {
@@ -60,9 +93,12 @@ MobileNavigation.propTypes = {
     PropTypes.shape({
       title: PropTypes.string,
       link: PropTypes.string,
+      number: PropTypes.string
     })
   ),
-  activeMenuItem: PropTypes.string,
+  menuType: PropTypes.object,
+  setMenuType: PropTypes.func,
+  activeMenuItem: PropTypes.string
 }
 
 export default MobileNavigation

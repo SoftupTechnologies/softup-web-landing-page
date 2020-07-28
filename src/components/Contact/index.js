@@ -20,6 +20,10 @@ export const ContactUs = () => {
             placeholder={t("name")}
             className={"inputField"}
           />
+          {/* eslint-disable-next-line no-undef */}
+          <div className={"submitButton"} onClick={() => console.log("submit")}>
+            <SubmitButton />
+          </div>
           <input
             type={"email"}
             placeholder={t("e-mail")}
@@ -32,7 +36,6 @@ export const ContactUs = () => {
           />
         </form>
         {/* eslint-disable-next-line no-undef */}
-        {/*<div className={"submitButton"} onClick={() => (console.log("submit"))}><SubmitButton/></div>*/}
       </div>
     </div>
   )

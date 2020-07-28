@@ -11,6 +11,7 @@ exports.createPages = ({ boundActionCreators }) => {
   const menuItems = data.map(current => ({
     title: current.title,
     link: current.link,
+    number: current.number,
   }))
   // Create pages for each JSON entry.
   data.forEach(({ title, link, content }) => {

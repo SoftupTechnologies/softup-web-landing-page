@@ -36,12 +36,20 @@ const MenuLinks = ({ menuItems, activeMenuItem }) => {
   )
 }
 
-const MenuNavigation = ({ menuItems, activeMenuItem }) => {
-  // eslint-disable-next-line no-undef
-  console.log(isMobile)
+const MenuNavigation = ({
+  menuItems,
+  activeMenuItem,
+  menuType,
+  setMenuType,
+}) => {
   if (isMobile) {
     return (
-      <MobileNavigation menuItems={menuItems} activeMenuItem={activeMenuItem} />
+      <MobileNavigation
+        menuItems={menuItems}
+        activeMenuItem={activeMenuItem}
+        menuType={menuType}
+        setMenuType={setMenuType}
+      />
     )
   }
   return (
@@ -68,8 +76,11 @@ MenuNavigation.propTypes = {
     PropTypes.shape({
       title: PropTypes.string,
       link: PropTypes.string,
+      number: PropTypes.string,
     })
   ),
+  menuType: PropTypes.object,
+  setMenuType: PropTypes.func,
   activeMenuItem: PropTypes.string,
 }
 

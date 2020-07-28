@@ -14,7 +14,7 @@
   font-size: 2rem;
   line-height: 2rem;
   font-family: "Comfortaa", sans-serif;
-
+  text-align: center;
   .whiteProject {
     font-weight: bold;
     color: #ffffff;
@@ -24,17 +24,12 @@
 .submitButton {
   max-width: 80px;
   min-width: 80px;
-  transform: translate(-42px, 50px);
+  position: absolute;
+  transform: translate(132px, 150px);
   overflow: hidden;
   &:hover {
     cursor: pointer;
   }
-}
-
-.submitForm {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 .emailForm {
@@ -56,6 +51,7 @@
   &:focus, &focus-active {
     outline: none;
   }
+  width: 200px;
   border: none;
   margin: 10px;
   color: #ffffff;
@@ -65,7 +61,18 @@
 
 @media (min-width: 678px) {
   .inputField {
-    max-width: 700px;
     width: 500px;
   }
+  .submitButton {
+    max-width: 80px;
+    min-width: 80px;
+    position: absolute;
+    overflow: hidden;
+    transform: translate(282px, 150px);
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+
 }
