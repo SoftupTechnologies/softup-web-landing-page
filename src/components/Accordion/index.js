@@ -5,6 +5,7 @@ import { CompanyNumbers } from "../CompanyNumbers"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 import navData from "../../../content/page-data.json"
+import classNames from "classnames"
 
 export const AccordionSlide = ({
   link,
@@ -13,49 +14,39 @@ export const AccordionSlide = ({
   content,
   slideInfo,
   setSlideInfo,
-  componentId,
+  componentId
 }) => {
   const { t } = useTranslation()
-  let fillerDiv = <></>
+  const slideIsActive = slideInfo.activeSlideNumber === componentId
+  const uninitializedSlides = slideInfo.activeSlideNumber === null
 
-  let style = {
-    slideContainer: "disabledContainer",
-    title: "disabledTitle",
-    slideContent: "disabledContent",
-  }
+  let sliderDivClasses = classNames({
+    slideContainer: true,
+    inactive: !slideIsActive,
+    uninitialized: uninitializedSlides
+  })
 
-  if (slideInfo.activeSlideNumber === componentId) {
-    style.slideContainer = "enabledContainer"
-    style.contentAndTitle = "enabledContentAndTitle"
-    style.title = "enabledTitle"
-    style.slideContent = "enabledContent"
-    fillerDiv = <div className={"bottom"} />
-  }
-
-  if (slideInfo.activeSlideNumber === null) {
-    style.slideContainer = "initialContainer"
-    style.title = "initialTitle"
-    style.slideContent = "disabledContent"
-
-    fillerDiv = <div className={"bottom"} />
-  }
+  let titleClasses = classNames({
+    title: true,
+    active: slideIsActive,
+    inactive: !slideIsActive
+  })
 
   const toggleAccordion = () => {
     setSlideInfo({
-      activeSlideNumber: componentId,
+      activeSlideNumber: componentId
     })
   }
 
   return (
-    <div onClick={toggleAccordion} className={style.slideContainer}>
+    <div onClick={toggleAccordion} className={sliderDivClasses}>
       <div className={"number"}>{number}</div>
-      <div className={style.contentAndTitle}>
-        <div className={style.title}>
+      <div className={"contentAndTitle"}>
+        <div className={titleClasses}>
           <Link to={link}>{t(title)}</Link>
         </div>
-        <div className={style.slideContent}>{content}</div>
+        {slideIsActive ? <div className={"slideContent"}>{content}</div> : null}
       </div>
-      {fillerDiv}
     </div>
   )
 }
@@ -84,8 +75,8 @@ export const Accordion = () => {
 export const AccordionMenu = () => {
   return (
     <div id={"accordion-menu"} className={"accordionMenuContainer"}>
-      <CompanyNumbers />
-      <Accordion />
+      <CompanyNumbers/>
+      <Accordion/>
     </div>
   )
 }
@@ -97,5 +88,5 @@ AccordionSlide.propTypes = {
   content: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   slideInfo: PropTypes.object,
   setSlideInfo: PropTypes.func,
-  componentId: PropTypes.number,
+  componentId: PropTypes.number
 }

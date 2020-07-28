@@ -10,7 +10,7 @@ import Burger from "../../images/burger.svg"
 const SoftupLogo = () => {
   return (
     <Link to={"/"} className={"mobileSoftupLogo"}>
-      <SoftupLogoSvg/>
+      <SoftupLogoSvg />
     </Link>
   )
 }
@@ -18,11 +18,9 @@ const SoftupLogo = () => {
 const NumberUnderlined = ({ number, isActive }) => {
   let classes = classNames({
     mobileMenuNumber: true,
-    mobileMenuNumberActive: isActive
+    mobileMenuNumberActive: isActive,
   })
-  return (
-    <span className={classes}>{number}</span>
-  )
+  return <span className={classes}>{number}</span>
 }
 
 const MobileMenuLinks = ({ menuItems, activeMenuItem }) => {
@@ -33,11 +31,14 @@ const MobileMenuLinks = ({ menuItems, activeMenuItem }) => {
         {menuItems?.map((item, index) => {
           let classes = classNames({
             link: true,
-            enabledMenuItem: item.title === activeMenuItem
+            enabledMenuItem: item.title === activeMenuItem,
           })
           return (
             <Link className={classes} key={index} to={item.link}>
-              <NumberUnderlined number={item.number} isActive={item.title === activeMenuItem}/>
+              <NumberUnderlined
+                number={item.number}
+                isActive={item.title === activeMenuItem}
+              />
               {t(item.title)}
             </Link>
           )
@@ -51,12 +52,12 @@ const MobileNavigation = ({
   menuItems,
   activeMenuItem,
   setMenuType,
-  menuType
+  menuType,
 }) => {
   return (
     <div>
       <div className={"mobileMenuDiv"}>
-        <SoftupLogo className={"mobileSoftupLogo"}/>
+        <SoftupLogo className={"mobileSoftupLogo"} />
         <Burger
           onClick={() =>
             setMenuType({ showMobileMenu: !menuType.showMobileMenu })
@@ -75,17 +76,17 @@ const MobileNavigation = ({
 
 NumberUnderlined.propTypes = {
   number: PropTypes.string,
-  isActive: PropTypes.bool
+  isActive: PropTypes.bool,
 }
 
 MobileMenuLinks.propTypes = {
   menuItems: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
-      link: PropTypes.string
+      link: PropTypes.string,
     })
   ),
-  activeMenuItem: PropTypes.string
+  activeMenuItem: PropTypes.string,
 }
 
 MobileNavigation.propTypes = {
@@ -93,12 +94,12 @@ MobileNavigation.propTypes = {
     PropTypes.shape({
       title: PropTypes.string,
       link: PropTypes.string,
-      number: PropTypes.string
+      number: PropTypes.string,
     })
   ),
   menuType: PropTypes.object,
   setMenuType: PropTypes.func,
-  activeMenuItem: PropTypes.string
+  activeMenuItem: PropTypes.string,
 }
 
 export default MobileNavigation
