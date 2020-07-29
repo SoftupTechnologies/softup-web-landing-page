@@ -16,6 +16,14 @@
             {
               "link": "/services#extended-team",
               "name": "EXTENDED TEAM"
+            },
+            {
+              "link": "/services#workshops",
+              "name": "WORkSHOPS"
+            },
+            {
+              "link": "/services#mvp-in-10-days",
+              "name": "MVP IN 10 DAYS"
             }
           ]
         }
@@ -120,8 +128,12 @@
           "component": "slideLinks",
           "data": [
             {
-              "link": "",
-              "iconUrl": ""
+              "link": "/expertise#proptech",
+              "name": "PROPTECH"
+            },
+            {
+              "link": "/expertise#human-resources",
+              "name": "HUMAN RESOURCES"
             }
           ]
         }
@@ -132,7 +144,8 @@
         "component": "horizontalTabs",
         "data": [
           {
-            "tabName": "Our expertise",
+            "tabName": "proptech.",
+            "slug": "proptech",
             "content": [
               {
                 "component": "numberedParagraph",
@@ -152,7 +165,8 @@
             ]
           },
           {
-            "tabName": "product development. 2",
+            "tabName": "human resources.",
+            "slug": "human-resources",
             "content": [
               {
                 "component": "numberedParagraph",

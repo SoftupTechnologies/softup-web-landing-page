@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next"
-import React from "react"
+import React, { useEffect } from "react"
 import classNames from "classnames"
 import { breakLongWords, generateContent } from "../helpers"
 import PropTypes from "prop-types"
@@ -15,15 +15,15 @@ const TabContent = ({ itemToBeRendered }) => {
 
 export const WideTabs = ({ data }) => {
   const { t } = useTranslation()
-  const windowLocHash = window.location.hash.slice(
-    1,
-    window.location.hash.length
-  ) || data[0].slug
+  const windowLocHash =
+    window.location.hash.slice(1, window.location.hash.length) || data[0].slug
 
   const itemToBeRendered = data.find(item => item.slug === windowLocHash)
-
+  useEffect(() => {
+    window.scroll(0, 0)
+  })
   const tabTitles = (
-    <div className={"tabTitles"} id={itemToBeRendered.slug}>
+    <div className={"tabTitles"} >
       {data.map((item, index) => {
         let classes = classNames({
           tabName: true,

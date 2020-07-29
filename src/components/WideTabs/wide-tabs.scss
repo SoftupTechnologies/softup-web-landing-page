@@ -32,8 +32,9 @@
 }
 
 .tabTitles {
+  padding-left: 15vw;
+  padding-right: 15vw;
   flex: 1;
-  background-color: #1e1e1e;
   display: flex;
   flex-direction: row;
   border-top: 4px solid #19a0ff;
@@ -47,6 +48,7 @@
 }
 
 .tabName {
+  background-color: #1e1e1e;
   line-height: calc(1rem + 1vw);
   padding-right: 10px;
   text-align: right;
@@ -76,6 +78,8 @@
 
 @media (max-width: 768px) {
   .tabTitles {
+    padding-left: 0;
+    padding-right: 0;
     flex-wrap: wrap;
     @include even('div') {
       border-left: 5px solid #0f0f0f;

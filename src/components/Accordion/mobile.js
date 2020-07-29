@@ -6,6 +6,8 @@ import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 import navData from "../../../content/page-data.json"
 import classNames from "classnames"
+import { SlideLinks } from "./SlideLinks"
+import { generateContent } from "../helpers"
 
 export const MobileAccordionSlide = ({
   link,
@@ -15,6 +17,7 @@ export const MobileAccordionSlide = ({
   slideInfo,
   setSlideInfo,
   componentId,
+  content,
 }) => {
   const { t } = useTranslation()
   const slideIsActive = slideInfo.activeSlideNumber === componentId
@@ -45,7 +48,10 @@ export const MobileAccordionSlide = ({
           <Link to={link}>{t(title)}</Link>
         </div>
         {slideIsActive ? (
-          <div className={"slideContent"}>{description}</div>
+          <React.Fragment>
+            <div className={"slideContent"}>{description}</div>
+            {generateContent(content)}
+          </React.Fragment>
         ) : null}
       </div>
       <div className={"number"}>{number}</div>
@@ -68,6 +74,7 @@ const MobileAccordion = () => {
           number={slide.number}
           slideInfo={slideInfo}
           setSlideInfo={setSlideInfo}
+          content={slide.accordionContent.content}
         />
       ))}
     </div>
@@ -91,4 +98,5 @@ MobileAccordionSlide.propTypes = {
   slideInfo: PropTypes.object,
   setSlideInfo: PropTypes.func,
   componentId: PropTypes.number,
+  content: PropTypes.array,
 }
