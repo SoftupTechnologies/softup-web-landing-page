@@ -13,13 +13,19 @@ exports.createPages = ({ boundActionCreators }) => {
     link: current.link,
     number: current.number,
   }))
+
   // Create pages for each JSON entry.
-  data.forEach(({ title, link, content }) => {
+  data.forEach(({ title, link, content, accordionContent }) => {
+    const slugContainer = accordionContent.content.find(
+      item => item.component === "slideLinks"
+    )
+    const accordionSlugs = slugContainer.data.map(el => el.link.split("#")[1])
     const path = title.slice(0, -1)
     createPage({
       path,
       component: template,
       context: {
+        accordionSlugs,
         title,
         link,
         content,

@@ -15,15 +15,13 @@ const TabContent = ({ itemToBeRendered }) => {
 
 export const WideTabs = ({ data }) => {
   const { t } = useTranslation()
+  const locationHash = window.location.hash
   const windowLocHash =
-    window.location.hash.slice(1, window.location.hash.length) || data[0].slug
+    locationHash.slice(1, locationHash.length) || data[0].slug
 
   const itemToBeRendered = data.find(item => item.slug === windowLocHash)
-  useEffect(() => {
-    window.scroll(0, 0)
-  })
   const tabTitles = (
-    <div className={"tabTitles"} >
+    <div className={"tabTitles"} id={itemToBeRendered.slug}>
       {data.map((item, index) => {
         let classes = classNames({
           tabName: true,

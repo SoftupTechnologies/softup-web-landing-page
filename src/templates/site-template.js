@@ -12,7 +12,10 @@ const BasicTemplate = ({ pageContext }) => {
   const { t } = useTranslation()
   const [menuType, setMenuType] = useState({ showMobileMenu: false })
   return (
-    <div>
+    <div id="top">
+      {pageContext.accordionSlugs.map((slug, index) => {
+        return <div key={index} id={slug} />
+      })}
       <MenuNavigation
         menuItems={pageContext.menuItems}
         activeMenuItem={pageContext.title}
