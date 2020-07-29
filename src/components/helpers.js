@@ -1,6 +1,7 @@
 import React from "react"
 import { WideTabs } from "./WideTabs"
 import { NumberedParagraph } from "./NumberedParagraph"
+import { SlideLinks } from "./Accordion/SlideLinks"
 
 export const formatNumber = num => {
   const stringNum = parseInt(num, 10).toString()
@@ -16,6 +17,7 @@ export const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 let componentContainer = {
   horizontalTabs: WideTabs,
   numberedParagraph: NumberedParagraph,
+  slideLinks: SlideLinks,
 }
 
 export const generateContent = pageContent => {

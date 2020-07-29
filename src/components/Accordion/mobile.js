@@ -11,7 +11,7 @@ export const MobileAccordionSlide = ({
   link,
   number,
   title,
-  content,
+  description,
   slideInfo,
   setSlideInfo,
   componentId,
@@ -44,7 +44,7 @@ export const MobileAccordionSlide = ({
         <div className={titleClasses}>
           <Link to={link}>{t(title)}</Link>
         </div>
-        {slideIsActive ? <div className={"slideContent"}>{content}</div> : null}
+        {slideIsActive ? <div className={"slideContent"}>{description}</div> : null}
       </div>
       <div className={"number"}>{number}</div>
     </div>
@@ -62,7 +62,7 @@ const MobileAccordion = () => {
           componentId={index}
           key={index}
           title={slide.title}
-          content={slide.accordionContent}
+          description={slide.accordionContent.description}
           number={slide.number}
           slideInfo={slideInfo}
           setSlideInfo={setSlideInfo}
@@ -85,7 +85,7 @@ MobileAccordionSlide.propTypes = {
   link: PropTypes.string,
   number: PropTypes.string,
   title: PropTypes.string,
-  content: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  description: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   slideInfo: PropTypes.object,
   setSlideInfo: PropTypes.func,
   componentId: PropTypes.number,

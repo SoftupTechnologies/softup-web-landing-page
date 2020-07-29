@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 
 export const LanguageMenu = ({ gridColumnStart }) => {
   const { i18n } = useTranslation()
-  const lang = i18n.language
+  const lang = i18n.languages[0]
 
   const [values, setValues] = useState({
     language: lang,
