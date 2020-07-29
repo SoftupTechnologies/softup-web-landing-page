@@ -10,7 +10,7 @@ import { MobileAccordionMenu } from "../components/Accordion/mobile"
 const IndexPage = () => (
   <PageLayout>
     <Landing />
-    { isMobile ? <MobileAccordionMenu /> : <DesktopAccordionMenu />}
+    {isMobile ? <MobileAccordionMenu /> : <DesktopAccordionMenu />}
     <ContactUs />
     <Footer />
   </PageLayout>

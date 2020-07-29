@@ -44,7 +44,9 @@ export const MobileAccordionSlide = ({
         <div className={titleClasses}>
           <Link to={link}>{t(title)}</Link>
         </div>
-        {slideIsActive ? <div className={"slideContent"}>{description}</div> : null}
+        {slideIsActive ? (
+          <div className={"slideContent"}>{description}</div>
+        ) : null}
       </div>
       <div className={"number"}>{number}</div>
     </div>

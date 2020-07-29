@@ -16,7 +16,7 @@ export const AccordionSlide = ({
   slideInfo,
   setSlideInfo,
   componentId,
-  content
+  content,
 }) => {
   const { t } = useTranslation()
   const slideIsActive = slideInfo.activeSlideNumber === componentId
