@@ -6,6 +6,7 @@ import "./site.scss"
 import { Footer } from "../components/Footer"
 import { ContactUs } from "../components/Contact"
 import { generateContent } from "../components/helpers"
+import SEO from "../components/seo"
 
 const BasicTemplate = ({ pageContext }) => {
   const { t } = useTranslation()
@@ -20,6 +21,7 @@ const BasicTemplate = ({ pageContext }) => {
       />
       {!menuType.showMobileMenu ? (
         <React.Fragment>
+          <SEO title={t(pageContext.title)} />
           <div className={"pageTemplate"}>
             <div className={"bodyTitleDiv"}>
               <div className={"title"}>{t(pageContext.title)}</div>

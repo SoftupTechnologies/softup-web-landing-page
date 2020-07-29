@@ -26,7 +26,7 @@ i18next
     defaultNS: "translations",
     returnObjects: true,
     // eslint-disable-next-line no-undef
-    debug: "development" === process.env.NODE_ENV,
+    debug: false,
     react: {
       wait: true,
     },

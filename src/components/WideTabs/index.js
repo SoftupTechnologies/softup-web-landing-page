@@ -1,7 +1,8 @@
+/* eslint-disable */
 import { useTranslation } from "react-i18next"
 import React, { useState } from "react"
 import classNames from "classnames"
-import { generateContent, breakLongWords } from "../helpers"
+import { breakLongWords, generateContent } from "../helpers"
 import PropTypes from "prop-types"
 import "./wide-tabs.scss"
 
@@ -16,20 +17,29 @@ const TabContent = ({ itemToBeRendered }) => {
 export const WideTabs = ({ data }) => {
   const { t } = useTranslation()
   const [selectedTab, setSetSelectedTab] = useState({
-    selected: data[0]?.tabName,
+    selected: data[0]?.tabName
   })
+
+  const itemToBeRendered = data.find(
+    item => item.tabName === selectedTab.selected
+  )
+
   const tabTitles = (
     <div className={"tabTitles"}>
       {data.map((item, index) => {
         let classes = classNames({
           tabName: true,
-          enabledTitle: item.tabName === selectedTab.selected,
+          enabledTitle: item.tabName === selectedTab.selected
         })
         return (
           <div
-            onClick={() => setSetSelectedTab({ selected: item.tabName })}
+            defaultValue={item.tabName}
+            onClick={() => {
+              setSetSelectedTab({ selected: item.tabName })
+            }}
             key={index}
             className={classes}
+            id={item.tabName}
           >
             {breakLongWords(t(item.tabName))}
           </div>
@@ -37,21 +47,19 @@ export const WideTabs = ({ data }) => {
       })}
     </div>
   )
-  const itemToBeRendered = data.find(
-    item => item.tabName === selectedTab.selected
-  )
+
   return (
     <div className={"wideTabsDiv"}>
       {tabTitles}
-      <TabContent itemToBeRendered={itemToBeRendered} />
+      <TabContent itemToBeRendered={itemToBeRendered}/>
     </div>
   )
 }
 
 TabContent.propTypes = {
-  itemToBeRendered: PropTypes.object,
+  itemToBeRendered: PropTypes.object
 }
 
 WideTabs.propTypes = {
-  data: PropTypes.array,
+  data: PropTypes.array
 }

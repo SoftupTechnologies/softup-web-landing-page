@@ -10,8 +10,12 @@
           "component": "slideLinks",
           "data": [
             {
-              "link": "/services",
-              "iconUrl": ""
+              "link": "/services#product-development",
+              "name": "PRODUCT DEVELOPMENT"
+            },
+            {
+              "link": "/services#extended-team",
+              "name": "EXTENDED TEAM"
             }
           ]
         }
@@ -23,6 +27,7 @@
         "data": [
           {
             "tabName": "product development.",
+            "slug": "product-development",
             "content": [
               {
                 "component": "numberedParagraph",
@@ -43,6 +48,7 @@
           },
           {
             "tabName": "extended team.",
+            "slug": "extended-team",
             "content": [
               {
                 "component": "numberedParagraph",
@@ -63,6 +69,7 @@
           },
           {
             "tabName": "workshops.",
+            "slug": "workshops",
             "content": [
               {
                 "component": "numberedParagraph",
@@ -79,6 +86,7 @@
           },
           {
             "tabName": "mvp in 10 days.",
+            "slug": "mvp-in-10-days",
             "content": [
               {
                 "component": "numberedParagraph",
