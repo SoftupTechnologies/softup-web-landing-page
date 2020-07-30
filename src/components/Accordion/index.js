@@ -60,9 +60,12 @@ export const AccordionSlide = ({
 
 export const Accordion = () => {
   const [slideInfo, setSlideInfo] = useState({ activeSlideNumber: null })
-
+  let accordionContainerClasses = classNames({
+    accordionContainer: true,
+    uninitialized: slideInfo.activeSlideNumber === null,
+  })
   return (
-    <div className={"accordionContainer"}>
+    <div className={accordionContainerClasses}>
       {navData.map((slide, index) => (
         <AccordionSlide
           link={slide.link}

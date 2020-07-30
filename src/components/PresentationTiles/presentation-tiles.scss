@@ -1,0 +1,59 @@
+.presentationItemsDiv {
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(2, [col-start] 35vw [col-end]);
+  grid-auto-rows: 25vw;
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  justify-content: center;
+  align-content: center;
+  padding-bottom: 10vh;
+}
+
+.presentationItem {
+  color: #ffffff;
+  font-family: Comfortaa, sans-serif;
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .companyLogo {
+    min-width: 100px;
+  }
+
+  &:hover {
+    .companyName,
+    .companyDescription {
+      color: #000000;
+    }
+    .companyLogo {
+      -webkit-filter: invert(1);
+      filter: invert(1);
+    }
+    .companySeparator {
+      background-color: #000000;
+    }
+    cursor: pointer;
+    background-color: #19a0ff;
+  }
+
+  .companySeparator {
+    margin: 8px;
+    width: 100px;
+    height: 1px;
+    background-color: #7f7f7f;
+  }
+
+  .companyName {
+    padding-bottom: 5px;
+    color: #7f7f7f;
+  }
+
+  .companyDescription{
+    text-align: center;
+    font-size: 12px;
+    max-width: 200px;
+  }
+
+}

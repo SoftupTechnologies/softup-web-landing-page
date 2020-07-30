@@ -2,6 +2,7 @@ import React from "react"
 import { WideTabs } from "./WideTabs"
 import { NumberedParagraph } from "./NumberedParagraph"
 import { SlideLinks } from "./Accordion/SlideLinks"
+import { PresentationTiles } from "./PresentationTiles"
 
 export const formatNumber = num => {
   const stringNum = parseInt(num, 10).toString()
@@ -18,6 +19,7 @@ let componentContainer = {
   horizontalTabs: WideTabs,
   numberedParagraph: NumberedParagraph,
   slideLinks: SlideLinks,
+  presentationTiles: PresentationTiles,
 }
 
 export const generateContent = pageContent => {

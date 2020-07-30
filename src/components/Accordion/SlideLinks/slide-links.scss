@@ -1,16 +1,19 @@
 .slideLinksDiv{
-  padding-top: 100px;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   display: flex;
   flex-direction: column;
   width: max-content;
   a:link,
   a:visited,
-  a:hover,
   a:active {
     color: #7f7f7f;
     pointer-events: visible;
     cursor: pointer;
     text-decoration: none;
+  }
+  a:hover{
+    color: #19a0ff;
   }
 }
 
