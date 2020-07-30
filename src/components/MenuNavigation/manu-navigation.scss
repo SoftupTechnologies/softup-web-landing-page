@@ -5,8 +5,10 @@
 }
 
 .menuNavigationDiv {
+  padding-left: 10px;
+  padding-right: 10px;
   display: grid;
-  grid-template-columns: 15% 15% 55% 15%;
+  grid-template-columns:  1fr 100px minmax(100px , 1100px) 1fr;
   align-items: center;
   border-bottom: 1px solid #4b4a4a;
 }

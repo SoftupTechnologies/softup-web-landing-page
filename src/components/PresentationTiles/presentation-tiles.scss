@@ -1,8 +1,8 @@
 .presentationItemsDiv {
   align-self: center;
   display: grid;
-  grid-template-columns: repeat(2, [col-start] 35vw [col-end]);
-  grid-auto-rows: 25vw;
+  grid-template-columns: repeat(2, [col-start] minmax(max-content, 600px) [col-end]);
+  grid-auto-rows: minmax(max-content, 400px);
   grid-column-gap: 8px;
   grid-row-gap: 8px;
   justify-content: center;
