@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next"
-import React, { useEffect } from "react"
+import React from "react"
 import classNames from "classnames"
 import { breakLongWords, generateContent } from "../helpers"
 import PropTypes from "prop-types"

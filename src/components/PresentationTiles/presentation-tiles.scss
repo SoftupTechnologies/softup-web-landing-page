@@ -1,8 +1,13 @@
-.presentationItemsDiv {
-  align-self: center;
+.presentationWrapper{
   display: grid;
-  grid-template-columns: repeat(2, [col-start] minmax(max-content, 600px) [col-end]);
-  grid-auto-rows: minmax(max-content, 400px);
+  grid-template-columns:  minmax(50px, 1fr) minmax(0, 1000px) minmax(50px, 1fr);
+}
+
+.presentationItemsDiv {
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(2, [row-start] minmax(0, 500px) [row-end]);
+  grid-auto-rows: minmax(0, 350px);
   grid-column-gap: 8px;
   grid-row-gap: 8px;
   justify-content: center;
@@ -56,4 +61,20 @@
     max-width: 200px;
   }
 
+}
+
+
+@media (max-width: 768px) {
+  .presentationWrapper{
+    grid-template-columns:  minmax(20px, 1fr) minmax(0, 1000px) minmax(20px, 1fr);
+    grid-auto-rows: minmax(max-content, 350px);
+    padding-bottom: 2vh;
+  }
+
+
+  .presentationItemsDiv {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }

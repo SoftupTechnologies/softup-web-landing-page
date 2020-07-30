@@ -15,7 +15,11 @@ export const PresentationTiles = ({ data }) => {
     )
   })
 
-  return <div className={"presentationItemsDiv"}>{items}</div>
+  return (
+    <div className={"presentationWrapper"}>
+      <div className={"presentationItemsDiv"}>{items}</div>
+    </div>
+  )
 }
 
 PresentationTiles.propTypes = {

@@ -3,15 +3,16 @@
   font-family: Comfortaa, sans-serif;
   font-size: 2rem;
   display: grid;
-  grid-template-columns: 5% 95%;
+  grid-template-columns: minmax(20px, 1fr) minmax(max-content, 1000px) minmax(20px, 1fr);
   height: 15vh;
-  padding-bottom: 5vh;
+  padding-bottom: 2vh;
   .title {
     color: #ffffff;
     text-decoration: underline;
     text-decoration-color: #19a0ff;
     grid-column-start: 2;
   }
+  border-bottom: solid 1px #333333;
 }
 
 .pageTemplate {
@@ -20,9 +21,9 @@
   animation: fadeIn 0.8s;
 }
 
-@media (min-width: 679px) {
+@media (min-width: 768px) {
   .bodyTitleDiv {
-    grid-template-columns: 1fr 1200px 1fr;
+    grid-template-columns: minmax(50px, 1fr) minmax(max-content, 1000px) minmax(50px, 1fr);
     height: 25vh;
     font-size: 3rem;
   }

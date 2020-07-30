@@ -10,8 +10,9 @@
 }
 
 .langMenu {
+    margin-left: 5px;
+    padding-right: 5px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding-right: 1vh;
 }

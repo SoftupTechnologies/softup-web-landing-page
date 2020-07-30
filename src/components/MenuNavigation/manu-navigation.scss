@@ -5,10 +5,8 @@
 }
 
 .menuNavigationDiv {
-  padding-left: 10px;
-  padding-right: 10px;
   display: grid;
-  grid-template-columns:  1fr 100px minmax(100px , 1100px) 1fr;
+  grid-template-columns: minmax(50px, 1fr) 100px minmax(max-content , 900px)  minmax(100px, 1fr);
   align-items: center;
   border-bottom: 1px solid #4b4a4a;
 }
@@ -17,7 +15,6 @@
   text-align: right;
   grid-column-start: 3;
   grid-row-start: 1;
-
   a:link,
   a:visited,
   a:active {
