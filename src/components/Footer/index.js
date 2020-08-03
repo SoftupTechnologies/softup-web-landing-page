@@ -33,9 +33,15 @@ export const Footer = () => {
         </div>
         <div className={"footerSection"}>
           <div className={"sectionTitle"}>ABOUT</div>
-          <div className={"sectionRow"}>Portfolio</div>
-          <div className={"sectionRow"}>Blog</div>
-          <div className={"sectionRow"}>We are hiring!</div>
+          <div className={"sectionRow"}>
+            <Link to={"/portfolio"}>Portfolio</Link>
+          </div>
+          <div className={"sectionRow"}>
+            <Link to={"/blog"}>Blog</Link>
+          </div>
+          <div className={"sectionRow"}>
+            <Link to={"/career"}>We are hiring!</Link>
+          </div>
         </div>
         <div className={"footerSection"}>
           <div className={"sectionTitle"}>LEGAL</div>

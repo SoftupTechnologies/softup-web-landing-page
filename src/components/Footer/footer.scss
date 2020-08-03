@@ -34,6 +34,18 @@
       }
 
       .sectionRow {
+        a,
+        a:link,
+        a:visited,
+        a:active {
+          color: #ffffff;
+          pointer-events: visible;
+          cursor: pointer;
+          text-decoration: none;
+        }
+        a:hover {
+          color: #19a0ff;
+        }
         padding-top: 5px;
         padding-bottom: 5px;
         color: #ffffff;

@@ -34,7 +34,16 @@ const MobileMenuLinks = ({ menuItems, activeMenuItem }) => {
             enabledMenuItem: item.title === activeMenuItem,
           })
           return (
-            <Link className={classes} key={index} to={item.link}>
+            <Link
+              className={classes}
+              key={index}
+              to={item.link}
+              getProps={({ isPartiallyCurrent }) =>
+                isPartiallyCurrent
+                  ? { className: "link enabledMenuItem" }
+                  : { className: "link" }
+              }
+            >
               <NumberUnderlined
                 number={item.number}
                 isActive={item.title === activeMenuItem}

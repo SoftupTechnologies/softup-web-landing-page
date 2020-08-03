@@ -20,15 +20,33 @@ exports.createPages = ({ boundActionCreators }) => {
       item => item.component === "slideLinks"
     )
     const accordionSlugs = slugContainer.data.map(el => el.link.split("#")[1])
-    const path = title.slice(0, -1)
+    const pagePath = title.slice(0, -1)
     createPage({
-      path,
+      path: pagePath,
       component: template,
       context: {
+        showTitleInBody: true,
         accordionSlugs,
         title,
         link,
         content,
+        menuItems,
+      },
+    })
+  })
+
+  const portfolioContent = data.find(item => item.title === "portfolio.")
+  const portfolioItems = portfolioContent.content.find(
+    item => item.component === "presentationTiles"
+  )
+  const portfolioPages = portfolioItems.data
+  portfolioPages.forEach(({ title, link, content }) => {
+    createPage({
+      path: link,
+      component: template,
+      context: {
+        showTitleInBody: false,
+        title,
         menuItems,
       },
     })

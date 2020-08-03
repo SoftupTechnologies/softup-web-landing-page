@@ -12,8 +12,10 @@ export const formatNumber = num => {
   return stringNum
 }
 
-// eslint-disable-next-line no-undef
-export const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+export const isMobile =
+  typeof navigator !== "undefined"
+    ? /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+    : null
 
 let componentContainer = {
   horizontalTabs: WideTabs,

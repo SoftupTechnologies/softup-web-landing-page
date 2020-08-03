@@ -1,7 +1,7 @@
 import React from "react"
 import { LanguageMenu } from "../LangSwitch"
 import SoftupLogoSvg from "../../images/softup-logo.svg"
-import "./manu-navigation.scss"
+import "./menu-navigation.scss"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 import PropTypes from "prop-types"
@@ -22,12 +22,17 @@ const MenuLinks = ({ menuItems, activeMenuItem }) => {
   return (
     <div className={"menuLinkDiv"}>
       {menuItems?.map((item, index) => {
-        let classes = classNames({
-          link: true,
-          enabledMenuItem: item.title === activeMenuItem,
-        })
         return (
-          <Link className={classes} key={index} to={item.link}>
+          <Link
+            className={"link"}
+            key={index}
+            to={item.link}
+            getProps={({ isPartiallyCurrent }) =>
+              isPartiallyCurrent
+                ? { className: "link enabledMenuItem" }
+                : { className: "link" }
+            }
+          >
             {t(item.title)}
           </Link>
         )

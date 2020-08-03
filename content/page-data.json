@@ -214,26 +214,31 @@
           {
             "iconFilename": "last-supper.png",
             "title": "REALCUBE",
+            "link": "/portfolio/realcube",
             "description": "Property data for owners"
           },
           {
             "iconFilename": "last-supper.png",
             "title": "LAST SUPPER",
+            "link": "/portfolio/last-supper",
             "description": "Restaurant management system & client apps"
           },
           {
             "iconFilename": "staffboard.png",
             "title": "STAFFBOARD",
+            "link": "/portfolio/staffboard",
             "description": "The software for HR Designers"
           },
           {
             "iconFilename": "salt.png",
             "title": "SALT",
+            "link": "/portfolio/salt",
             "description": "Fancy restaurant"
           },
           {
             "iconFilename": "moma.png",
             "title": "MOMA",
+            "link": "/portfolio/moma",
             "description": "Easily access your local deals"
           }
         ]

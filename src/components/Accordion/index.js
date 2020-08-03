@@ -25,6 +25,7 @@ export const AccordionSlide = ({
   let sliderDivClasses = classNames({
     slideContainer: true,
     inactive: !slideIsActive,
+    active: slideIsActive,
     uninitialized: uninitializedSlides,
   })
 

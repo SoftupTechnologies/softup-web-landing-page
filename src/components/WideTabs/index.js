@@ -15,7 +15,12 @@ const TabContent = ({ itemToBeRendered }) => {
 
 export const WideTabs = ({ data }) => {
   const { t } = useTranslation()
-  const locationHash = window.location.hash
+  let locationHash
+  if (typeof window !== "undefined") {
+    locationHash = window.location.hash
+  } else {
+    return null
+  }
   const windowLocHash =
     locationHash.slice(1, locationHash.length) || data[0].slug
 

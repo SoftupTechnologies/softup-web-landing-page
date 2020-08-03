@@ -13,7 +13,7 @@ const BasicTemplate = ({ pageContext }) => {
   const [menuType, setMenuType] = useState({ showMobileMenu: false })
   return (
     <div id="top">
-      {pageContext.accordionSlugs.map((slug, index) => {
+      {pageContext?.accordionSlugs?.map((slug, index) => {
         return <div key={index} id={slug} />
       })}
       <MenuNavigation
@@ -26,9 +26,11 @@ const BasicTemplate = ({ pageContext }) => {
         <React.Fragment>
           <SEO title={t(pageContext.title)} />
           <div className={"pageTemplate"}>
-            <div className={"bodyTitleDiv"}>
-              <div className={"title"}>{t(pageContext.title)}</div>
-            </div>
+            {pageContext?.showTitleInBody ? (
+              <div className={"bodyTitleDiv"}>
+                <div className={"title"}>{t(pageContext.title)}</div>
+              </div>
+            ) : null}
             {generateContent(pageContext?.content)}
           </div>
           <ContactUs />
