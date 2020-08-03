@@ -259,16 +259,20 @@
                     "title": "TECHNOLOGIES WE USED",
                     "type": "list",
                     "items": [
-                      "Concept",
-                      "UI /UX",
-                      "Rapid Prototyping",
-                      "AI/ML Development"
+                      "AWS",
+                      "React",
+                      "Node.js"
                     ]
                   },
                   {
                     "title": "INCREASE IN BETA USERS",
                     "type": "fact",
                     "description": "250%"
+                  },
+                  {
+                    "title": "Hour GAP analysis",
+                    "type": "fact",
+                    "description": "48h"
                   }
                 ]
               }

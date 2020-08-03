@@ -1,0 +1,39 @@
+.quickFactsContainer {
+  grid-column-start: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  align-items: center;
+  justify-content: center;
+}
+
+.itemContainer {
+  padding-top: calc(2vw);
+  padding-bottom: calc(2vw);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    width: 100px;
+    padding: 10px;
+    color: #7d7d7d;
+    font-family: "Bebas Neue", sans-serif;
+  }
+  .content {
+    //min-height: 100px;
+    border-left: 1px solid #19a0ff;
+    color: #ffffff;
+    padding-left: 2vw;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    .description {
+      font-size: 50px;
+      line-height: 50px;
+    }
+  }
+}
