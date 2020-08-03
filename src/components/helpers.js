@@ -3,6 +3,10 @@ import { WideTabs } from "./WideTabs"
 import { NumberedParagraph } from "./NumberedParagraph"
 import { SlideLinks } from "./Accordion/SlideLinks"
 import { PresentationTiles } from "./PresentationTiles"
+import { HeaderImage } from "./PortfolioTools/HeaderImage"
+import { QuickDescription } from "./PortfolioTools/QuickDescription"
+import { ClientDivider } from "./PortfolioTools/ClientDivider"
+import { QuickFacts } from "./PortfolioTools/QuickFacts"
 
 export const formatNumber = num => {
   const stringNum = parseInt(num, 10).toString()
@@ -22,6 +26,10 @@ let componentContainer = {
   numberedParagraph: NumberedParagraph,
   slideLinks: SlideLinks,
   presentationTiles: PresentationTiles,
+  headerImage: HeaderImage,
+  quickDescription: QuickDescription,
+  clientDivider: ClientDivider,
+  quickFacts: QuickFacts,
 }
 
 export const generateContent = pageContent => {

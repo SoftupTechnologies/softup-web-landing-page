@@ -23,7 +23,7 @@
 
 @media (min-width: 768px) {
   .bodyTitleDiv {
-    grid-template-columns: minmax(50px, 1fr) minmax(max-content, 1000px) minmax(50px, 1fr);
+    grid-template-columns: minmax(20px, 1fr) minmax(max-content, 1000px) minmax(20px, 1fr);
     height: 25vh;
     font-size: 3rem;
   }

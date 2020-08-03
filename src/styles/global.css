@@ -1,3 +1,8 @@
+.displayWithGrid {
+    display: grid;
+    grid-template-columns:  minmax(50px, 1fr) minmax(0, 1000px) minmax(50px, 1fr);
+}
+
 html {
     background-color: #0f0f0f;
 }

@@ -1,0 +1,22 @@
+.clientDividerGrid {
+  align-items: center;
+  grid-template-rows: calc(10vh + 10vw);
+}
+
+.clientDividerDiv {
+  grid-column-start: 2;
+  .client {
+    color: #7d7d7d;
+    font-family: "Bebas Neue", sans-serif;
+  }
+  .separator {
+    border-top: 1px solid #19a0ff;
+    width: 100%;
+    padding-bottom: 5px;
+  }
+  .clientName {
+    font-weight: bold;
+    font-family: "Caviar", sans-serif;
+    color: #ffffff;
+  }
+}

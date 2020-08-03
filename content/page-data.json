@@ -19,7 +19,7 @@
             },
             {
               "link": "/services#workshops",
-              "name": "WORkSHOPS"
+              "name": "WORKSHOPS"
             },
             {
               "link": "/services#mvp-in-10-days",
@@ -215,7 +215,64 @@
             "iconFilename": "last-supper.png",
             "title": "REALCUBE",
             "link": "/portfolio/realcube",
-            "description": "Property data for owners"
+            "description": "Property data for owners",
+            "content": [
+              {
+                "component": "headerImage",
+                "data": [
+                  {
+                    "imageFileName": "realcube.png"
+                  }
+                ]
+              },
+              {
+                "component": "quickDescription",
+                "data": [
+                  {
+                    "title": "Hassle-free Scaling",
+                    "description": "The REALCUBE team is composed of true veterans in the Real Estate software space. Both cofounders have previously started and exited successful startups in the past. REALCUBE is a refined attempt at starting something from their hearts."
+                  }
+                ]
+              },
+              {
+                "component": "clientDivider",
+                "data": [
+                  {
+                    "client": "REALCUBE"
+                  }
+                ]
+              },
+              {
+                "component": "quickFacts",
+                "data": [
+                  {
+                    "title": "WHAT WE DID",
+                    "type": "list",
+                    "items": [
+                      "Concept",
+                      "UI /UX",
+                      "Rapid Prototyping",
+                      "AI/ML Development"
+                    ]
+                  },
+                  {
+                    "title": "TECHNOLOGIES WE USED",
+                    "type": "list",
+                    "items": [
+                      "Concept",
+                      "UI /UX",
+                      "Rapid Prototyping",
+                      "AI/ML Development"
+                    ]
+                  },
+                  {
+                    "title": "INCREASE IN BETA USERS",
+                    "type": "fact",
+                    "description": "250%"
+                  }
+                ]
+              }
+            ]
           },
           {
             "iconFilename": "last-supper.png",

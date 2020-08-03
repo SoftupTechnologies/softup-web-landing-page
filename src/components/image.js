@@ -29,7 +29,13 @@ export const Image = props => (
       if (!image) {
         return null
       }
-      return <Img alt={props.alt} fluid={image.node.childImageSharp.fluid} />
+      return (
+        <Img
+          imgStyle={{ maxHeight: "500px" }}
+          alt={props.alt}
+          fluid={image.node.childImageSharp.fluid}
+        />
+      )
     }}
   />
 )

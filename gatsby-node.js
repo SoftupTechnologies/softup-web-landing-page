@@ -48,6 +48,7 @@ exports.createPages = ({ boundActionCreators }) => {
         showTitleInBody: false,
         title,
         menuItems,
+        content,
       },
     })
   })

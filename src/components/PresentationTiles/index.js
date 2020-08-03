@@ -8,8 +8,10 @@ export const PresentationTiles = ({ data }) => {
   const items = data.map((item, index) => {
     return (
       <Link key={index} className={"presentationItem"} to={item.link}>
-        <div className={"companyLogo"}><Image alt="Gatsby in Space" filename={item.iconFilename}/></div>
-        <div className={"companySeparator"}/>
+        <div className={"companyLogo"}>
+          <Image filename={item.iconFilename} />
+        </div>
+        <div className={"companySeparator"} />
         <div className={"companyName"}>{item.title}</div>
         <div className={"companyDescription"}>{item.description}</div>
       </Link>
