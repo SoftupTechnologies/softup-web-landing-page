@@ -1,4 +1,9 @@
 .slideLinksDiv{
+  .arrow {
+    align-self: flex-end;
+    text-align: right;
+    visibility: hidden;
+  }
   padding-top: 5vh;
   padding-bottom: 5vh;
   display: flex;
@@ -13,6 +18,9 @@
     text-decoration: none;
   }
   a:hover{
+    .arrow {
+      visibility: visible;
+    }
     color: #19a0ff;
   }
 }

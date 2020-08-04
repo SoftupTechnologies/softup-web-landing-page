@@ -1,6 +1,6 @@
 .clientDividerGrid {
   align-items: center;
-  grid-template-rows: calc(10vh + 10vw);
+  margin-top: 5vw;
 }
 
 .clientDividerDiv {
@@ -13,10 +13,5 @@
     border-top: 1px solid #19a0ff;
     width: 100%;
     padding-bottom: 5px;
-  }
-  .clientName {
-    font-weight: bold;
-    font-family: "Caviar", sans-serif;
-    color: #ffffff;
   }
 }

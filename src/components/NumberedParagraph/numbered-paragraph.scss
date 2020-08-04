@@ -11,6 +11,7 @@
   }
 
   .titleAndContent {
+    font-family: Comfortaa, sans-serif;
     display: flex;
     flex-direction: column;
     transform: translate(25px, -40px);
@@ -28,13 +29,12 @@
 
   .paragraphTitle {
     font-size: 1.2rem;
-    font-family: Comfortaa, sans-serif;
     font-weight: 400;
     color: #19a0ff;
   }
 
   .paragraphContent {
-    font-family: Comfortaa, sans-serif;
+    font-size: 16px;
     color: #7f7f7f;
   }
 }

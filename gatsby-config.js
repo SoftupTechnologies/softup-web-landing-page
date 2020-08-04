@@ -35,27 +35,15 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts-v2`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: 'Comfortaa',
-            variable: true,
-            weights: ['200..900']
-          },
-          {
-            family: 'Bebas Neue',
-          },
-          {
-            family: 'Roboto',
-            variable: true,
-            weights: ['100..900']
-          },
-          {
-            family: 'Source Sans Pro'
-          }
-        ]
-      }
+          `Comfortaa\:300,400,400i,700`,
+          `Roboto\:100,200`,
+          `source sans pro`,
+          `Bebas Neue`,
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,

@@ -9,6 +9,7 @@ export const SlideLinks = ({ data }) => {
       {data.map((item, index) => (
         <Link key={index} to={item.link} className={"slideItemLink"}>
           {item.name}
+          {item.name ? <span className={"arrow"}>→</span> : null}
         </Link>
       ))}
     </div>

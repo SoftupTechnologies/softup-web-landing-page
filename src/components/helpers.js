@@ -5,8 +5,9 @@ import { SlideLinks } from "./Accordion/SlideLinks"
 import { PresentationTiles } from "./PresentationTiles"
 import { HeaderImage } from "./PortfolioTools/HeaderImage"
 import { QuickDescription } from "./PortfolioTools/QuickDescription"
-import { ClientDivider } from "./PortfolioTools/ClientDivider"
+import { NamedDivider } from "./PortfolioTools/NamedDivider"
 import { QuickFacts } from "./PortfolioTools/QuickFacts"
+import { ClientName } from "./PortfolioTools/ClientName"
 
 export const formatNumber = num => {
   const stringNum = parseInt(num, 10).toString()
@@ -28,8 +29,9 @@ let componentContainer = {
   presentationTiles: PresentationTiles,
   headerImage: HeaderImage,
   quickDescription: QuickDescription,
-  clientDivider: ClientDivider,
+  namedDivider: NamedDivider,
   quickFacts: QuickFacts,
+  clientName: ClientName,
 }
 
 export const generateContent = pageContent => {

@@ -15,6 +15,7 @@
 .logo {
     justify-self: center;
     width: 70px;
+    max-height: 70px;
     grid-row-start: 1;
     grid-column-start: 2;
 }
