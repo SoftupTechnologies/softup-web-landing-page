@@ -5,6 +5,8 @@
 }
 
 .menuHeader {
+    padding-bottom: 10px;
+    padding-top: 10px;
     height: 10vh;
     align-items: center;
     grid-row-start: 1;

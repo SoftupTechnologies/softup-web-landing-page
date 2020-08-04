@@ -5,7 +5,6 @@ import "./menu-navigation.scss"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 import PropTypes from "prop-types"
-import classNames from "classnames"
 import { isMobile } from "../helpers"
 import MobileNavigation from "./mobile"
 
@@ -17,7 +16,7 @@ const SoftupLogo = () => {
   )
 }
 
-const MenuLinks = ({ menuItems, activeMenuItem }) => {
+const MenuLinks = ({ menuItems }) => {
   const { t } = useTranslation()
   return (
     <div className={"menuLinkDiv"}>

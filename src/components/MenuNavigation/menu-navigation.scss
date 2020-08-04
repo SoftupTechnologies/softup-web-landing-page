@@ -8,6 +8,8 @@
 .menuNavigationDiv {
   display: grid;
   grid-template-columns: minmax(30px, 1fr) 100px minmax(max-content , 900px)  minmax(80px, 1fr);
+  padding-top: 10px;
+  padding-bottom: 10px;
   align-items: center;
   border-bottom: 1px solid #4b4a4a;
 }

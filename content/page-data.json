@@ -305,6 +305,38 @@
                     "The result was a mobile app that was a slow, unresponsive and bug prone app. He contacted Softup with the hope to fix most of the pressing issues and bugs."
                   ]
                 }
+              },
+              {
+                "component": "namedDivider",
+                "data": {
+                  "title": "THE SOLUTION"
+                }
+              },
+              {
+                "component": "paragraphAndImage",
+                "data": {
+                  "title": "Fixed issues",
+                  "imageName": "alarm-mobile.png",
+                  "imagePosition": "right",
+                  "paragraphs": [
+                    "One of our senior consultants quickly got to work and delivered within 48 hours a list of issues some known but most of them unknown, that needed to be handled right away for the app to be presentable in front of potential customers and investors.",
+                    "All the issues were fixed in the next two weeks and shortly after Cleu was able to get a new batch of Beta users to the platform.",
+                    "The founder would decide to work exclusively with Softup going forward in order to maintain the high performance and reliability of the mobile app. He scaled his development team at Softup with 3 developers working full time in order to make Cleu the most promising product in its niche."
+                  ]
+                }
+              },
+              {
+                "component": "paragraphAndImage",
+                "data": {
+                  "title": "Fixed issues",
+                  "imageName": "alarm-mobile.png",
+                  "imagePosition": "left",
+                  "paragraphs": [
+                    "One of our senior consultants quickly got to work and delivered within 48 hours a list of issues some known but most of them unknown, that needed to be handled right away for the app to be presentable in front of potential customers and investors.",
+                    "All the issues were fixed in the next two weeks and shortly after Cleu was able to get a new batch of Beta users to the platform.",
+                    "The founder would decide to work exclusively with Softup going forward in order to maintain the high performance and reliability of the mobile app. He scaled his development team at Softup with 3 developers working full time in order to make Cleu the most promising product in its niche."
+                  ]
+                }
               }
             ]
           },

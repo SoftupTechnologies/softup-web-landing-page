@@ -31,7 +31,7 @@ export const Image = props => (
       }
       return (
         <Img
-          imgStyle={{ maxHeight: "500px" }}
+          style={{ maxHeight: "600px" }}
           alt={props.alt}
           fluid={image.node.childImageSharp.fluid}
         />

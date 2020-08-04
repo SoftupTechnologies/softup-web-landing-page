@@ -9,6 +9,7 @@ import { NamedDivider } from "./PortfolioTools/NamedDivider"
 import { QuickFacts } from "./PortfolioTools/QuickFacts"
 import { ClientName } from "./PortfolioTools/ClientName"
 import { CommonParagraph } from "./PortfolioTools/CommonParagraph"
+import { ParagraphAndImage } from "./PortfolioTools/ParagraphAndImage"
 
 export const formatNumber = num => {
   const stringNum = parseInt(num, 10).toString()
@@ -20,7 +21,8 @@ export const formatNumber = num => {
 
 export const isMobile =
   typeof navigator !== "undefined"
-    ? /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+    ? /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ||
+      window.innerWidth <= 768
     : null
 
 let componentContainer = {
@@ -34,6 +36,7 @@ let componentContainer = {
   quickFacts: QuickFacts,
   clientName: ClientName,
   commonParagraph: CommonParagraph,
+  paragraphAndImage: ParagraphAndImage,
 }
 
 export const generateContent = pageContent => {
