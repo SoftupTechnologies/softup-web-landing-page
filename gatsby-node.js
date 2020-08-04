@@ -8,7 +8,7 @@ exports.createPages = ({ boundActionCreators }) => {
   // Your component that should be rendered for every item in JSON.
   const template = path.resolve(`src/templates/site-template.js`)
 
-  const menuItems = data.map(current => ({
+  const menuItems = data.filter(item => item.menu).map(current => ({
     title: current.title,
     link: current.link,
     number: current.number,
@@ -20,9 +20,8 @@ exports.createPages = ({ boundActionCreators }) => {
       item => item.component === "slideLinks"
     )
     const accordionSlugs = slugContainer.data.map(el => el.link.split("#")[1])
-    const pagePath = title.slice(0, -1)
     createPage({
-      path: pagePath,
+      path: link,
       component: template,
       context: {
         showTitleInBody: true,

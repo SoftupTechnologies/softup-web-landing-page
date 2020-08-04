@@ -1,6 +1,7 @@
 [
   {
     "link": "/services",
+    "menu": true,
     "number": "01",
     "title": "services.",
     "accordionContent": {
@@ -119,6 +120,7 @@
   },
   {
     "link": "/expertise",
+    "menu": true,
     "number": "02",
     "title": "expertise.",
     "accordionContent": {
@@ -191,6 +193,7 @@
   },
   {
     "link": "/portfolio",
+    "menu": true,
     "number": "03",
     "title": "portfolio.",
     "accordionContent": {
@@ -389,6 +392,7 @@
   },
   {
     "link": "/career",
+    "menu": true,
     "number": "04",
     "title": "career.",
     "accordionContent": {
@@ -408,8 +412,47 @@
   },
   {
     "link": "/blog",
+    "menu": true,
     "number": "05",
     "title": "blog.",
+    "accordionContent": {
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "content": [
+        {
+          "component": "slideLinks",
+          "data": [
+            {
+              "link": "",
+              "iconUrl": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "link": "/privacy-policy",
+    "menu": false,
+    "title": "privacy policy.",
+    "accordionContent": {
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+      "content": [
+        {
+          "component": "slideLinks",
+          "data": [
+            {
+              "link": "",
+              "iconUrl": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "link": "/imprint",
+    "menu": false,
+    "title": "imprint.",
     "accordionContent": {
       "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
       "content": [
