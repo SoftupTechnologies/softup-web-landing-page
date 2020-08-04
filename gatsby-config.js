@@ -41,6 +41,7 @@ module.exports = {
           `Comfortaa\:300,400,400i,700`,
           `Roboto\:100,200`,
           `source sans pro`,
+          `Open Sans`,
           `Bebas Neue`,
         ],
       },

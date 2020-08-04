@@ -10,6 +10,7 @@ import { QuickFacts } from "./PortfolioTools/QuickFacts"
 import { ClientName } from "./PortfolioTools/ClientName"
 import { CommonParagraph } from "./PortfolioTools/CommonParagraph"
 import { ParagraphAndImage } from "./PortfolioTools/ParagraphAndImage"
+import { Testimonial } from "./PortfolioTools/Testimonial"
 
 export const formatNumber = num => {
   const stringNum = parseInt(num, 10).toString()
@@ -37,6 +38,7 @@ let componentContainer = {
   clientName: ClientName,
   commonParagraph: CommonParagraph,
   paragraphAndImage: ParagraphAndImage,
+  testimonial: Testimonial,
 }
 
 export const generateContent = pageContent => {

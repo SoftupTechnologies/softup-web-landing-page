@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Bittermilk";
+  src: url('../../../fonts/bittermilk/Bittermilk.ttf');
+}
+
+.testimonialDiv {
+  grid-column-start: 2;
+  color: #ffffff;
+  .content {
+    padding: 10px 10vw;
+    .description{
+      font-family: "Open Sans", sans-serif;
+      font-style: italic;
+    }
+    .hyphen {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 17px;
+      color: #19a0ff;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .author {
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 17px;
+      color: #19a0ff;
+    }
+  }
+
+  .quotes {
+    padding-top: 10px;
+    font-family: "Bittermilk", sans-serif;
+    color: #19a0ff;
+    font-size: 70px;
+    line-height: 70px;
+    text-align: center;
+    &.quoteUp {
+      transform: translateY(40px);
+    }
+  }
+}

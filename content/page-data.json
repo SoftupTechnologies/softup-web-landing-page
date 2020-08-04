@@ -212,22 +212,22 @@
         "component": "presentationTiles",
         "data": [
           {
-            "iconFilename": "last-supper.png",
-            "title": "REALCUBE",
-            "link": "/portfolio/realcube",
-            "description": "Property data for owners",
+            "iconFilename": "cleu.png",
+            "title": "CLEU",
+            "link": "/portfolio/cleu",
+            "description": "Bright startup ...",
             "content": [
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "realcube.png"
+                  "imageFileName": "cleu-hero.png"
                 }
               },
               {
                 "component": "quickDescription",
                 "data": {
-                  "title": "Hassle-free Scaling",
-                  "description": "The REALCUBE team is composed of true veterans in the Real Estate software space. Both cofounders have previously started and exited successful startups in the past. REALCUBE is a refined attempt at starting something from their hearts."
+                  "title": "The morning alarm clock",
+                  "description": "Used by K-12 students as their daily alarm clock, students start the day more focused and alert. Using Cleu leads to higher grit, perseverance, and class attendance. Cleu is available on the AppStore and our solutions team for district-wide pilots."
                 }
               },
               {
@@ -239,7 +239,7 @@
               {
                 "component": "clientName",
                 "data": {
-                  "name": "REALCUBE"
+                  "name": "CLEU"
                 }
               },
               {
@@ -337,8 +337,27 @@
                     "The founder would decide to work exclusively with Softup going forward in order to maintain the high performance and reliability of the mobile app. He scaled his development team at Softup with 3 developers working full time in order to make Cleu the most promising product in its niche."
                   ]
                 }
+              },
+              {
+                "component": "namedDivider",
+                "data": {
+                  "title": "TESTIMONIALS"
+                }
+              },
+              {
+                "component": "testimonial",
+                "data": {
+                  "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam consectetuer de adipiscing elit, consectetuer adipiscing elit sed diam.",
+                  "author": "LOREM IPSUM"
+                }
               }
             ]
+          },
+          {
+            "iconFilename": "realcube.png",
+            "title": "REALCUBE",
+            "link": "/portfolio/realcube",
+            "description": "Property data for owners"
           },
           {
             "iconFilename": "last-supper.png",
