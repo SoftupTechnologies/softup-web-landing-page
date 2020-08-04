@@ -8,6 +8,7 @@ import { QuickDescription } from "./PortfolioTools/QuickDescription"
 import { NamedDivider } from "./PortfolioTools/NamedDivider"
 import { QuickFacts } from "./PortfolioTools/QuickFacts"
 import { ClientName } from "./PortfolioTools/ClientName"
+import { HorizontalParagraph } from "./PortfolioTools/HorizontalParagraph"
 
 export const formatNumber = num => {
   const stringNum = parseInt(num, 10).toString()
@@ -32,6 +33,7 @@ let componentContainer = {
   namedDivider: NamedDivider,
   quickFacts: QuickFacts,
   clientName: ClientName,
+  horizontalParagraph: HorizontalParagraph,
 }
 
 export const generateContent = pageContent => {

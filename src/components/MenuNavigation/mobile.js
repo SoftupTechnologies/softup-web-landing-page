@@ -64,7 +64,7 @@ const MobileNavigation = ({
   menuType,
 }) => {
   return (
-    <div>
+    <div className={"displayWithGrid"}>
       <div className={"mobileMenuDiv"}>
         <SoftupLogo className={"mobileSoftupLogo"} />
         <Burger

@@ -5,7 +5,7 @@
 .footerGrid {
   border-top: solid 1px #333333;
   display: grid;
-  grid-template-columns: 5% 90% 5%;
+  grid-template-columns:  minmax(30px, 1fr) minmax(0, 1000px) minmax(30px, 1fr);
   .footerDiv {
     grid-column-start: 2;
     display: flex;
@@ -56,10 +56,24 @@
   }
 }
 
-@media (min-width: 678px) {
+@media (max-width: 768px) {
   .footerGrid {
-    border-top: solid 1px #333333;
-    display: grid;
-    grid-template-columns: minmax(20px, 1fr) minmax(max-content, 1000px) minmax(20px, 1fr);
+    .footerLogo {
+      display: none;
+    }
+    .footerDiv {
+      padding: 5vh 0 5vh 0;
+      flex-direction: column;
+      .footerSection {
+        padding-top: 20px;
+        .sectionTitle {
+          padding-left: 10px;
+          border-left: 1px solid #ffffff;
+          border-right: none;
+        }
+        align-self: self-start;
+        text-align: left;
+      }
+    }
   }
 }

@@ -1,11 +1,19 @@
 import React from "react"
 import "./quick-description.scss"
+import PropTypes from "prop-types"
 
 export const QuickDescription = ({ data }) => {
-  return data.map((item, index) => (
-    <div key={index} className={"quickDescriptionDiv displayWithGrid"}>
-      <div className={"title"}>{item.title}</div>
-      <div className={"description"}>{item.description}</div>
+  return (
+    <div className={"quickDescriptionDiv displayWithGrid"}>
+      <div className={"title"}>{data.title}</div>
+      <div className={"description"}>{data.description}</div>
     </div>
-  ))
+  )
+}
+
+QuickDescription.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+  }),
 }

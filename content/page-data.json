@@ -219,36 +219,28 @@
             "content": [
               {
                 "component": "headerImage",
-                "data": [
-                  {
-                    "imageFileName": "realcube.png"
-                  }
-                ]
+                "data": {
+                  "imageFileName": "realcube.png"
+                }
               },
               {
                 "component": "quickDescription",
-                "data": [
-                  {
-                    "title": "Hassle-free Scaling",
-                    "description": "The REALCUBE team is composed of true veterans in the Real Estate software space. Both cofounders have previously started and exited successful startups in the past. REALCUBE is a refined attempt at starting something from their hearts."
-                  }
-                ]
+                "data": {
+                  "title": "Hassle-free Scaling",
+                  "description": "The REALCUBE team is composed of true veterans in the Real Estate software space. Both cofounders have previously started and exited successful startups in the past. REALCUBE is a refined attempt at starting something from their hearts."
+                }
               },
               {
                 "component": "namedDivider",
-                "data": [
-                  {
-                    "title": "client"
-                  }
-                ]
+                "data": {
+                  "title": "CLIENT"
+                }
               },
               {
                 "component": "clientName",
-                "data": [
-                  {
-                    "name": "REALCUBE"
-                  }
-                ]
+                "data": {
+                  "name": "REALCUBE"
+                }
               },
               {
                 "component": "quickFacts",
@@ -279,6 +271,18 @@
                     "description": "48h"
                   }
                 ]
+              },
+              {
+                "component": "namedDivider",
+                "data": {
+                  "title": "THE PROCESS"
+                }
+              },
+              {
+                "component": "horizontalParagraph",
+                "data": {
+                  "title": "THE PROCESS"
+                }
               }
             ]
           },
