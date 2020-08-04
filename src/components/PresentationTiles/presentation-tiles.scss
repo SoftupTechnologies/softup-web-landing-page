@@ -1,6 +1,5 @@
 .presentationWrapper{
-  display: grid;
-  grid-template-columns:  minmax(50px, 1fr) minmax(0, 1000px) minmax(50px, 1fr);
+  grid-column-start: 2;
 }
 
 .presentationItemsDiv {
@@ -11,7 +10,6 @@
     font-size: 1.2rem;
     text-decoration: none;
   }
-  grid-column: 2;
   display: grid;
   grid-template-columns: repeat(2, [row-start] minmax(0, 500px) [row-end]);
   grid-auto-rows: minmax(0, 350px);

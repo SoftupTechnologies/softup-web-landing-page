@@ -19,8 +19,10 @@ export const PresentationTiles = ({ data }) => {
   })
 
   return (
-    <div className={"presentationWrapper"}>
-      <div className={"presentationItemsDiv"}>{items}</div>
+    <div className={"displayWithGrid"}>
+      <div className={"presentationWrapper"}>
+        <div className={"presentationItemsDiv"}>{items}</div>
+      </div>
     </div>
   )
 }

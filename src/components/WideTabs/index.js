@@ -7,8 +7,10 @@ import "./wide-tabs.scss"
 
 const TabContent = ({ itemToBeRendered }) => {
   return (
-    <div className={"tabContent"} key={Math.random()}>
-      {generateContent(itemToBeRendered.content)}
+    <div className={"displayWithGrid"}>
+      <div className={"tabContent"} key={Math.random()}>
+        {generateContent(itemToBeRendered.content)}
+      </div>
     </div>
   )
 }

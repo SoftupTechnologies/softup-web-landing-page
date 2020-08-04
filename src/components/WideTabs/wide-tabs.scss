@@ -27,7 +27,7 @@
   animation: fadeIn 1s;
   display: grid;
   padding-top: 5vh;
-  grid-template-columns: minmax(50px, 1fr) minmax(0, 1000px) minmax(50px, 1fr);
+  grid-column-start: 2;
 }
 
 .tabTitles {
