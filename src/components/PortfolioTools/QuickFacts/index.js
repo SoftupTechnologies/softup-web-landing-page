@@ -1,12 +1,11 @@
 import React from "react"
 import "./quick-facts.scss"
+import PropTypes from "prop-types"
 
-// eslint-disable-next-line react/prop-types
 export const QuickFacts = ({ data }) => {
   return (
     <div className={"displayWithGrid"}>
       <div className={"quickFactsContainer"}>
-        {/* eslint-disable-next-line react/prop-types */}
         {data.map((item, index) => (
           <div key={index} className={"itemContainer"}>
             <div className={"title"}>{item.title}</div>
@@ -26,4 +25,13 @@ export const QuickFacts = ({ data }) => {
       </div>
     </div>
   )
+}
+
+QuickFacts.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      description: PropTypes.string,
+    })
+  ),
 }

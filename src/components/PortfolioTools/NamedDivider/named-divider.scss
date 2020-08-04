@@ -1,9 +1,6 @@
-.clientDividerGrid {
+.clientDividerDiv {
   align-items: center;
   margin-top: 5vw;
-}
-
-.clientDividerDiv {
   grid-column-start: 2;
   .client {
     color: #7d7d7d;

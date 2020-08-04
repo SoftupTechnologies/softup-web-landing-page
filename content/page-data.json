@@ -275,13 +275,35 @@
               {
                 "component": "namedDivider",
                 "data": {
+                  "title": "THE CHALLENGE"
+                }
+              },
+              {
+                "component": "commonParagraph",
+                "data": {
+                  "title": "Fix most of the pressing issues and bugs",
+                  "type": "horizontal",
+                  "paragraphs": [
+                    "Cleu founder, Uzair had fallen into the common trap of outsourcing the app development of his idea to a low-cost agency, in order to “fit” it into his limited budget.",
+                    "The result was a mobile app that was a slow, unresponsive and bug prone app. He contacted Softup with the hope to fix most of the pressing issues and bugs."
+                  ]
+                }
+              },
+              {
+                "component": "namedDivider",
+                "data": {
                   "title": "THE PROCESS"
                 }
               },
               {
-                "component": "horizontalParagraph",
+                "component": "commonParagraph",
                 "data": {
-                  "title": "THE PROCESS"
+                  "title": "Title",
+                  "type": "vertical",
+                  "paragraphs": [
+                    "Cleu founder, Uzair had fallen into the common trap of outsourcing the app development of his idea to a low-cost agency, in order to “fit” it into his limited budget.",
+                    "The result was a mobile app that was a slow, unresponsive and bug prone app. He contacted Softup with the hope to fix most of the pressing issues and bugs."
+                  ]
                 }
               }
             ]

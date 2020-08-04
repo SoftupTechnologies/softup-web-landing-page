@@ -1,0 +1,26 @@
+.hParagraphDiv{
+  padding-top: 10px;
+  grid-column-start: 2;
+  color: #ffffff;
+  font-family: "Comfortaa", sans-serif;
+  display: flex;
+  .title {
+    padding-bottom: 10px;
+    margin-right: 10px;
+    font-size: calc(1rem + 1vw);
+    line-height: calc(1.2rem + 1vw);
+    font-weight: bold;
+  }
+  .content {
+    font-size: 15px;
+    .paragraph {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hParagraphDiv {
+    flex-direction: column;
+  }
+}
