@@ -15,6 +15,9 @@ export const ParagraphAndImage = ({ data }) => {
   return (
     <div className={"displayWithGrid"}>
       <div className={classes}>
+        <div className={"pImage"}>
+          <Image filename={data.imageName} />
+        </div>
         <div>
           <div className={"title"}>{data.title}</div>
           <div className={"content"}>
@@ -24,9 +27,6 @@ export const ParagraphAndImage = ({ data }) => {
               </div>
             ))}
           </div>
-        </div>
-        <div className={"pImage"}>
-          <Image filename={data.imageName} />
         </div>
       </div>
     </div>

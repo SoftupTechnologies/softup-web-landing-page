@@ -12,6 +12,7 @@
     flex-direction: row-reverse;
   }
   .title {
+    padding-top: 30px;
     padding-bottom: 10px;
     margin-right: 10px;
     font-size: calc(1rem + 1vw);
@@ -40,7 +41,6 @@
   }
   .pImage{
     align-self: center;
-    padding: 20px;
-    width: 100%;
+    padding: 10px;
   }
 }

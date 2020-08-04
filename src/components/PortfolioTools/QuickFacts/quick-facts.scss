@@ -37,3 +37,16 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .quickFactsContainer {
+    grid-template-columns: repeat(auto-fit, 250px);
+  }
+  .itemContainer {
+    padding-top: 4vh;
+    .title {
+      width: 100px;
+      padding: 5px;
+    }
+  }
+}
