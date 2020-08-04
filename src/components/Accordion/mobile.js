@@ -6,7 +6,6 @@ import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 import navData from "../../../content/page-data.json"
 import classNames from "classnames"
-import { SlideLinks } from "./SlideLinks"
 import { generateContent } from "../helpers"
 
 export const MobileAccordionSlide = ({
@@ -64,19 +63,21 @@ const MobileAccordion = () => {
 
   return (
     <div className={"mobileAccordionContainer"}>
-      {navData.map((slide, index) => (
-        <MobileAccordionSlide
-          link={slide.link}
-          componentId={index}
-          key={index}
-          title={slide.title}
-          description={slide.accordionContent.description}
-          number={slide.number}
-          slideInfo={slideInfo}
-          setSlideInfo={setSlideInfo}
-          content={slide.accordionContent.content}
-        />
-      ))}
+      {navData
+        .filter(item => item.menu)
+        .map((slide, index) => (
+          <MobileAccordionSlide
+            link={slide.link}
+            componentId={index}
+            key={index}
+            title={slide.title}
+            description={slide.accordionContent.description}
+            number={slide.number}
+            slideInfo={slideInfo}
+            setSlideInfo={setSlideInfo}
+            content={slide.accordionContent.content}
+          />
+        ))}
     </div>
   )
 }

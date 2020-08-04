@@ -10,8 +10,7 @@ export const Testimonial = ({ data }) => {
         <div className={"content"}>
           <span>
             <span className={"description"}>{data.content}</span>
-            <span className={"hyphen"}>—</span>
-            <span className={"author"}>{data.author}</span>
+            <span className={"author"}> — {data.author}</span>
           </span>
         </div>
         <div className={"quotes"}>”</div>

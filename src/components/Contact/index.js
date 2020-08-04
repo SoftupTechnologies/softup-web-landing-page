@@ -35,7 +35,6 @@ export const ContactUs = () => {
             className={"inputField"}
           />
         </form>
-        {/* eslint-disable-next-line no-undef */}
       </div>
     </div>
   )

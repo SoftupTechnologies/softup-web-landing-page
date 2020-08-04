@@ -67,19 +67,21 @@ export const Accordion = () => {
   })
   return (
     <div className={accordionContainerClasses}>
-      {navData.map((slide, index) => (
-        <AccordionSlide
-          link={slide.link}
-          componentId={index}
-          key={index}
-          title={slide.title}
-          description={slide.accordionContent.description}
-          number={slide.number}
-          slideInfo={slideInfo}
-          setSlideInfo={setSlideInfo}
-          content={slide.accordionContent.content}
-        />
-      ))}
+      {navData
+        .filter(item => item.menu)
+        .map((slide, index) => (
+          <AccordionSlide
+            link={slide.link}
+            componentId={index}
+            key={index}
+            title={slide.title}
+            description={slide.accordionContent.description}
+            number={slide.number}
+            slideInfo={slideInfo}
+            setSlideInfo={setSlideInfo}
+            content={slide.accordionContent.content}
+          />
+        ))}
     </div>
   )
 }

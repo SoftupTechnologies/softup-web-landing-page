@@ -8,11 +8,13 @@ exports.createPages = ({ boundActionCreators }) => {
   // Your component that should be rendered for every item in JSON.
   const template = path.resolve(`src/templates/site-template.js`)
 
-  const menuItems = data.filter(item => item.menu).map(current => ({
-    title: current.title,
-    link: current.link,
-    number: current.number,
-  }))
+  const menuItems = data
+    .filter(item => item.menu)
+    .map(current => ({
+      title: current.title,
+      link: current.link,
+      number: current.number,
+    }))
 
   // Create pages for each JSON entry.
   data.forEach(({ title, link, content, accordionContent }) => {
