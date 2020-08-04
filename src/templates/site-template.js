@@ -14,6 +14,9 @@ const BasicTemplate = ({ pageContext }) => {
   return (
     <div id="top">
       {pageContext?.accordionSlugs?.map((slug, index) => {
+        // This exists because otherwise the browser will scroll to the anchor
+        // meaning, after every click or redirection it will scroll you down
+        // to the tab name. This is a workaround
         return <div key={index} id={slug} />
       })}
       <MenuNavigation
