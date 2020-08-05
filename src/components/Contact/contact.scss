@@ -48,7 +48,8 @@
 
 .inputField {
   padding-top: 40px;
-  &:focus, &focus-active {
+  &:focus,
+  &focus-active {
     outline: none;
   }
   width: 200px;

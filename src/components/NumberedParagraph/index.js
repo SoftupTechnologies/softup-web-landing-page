@@ -7,18 +7,20 @@ import "./numbered-paragraph.scss"
 export const NumberedParagraph = ({ data }) => {
   const { t } = useTranslation()
   return (
-    <div className={"paragraphDiv"}>
-      {data?.items.map((item, index) => {
-        return (
-          <div className={"paragraph"} key={index}>
-            <div className={"paragraphNumber"}>{formatNumber(index + 1)}</div>
-            <div className={"titleAndContent"}>
-              <div className={"paragraphTitle"}>{t(item.title)}</div>
-              <div className={"paragraphContent"}>{t(item.description)}</div>
+    <div className={"displayWithGrid"}>
+      <div className={"paragraphDiv"}>
+        {data?.items.map((item, index) => {
+          return (
+            <div className={"paragraph"} key={index}>
+              <div className={"paragraphNumber"}>{formatNumber(index + 1)}</div>
+              <div className={"titleAndContent"}>
+                <div className={"paragraphTitle"}>{t(item.title)}</div>
+                <div className={"paragraphContent"}>{t(item.description)}</div>
+              </div>
             </div>
-          </div>
-        )
-      })}
+          )
+        })}
+      </div>
     </div>
   )
 }

@@ -52,6 +52,30 @@
                     }
                   ]
                 }
+              },
+              {
+                "component": "process",
+                "data": {
+                  "title": "Process",
+                  "items": [
+                    {
+                      "title": "Title goes here",
+                      "description": "Qui do duis magna culpa proident eiusmod magna esse ullamco nisi esse aliqua. Sint laborum ipsum consequat ex quis ut ipsum. Proident ad proident magna ad nulla excepteur enim. Cupidatat occaecat elit in nulla culpa magna adipisicing aliqua tempor est velit velit in duis."
+                    },
+                    {
+                      "title": "Title goes here",
+                      "description": "Qui do duis magna culpa proident eiusmod magna esse ullamco nisi esse aliqua. Sint laborum ipsum consequat ex quis ut ipsum. Proident ad proident magna ad nulla excepteur enim. Cupidatat occaecat elit in nulla culpa magna adipisicing aliqua tempor est velit velit in duis."
+                    },
+                    {
+                      "title": "Title goes here",
+                      "description": "Qui do duis magna culpa proident eiusmod magna esse ullamco nisi esse aliqua. Sint laborum ipsum consequat ex quis ut ipsum. Proident ad proident magna ad nulla excepteur enim. Cupidatat occaecat elit in nulla culpa magna adipisicing aliqua tempor est velit velit in duis."
+                    },
+                    {
+                      "title": "Title goes here",
+                      "description": "Qui do duis magna culpa proident eiusmod magna esse ullamco nisi esse aliqua. Sint laborum ipsum consequat ex quis ut ipsum. Proident ad proident magna ad nulla excepteur enim. Cupidatat occaecat elit in nulla culpa magna adipisicing aliqua tempor est velit velit in duis."
+                    }
+                  ]
+                }
               }
             ]
           },

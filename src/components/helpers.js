@@ -11,6 +11,7 @@ import { ClientName } from "./PortfolioTools/ClientName"
 import { CommonParagraph } from "./PortfolioTools/CommonParagraph"
 import { ParagraphAndImage } from "./PortfolioTools/ParagraphAndImage"
 import { Testimonial } from "./PortfolioTools/Testimonial"
+import { Process } from "./Process"
 
 export const formatNumber = num => {
   const stringNum = parseInt(num, 10).toString()
@@ -33,6 +34,7 @@ let componentContainer = {
   commonParagraph: CommonParagraph,
   paragraphAndImage: ParagraphAndImage,
   testimonial: Testimonial,
+  process: Process,
 }
 
 export const generateContent = pageContent => {
