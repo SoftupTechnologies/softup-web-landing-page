@@ -2,14 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./paragraph-and-image.scss"
 import { Image } from "../../image"
-import { isMobile } from "react-device-detect"
 import classNames from "classnames"
 
 export const ParagraphAndImage = ({ data }) => {
   let classes = classNames({
     paragraphAndImageDiv: true,
-    right: data.imagePosition === "right" && !isMobile,
-    left: data.imagePosition === "left" && !isMobile,
+    right: data.imagePosition === "right",
+    left: data.imagePosition === "left",
   })
 
   return (
