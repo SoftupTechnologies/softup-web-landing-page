@@ -3,6 +3,12 @@
   flex-direction: column;
 }
 
+@media (min-width: 768px) {
+  .mobileAccordionMenuContainer {
+    display: none;
+  }
+}
+
 .mobileAccordionContainer {
   display: flex;
   flex-direction: column;

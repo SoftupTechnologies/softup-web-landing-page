@@ -12,10 +12,15 @@
   .initialContainer:hover,
   .disabledContainer:hover {
     cursor: pointer;
-
     .number {
       color: #19a0ff;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .accordionMenuContainer {
+    display: none;
   }
 }
 
@@ -140,5 +145,3 @@
   text-align: right;
   color: #ffffff;
 }
-
-

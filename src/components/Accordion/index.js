@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import "./accordion.scss"
 import PropTypes from "prop-types"
 import { CompanyNumbers } from "../CompanyNumbers"
 import { Link } from "gatsby"
@@ -7,6 +6,7 @@ import { useTranslation } from "react-i18next"
 import navData from "../../../content/page-data.json"
 import classNames from "classnames"
 import { generateContent } from "../helpers"
+import "./accordion.scss"
 
 export const AccordionSlide = ({
   link,
@@ -88,7 +88,7 @@ export const Accordion = () => {
 
 export const DesktopAccordionMenu = () => {
   return (
-    <div id={"accordion-menu"} className={"accordionMenuContainer"}>
+    <div className={"accordionMenuContainer"}>
       <CompanyNumbers />
       <Accordion />
     </div>

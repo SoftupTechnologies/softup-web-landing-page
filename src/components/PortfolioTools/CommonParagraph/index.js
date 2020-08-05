@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import "./common-paragraph.scss"
-import { isMobile } from "../../helpers"
+import { isMobile } from "react-device-detect"
 
 export const CommonParagraph = ({ data }) => {
   return (

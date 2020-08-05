@@ -5,7 +5,8 @@ import "./menu-navigation.scss"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 import PropTypes from "prop-types"
-import { isMobile } from "../helpers"
+import { BrowserView, MobileView } from "react-device-detect"
+
 import MobileNavigation from "./mobile"
 
 const SoftupLogo = () => {
@@ -46,22 +47,24 @@ const MenuNavigation = ({
   menuType,
   setMenuType,
 }) => {
-  if (isMobile) {
-    return (
-      <MobileNavigation
-        menuItems={menuItems}
-        activeMenuItem={activeMenuItem}
-        menuType={menuType}
-        setMenuType={setMenuType}
-      />
-    )
-  }
   return (
-    <div className={"menuNavigationDiv"}>
-      <SoftupLogo />
-      <MenuLinks menuItems={menuItems} activeMenuItem={activeMenuItem} />
-      <LanguageMenu gridColumnStart={"4"} />
-    </div>
+    <React.Fragment>
+      <MobileView>
+        <MobileNavigation
+          menuItems={menuItems}
+          activeMenuItem={activeMenuItem}
+          menuType={menuType}
+          setMenuType={setMenuType}
+        />
+      </MobileView>
+      <BrowserView>
+        <div className={"menuNavigationDiv"}>
+          <SoftupLogo />
+          <MenuLinks menuItems={menuItems} activeMenuItem={activeMenuItem} />
+          <LanguageMenu gridColumnStart={"4"} />
+        </div>
+      </BrowserView>
+    </React.Fragment>
   )
 }
 

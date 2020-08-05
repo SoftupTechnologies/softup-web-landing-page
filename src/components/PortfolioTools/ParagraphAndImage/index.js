@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./paragraph-and-image.scss"
 import { Image } from "../../image"
-import { isMobile } from "../../helpers"
+import { isMobile } from "react-device-detect"
 import classNames from "classnames"
 
 export const ParagraphAndImage = ({ data }) => {

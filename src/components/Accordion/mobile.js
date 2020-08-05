@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import "./mobile.scss"
 import PropTypes from "prop-types"
 import { CompanyNumbers } from "../CompanyNumbers"
 import { Link } from "gatsby"
@@ -7,6 +6,7 @@ import { useTranslation } from "react-i18next"
 import navData from "../../../content/page-data.json"
 import classNames from "classnames"
 import { generateContent } from "../helpers"
+import "./mobile.scss"
 
 export const MobileAccordionSlide = ({
   link,
@@ -84,7 +84,7 @@ const MobileAccordion = () => {
 
 export const MobileAccordionMenu = () => {
   return (
-    <div id={"accordion-menu"} className={"mobileAccordionMenuContainer"}>
+    <div className={"mobileAccordionMenuContainer"}>
       <CompanyNumbers />
       <MobileAccordion />
     </div>

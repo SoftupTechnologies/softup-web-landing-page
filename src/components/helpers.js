@@ -20,12 +20,6 @@ export const formatNumber = num => {
   return stringNum
 }
 
-export const isMobile =
-  typeof navigator !== "undefined"
-    ? /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ||
-      window.innerWidth <= 768
-    : null
-
 let componentContainer = {
   horizontalTabs: WideTabs,
   numberedParagraph: NumberedParagraph,
