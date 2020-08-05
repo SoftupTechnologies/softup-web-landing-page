@@ -23,29 +23,29 @@ export const Process = ({ data }) => {
                   <div className="article">
                     {index % 2 === 0 ? (
                       <>
-                        <div className="left-container">
-                          <div className="title right">
-                            <p>{t(item.title)}</p>
-                          </div>
+                        {/* <div className="left-container"> */}
+                        <div className="title right">
+                          <p>{t(item.title)}</p>
                         </div>
-                        <div className="right-container">
-                          <div className="description">
-                            <p>{t(item.description)}</p>
-                          </div>
+                        {/* </div> */}
+                        {/* <div className="right-container"> */}
+                        <div className="description">
+                          <p>{t(item.description)}</p>
                         </div>
+                        {/* </div> */}
                       </>
                     ) : (
                       <>
-                        <div className="left-container">
-                          <div className="description">
-                            <p>{t(item.description)}</p>
-                          </div>
+                        {/* <div className="left-container"> */}
+                        <div className="description">
+                          <p>{t(item.description)}</p>
                         </div>
-                        <div className="right-container">
-                          <div className="title left">
-                            <p>{t(item.title)}</p>
-                          </div>
+                        {/* </div> */}
+                        {/* <div className="right-container"> */}
+                        <div className="title left">
+                          <p>{t(item.title)}</p>
                         </div>
+                        {/* </div> */}
                       </>
                     )}
                     <div className="outer-circle">
