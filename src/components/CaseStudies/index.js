@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { Image } from "../image"
 import "./caseStudies.scss"
 import SubmitButton from "../../images/submit.svg"
+import { Link } from "gatsby"
 
 export const CaseStudies = ({ data }) => {
   const { t } = useTranslation()
@@ -26,7 +27,9 @@ export const CaseStudies = ({ data }) => {
                     <h1>{t(item.title)}</h1>
                     <p>{t(item.description)}</p>
                     <div className="caseStudies-navigation">
-                      <SubmitButton />
+                      <Link to={item.link}>
+                        <SubmitButton />
+                      </Link>
                     </div>
                   </div>
                 </>
