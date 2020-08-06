@@ -35,7 +35,7 @@ export const MenuHeader = () => {
         to="/#accordion-menu"
         className={landingStyles.burgerIcon}
       >
-        <BurgerMenuIcon />
+        <BurgerMenuIcon className={"mobileSoftupLogo"} />
       </AnchorLink>
     </div>
   )

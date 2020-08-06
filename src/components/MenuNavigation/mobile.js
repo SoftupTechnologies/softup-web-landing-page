@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next"
 import PropTypes from "prop-types"
 import classNames from "classnames"
 import Burger from "../../images/burger.svg"
+import Close from "../../images/close.svg"
 
 const SoftupLogo = () => {
   return (
@@ -64,14 +65,25 @@ const MobileNavigation = ({
   menuType,
 }) => {
   return (
-    <div className={"displayWithGrid"}>
+    <div>
       <div className={"mobileMenuDiv"}>
         <SoftupLogo className={"mobileSoftupLogo"} />
-        <Burger
-          onClick={() =>
-            setMenuType({ showMobileMenu: !menuType.showMobileMenu })
-          }
-        />
+
+        {menuType.showMobileMenu ? (
+          <Close
+            className={"mobileBurgerIcon"}
+            onClick={() =>
+              setMenuType({ showMobileMenu: !menuType.showMobileMenu })
+            }
+          />
+        ) : (
+          <Burger
+            className={"mobileBurgerIcon"}
+            onClick={() =>
+              setMenuType({ showMobileMenu: !menuType.showMobileMenu })
+            }
+          />
+        )}
       </div>
       {menuType.showMobileMenu ? (
         <MobileMenuLinks
