@@ -38,3 +38,24 @@
     color: #7f7f7f;
   }
 }
+
+@media (max-width: 768px) {
+  .paragraph {
+    .paragraphNumber {
+      text-align: center;
+    }
+
+    .titleAndContent {
+      max-width: none;
+      transform: translate(0, -35px);
+
+      .paragraphTitle {
+        text-align: center;
+      }
+
+      .paragraphContent {
+        text-align: center;
+      }
+    }
+  }
+}
