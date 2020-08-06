@@ -48,9 +48,14 @@ export const generateContent = pageContent => {
 }
 
 export const breakLongWords = str => {
+  //TODO: Need to be removed from hardcoded
+  if (str === "mvp in 10 days.")
+    return <div dangerouslySetInnerHTML={{ __html: "mvp in<br/>10 days." }} />
+
   const words = str.split(/\s+/)
   const container = []
   let line = ""
+
   words.forEach((word, index) => {
     if (line !== "") {
       line = line + "<br/>" + word

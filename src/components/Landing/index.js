@@ -1,6 +1,6 @@
 import React from "react"
 import SEO from "../seo"
-import landingStyles from "./landing.module.css"
+import "./landing.scss"
 import { MenuHeader, Slogan } from "./components"
 import { useTranslation } from "react-i18next"
 import StyledBackgroundSection from "../background"
@@ -11,7 +11,7 @@ export const Landing = () => {
   return (
     <StyledBackgroundSection>
       <PageLayout>
-        <div className={landingStyles.landing}>
+        <div className="landing">
           <SEO title="Home" />
           <MenuHeader />
           <Slogan

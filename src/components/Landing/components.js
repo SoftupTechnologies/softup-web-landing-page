@@ -1,4 +1,4 @@
-import landingStyles from "./landing.module.css"
+import "./landing.scss"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import BurgerMenuIcon from "../../images/burger.svg"
 import React from "react"
@@ -9,17 +9,19 @@ import SoftupLogoSvg from "../../images/softup-logo.svg"
 
 export const Slogan = ({ slogan, description }) => {
   return (
-    <div className={landingStyles.slogan}>
-      {/*<span className={landingStyles.sloganTitle}>{slogan}<span className={landingStyles.point}/></span>*/}
-      {<span className={landingStyles.sloganTitle}>{slogan}</span>}
-      <div className={landingStyles.sloganDesc}>{description}</div>
+    <div className="slogan">
+      <h1 className="sloganTitle">
+        {slogan}
+        <div className="diamond-punctuation"></div>
+      </h1>
+      <div className="sloganDesc">{description}</div>
     </div>
   )
 }
 
 const SoftupLogo = () => {
   return (
-    <Link to={"/"} className={landingStyles.logo}>
+    <Link to={"/"} className="logo">
       <SoftupLogoSvg />
     </Link>
   )
@@ -27,14 +29,10 @@ const SoftupLogo = () => {
 
 export const MenuHeader = () => {
   return (
-    <div className={landingStyles.menuHeader}>
+    <div className="menuHeader">
       <SoftupLogo />
       <LanguageMenu gridColumnStart={"3"} />
-      <AnchorLink
-        offset="100"
-        to="/#accordion-menu"
-        className={landingStyles.burgerIcon}
-      >
+      <AnchorLink offset="100" to="/#accordion-menu" className="burgerIcon">
         <BurgerMenuIcon className={"mobileSoftupLogo"} />
       </AnchorLink>
     </div>
