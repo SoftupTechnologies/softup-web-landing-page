@@ -12,7 +12,7 @@ export const Process = ({ data }) => {
       <hr className="process-hr" />
       <div className="displayWithGrid">
         <div className="process-wrapper">
-          <h1 className="process-title">{data.title}</h1>
+          <h1 className="process-title">{t(data.title)}</h1>
           {data?.items.map((item, index) => {
             return (
               <>

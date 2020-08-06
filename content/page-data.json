@@ -76,6 +76,32 @@
                     }
                   ]
                 }
+              },
+              {
+                "component": "caseStudies",
+                "data": {
+                  "title": "Case studies.",
+                  "items": [
+                    {
+                      "iconFilename": "moma.png",
+                      "title": "MOMA",
+                      "link": "/portfolio/moma",
+                      "description": "Easily access your local deals"
+                    },
+                    {
+                      "iconFilename": "last-supper.png",
+                      "title": "LAST SUPPER",
+                      "link": "/portfolio/last-supper",
+                      "description": "Restaurant management system & client apps"
+                    },
+                    {
+                      "iconFilename": "salt.png",
+                      "title": "SALT",
+                      "link": "/portfolio/salt",
+                      "description": "Fancy restaurant"
+                    }
+                  ]
+                }
               }
             ]
           },
