@@ -42,7 +42,13 @@ export const WideTabs = ({ data }) => {
             key={index}
             className={classes}
           >
-            {breakLongWords(t(item.tabName))}
+            {index === data.length - 1 ? (
+              <div className="mvpDisplay">
+                <div className="customWidth">{t(item.tabName)}</div>
+              </div>
+            ) : (
+              breakLongWords(t(item.tabName))
+            )}
           </div>
         )
       })}

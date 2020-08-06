@@ -4,9 +4,9 @@
   }
 }
 
-@mixin even($selector){
+@mixin even($selector) {
   & #{$selector}:nth-child(even) {
-    @content
+    @content;
   }
 }
 
@@ -32,7 +32,7 @@
 
 .tabTitles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-column-gap: 5px;
   grid-row-gap: 5px;
   border-top: 4px solid #19a0ff;
@@ -55,6 +55,15 @@
   flex-direction: column;
   justify-content: space-around;
   color: #ffffff;
+
+  .mvpDisplay {
+    display: flex;
+    justify-content: flex-end;
+
+    .customWidth {
+      width: 100px;
+    }
+  }
 }
 
 @media (min-width: 768px) {
@@ -66,14 +75,19 @@
 
 @media (max-width: 768px) {
   .tabTitles {
-    grid-template-columns: repeat(2, minmax(100px, 1fr) );
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
+
   .tabName {
     font-size: 1.3rem;
     line-height: 1.5rem;
     padding-left: 5px;
     height: 18vh;
+
+    .mvpDisplay {
+      .customWidth {
+        width: 85px;
+      }
+    }
   }
-
 }
-
