@@ -254,7 +254,7 @@
           "data": [
             {
               "link": "",
-              "iconUrl": ""
+              "name": ""
             }
           ]
         }
@@ -477,7 +477,7 @@
     }
   },
   {
-    "link": "/blog",
+    "link": "https://medium.com/softup-technologies",
     "menu": true,
     "number": "05",
     "title": "blog.",
@@ -486,12 +486,7 @@
       "content": [
         {
           "component": "slideLinks",
-          "data": [
-            {
-              "link": "",
-              "iconUrl": ""
-            }
-          ]
+          "data": []
         }
       ]
     }

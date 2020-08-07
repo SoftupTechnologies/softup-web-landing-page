@@ -58,6 +58,12 @@ module.exports = {
         icon: `src/images/softup-logo.svg`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: "gatsby-source-medium",
+      options: {
+        username: "softup-technologies", // Medium user name
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     //`gatsby-plugin-offline`,
