@@ -33,7 +33,8 @@ export const MenuHeader = () => {
       <SoftupLogo />
       <LanguageMenu gridColumnStart={"3"} />
       <AnchorLink offset="100" to="/#accordion-menu" className="burgerIcon">
-        <BurgerMenuIcon className={"mobileSoftupLogo"} />
+        {/* TODO: Replace icon */}
+        <BurgerMenuIcon />
       </AnchorLink>
     </div>
   )

@@ -65,7 +65,7 @@ const MobileNavigation = ({
   menuType,
 }) => {
   return (
-    <div>
+    <div className="mobile">
       <div className={"mobileMenuDiv"}>
         <SoftupLogo className={"mobileSoftupLogo"} />
 

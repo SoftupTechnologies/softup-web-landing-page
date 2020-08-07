@@ -85,6 +85,9 @@
   grid-row-start: 2;
   grid-column-start: 2;
   justify-self: center;
+  min-width: 60px;
+  max-width: 70px;
+  max-height: 70px;
 }
 
 @media (max-width: 768px) {

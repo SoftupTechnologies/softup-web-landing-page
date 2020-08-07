@@ -1,73 +1,81 @@
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.centerLinks {
-  grid-column-start: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.mobileMenuDiv {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5%;
-}
-
-.mobileSoftupLogo {
-  min-width: 60px;
-  max-width: 70px;
-  max-height: 70px;
-  margin: 10px;
-}
-
-.mobileBurgerIcon {
-  min-width: 40px;
-  max-width: 70px;
-  max-height: 70px;
-}
-
-.mobileMenuNumber {
-  font-size: 0.9rem;
-  margin-right: 20px;
-  border-bottom: 1px solid #19a0ff;
-}
-
-.mobileMenuNumberActive {
-  border-bottom: 1px solid #ffffff;
-}
-
-.mobileMenuLinksDiv {
-  animation: fadeIn 0.5s;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  a:link,
-  a:visited,
-  a:active {
-    &.enabledMenuItem {
-      color: #ffffff;
+.mobile {
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
     }
-    font-family: Comfortaa, sans-serif;
-    white-space: nowrap;
-    color: #19a0ff;
-    text-decoration: none;
-    font-size: 1.2rem;
+    100% {
+      opacity: 1;
+    }
   }
 
-  .link {
-    padding: 1vw;
+  .mobileMenuDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+
+    .mobileSoftupLogo {
+      min-width: 60px;
+      max-width: 70px;
+      max-height: 70px;
+      margin: 10px;
+    }
+
+    .mobileBurgerIcon {
+      min-width: 40px;
+      max-width: 70px;
+      max-height: 70px;
+    }
+  }
+
+  .centerLinks {
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .mobileMenuLinksDiv {
+      animation: fadeIn 0.5s;
+      padding-top: 5vh;
+      padding-bottom: 5vh;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      a:link,
+      a:visited,
+      a:active {
+        &.enabledMenuItem {
+          color: #ffffff;
+        }
+        font-family: Comfortaa, sans-serif;
+        white-space: nowrap;
+        color: #19a0ff;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+
+      .link {
+        padding: 1vw;
+      }
+
+      .mobileMenuNumber {
+        font-size: 0.9rem;
+        margin-right: 20px;
+        border-bottom: 1px solid #19a0ff;
+      }
+
+      .mobileMenuNumberActive {
+        border-bottom: 1px solid #ffffff;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
   }
 }

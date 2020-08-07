@@ -5,7 +5,6 @@ import "./menu-navigation.scss"
 import { Link } from "gatsby"
 import { useTranslation } from "react-i18next"
 import PropTypes from "prop-types"
-import { BrowserView, MobileView } from "react-device-detect"
 
 import MobileNavigation from "./mobile"
 
@@ -49,21 +48,17 @@ const MenuNavigation = ({
 }) => {
   return (
     <React.Fragment>
-      <MobileView>
-        <MobileNavigation
-          menuItems={menuItems}
-          activeMenuItem={activeMenuItem}
-          menuType={menuType}
-          setMenuType={setMenuType}
-        />
-      </MobileView>
-      <BrowserView>
-        <div className={"menuNavigationDiv"}>
-          <SoftupLogo />
-          <MenuLinks menuItems={menuItems} activeMenuItem={activeMenuItem} />
-          <LanguageMenu gridColumnStart={"4"} />
-        </div>
-      </BrowserView>
+      <MobileNavigation
+        menuItems={menuItems}
+        activeMenuItem={activeMenuItem}
+        menuType={menuType}
+        setMenuType={setMenuType}
+      />
+      <div className={"menuNavigationDiv"}>
+        <SoftupLogo />
+        <MenuLinks menuItems={menuItems} activeMenuItem={activeMenuItem} />
+        <LanguageMenu gridColumnStart={"4"} />
+      </div>
     </React.Fragment>
   )
 }
