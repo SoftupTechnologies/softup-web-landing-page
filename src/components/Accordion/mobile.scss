@@ -21,9 +21,11 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 0 10px 0 10px;
+
   .number {
-    padding-top: 10px;
+    padding-top: 15px;
   }
+
   .contentAndTitle {
     padding-bottom: 15px;
     padding-top: 15px;
@@ -32,19 +34,31 @@
 
   &.inactive {
     align-items: center;
+
     .number {
       padding-top: 0;
     }
+
+    .title {
+      padding: 5px 0 5px 0;
+    }
   }
+
   &.uninitialized {
     align-items: center;
+
     .number {
       padding-top: 0;
+    }
+
+    .title {
+      padding: 5px 0 5px 0;
     }
   }
 
   .title {
-    padding: 5px 0 5px 0;
+    // padding: 5px 0 5px 0;
+    padding-bottom: 30px;
     color: #19a0ff;
     font-family: Comfortaa, sans-serif;
     font-size: 1.5rem;
@@ -64,7 +78,7 @@
       a:link,
       a:visited,
       a:active {
-        transition: color .8s;
+        transition: color 0.8s;
         font-size: 1.2rem;
         text-decoration: none;
         color: #7d7d7d;
