@@ -1,6 +1,6 @@
 import "./landing.scss"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import BurgerMenuIcon from "../../images/burger.svg"
+import BurgerMenuIcon from "../../images/burger-desktop.svg"
 import React from "react"
 import PropTypes from "prop-types"
 import { LanguageMenu } from "../LangSwitch"

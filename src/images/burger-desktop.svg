@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 37 36" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(1, 0, 0, 1, -6.008911, -9.701944)">
+    <g>
+      <line class="st0" x1="16.5" y1="22" x2="33.5" y2="22" style="fill: none; stroke: rgb(25, 160, 255); stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    </g>
+    <g>
+      <line class="st0" x1="19" y1="28" x2="31" y2="28" style="fill: none; stroke: rgb(25, 160, 255); stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 10; stroke-width: 2px;"/>
+    </g>
+  </g>
+</svg>
