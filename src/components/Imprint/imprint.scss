@@ -1,0 +1,30 @@
+.imprint-wrapper {
+  grid-column-start: 2;
+  margin: 50px 0;
+  color: white;
+  font-family: Comfortaa, sans-serif;
+  font-size: 20px;
+
+  .imprint-info {
+    color: #7f7f7f;
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+
+  .imprint-header {
+    font-size: 20px;
+    font-family: Comfortaa, sans-serif;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  .imprint-link {
+    color: #19a0ff;
+  }
+
+  ul {
+    li {
+      margin-bottom: 0;
+    }
+  }
+}
