@@ -17,7 +17,7 @@ export const CaseStudies = ({ data }) => {
           <h1 className="caseStudies-title">{t(data.title)}</h1>
           <div className="caseStudies-clients">
             {data?.items.map((item, index) => (
-              <div key={index} className={"paragraph"}>
+              <Link to={item.link} key={index}>
                 <div className="caseStudies-client">
                   <div className="image-wrapper">
                     <Image filename={item.iconFilename} />
@@ -26,12 +26,10 @@ export const CaseStudies = ({ data }) => {
                   <h1>{t(item.title)}</h1>
                   <p>{t(item.description)}</p>
                   <div className="caseStudies-navigation">
-                    <Link to={item.link}>
-                      <SubmitButton />
-                    </Link>
+                    <SubmitButton />
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
