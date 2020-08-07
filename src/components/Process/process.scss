@@ -24,144 +24,142 @@
 
 .process-wrapper {
   grid-column-start: 2;
+}
 
-  .process {
-    position: relative;
-    max-width: 90%;
-    width: 100%;
-    margin: 0 auto;
+.process {
+  position: relative;
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+}
 
-    .process-center-line {
-      position: absolute;
-      width: 3px;
-      height: 100%;
-      top: 0;
-      left: 50%;
-      margin-left: -2px;
-      background: #19a0ff;
-    }
+.process-center-line {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  margin-left: -2px;
+  background: #19a0ff;
+}
+
+.article {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+
+.left {
+  justify-content: flex-start;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.title {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  max-width: 42%;
+  width: 100%;
+  padding: 0 25px;
+
+  p {
+    font-size: 30px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: #ffffff;
+    font-family: Comfortaa, sans-serif;
+    margin-bottom: 0;
   }
+}
 
-  .article {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 100px;
-    // padding-top: 67px;
+.description {
+  align-items: center;
+  max-width: 42%;
+  width: 100%;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-    .left {
-      justify-content: flex-start;
-    }
-
-    .right {
-      justify-content: flex-end;
-    }
-
-    .title {
-      height: 120px;
-      display: flex;
-      align-items: center;
-      max-width: 42%;
-      width: 100%;
-      padding: 0 25px;
-
-      p {
-        font-size: 30px;
-        font-weight: 300;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.2;
-        letter-spacing: normal;
-        color: #ffffff;
-        font-family: Comfortaa, sans-serif;
-        margin-bottom: 0;
-      }
-    }
-
-    .description {
-      align-items: center;
-      max-width: 42%;
-      width: 100%;
-      padding: 0 25px;
-      // height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-
-      p {
-        font-size: 12px;
-        font-weight: 300;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.2;
-        letter-spacing: normal;
-        color: #7f7f7f;
-        font-family: Comfortaa, sans-serif;
-        text-align: left;
-        margin-bottom: 0;
-      }
-    }
-
-    .outer-circle {
-      position: absolute;
-      left: 50%;
-      height: 120px;
-      width: 120px;
-      margin-left: -60px;
-      border-radius: 50%;
-      border: solid 2px #173b57;
-      background-color: #173b57;
-
-      .inner-circle {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        height: 106px;
-        width: 106px;
-        border: solid 2px #1b6eac;
-        background-color: #1b6eac;
-        border-radius: 50%;
-        margin: -53px 0px 0px -53px;
-
-        .second-inner-circle {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          height: 90px;
-          width: 90px;
-          border: solid 2px #19a0ff;
-          background-color: #19a0ff;
-          border-radius: 50%;
-          margin: -45px 0px 0px -45px;
-
-          .third-inner-circle {
-            position: absolute;
-            background: #0f0f0f;
-            border-radius: 50%;
-            height: 84px;
-            width: 84px;
-            top: 50%;
-            left: 50%;
-            margin: -42px 0px 0px -42px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .process-number {
-              font-family: Caviar, sans-serif;
-              font-weight: normal;
-              font-stretch: normal;
-              line-height: 1.2;
-              letter-spacing: normal;
-              font-size: 45px;
-              line-height: 40px;
-              text-align: left;
-              color: #333333;
-            }
-          }
-        }
-      }
-    }
+  p {
+    font-size: 12px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: #7f7f7f;
+    font-family: Comfortaa, sans-serif;
+    text-align: left;
+    margin-bottom: 0;
   }
+}
+
+.outer-circle {
+  position: absolute;
+  left: 50%;
+  height: 120px;
+  width: 120px;
+  margin-left: -60px;
+  border-radius: 50%;
+  border: solid 2px #173b57;
+  background-color: #173b57;
+}
+
+.inner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 106px;
+  width: 106px;
+  border: solid 2px #1b6eac;
+  background-color: #1b6eac;
+  border-radius: 50%;
+  margin: -53px 0px 0px -53px;
+}
+
+.second-inner-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 90px;
+  width: 90px;
+  border: solid 2px #19a0ff;
+  background-color: #19a0ff;
+  border-radius: 50%;
+  margin: -45px 0px 0px -45px;
+}
+
+.third-inner-circle {
+  position: absolute;
+  background: #0f0f0f;
+  border-radius: 50%;
+  height: 84px;
+  width: 84px;
+  top: 50%;
+  left: 50%;
+  margin: -42px 0px 0px -42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.process-number {
+  font-family: Caviar, sans-serif;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  font-size: 45px;
+  line-height: 40px;
+  text-align: left;
+  color: #333333;
 }
 
 // Mobile Design
@@ -170,83 +168,81 @@
     color: #7f7f7f;
   }
 
-  .process-wrapper {
-    .process {
-      .process-center-line {
-        display: none;
-      }
+  .process {
+    .process-center-line {
+      display: none;
     }
+  }
 
-    .article {
-      padding-bottom: 60px;
-      display: flex;
-      flex-flow: column;
+  .title {
+    height: auto;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    order: 2;
 
-      .title {
-        height: auto;
-        margin-top: 20px;
-        width: 100%;
-        max-width: 100%;
-        display: block;
-        order: 2;
-
-        p {
-          font-size: 20px;
-          font-weight: bold;
-        }
-      }
-
-      .right {
-        text-align: center;
-      }
-
-      .left {
-        text-align: center;
-      }
-
-      .description {
-        height: auto;
-        width: 100%;
-        max-width: 100%;
-        order: 3;
-
-        p {
-          text-align: center;
-          font-size: 15px;
-        }
-      }
-
-      .outer-circle {
-        position: relative;
-        order: 1;
-        height: 100px;
-        width: 100px;
-        margin-left: -50px;
-
-        .inner-circle {
-          height: 86px;
-          width: 86px;
-          margin: -43px 0px 0px -43px;
-
-          .second-inner-circle {
-            height: 70px;
-            width: 70px;
-            margin: -35px 0px 0px -35px;
-
-            .third-inner-circle {
-              height: 64px;
-              width: 64px;
-              margin: -32px 0px 0px -32px;
-
-              .process-number {
-                color: white;
-                font-weight: bold;
-                font-size: 30px;
-              }
-            }
-          }
-        }
-      }
+    p {
+      font-size: 20px;
+      font-weight: bold;
     }
+  }
+
+  .right {
+    text-align: center;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .description {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    order: 3;
+
+    p {
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+
+  .article {
+    padding-bottom: 60px;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .outer-circle {
+    position: relative;
+    order: 1;
+    height: 100px;
+    width: 100px;
+    margin-left: -50px;
+  }
+
+  .inner-circle {
+    height: 86px;
+    width: 86px;
+    margin: -43px 0px 0px -43px;
+  }
+
+  .second-inner-circle {
+    height: 70px;
+    width: 70px;
+    margin: -35px 0px 0px -35px;
+  }
+
+  .third-inner-circle {
+    height: 64px;
+    width: 64px;
+    margin: -32px 0px 0px -32px;
+  }
+
+  .process-number {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
   }
 }
