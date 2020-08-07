@@ -57,7 +57,7 @@ const MenuNavigation = ({
       <div className={"menuNavigationDiv"}>
         <SoftupLogo />
         <MenuLinks menuItems={menuItems} activeMenuItem={activeMenuItem} />
-        <LanguageMenu gridColumnStart={"4"} />
+        {/* <LanguageMenu gridColumnStart={"4"} /> */}
       </div>
     </React.Fragment>
   )

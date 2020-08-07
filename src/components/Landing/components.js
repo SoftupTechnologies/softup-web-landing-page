@@ -31,9 +31,8 @@ export const MenuHeader = () => {
   return (
     <div className="menuHeader">
       <SoftupLogo />
-      <LanguageMenu gridColumnStart={"3"} />
+      {/* <LanguageMenu gridColumnStart={"3"} /> */}
       <AnchorLink offset="100" to="/#accordion-menu" className="burgerIcon">
-        {/* TODO: Replace icon */}
         <BurgerMenuIcon />
       </AnchorLink>
     </div>
