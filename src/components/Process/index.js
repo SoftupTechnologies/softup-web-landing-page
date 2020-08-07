@@ -16,22 +16,22 @@ export const Process = ({ data }) => {
           {data?.items.map((item, index) => (
             <div className="process" key={index}>
               {index !== items && <div className="process-center-line"></div>}
-              <div className="article">
+              <div className="process-article">
                 {index % 2 === 0 ? (
                   <>
-                    <div className="title right">
+                    <div className="process-article-title right">
                       <p>{t(item.title)}</p>
                     </div>
-                    <div className="description">
+                    <div className="process-article-description">
                       <p>{t(item.description)}</p>
                     </div>
                   </>
                 ) : (
                   <>
-                    <div className="description">
+                    <div className="process-article-description">
                       <p>{t(item.description)}</p>
                     </div>
-                    <div className="title left">
+                    <div className="process-article-title left">
                       <p>{t(item.title)}</p>
                     </div>
                   </>
