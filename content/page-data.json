@@ -441,7 +441,7 @@
     ]
   },
   {
-    "link": "/career",
+    "link": "https://www.notion.so/Ready-for-a-Challenge-78fa9cdfe3774736bbd848a91419ac6e",
     "menu": true,
     "number": "04",
     "title": "career.",
@@ -452,8 +452,24 @@
           "component": "slideLinks",
           "data": [
             {
-              "link": "",
-              "iconUrl": ""
+              "link": "https://www.notion.so/Who-are-we-3dd9374b683d49f0858bdcd8eea55de9",
+              "name": "Who are we?"
+            },
+            {
+              "link": "https://www.notion.so/Technology-Stack-5b870086e876460bba0f4f09f3e6d009",
+              "name": "Technology Stack"
+            },
+            {
+              "link": "https://www.notion.so/Benefits-Why-join-us-c4074149161e4fc7a9573588c1aca07e",
+              "name": "Benefits - Why join us?"
+            },
+            {
+              "link": "https://www.notion.so/Our-interview-process-39aa5fb136704bde9e81911409f71be5",
+              "name": "Our interview process"
+            },
+            {
+              "link": "https://www.notion.so/Open-job-positions-216572e2b7134ccd95520d066b8d5f76",
+              "name": "Open job positions"
             }
           ]
         }

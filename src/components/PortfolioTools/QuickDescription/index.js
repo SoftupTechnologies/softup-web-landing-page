@@ -6,7 +6,9 @@ export const QuickDescription = ({ data }) => {
   return (
     <div className={"quickDescriptionDiv displayWithGrid"}>
       <div className={"title"}>{data.title}</div>
-      <div className={"description"}>{data.description}</div>
+      <div className={"description"}>
+        <pre>{data.description}</pre>
+      </div>
     </div>
   )
 }

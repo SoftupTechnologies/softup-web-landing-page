@@ -1,5 +1,4 @@
 import React from "react"
-import { LanguageMenu } from "../LangSwitch"
 import SoftupLogoSvg from "../../images/softup-logo.svg"
 import "./menu-navigation.scss"
 import { Link } from "gatsby"
