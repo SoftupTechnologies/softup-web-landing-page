@@ -5,12 +5,15 @@
   color: #ffffff;
   font-family: "Comfortaa", sans-serif;
   display: flex;
-  &.right{
-    flex-direction: row;
-  }
-  &.left{
+
+  &.right {
     flex-direction: row-reverse;
   }
+
+  &.left {
+    flex-direction: row;
+  }
+
   .title {
     padding-top: 30px;
     padding-bottom: 10px;
@@ -19,13 +22,15 @@
     line-height: calc(1.2rem + 1vw);
     font-weight: bold;
   }
+
   .content {
     font-size: 15px;
     .paragraph {
       padding-bottom: 10px;
     }
   }
-  .pImage{
+
+  .pImage {
     padding-left: 5vw;
     padding-right: 5vw;
     padding-top: 20px;
@@ -37,9 +42,21 @@
 
 @media (max-width: 768px) {
   .paragraphAndImageDiv {
-    flex-direction: column;
+    .title,
+    .content {
+      text-align: left;
+    }
+
+    &.right {
+      flex-direction: column;
+    }
+
+    &.left {
+      flex-direction: column;
+    }
   }
-  .pImage{
+
+  .pImage {
     align-self: center;
     padding: 10px;
   }
