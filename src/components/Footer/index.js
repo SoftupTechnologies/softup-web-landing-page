@@ -46,11 +46,9 @@ export const Footer = () => {
         <div className={"footerSection"}>
           <div className={"sectionTitle"}>LEGAL</div>
           <div className={"sectionRow"}>
-            {" "}
             <Link to={"/privacy-policy"}>Privacy Policy</Link>
           </div>
           <div className={"sectionRow"}>
-            {" "}
             <Link to={"/imprint"}>Imprint</Link>
           </div>
           <div className={"sectionRow"}>FB LI GH</div>

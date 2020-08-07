@@ -18,22 +18,38 @@ exports.createPages = ({ boundActionCreators }) => {
 
   // Create pages for each JSON entry.
   data.forEach(({ title, link, content, accordionContent }) => {
-    const slugContainer = accordionContent.content.find(
-      item => item.component === "slideLinks"
-    )
-    const accordionSlugs = slugContainer.data.map(el => el.link.split("#")[1])
-    createPage({
-      path: link,
-      component: template,
-      context: {
-        showTitleInBody: true,
-        accordionSlugs,
-        title,
-        link,
-        content,
-        menuItems,
-      },
-    })
+    if (accordionContent) {
+      const slugContainer = accordionContent.content.find(
+        item => item.component === "slideLinks"
+      )
+
+      const accordionSlugs = slugContainer.data.map(el => el.link.split("#")[1])
+
+      createPage({
+        path: link,
+        component: template,
+        context: {
+          showTitleInBody: true,
+          accordionSlugs,
+          title,
+          link,
+          content,
+          menuItems,
+        },
+      })
+    } else {
+      createPage({
+        path: link,
+        component: template,
+        context: {
+          showTitleInBody: true,
+          title,
+          link,
+          content,
+          menuItems,
+        },
+      })
+    }
   })
 
   const portfolioContent = data.find(item => item.title === "portfolio.")

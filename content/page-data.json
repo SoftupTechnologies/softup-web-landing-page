@@ -484,20 +484,24 @@
     "link": "/privacy-policy",
     "menu": false,
     "title": "privacy policy.",
-    "accordionContent": {
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
-      "content": [
-        {
-          "component": "slideLinks",
-          "data": [
-            {
-              "link": "",
-              "iconUrl": ""
-            }
-          ]
+    "content": [
+      {
+        "component": "privacyPolicy",
+        "data": {
+          "links": {
+            "cookies": "http://www.allaboutcookies.org",
+            "stripe": "https://stripe.com/de/privacy",
+            "googlePrivacy": "https://www.google.com/intl/en/policies/privacy/",
+            "googleAnalytics": "https://tools.google.com/dlpage/gaoptout",
+            "nai": "http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work",
+            "facebookAdd": "https://www.facebook.com/settings/?tab=ads",
+            "googleAdd": "https://www.google.com/settings/ads/anonymous",
+            "daa": "http://optout.aboutads.info/",
+            "softup": "info@softup.co"
+          }
         }
-      ]
-    }
+      }
+    ]
   },
   {
     "link": "/imprint",
