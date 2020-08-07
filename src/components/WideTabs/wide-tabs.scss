@@ -55,15 +55,6 @@
   flex-direction: column;
   justify-content: space-around;
   color: #ffffff;
-
-  .mvpDisplay {
-    display: flex;
-    justify-content: flex-end;
-
-    .customWidth {
-      width: 100px;
-    }
-  }
 }
 
 @media (min-width: 768px) {
@@ -83,11 +74,5 @@
     line-height: 1.5rem;
     padding-left: 5px;
     height: 18vh;
-
-    .mvpDisplay {
-      .customWidth {
-        width: 85px;
-      }
-    }
   }
 }

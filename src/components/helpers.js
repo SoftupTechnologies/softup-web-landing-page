@@ -48,6 +48,12 @@ export const generateContent = pageContent => {
 }
 
 export const breakLongWords = str => {
+  if (str.includes("#insertnewline#")) {
+    str = str.replace(/#insertnewline#/g, "<br/>")
+
+    return <div dangerouslySetInnerHTML={{ __html: str }} />
+  }
+
   const words = str.split(/\s+/)
   const container = []
   let line = ""
