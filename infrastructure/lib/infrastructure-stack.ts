@@ -13,7 +13,7 @@ export class InfrastructureStack extends cdk.Stack {
     });
 
     const deployment = new s3Deployment.BucketDeployment(this, "deployStaticWebsite", {
-      sources: [s3Deployment.Source.asset("../public")],
+      sources: [s3Deployment.Source.asset("../website/public")],
       destinationBucket: websiteBucket
     });
   }
