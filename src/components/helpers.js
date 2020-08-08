@@ -1,4 +1,5 @@
 import React from "react"
+import axios from "axios"
 import { WideTabs } from "./WideTabs"
 import { NumberedParagraph } from "./NumberedParagraph"
 import { SlideLinks } from "./Accordion/SlideLinks"
@@ -74,4 +75,46 @@ export const breakLongWords = str => {
     }
   })
   return <div dangerouslySetInnerHTML={{ __html: container.join(" ") }} />
+}
+
+export const sendVisitorData = (data) => {
+  const body = {
+    fullName: data.name,
+    email: data.email
+  };
+
+  if (data.phone) {
+    body.phoneNumber = data.phone;
+  }
+  if(data.platform) {
+    let platform = null;
+    Object.keys(data.platform).forEach((key) => {
+      if (data.platform[key]) {
+        platform = key;
+      }
+    });
+
+    body.projectPlatform = platform;
+  }
+
+  if(data.size) {
+    if(data.size === 1) {
+      body.projectSize = 'small';
+    } else if (data.size === 2) {
+      body.projectSize = 'medium';
+    } else if (data.size === 3) {
+      body.projectSize = 'large';
+    }
+  }
+
+  return axios({
+    method: 'post',
+    url:'https://us-central1-softup-landing-page.cloudfunctions.net/processForm',
+    headers: {
+      "Content-Type": "application/json",
+      'Accept': 'application/json'
+    },
+    data: body
+  });
+
 }
