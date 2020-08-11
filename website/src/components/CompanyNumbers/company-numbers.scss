@@ -8,8 +8,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  max-width: 1000px;
-  align-self: center;
 }
 
 .benchmarkGroup {
@@ -18,7 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 40px;
+  padding: 5px;
 }
 
 .benchmarkCategory {

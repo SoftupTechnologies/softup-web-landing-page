@@ -1,5 +1,4 @@
 import React from "react"
-import axios from "axios"
 import { WideTabs } from "./WideTabs"
 import { NumberedParagraph } from "./NumberedParagraph"
 import { SlideLinks } from "./Accordion/SlideLinks"
@@ -75,4 +74,10 @@ export const breakLongWords = str => {
     }
   })
   return <div dangerouslySetInnerHTML={{ __html: container.join(" ") }} />
+}
+
+export const encode = (data) => {
+  return Object.keys(data)
+  .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+  .join("&");
 }
