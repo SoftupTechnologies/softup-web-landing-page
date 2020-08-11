@@ -48,6 +48,14 @@ export class InfrastructureStack extends cdk.Stack {
         resources: ["arn:aws:ses:eu-central-1:485652621123:identity/erald.totraku@softup.co"]
       })
 
+    const sendMailPolicyE = new PolicyStatement(
+      {
+        actions: ["SES:SendEmail"],
+        effect: Effect.ALLOW,
+        resources: ["arn:aws:ses:eu-central-1:485652621123:identity/info@softup.co"]
+      })
+
     formSubmitFunction.addToRolePolicy(sendMailPolicy)
+    formSubmitFunction.addToRolePolicy(sendMailPolicyE)
   }
 }

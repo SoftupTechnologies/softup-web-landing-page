@@ -75,9 +75,3 @@ export const breakLongWords = str => {
   })
   return <div dangerouslySetInnerHTML={{ __html: container.join(" ") }} />
 }
-
-export const encode = (data) => {
-  return Object.keys(data)
-  .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-  .join("&");
-}
