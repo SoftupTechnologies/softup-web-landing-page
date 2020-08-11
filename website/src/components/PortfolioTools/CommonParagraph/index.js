@@ -14,7 +14,7 @@ export const CommonParagraph = ({ data }) => {
             : { flexDirection: "column" }
         }
       >
-        <div className={"title"}>{data.title}</div>
+        {data.title && (<div className={"title"}>{data.title}</div>)}
         <div className={"content"}>
           {data.paragraphs.map((para, index) => (
             <div key={index} className={"paragraph"}>

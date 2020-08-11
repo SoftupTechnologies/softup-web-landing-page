@@ -17,25 +17,12 @@ export const Process = ({ data }) => {
             <div className="process" key={index}>
               {index !== items && <div className="process-center-line"></div>}
               <div className="process-article">
-                {index % 2 === 0 ? (
-                  <>
-                    <div className="process-article-title right">
-                      <p>{t(item.title)}</p>
-                    </div>
-                    <div className="process-article-description">
-                      <p>{t(item.description)}</p>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="process-article-description">
-                      <p>{t(item.description)}</p>
-                    </div>
-                    <div className="process-article-title left">
-                      <p>{t(item.title)}</p>
-                    </div>
-                  </>
-                )}
+                <div className="process-article-title right">
+                  <p>{t(item.title)}</p>
+                </div>
+                <div className="process-article-description">
+                  <p>{t(item.description)}</p>
+                </div>
                 <div className="outer-circle">
                   <div className="inner-circle">
                     <div className="second-inner-circle">

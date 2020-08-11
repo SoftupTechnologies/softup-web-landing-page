@@ -3,15 +3,7 @@ import ReactMarkdown from "react-markdown"
 import PropTypes from "prop-types"
 import './markdown-display.scss'
 
-export const MarkdownDisplay = ({ data }) => {
-  return (
-    <div className={"displayWithGrid"}>
-      <div className={"markdownDiv"}>
-        <ReactMarkdown source={data} />
-      </div>
-    </div>
-  )
-}
+export const MarkdownDisplay = ({ data }) => <ReactMarkdown source={data} />
 
 MarkdownDisplay.propTypes = {
   data: PropTypes.string,
