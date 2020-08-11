@@ -48,42 +48,40 @@ export const ContactUs = () => {
       }}
     >
       {() => (
-        (
-          <div className={"contactUsDiv"}>
-            <div className={"question"}>
-              <div>
-                Want to start a <br />
-                <a className={"whiteProject"}>project</a> with us?
-              </div>
-            </div>
-            <div className={"submitForm"}>
-              <Form className={"emailForm"}>
-                <Field
-                  className={"inputField"}
-                  placeholder={t("name")}
-                  name="name"
-                />
-                <ErrorMessage className={"validationError"} name="name" />
-                <Field
-                  className={"inputField"}
-                  placeholder={t("e-mail")}
-                  name="email"
-                />
-                <ErrorMessage className={"validationError"} name="email" />
-                <ErrorMessage className={"validationError"} name="phone" />
-                <Field
-                  className={"inputField"}
-                  placeholder={t("phone number")}
-                  name="phone"
-                />
-                <label className={"submitButton"}>
-                  <input type="submit" style={{ display: "none" }} />
-                  <SubmitButton />
-                </label>
-              </Form>
+        <div className={"contactUsDiv"}>
+          <div className={"question"}>
+            <div>
+              Want to start a <br />
+              <a className={"whiteProject"}>project</a> with us?
             </div>
           </div>
-        )
+          <div className={"submitForm"}>
+            <Form className={"emailForm"}>
+              <Field
+                className={"inputField"}
+                placeholder={t("name")}
+                name="name"
+              />
+              <ErrorMessage className={"validationError"} name="name" />
+              <Field
+                className={"inputField"}
+                placeholder={t("e-mail")}
+                name="email"
+              />
+              <ErrorMessage className={"validationError"} name="email" />
+              <ErrorMessage className={"validationError"} name="phone" />
+              <Field
+                className={"inputField"}
+                placeholder={t("phone number")}
+                name="phone"
+              />
+              <label className={"submitButton"}>
+                <input type="submit" style={{ display: "none" }} />
+                <SubmitButton />
+              </label>
+            </Form>
+          </div>
+        </div>
       )}
     </Formik>
   )
