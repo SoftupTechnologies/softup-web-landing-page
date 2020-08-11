@@ -24,10 +24,7 @@ export class InfrastructureStack extends cdk.Stack {
     const formSubmitFunction = new Function(this, "formSubmitFunction", {
       runtime: Runtime.NODEJS_12_X,
       handler: "index.handler",
-      code: Code.fromAsset("./function"),
-      environment: {
-        // QUEUE_URL:
-      }
+      code: Code.fromAsset("./src")
     })
 
     const api = new RestApi(this, "api", {
