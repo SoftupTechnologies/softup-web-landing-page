@@ -3,7 +3,7 @@ import * as s3 from "@aws-cdk/aws-s3"
 import { Code, Function, Runtime } from "@aws-cdk/aws-lambda"
 import { Cors, LambdaIntegration, RestApi } from "@aws-cdk/aws-apigateway"
 import * as s3Deployment from "@aws-cdk/aws-s3-deployment"
-import { Effect, PolicyStatement, Role, ServicePrincipal } from "@aws-cdk/aws-iam"
+import { Effect, PolicyStatement } from "@aws-cdk/aws-iam"
 
 export class InfrastructureStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
