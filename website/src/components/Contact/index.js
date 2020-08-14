@@ -67,7 +67,7 @@ export const ContactUs = () => {
             <div
               className={"postingIndicator"}
               style={
-                props.status?.started
+                props.status?.started && !props.status?.ended
                   ? { display: "block", color: "white" }
                   : { display: "none" }
               }
@@ -104,7 +104,7 @@ export const ContactUs = () => {
             <div className={"submitForm"}>
               <Form
                 className={"emailForm"}
-                style={props.status?.started ? { filter: "blur(5px)" } : {}}
+                style={props.status?.started && !props.status?.ended ? { filter: "blur(5px)" } : {}}
               >
                 <Field
                   className={"inputField"}
