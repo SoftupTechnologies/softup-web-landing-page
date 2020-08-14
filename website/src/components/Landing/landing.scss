@@ -46,7 +46,7 @@
   letter-spacing: 1.05pt;
   text-align: center;
   font-family: Comfortaa, sans-serif;
-  font-size: calc(1.6rem + 1.8vw);
+  font-size: calc(3rem + 1.8vw);
   font-weight: bold;
   line-height: 1;
   color: #ffffff;
@@ -65,10 +65,11 @@
 .sloganDesc {
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 500px;
+  max-width: 768px;
   text-align: center;
   font-family: Comfortaa, sans-serif;
   font-weight: 300;
+  font-size: calc(1.5rem);
   line-height: 1.2;
   color: #aaaaaa;
 }
@@ -94,5 +95,13 @@
     width: 6px;
     height: 6px;
     border-radius: 2px;
+  }
+
+  .sloganTitle {
+    font-size: calc(2rem + 1.8vw);
+    width: 100%;
+  }
+  .sloganDesc {
+    width: 100%;
   }
 }

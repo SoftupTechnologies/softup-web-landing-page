@@ -6,7 +6,7 @@ export const Button = ({ data }) => {
   return (
     <form>
       <div className={"buttonDiv"}>
-        <a link={data.link}>
+        <a href={data.link}>
           {data.value}
         </a>
       </div>

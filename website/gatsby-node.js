@@ -23,22 +23,24 @@ exports.createPages = ({ boundActionCreators }) => {
         item => item.component === "slideLinks"
       )
 
-      if (slugContainer) {
-        const accordionSlugs = slugContainer.data.map(el => el.link.split("#")[1])
 
-        createPage({
-          path: link,
-          component: template,
-          context: {
-            showTitleInBody: true,
-            accordionSlugs,
-            title,
-            link,
-            content,
-            menuItems,
-          },
-        })
+      const context = {
+        showTitleInBody: true,
+        title,
+        link,
+        content,
+        menuItems,
       }
+
+      if (slugContainer) {
+        context.accordionSlugs = slugContainer.data.map(el => el.link.split("#")[1])
+      }
+
+      createPage({
+        path: link,
+        component: template,
+        context,
+      })
     } else {
       createPage({
         path: link,
