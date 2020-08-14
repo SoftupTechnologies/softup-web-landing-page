@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import "./paragraph-and-image.scss"
 import { Image } from "../../image"
 import classNames from "classnames"
+import { generateContent } from "../../helpers"
 
 export const ParagraphAndImage = ({ data }) => {
   let classes = classNames({
@@ -20,11 +21,7 @@ export const ParagraphAndImage = ({ data }) => {
         <div>
           <div className={"title"}>{data.title}</div>
           <div className={"content"}>
-            {data.paragraphs.map((para, index) => (
-              <div key={index} className={"paragraph"}>
-                {para}
-              </div>
-            ))}
+            {generateContent(data.content)}
           </div>
         </div>
       </div>
@@ -37,6 +34,6 @@ ParagraphAndImage.propTypes = {
     title: PropTypes.string,
     imageName: PropTypes.string,
     imagePosition: PropTypes.oneOf(["left", "right"]),
-    paragraphs: PropTypes.arrayOf(PropTypes.string),
+    content: PropTypes.arrayOf(PropTypes.object),
   }),
 }
