@@ -3,7 +3,8 @@
   src: url("../../fonts/caviar_dreams/CaviarDreams.ttf");
 }
 
-.paragraphDiv {
+.normalParagraphDiv {
+  padding-top: 10vh;
   grid-column-start: 2;
 
   .paragraph {
@@ -14,17 +15,10 @@
     font-family: Comfortaa, sans-serif;
     display: flex;
     flex-direction: column;
-    transform: translate(25px, -40px);
+    transform: translate(0px, -40px);
     background-color: #0f0f0f;
     padding: 10px;
     max-width: calc(100% - 25px);
-  }
-
-  .paragraphNumber {
-    font-family: Caviar, sans-serif;
-    font-size: 5rem;
-    line-height: 1.2;
-    color: #ffffff;
   }
 
   .paragraphTitle {
@@ -34,9 +28,9 @@
   }
 
   .paragraphContent {
+    padding-top: 1vh;
     font-size: 18px;
     color: #c2c2c2;
-    padding-top: 1vh;
 
     strong {
       font-weight: bolder;
@@ -56,11 +50,11 @@
       transform: translate(0, -35px);
 
       .paragraphTitle {
-        text-align: center;
+        text-align: left;
       }
 
       .paragraphContent {
-        text-align: center;
+        text-align: left;
       }
     }
   }

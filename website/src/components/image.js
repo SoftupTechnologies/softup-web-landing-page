@@ -13,7 +13,7 @@ export const Image = props => (
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 600) {
+                fluid {
                   ...GatsbyImageSharpFluid
                 }
               }
