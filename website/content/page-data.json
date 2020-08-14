@@ -362,11 +362,7 @@
                   {
                     "title": "TECHNOLOGIES WE USED",
                     "type": "list",
-                    "items": [
-                      "AWS",
-                      "React",
-                      "Node.js"
-                    ]
+                    "items": ["AWS", "React", "Node.js"]
                   },
                   {
                     "title": "INCREASE IN BETA USERS",

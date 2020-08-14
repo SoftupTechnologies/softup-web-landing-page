@@ -1,8 +1,10 @@
+/* eslint-disable */
 import React from "react"
 import "./contact.scss"
 import SubmitButton from "../../images/submit.svg"
 import { useTranslation } from "react-i18next"
 import { ErrorMessage, Field, Form, Formik } from "formik"
+import { timeout } from "../helpers"
 
 export const ContactUs = () => {
   const { t } = useTranslation()
@@ -28,10 +30,12 @@ export const ContactUs = () => {
               body: JSON.stringify(values),
             }
           )
-          alert("Information has been sent, thank you!")
+          actions.setStatus({ success: true, started: true, ended: true })
+          await timeout(2000)
           actions.resetForm()
         } catch (e) {
-          alert("Form submission failed!")
+          actions.setStatus({ error: true, message: e, ended: true })
+          await timeout(3000)
         }
         actions.setSubmitting(false)
       }}
@@ -47,41 +51,84 @@ export const ContactUs = () => {
         return errors
       }}
     >
-      {() => (
-        <div className={"contactUsDiv"}>
-          <div className={"question"}>
-            <div>
-              Want to start a <br />
-              <a className={"whiteProject"}>project</a> with us?
+      {props => (
+        console.log(props.status),
+        (
+          <div className={"contactUsDiv"}>
+            <div className={"question"}>
+              <div>
+                Want to start a <br />
+                <a className={"whiteProject"}>project</a> with us?
+              </div>
+            </div>
+            <div
+              className={"postingIndicator"}
+              style={
+                props.status?.started
+                  ? { display: "block", color: "white" }
+                  : { display: "none" }
+              }
+            >
+              Message is being sent...
+            </div>
+            <div
+              className={"postingIndicator"}
+              style={
+                !props.status?.error && props.status?.ended
+                  ? { display: "block", color: "white" }
+                  : { display: "none" }
+              }
+            >
+              <span style={{ textAlign: "center" }}>
+                <p>Thanks for your message.</p>
+                <p>Well get back to you within 48 hours.</p>
+              </span>
+            </div>
+            <div
+              className={"postingIndicator"}
+              style={
+                props.status?.error && props.status?.ended
+                  ? { display: "block", color: "white" }
+                  : { display: "none" }
+              }
+            >
+              <span style={{ textAlign: "center" }}>
+                <p>Unfortunately your message could not be delivered.</p>
+                <p>Please use our email: info@softup.co</p>
+              </span>
+            </div>
+            <div className={"submitForm"}>
+              <Form
+                className={"emailForm"}
+                style={props.status?.started ? { filter: "blur(5px)" } : {}}
+              >
+                <Field
+                  className={"inputField"}
+                  placeholder={t("name")}
+                  name="name"
+                />
+                <ErrorMessage className={"validationError"} name="name" />
+                <Field
+                  className={"inputField"}
+                  placeholder={t("e-mail")}
+                  name="email"
+                />
+                {/* eslint-disable-next-line react/prop-types */}
+                <ErrorMessage className={"validationError"} name="email" />
+                <ErrorMessage className={"validationError"} name="phone" />
+                <Field
+                  className={"inputField"}
+                  placeholder={t("phone number")}
+                  name="phone"
+                />
+                <label className={"submitButton"}>
+                  <input type="submit" style={{ display: "none" }} />
+                  <SubmitButton />
+                </label>
+              </Form>
             </div>
           </div>
-          <div className={"submitForm"}>
-            <Form className={"emailForm"}>
-              <Field
-                className={"inputField"}
-                placeholder={t("name")}
-                name="name"
-              />
-              <ErrorMessage className={"validationError"} name="name" />
-              <Field
-                className={"inputField"}
-                placeholder={t("e-mail")}
-                name="email"
-              />
-              <ErrorMessage className={"validationError"} name="email" />
-              <ErrorMessage className={"validationError"} name="phone" />
-              <Field
-                className={"inputField"}
-                placeholder={t("phone number")}
-                name="phone"
-              />
-              <label className={"submitButton"}>
-                <input type="submit" style={{ display: "none" }} />
-                <SubmitButton />
-              </label>
-            </Form>
-          </div>
-        </div>
+        )
       )}
     </Formik>
   )
