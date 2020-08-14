@@ -326,7 +326,12 @@
                 "component": "quickDescription",
                 "data": {
                   "title": "The morning alarm clock",
-                  "description": "Used by K-12 students as their daily alarm clock, students start the day more focused and alert. Using Cleu leads to higher grit, perseverance, and class attendance. Cleu is available on the AppStore and our solutions team for district-wide pilots."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "Used by K-12 students as their daily alarm clock, students start the day more focused and alert. Using Cleu leads to higher grit, perseverance, and class attendance. Cleu is available on the AppStore and our solutions team for district-wide pilots."
+                    }
+                  ]
                 }
               },
               {
@@ -386,9 +391,11 @@
                 "data": {
                   "title": "Fix most of the pressing issues and bugs",
                   "type": "horizontal",
-                  "paragraphs": [
-                    "Cleu founder, Uzair had fallen into the common trap of outsourcing the app development of his idea to a low-cost agency, in order to “fit” it into his limited budget.",
-                    "The result was a mobile app that was a slow, unresponsive and bug prone app. He contacted Softup with the hope to fix most of the pressing issues and bugs."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "Cleu founder, Uzair had fallen into the common trap of outsourcing the app development of his idea to a low-cost agency, in order to “fit” it into his limited budget.\n\nThe result was a mobile app that was a slow, unresponsive and bug prone app. He contacted Softup with the hope to fix most of the pressing issues and bugs."
+                    }
                   ]
                 }
               },
@@ -403,9 +410,11 @@
                 "data": {
                   "title": "Title",
                   "type": "vertical",
-                  "paragraphs": [
-                    "Cleu founder, Uzair had fallen into the common trap of outsourcing the app development of his idea to a low-cost agency, in order to “fit” it into his limited budget.",
-                    "The result was a mobile app that was a slow, unresponsive and bug prone app. He contacted Softup with the hope to fix most of the pressing issues and bugs."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "Cleu founder, Uzair had fallen into the common trap of outsourcing the app development of his idea to a low-cost agency, in order to “fit” it into his limited budget.\n\nThe result was a mobile app that was a slow, unresponsive and bug prone app. He contacted Softup with the hope to fix most of the pressing issues and bugs."
+                    }
                   ]
                 }
               },
@@ -421,10 +430,11 @@
                   "title": "Fixed issues",
                   "imageName": "alarm-mobile.png",
                   "imagePosition": "right",
-                  "paragraphs": [
-                    "One of our senior consultants quickly got to work and delivered within 48 hours a list of issues some known but most of them unknown, that needed to be handled right away for the app to be presentable in front of potential customers and investors.",
-                    "All the issues were fixed in the next two weeks and shortly after Cleu was able to get a new batch of Beta users to the platform.",
-                    "The founder would decide to work exclusively with Softup going forward in order to maintain the high performance and reliability of the mobile app. He scaled his development team at Softup with 3 developers working full time in order to make Cleu the most promising product in its niche."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "One of our senior consultants quickly got to work and delivered within 48 hours a list of issues some known but most of them unknown, that needed to be handled right away for the app to be presentable in front of potential customers and investors.\n\nAll the issues were fixed in the next two weeks and shortly after Cleu was able to get a new batch of Beta users to the platform.\n\nThe founder would decide to work exclusively with Softup going forward in order to maintain the high performance and reliability of the mobile app. He scaled his development team at Softup with 3 developers working full time in order to make Cleu the most promising product in its niche."
+                    }
                   ]
                 }
               },
@@ -434,10 +444,11 @@
                   "title": "Fixed issues",
                   "imageName": "alarm-mobile.png",
                   "imagePosition": "left",
-                  "paragraphs": [
-                    "One of our senior consultants quickly got to work and delivered within 48 hours a list of issues some known but most of them unknown, that needed to be handled right away for the app to be presentable in front of potential customers and investors.",
-                    "All the issues were fixed in the next two weeks and shortly after Cleu was able to get a new batch of Beta users to the platform.",
-                    "The founder would decide to work exclusively with Softup going forward in order to maintain the high performance and reliability of the mobile app. He scaled his development team at Softup with 3 developers working full time in order to make Cleu the most promising product in its niche."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "One of our senior consultants quickly got to work and delivered within 48 hours a list of issues some known but most of them unknown, that needed to be handled right away for the app to be presentable in front of potential customers and investors.\n\nAll the issues were fixed in the next two weeks and shortly after Cleu was able to get a new batch of Beta users to the platform.\n\nThe founder would decide to work exclusively with Softup going forward in order to maintain the high performance and reliability of the mobile app. He scaled his development team at Softup with 3 developers working full time in order to make Cleu the most promising product in its niche."
+                    }
                   ]
                 }
               },
