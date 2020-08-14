@@ -27,7 +27,7 @@ exports.handler = async (event, context) => {
 
     const params = {
       Destination: {
-        ToAddresses: ["info@softup.co", "erald.totraku@softup.co"]
+        ToAddresses: ["info@softup.co"]
       },
       Message: {
         Body: {

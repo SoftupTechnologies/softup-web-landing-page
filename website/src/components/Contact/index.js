@@ -19,7 +19,7 @@ export const ContactUs = () => {
       onSubmit={async (values, actions) => {
         try {
           actions.setStatus({ success: false, started: true, ended: false })
-          await fetch(
+          const resp = await fetch(
             "https://s67z3we37e.execute-api.eu-central-1.amazonaws.com/prod/",
             {
               method: "POST",
@@ -30,7 +30,11 @@ export const ContactUs = () => {
               body: JSON.stringify(values),
             }
           )
-          actions.setStatus({ success: true, started: true, ended: true })
+          if(resp.status !== 200) {
+            actions.setStatus({ error: true, ended: true })
+          } else {
+            actions.setStatus({ success: true, started: true, ended: true })
+          }
           await timeout(2000)
           actions.resetForm()
         } catch (e) {
@@ -52,7 +56,6 @@ export const ContactUs = () => {
       }}
     >
       {props => (
-        console.log(props.status),
         (
           <div className={"contactUsDiv"}>
             <div className={"question"}>
@@ -64,12 +67,13 @@ export const ContactUs = () => {
             <div
               className={"postingIndicator"}
               style={
-                props.status?.started
+                props.status?.started && !props.status?.ended
                   ? { display: "block", color: "white" }
                   : { display: "none" }
               }
             >
-              Message is being sent...
+              <div>Message is being sent</div>
+              <div className="loader">Loading...</div>
             </div>
             <div
               className={"postingIndicator"}
@@ -100,7 +104,7 @@ export const ContactUs = () => {
             <div className={"submitForm"}>
               <Form
                 className={"emailForm"}
-                style={props.status?.started ? { filter: "blur(5px)" } : {}}
+                style={props.status?.started && !props.status?.ended ? { filter: "blur(5px)" } : {}}
               >
                 <Field
                   className={"inputField"}
