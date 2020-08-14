@@ -30,7 +30,7 @@ export const ContactUs = () => {
               body: JSON.stringify(values),
             }
           )
-          if(resp.status !== 200) {
+          if (resp.status !== 200) {
             actions.setStatus({ error: true, ended: true })
           } else {
             actions.setStatus({ success: true, started: true, ended: true })
@@ -56,83 +56,85 @@ export const ContactUs = () => {
       }}
     >
       {props => (
-        (
-          <div className={"contactUsDiv"}>
-            <div className={"question"}>
-              <div>
-                Want to start a <br />
-                <a className={"whiteProject"}>project</a> with us?
-              </div>
-            </div>
-            <div
-              className={"postingIndicator"}
-              style={
-                props.status?.started && !props.status?.ended
-                  ? { display: "block", color: "white" }
-                  : { display: "none" }
-              }
-            >
-              <div>Message is being sent</div>
-              <div className="loader">Loading...</div>
-            </div>
-            <div
-              className={"postingIndicator"}
-              style={
-                !props.status?.error && props.status?.ended
-                  ? { display: "block", color: "white" }
-                  : { display: "none" }
-              }
-            >
-              <span style={{ textAlign: "center" }}>
-                <p>Thanks for your message.</p>
-                <p>Well get back to you within 48 hours.</p>
-              </span>
-            </div>
-            <div
-              className={"postingIndicator"}
-              style={
-                props.status?.error && props.status?.ended
-                  ? { display: "block", color: "white" }
-                  : { display: "none" }
-              }
-            >
-              <span style={{ textAlign: "center" }}>
-                <p>Unfortunately your message could not be delivered.</p>
-                <p>Please use our email: info@softup.co</p>
-              </span>
-            </div>
-            <div className={"submitForm"}>
-              <Form
-                className={"emailForm"}
-                style={props.status?.started && !props.status?.ended ? { filter: "blur(5px)" } : {}}
-              >
-                <Field
-                  className={"inputField"}
-                  placeholder={t("name")}
-                  name="name"
-                />
-                <ErrorMessage className={"validationError"} name="name" />
-                <Field
-                  className={"inputField"}
-                  placeholder={t("e-mail")}
-                  name="email"
-                />
-                {/* eslint-disable-next-line react/prop-types */}
-                <ErrorMessage className={"validationError"} name="email" />
-                <ErrorMessage className={"validationError"} name="phone" />
-                <Field
-                  className={"inputField"}
-                  placeholder={t("phone number")}
-                  name="phone"
-                />
-                <label className={"submitButton"}>
-                  <input type="submit" style={{ display: "none" }} />
-                  <SubmitButton />
-                </label>
-              </Form>
+        <div className={"contactUsDiv"}>
+          <div className={"question"}>
+            <div>
+              Want to start a <br />
+              <a className={"whiteProject"}>project</a> with us?
             </div>
           </div>
-        )
+          <div
+            className={"postingIndicator"}
+            style={
+              props.status?.started && !props.status?.ended
+                ? { display: "block", color: "white" }
+                : { display: "none" }
+            }
+          >
+            <div>Message is being sent</div>
+            <div className="loader">Loading...</div>
+          </div>
+          <div
+            className={"postingIndicator"}
+            style={
+              !props.status?.error && props.status?.ended
+                ? { display: "block", color: "white" }
+                : { display: "none" }
+            }
+          >
+            <span style={{ textAlign: "center" }}>
+              <p>Thanks for your message.</p>
+              <p>Well get back to you within 48 hours.</p>
+            </span>
+          </div>
+          <div
+            className={"postingIndicator"}
+            style={
+              props.status?.error && props.status?.ended
+                ? { display: "block", color: "white" }
+                : { display: "none" }
+            }
+          >
+            <span style={{ textAlign: "center" }}>
+              <p>Unfortunately your message could not be delivered.</p>
+              <p>Please use our email: info@softup.co</p>
+            </span>
+          </div>
+          <div className={"submitForm"}>
+            <Form
+              className={"emailForm"}
+              style={
+                props.status?.started && !props.status?.ended
+                  ? { filter: "blur(5px)" }
+                  : {}
+              }
+            >
+              <Field
+                className={"inputField"}
+                placeholder={t("name")}
+                name="name"
+              />
+              <ErrorMessage className={"validationError"} name="name" />
+              <Field
+                className={"inputField"}
+                placeholder={t("e-mail")}
+                name="email"
+              />
+              {/* eslint-disable-next-line react/prop-types */}
+              <ErrorMessage className={"validationError"} name="email" />
+              <ErrorMessage className={"validationError"} name="phone" />
+              <Field
+                className={"inputField"}
+                placeholder={t("phone number")}
+                name="phone"
+              />
+              <label className={"submitButton"}>
+                <input type="submit" style={{ display: "none" }} />
+                <SubmitButton />
+              </label>
+            </Form>
+          </div>
+        </div>
       )}
     </Formik>
   )

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Softup Technologies`,
-    description: `Description`,
+    description: `Empowering Ideas.`,
     author: `@softup-technologies`,
   },
   plugins: [
