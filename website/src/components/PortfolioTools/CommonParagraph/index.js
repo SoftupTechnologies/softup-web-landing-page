@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import "./common-paragraph.scss"
 import { isMobile } from "react-device-detect"
+import { generateContent } from "../../helpers"
 
 export const CommonParagraph = ({ data }) => {
   return (
@@ -14,13 +15,9 @@ export const CommonParagraph = ({ data }) => {
             : { flexDirection: "column" }
         }
       >
-        {data.title && (<div className={"title"}>{data.title}</div>)}
+        {data.title && <div className={"title"}>{data.title}</div>}
         <div className={"content"}>
-          {data.paragraphs.map((para, index) => (
-            <div key={index} className={"paragraph"}>
-              {para}
-            </div>
-          ))}
+          {generateContent(data.content)}
         </div>
       </div>
     </div>
@@ -31,6 +28,6 @@ CommonParagraph.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string,
     type: PropTypes.oneOf(["horizontal", "vertical"]),
-    paragraphs: PropTypes.arrayOf(PropTypes.string),
+    content: PropTypes.arrayOf(PropTypes.object),
   }),
 }
