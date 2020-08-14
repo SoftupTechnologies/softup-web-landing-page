@@ -20,9 +20,7 @@ export const ParagraphAndImage = ({ data }) => {
         </div>
         <div>
           <div className={"title"}>{data.title}</div>
-          <div className={"content"}>
-            {generateContent(data.content)}
-          </div>
+          <div className={"content"}>{generateContent(data.content)}</div>
         </div>
       </div>
     </div>

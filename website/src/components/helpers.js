@@ -79,3 +79,7 @@ export const breakLongWords = str => {
   })
   return <div dangerouslySetInnerHTML={{ __html: container.join(" ") }} />
 }
+
+export const timeout = ms => {
+  return new Promise(resolve => setTimeout(resolve, ms))
+}
