@@ -503,7 +503,12 @@
                 "component": "quickDescription",
                 "data": {
                   "title": "Hassle-free Scaling",
-                  "description": "The REALCUBE team is composed of true veterans in the Real Estate software space. Both cofounders have previously started and exited successful startups in the past. REALCUBE is a refined attempt at starting something from their hearts."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "The REALCUBE team is composed of true veterans in the Real Estate software space. Both cofounders have previously started and exited successful startups in the past. REALCUBE is a refined attempt at starting something from their hearts."
+                    }
+                  ]
                 }
               },
               {
@@ -565,8 +570,11 @@
                 "component": "commonParagraph",
                 "data": {
                   "type": "list",
-                  "paragraphs": [
-                    "REALCUBE is the open Real Estate platform. Their API-based cloud technologies help Real Estate companies to manage their multiple properties, connect their desired apps, and run their daily operations in entirely new ways."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "REALCUBE is the open Real Estate platform. Their API-based cloud technologies help Real Estate companies to manage their multiple properties, connect their desired apps, and run their daily operations in entirely new ways."
+                    }
                   ]
                 }
               },
@@ -580,9 +588,15 @@
                 "component": "commonParagraph",
                 "data": {
                   "type": "list",
-                  "paragraphs": [
-                    "Finding a reliable external agency to develop a fully scalable solution is a daunting task. Companies struggle to find a partner that will provide high levels of quality products combined with a good communication and critical thinking skills.",
-                    "The REALCUBE team had very strong industry experience and some technical advisors on board, but lacked the manpower to bring their solution to life. It was very important for the REALCUBE team not only to find a partner that would deliver, but one that would be an integral part of their core team going forward."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "Finding a reliable external agency to develop a fully scalable solution is a daunting task. Companies struggle to find a partner that will provide high levels of quality products combined with a good communication and critical thinking skills."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "The REALCUBE team had very strong industry experience and some technical advisors on board, but lacked the manpower to bring their solution to life. It was very important for the REALCUBE team not only to find a partner that would deliver, but one that would be an integral part of their core team going forward."
+                    }
                   ]
                 }
               },
@@ -596,11 +610,33 @@
                 "component": "commonParagraph",
                 "data": {
                   "type": "list",
-                  "paragraphs": [
-                    "In 2017, REALCUBE ran a trial period with Softup. The goal was to develop one of its front- end modules. This way REALCUBE could verify that the developers at Softup were up to the task both technically and operationally.",
-                    "Fast-forward three years later, REALCUBE has integrated Softup consultants: Business Analysis, Front-end & Back-end developers and Testers into their core team.",
-                    "The collaboration has been hugely successful and as a result, REALCUBE has referred many new clients to Softup."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "In 2017, REALCUBE ran a trial period with Softup. The goal was to develop one of its front- end modules. This way REALCUBE could verify that the developers at Softup were up to the task both technically and operationally."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "Fast-forward three years later, REALCUBE has integrated Softup consultants: Business Analysis, Front-end & Back-end developers and Testers into their core team."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "The collaboration has been hugely successful and as a result, REALCUBE has referred many new clients to Softup."
+                    }
                   ]
+                }
+              },
+              {
+                "component": "namedDivider",
+                "data": {
+                  "title": "TESTIMONIAL"
+                }
+              },
+              {
+                "component": "testimonial",
+                "data": {
+                  "content": "In 2017, REALCUBE GmbH started a viable partnership with Softup Technologies for high quality and efficient Frontend development projects. We especially appreciate the professional work stream from our functional specifications given, development of UI design guidelines to the completion and testing of our apps. Highly recommended partners!",
+                  "author": "Uwe Forgber"
                 }
               }
             ]
@@ -621,7 +657,12 @@
                 "component": "quickDescription",
                 "data": {
                   "title": "Trust the Experts",
-                  "description": "Cleu is the social and emotional learning complement for today’s classroom tools. Used by K-12 students as their daily alarm clock, students start the day more focused and alert. Using Cleu leads to higher grit, perseverance, and class attendance."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "Cleu is the social and emotional learning complement for today’s classroom tools. Used by K-12 students as their daily alarm clock, students start the day more focused and alert. Using Cleu leads to higher grit, perseverance, and class attendance."
+                    }
+                  ]
                 }
               },
               {
@@ -701,10 +742,19 @@
                 "data": {
                   "title": "Evaluate, Plan & Ship",
                   "type": "list",
-                  "paragraphs": [
-                    "One of our senior consultants quickly got to work and delivered within 48 hours a list of issues some known but most of them unknown, that needed to be handled right away for the app to be presentable in front of potential customers and investors.",
-                    "All the issues were fixed in the next two weeks and shortly after Cleu was able to get a new batch of Beta users to the platform.",
-                    "The founder would decide to work exclusively with Softup going forward in order to maintain the high performance and reliability of the mobile app. He scaled his development team at Softup with 3 developers working full time in order to make Cleu the most promising product in its niche."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "One of our senior consultants quickly got to work and delivered within 48 hours a list of issues some known but most of them unknown, that needed to be handled right away for the app to be presentable in front of potential customers and investors."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "All the issues were fixed in the next two weeks and shortly after Cleu was able to get a new batch of Beta users to the platform."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "The founder would decide to work exclusively with Softup going forward in order to maintain the high performance and reliability of the mobile app. He scaled his development team at Softup with 3 developers working full time in order to make Cleu the most promising product in its niche."
+                    }
                   ]
                 }
               }
@@ -726,7 +776,12 @@
                 "component": "quickDescription",
                 "data": {
                   "title": "Meet your deadline",
-                  "description": "Wirecard is one of the world's fastest-growing digital platforms in the area of financial commerce processing over €130 billion per year. They offer both businesses and consumers a constantly growing ecosystem of value-added services for innovative digital payments: online, mobile, and at the point of sale."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "Wirecard is one of the world's fastest-growing digital platforms in the area of financial commerce processing over €130 billion per year. They offer both businesses and consumers a constantly growing ecosystem of value-added services for innovative digital payments: online, mobile, and at the point of sale."
+                    }
+                  ]
                 }
               },
               {
@@ -783,8 +838,11 @@
                 "component": "commonParagraph",
                 "data": {
                   "type": "list",
-                  "paragraphs": [
-                    "Wirecard`s marketing team had a very tight deadline to meet. They needed to request TrustPilot reviews from their thousands of merchants worldwide. To achieve that, they needed a modern Landing Page integrated with complex analytics in order to track merchants behaviour. The campaign was due to start within 5 business days."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "Wirecard`s marketing team had a very tight deadline to meet. They needed to request TrustPilot reviews from their thousands of merchants worldwide. To achieve that, they needed a modern Landing Page integrated with complex analytics in order to track merchants behaviour. The campaign was due to start within 5 business days."
+                    }
                   ]
                 }
               },
@@ -798,9 +856,15 @@
                 "component": "commonParagraph",
                 "data": {
                   "type": "list",
-                  "paragraphs": [
-                    "Softup`s Business Analysis team jumped right into the project gathering all the necessary requirements. Within the first hour of contact they quickly were able to allocate resources in-house in order to help Wirecard to meet this critical timeline.",
-                    "They delivered a first draft of the Landing Page within 24 hours, to allow time for Wirecard design and branding team to review and approve the images, logos and language use. The full product was ready within 3 business days, leaving the marketing team at Wirecard a good buffer to prepare for the rest of the campaign. Wirecard was very satisfied with the delivery and found a trustworthy partner in the ordeal."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "Softup`s Business Analysis team jumped right into the project gathering all the necessary requirements. Within the first hour of contact they quickly were able to allocate resources in-house in order to help Wirecard to meet this critical timeline."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "They delivered a first draft of the Landing Page within 24 hours, to allow time for Wirecard design and branding team to review and approve the images, logos and language use. The full product was ready within 3 business days, leaving the marketing team at Wirecard a good buffer to prepare for the rest of the campaign. Wirecard was very satisfied with the delivery and found a trustworthy partner in the ordeal."
+                    }
                   ]
                 }
               }
@@ -822,7 +886,12 @@
                 "component": "quickDescription",
                 "data": {
                   "title": "More Devs, More Funding",
-                  "description": "Leva is a Zurich-based Legal & FinTech company that enables you to raise capital efficiently and manage investment deals over the entire lifecycle in one place. The team is composed of young entrepreneurs who are shaping this industry."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "Leva is a Zurich-based Legal & FinTech company that enables you to raise capital efficiently and manage investment deals over the entire lifecycle in one place. The team is composed of young entrepreneurs who are shaping this industry."
+                    }
+                  ]
                 }
               },
               {
@@ -882,9 +951,15 @@
                 "component": "commonParagraph",
                 "data": {
                   "type": "list",
-                  "paragraphs": [
-                    "Leva is a blockchain based investment platform for private markets. They leverage the technology of distributed ledgers to make off-chain assets accessible to everybody. As a two-sided platform, Leva is a central hub for the funding of, investing in, and trading of formerly illiquid private assets.",
-                    "Through Leva, asset managers efficiently fund equity investments into specific private assets, or even open complete fund vehicles. And thanks to Leva, individuals can access the lucrative world of private markets, invest alongside professional asset managers and participate in the value creation of private companies."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "Leva is a blockchain based investment platform for private markets. They leverage the technology of distributed ledgers to make off-chain assets accessible to everybody. As a two-sided platform, Leva is a central hub for the funding of, investing in, and trading of formerly illiquid private assets."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "Through Leva, asset managers efficiently fund equity investments into specific private assets, or even open complete fund vehicles. And thanks to Leva, individuals can access the lucrative world of private markets, invest alongside professional asset managers and participate in the value creation of private companies."
+                    }
                   ]
                 }
               },
@@ -898,9 +973,15 @@
                 "component": "commonParagraph",
                 "data": {
                   "type": "list",
-                  "paragraphs": [
-                    "As a young start up, Leva had limited funds to achieve of their business goals. This made it extremely difficult to find qualified engineers in Zurich. After six months of searching in Switzerland and the DACH region they were still not able to fill their open positions.",
-                    "This is when they looked to find remote developers elsewhere in the world."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "As a young start up, Leva had limited funds to achieve of their business goals. This made it extremely difficult to find qualified engineers in Zurich. After six months of searching in Switzerland and the DACH region they were still not able to fill their open positions."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "This is when they looked to find remote developers elsewhere in the world."
+                    }
                   ]
                 }
               },
@@ -914,9 +995,15 @@
                 "component": "commonParagraph",
                 "data": {
                   "type": "list",
-                  "paragraphs": [
-                    "Softup was able to find an urgently needed Full Stack JavaScript developer withing days. Within 6 months the team working for Leva grew from one to four developers working full-time on the project.",
-                    "This helped Leva get the critical traction and prove to their investors that they can deliver. After 9 months of collaboration Leva was able to secure their next round of funding and take their product development to the next level."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "Softup was able to find an urgently needed Full Stack JavaScript developer withing days. Within 6 months the team working for Leva grew from one to four developers working full-time on the project."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "This helped Leva get the critical traction and prove to their investors that they can deliver. After 9 months of collaboration Leva was able to secure their next round of funding and take their product development to the next level."
+                    }
                   ]
                 }
               }
@@ -938,7 +1025,12 @@
                 "component": "quickDescription",
                 "data": {
                   "title": "Scalable Marketing",
-                  "description": "ZenGrowth is a Munich based growth agency that helps tech companies reach a new level of growth. ZenGrowth takes advantage of expert growth hackers in order to produce hyper growth for its clients."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "ZenGrowth is a Munich based growth agency that helps tech companies reach a new level of growth. ZenGrowth takes advantage of expert growth hackers in order to produce hyper growth for its clients."
+                    }
+                  ] 
                 }
               },
               {
@@ -963,8 +1055,11 @@
                 "component": "commonParagraph",
                 "data": {
                   "type": "list",
-                  "paragraphs": [
-                    "In order to implement various growth strategies like Content Marketing, ZenGrowth has had to build Blogs, Optimized Landing Pages and CMS systems for their clients. This came with its own challenges as ZenGrowth is specialized in online marketing and not software development. Hiring and sourcing for skilled development isn’t always easy when that is not your core focus."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "In order to implement various growth strategies like Content Marketing, ZenGrowth has had to build Blogs, Optimized Landing Pages and CMS systems for their clients. This came with its own challenges as ZenGrowth is specialized in online marketing and not software development. Hiring and sourcing for skilled development isn’t always easy when that is not your core focus."
+                    }
                   ]
                 }
               },
@@ -978,17 +1073,19 @@
                 "component": "commonParagraph",
                 "data": {
                   "type": "list",
-                  "paragraphs": [
-                    "By enabling a partnership with Softup, ZenGrowth now has access to a pool of expert developers specializing in:",
-                    "",
-                    "- Landing Page design and implementation",
-                    "- Content Management Systems implementation",
-                    "- Website performance and Analytics tests",
-                    "- WordPress themes and plugins",
-                    "- Website back-end architecture",
-                    "- Database & Server integration",
-                    "",
-                    "By partnering with Softup on the technology front, ZenGrowth can now go back and focus on serving their clients with what they really excel at; marketing and growth strategy."
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "By enabling a partnership with Softup, ZenGrowth now has access to a pool of expert developers specializing in:"
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "- Landing Page design and implementation\n - Content Management Systems implementation\n - Website performance and Analytics tests\n - WordPress themes and plugins\n - Website back-end architecture\n - Database & Server integration"
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "By partnering with Softup on the technology front, ZenGrowth can now go back and focus on serving their clients with what they really excel at; marketing and growth strategy."
+                    }
                   ]
                 }
               }
