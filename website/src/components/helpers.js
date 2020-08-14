@@ -1,6 +1,7 @@
 import React from "react"
 import { WideTabs } from "./WideTabs"
 import { NumberedParagraph } from "./NumberedParagraph"
+import { NormalParagraph } from "./NormalParagraph"
 import { SlideLinks } from "./Accordion/SlideLinks"
 import { PresentationTiles } from "./PresentationTiles"
 import { HeaderImage } from "./PortfolioTools/HeaderImage"
@@ -28,6 +29,7 @@ export const formatNumber = num => {
 let componentContainer = {
   horizontalTabs: WideTabs,
   numberedParagraph: NumberedParagraph,
+  normalParagraph: NormalParagraph,
   slideLinks: SlideLinks,
   presentationTiles: PresentationTiles,
   headerImage: HeaderImage,
