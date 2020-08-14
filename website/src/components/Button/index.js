@@ -2,18 +2,21 @@ import React from "react"
 import "./button.scss"
 import PropTypes from "prop-types"
 
-export const Button = ({ onClick, value, link }) => {
+export const Button = ({ data }) => {
   return (
     <form>
-      <button onClick={onClick} formAction={link}>
-        {value}
-      </button>
+      <div className={"buttonDiv"}>
+        <a link={data.link}>
+          {data.value}
+        </a>
+      </div>
     </form>
   )
 }
 
 Button.propTypes = {
-  onClick: PropTypes.func,
-  value: PropTypes.string,
-  link: PropTypes.string,
+  data: PropTypes.shape({
+    value: PropTypes.string,
+    link: PropTypes.string,
+  }),
 }

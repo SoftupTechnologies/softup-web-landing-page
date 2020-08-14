@@ -25,16 +25,16 @@ export const SlideLinks = ({ data }) => {
               to={`https://medium.com/softup-technologies/${node.uniqueSlug}`}
               className={"slideItemLink"}
             >
-              {node.title}
+              {node.title.toUpperCase()}
               {node.title ? <span className={"arrow"}>→</span> : null}
             </Link>
           ))}
-          <div className={"buttonDiv"}>
-            <Button
-              value={"View all posts"}
-              link={"https://medium.com/softup-technologies/"}
-            />
-          </div>
+          <Button
+            data={{
+              link: "https://medium.com/softup-technologies/",
+              value: "VIEW ALL POSTS"
+            }}
+          />
         </React.Fragment>
       )}
     </div>

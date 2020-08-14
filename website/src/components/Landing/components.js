@@ -3,7 +3,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 import BurgerMenuIcon from "../../images/burger-desktop.svg"
 import React from "react"
 import PropTypes from "prop-types"
-import { LanguageMenu } from "../LangSwitch"
+// import { LanguageMenu } from "../LangSwitch"
 import { Link } from "../../../.cache/gatsby-browser-entry"
 import SoftupLogoSvg from "../../images/softup-logo.svg"
 

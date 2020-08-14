@@ -17,6 +17,7 @@ import { CaseStudies } from "./CaseStudies"
 import { PrivacyPolicy } from "./PrivacyPolicy"
 import { Imprint } from "./Imprint"
 import { MarkdownDisplay } from "./MarkdownDisplay"
+import { Button } from './Button';
 
 export const formatNumber = num => {
   const stringNum = parseInt(num, 10).toString()
@@ -45,6 +46,7 @@ let componentContainer = {
   privacyPolicy: PrivacyPolicy,
   imprint: Imprint,
   markdownDisplay: MarkdownDisplay,
+  button: Button,
 }
 
 export const generateContent = pageContent => {

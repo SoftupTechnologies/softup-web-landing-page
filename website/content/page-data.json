@@ -272,13 +272,11 @@
       "description": "We are equipped with the right set of technologies and tools to help you succeed! We carefully pick the best tech stacks that serve your needs and supports you on your journey.",
       "content": [
         {
-          "component": "slideLinks",
-          "data": [
-            {
-              "link": "/technologies",
-              "name": "READ MORE ABOUT TECHNOLOGIES WE USE"
-            }
-          ]
+          "component": "button",
+          "data": {
+            "link": "/technologies",
+            "value": "LEARN MORE"
+          }
         }
       ]
     },
@@ -497,13 +495,11 @@
       "description": "We have built feature-rich platforms, high quality products and application software for clients all over the world. Our team has delivered high end solutions serving a wide range of industries such as IoT, Real Estate, E-Learning, Blockchain and many others. Click below to find more information about a some of our projects, along with the feedback from our clients.",
       "content": [
         {
-          "component": "slideLinks",
-          "data": [
-            {
-              "link": "/portfolio",
-              "name": "GO TO PORTFOLIO"
-            }
-          ]
+          "component": "button",
+          "data": {
+            "link": "/portfolio",
+            "value": "GO TO PORTFOLIO"
+          }
         }
       ]
     },
@@ -1120,23 +1116,23 @@
           "data": [
             {
               "link": "https://www.notion.so/Who-are-we-3dd9374b683d49f0858bdcd8eea55de9",
-              "name": "Who are we?"
+              "name": "WHO WE ARE?"
             },
             {
               "link": "https://www.notion.so/Technology-Stack-5b870086e876460bba0f4f09f3e6d009",
-              "name": "Technology Stack"
+              "name": "TECHNOLOGY STACK"
             },
             {
               "link": "https://www.notion.so/Benefits-Why-join-us-c4074149161e4fc7a9573588c1aca07e",
-              "name": "Benefits - Why join us?"
+              "name": "BENEFITS - WHY JOIN US?"
             },
             {
               "link": "https://www.notion.so/Our-interview-process-39aa5fb136704bde9e81911409f71be5",
-              "name": "Our interview process"
+              "name": "OUR INTERVIEW PROCESS"
             },
             {
               "link": "https://www.notion.so/Open-job-positions-216572e2b7134ccd95520d066b8d5f76",
-              "name": "Open job positions"
+              "name": "OPEN POSITIONS"
             }
           ]
         }
