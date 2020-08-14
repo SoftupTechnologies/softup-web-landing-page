@@ -19,7 +19,7 @@ export const ContactUs = () => {
       onSubmit={async (values, actions) => {
         try {
           actions.setStatus({ success: false, started: true, ended: false })
-          await fetch(
+          const resp = await fetch(
             "https://s67z3we37e.execute-api.eu-central-1.amazonaws.com/prod/",
             {
               method: "POST",
@@ -30,7 +30,11 @@ export const ContactUs = () => {
               body: JSON.stringify(values),
             }
           )
-          actions.setStatus({ success: true, started: true, ended: true })
+          if(resp.status !== 200) {
+            actions.setStatus({ error: true, ended: true })
+          } else {
+            actions.setStatus({ success: true, started: true, ended: true })
+          }
           await timeout(2000)
           actions.resetForm()
         } catch (e) {
@@ -69,7 +73,8 @@ export const ContactUs = () => {
                   : { display: "none" }
               }
             >
-              Message is being sent...
+              <div>Message is being sent</div>
+              <div className="loader">Loading...</div>
             </div>
             <div
               className={"postingIndicator"}
