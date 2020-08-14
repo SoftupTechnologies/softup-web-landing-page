@@ -36,22 +36,35 @@
             "content": [
               {
                 "component": "numberedParagraph",
-                "data": {
-                  "items": [
-                    {
-                      "title": "Digitalise & innovate towards the future",
-                      "description": "Do you have a disruptive idea? Do you think that speed and agility are key factors to succeed? We think the same. Our team has over 20 years of experience helping DAX companies innovate and launch new products and business lines. We will guide your company through all the steps of the product development cycle from the idea generation, concept development, feasibility study, customer validation and testing, all the way to market launch."
-                    },
-                    {
-                      "title": "Custom solutions for your business",
-                      "description": "Innovation is disrupting many industries and businesses. Software can help you increase efficiency and quality of your processes and provide KPI metrics that support better decision making. It can help better understand your customers and by leveraging the power of data it gives you the edge needed to succeed. We can help you on your journey towards digitalisation by building software that is secure, reliable and most importantly adds value to your company."
-                    },
-                    {
-                      "title": "Transparent costs",
-                      "description": "Our cost structure is based on person days. We provide a detailed estimation for the planned phase of the project in terms of time and will recommend the budget based on that. Projects typically run for 20 - 60 person days.."
-                    }
-                  ]
-                }
+                "data": [
+                  {
+                    "title": "Digitalise & innovate towards the future",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Do you have a disruptive idea? Do you think that speed and agility are key factors to succeed? We think the same. Our team has over 20 years of experience helping DAX companies innovate and launch new products and business lines. We will guide your company through all the steps of the product development cycle from the idea generation, concept development, feasibility study, customer validation and testing, all the way to market launch."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Custom solutions for your business",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Innovation is disrupting many industries and businesses. Software can help you increase efficiency and quality of your processes and provide KPI metrics that support better decision making. It can help better understand your customers and by leveraging the power of data it gives you the edge needed to succeed. We can help you on your journey towards digitalisation by building software that is secure, reliable and most importantly adds value to your company."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Transparent costs",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Our cost structure is based on person days. We provide a detailed estimation for the planned phase of the project in terms of time and will recommend the budget based on that. Projects typically run for 20 - 60 person days."
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "component": "process",
@@ -111,26 +124,44 @@
             "content": [
               {
                 "component": "numberedParagraph",
-                "data": {
-                  "items": [
-                    {
-                      "title": "Ready for help",
-                      "description": "Need to scale up? Need to fill a skill gap? Deadline around the corner? We got you covered! Our team of developers, designers and architects can join your team, support and then leave without any strings attached."
-                    },
-                    {
-                      "title": "Save time",
-                      "description": "Let’s admit, hiring is hard. With us you can save time and get the resources you need, exactly when you need them. No recruiting. No training."
-                    },
-                    {
-                      "title": "Full control",
-                      "description": "Our resources are fully incorporated into your team and you have full control over the processes."
-                    },
-                    {
-                      "title": "Expert skills",
-                      "description": "Choose from the international talent pool in all its versatility of skills. To name a few: Javascript, Typescript, React, Node.JS, React Native, Swift, Kotlin, C#, Ruby on Rails, PHP, Serverless, Cloud, CI / CD and a lot more."
-                    }
-                  ]
-                }
+                "data": [
+                  {
+                    "title": "Ready for help",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Need to scale up? Need to fill a skill gap? Deadline around the corner? We got you covered! Our team of developers, designers and architects can join your team, support and then leave without any strings attached."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Save time",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Let’s admit, hiring is hard. With us you can save time and get the resources you need, exactly when you need them. No recruiting. No training."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Full control",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Our resources are fully incorporated into your team and you have full control over the processes."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Expert skills",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Choose from the international talent pool in all its versatility of skills. To name a few: Javascript, Typescript, React, Node.JS, React Native, Swift, Kotlin, C#, Ruby on Rails, PHP, Serverless, Cloud, CI / CD and a lot more."
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -140,22 +171,35 @@
             "content": [
               {
                 "component": "numberedParagraph",
-                "data": {
-                  "items": [
-                    {
-                      "title": "Move fast",
-                      "description": "What if you could find the product-market fit in 10 days? Finding a product-market fit is always a long and complicated process. The earlier you can find it, the less money you will burn. We develop quick, light-weight prototypes (MVPs) of your ideal solution in 10 days so you can go out there and validate your product with real customer feedback."
-                    },
-                    {
-                      "title": "Tech Stack",
-                      "description": "The project will be implemented using Typescript programming language, React.JS for frontend, Node.JS for backend with GraphQL, PostgreSQL for data storage. Project will be deployed on Amazon Web Services and we will use the following services VPC, Lambda, S3, RDS, EC2, Cognito, Cloudwatch etc."
-                    },
-                    {
-                      "title": "Flat fee",
-                      "description": "No budget overrun. The service has a flat fee of €3,500. The fee covers meeting, workshop and implementation."
-                    }
-                  ]
-                }
+                "data": [
+                  {
+                    "title": "Move fast",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "What if you could find the product-market fit in 10 days? Finding a product-market fit is always a long and complicated process. The earlier you can find it, the less money you will burn. We develop quick, light-weight prototypes (MVPs) of your ideal solution in 10 days so you can go out there and validate your product with real customer feedback."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Tech Stack",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "The project will be implemented using Typescript programming language, React.JS for frontend, Node.JS for backend with GraphQL, PostgreSQL for data storage. Project will be deployed on Amazon Web Services and we will use the following services VPC, Lambda, S3, RDS, EC2, Cognito, Cloudwatch etc."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Flat fee",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "No budget overrun. The service has a flat fee of €3,500. The fee covers meeting, workshop and implementation."
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -196,18 +240,17 @@
             "content": [
               {
                 "component": "numberedParagraph",
-                "data": {
-                  "items": [
-                    {
-                      "title": "Best product ever",
-                      "description": "In ante metus dictum at tempor commodo. Mattis pellentesque id nibh tortor id. Eget mauris pharetra et ultrices neque ornare. Nec feugiat nisl pretium fusce id velit ut tortor. Viverra justo nec ultrices dui sapien eget mi. At in tellus integer feugiat scelerisque varius. Risus viverra adipiscing at in tellus. Proin fermentum leo vel orci porta. Ullamcorper eget nulla facilisi etiam dignissim. Amet massa vitae tortor condimentum lacinia quis vel."
-                    },
-                    {
-                      "title": "Workaholics",
-                      "description": " Dignissim suspendisse in est ante in nibh mauris. Tristique senectus et netus et malesuada fames. Id ornare arcu odio ut sem nulla pharetra diam. Elementum nibh tellus molestie nunc non blandit. Convallis tellus id interdum velit. Nisl condimentum id venenatis a condimentum vitae sapien. Ac felis donec et odio. Et egestas quis ipsum suspendisse ultrices. Non tellus orci ac auctor augue mauris augue neque. Tellus at urna condimentum mattis pellentesque id nibh."
-                    }
-                  ]
-                }
+                "data": [
+                  {
+                    "title": "Best product ever",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "In ante metus dictum at tempor commodo. Mattis pellentesque id nibh tortor id. Eget mauris pharetra et ultrices neque ornare. Nec feugiat nisl pretium fusce id velit ut tortor. Viverra justo nec ultrices dui sapien eget mi. At in tellus integer feugiat scelerisque varius. Risus viverra adipiscing at in tellus. Proin fermentum leo vel orci porta. Ullamcorper eget nulla facilisi etiam dignissim. Amet massa vitae tortor condimentum lacinia quis vel."
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -217,22 +260,26 @@
             "content": [
               {
                 "component": "numberedParagraph",
-                "data": {
-                  "items": [
-                    {
-                      "title": "Product Expertise",
-                      "description": "Our team has over 20 years of experience helping DAX companies innovate and launch new products and business lines. We will guide your company through all the steps of the product development cycle from the idea generation, concept development, feasibility study, customer validation and testing, all the way to market launch."
-                    },
-                    {
-                      "title": "Product Development",
-                      "description": "Finding a market fit is always a challenge. The earlier it is found the higher will be the chances of your company being successful. We use lean methodology in order to build the right products with the least amount of time and effort spent. We test for market fit early and often using data-driven product development. Iterating and adjusting quickly will allow you to learn about your customer sooner rather than later, thus ensuring a great start in the long product journey."
-                    }
-                  ]
-                }
-              },
-              {
-                "component": "markdownDisplay",
-                "data": "## Emphasis\n\n**This is bold text**\n\n__This is bold text__\n\n*This is italic text*\n\n_This is italic text_\n\n~~Strikethrough~~"
+                "data": [
+                  {
+                    "title": "Product Expertise",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Our team has over 20 years of experience helping DAX companies innovate and launch new products and business lines. We will guide your company through all the steps of the product development cycle from the idea generation, concept development, feasibility study, customer validation and testing, all the way to market launch."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Product Development",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Finding a market fit is always a challenge. The earlier it is found the higher will be the chances of your company being successful. We use lean methodology in order to build the right products with the least amount of time and effort spent. We test for market fit early and often using data-driven product development. Iterating and adjusting quickly will allow you to learn about your customer sooner rather than later, thus ensuring a great start in the long product journey."
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           }
@@ -310,7 +357,11 @@
                   {
                     "title": "TECHNOLOGIES WE USED",
                     "type": "list",
-                    "items": ["AWS", "React", "Node.js"]
+                    "items": [
+                      "AWS",
+                      "React",
+                      "Node.js"
+                    ]
                   },
                   {
                     "title": "INCREASE IN BETA USERS",
