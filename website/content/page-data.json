@@ -105,22 +105,16 @@
                   "title": "Case studies.",
                   "items": [
                     {
-                      "iconFilename": "moma.png",
-                      "title": "MOMA",
-                      "link": "/portfolio/moma",
-                      "description": "Easily access your local deals"
+                      "iconFilename": "portfolio/wirecard/logo.png",
+                      "title": "Wirecard",
+                      "link": "/portfolio/wirecard",
+                      "description": "Meet your deadline"
                     },
                     {
-                      "iconFilename": "last-supper.png",
-                      "title": "LAST SUPPER",
-                      "link": "/portfolio/last-supper",
-                      "description": "Restaurant management system & client apps"
-                    },
-                    {
-                      "iconFilename": "salt.png",
-                      "title": "SALT",
-                      "link": "/portfolio/salt",
-                      "description": "Fancy restaurant"
+                      "iconFilename": "portfolio/cleu/logo.png",
+                      "title": "Cleu",
+                      "link": "/portfolio/cleu",
+                      "description": "Trust the Experts"
                     }
                   ]
                 }
@@ -189,6 +183,32 @@
                     ]
                   }
                 ]
+              },
+              {
+                "component": "caseStudies",
+                "data": {
+                  "title": "Case studies.",
+                  "items": [
+                    {
+                      "iconFilename": "portfolio/leva/logo.png",
+                      "title": "Leva",
+                      "link": "/portfolio/leva",
+                      "description": "More Devs, More Funding"
+                    },
+                    {
+                      "iconFilename": "portfolio/realcube/logo.png",
+                      "title": "Realcube",
+                      "link": "/portfolio/realcube",
+                      "description": "Hassle-free Scaling"
+                    },
+                    {
+                      "iconFilename": "portfolio/zengrowth/logo.png",
+                      "title": "ZenGrowth",
+                      "link": "/portfolio/zengrowth",
+                      "description": "Scalable marketing"
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -488,7 +508,7 @@
         "component": "presentationTiles",
         "data": [
           {
-            "iconFilename": "realcube.png",
+            "iconFilename": "portfolio/realcube/logo.png",
             "title": "REALCUBE",
             "link": "/portfolio/realcube",
             "description": "Hassle-free Scaling",
@@ -496,7 +516,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "realcube.png"
+                  "imageFileName": "portfolio/realcube/hero.png"
                 }
               },
               {
@@ -642,7 +662,7 @@
             ]
           },
           {
-            "iconFilename": "cleu.png",
+            "iconFilename": "portfolio/cleu/logo.png",
             "title": "CLEU",
             "link": "/portfolio/cleu",
             "description": "Trust the Experts",
@@ -650,7 +670,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "cleu-hero.png"
+                  "imageFileName": "portfolio/cleu/hero.png"
                 }
               },
               {
@@ -761,7 +781,7 @@
             ]
           },
           {
-            "iconFilename": "realcube.png",
+            "iconFilename": "portfolio/wirecard/logo.png",
             "title": "Wirecard",
             "link": "/portfolio/wirecard",
             "description": "Meet your deadline",
@@ -769,7 +789,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "cleu-hero.png"
+                  "imageFileName": "portfolio/wirecard/hero.png"
                 }
               },
               {
@@ -871,7 +891,7 @@
             ]
           },
           {
-            "iconFilename": "realcube.png",
+            "iconFilename": "portfolio/leva/logo.png",
             "title": "Leva",
             "link": "/portfolio/leva",
             "description": "More Devs, More Funding",
@@ -879,7 +899,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "cleu-hero.png"
+                  "imageFileName": "portfolio/leva/hero.png"
                 }
               },
               {
@@ -1010,7 +1030,7 @@
             ]
           },
           {
-            "iconFilename": "realcube.png",
+            "iconFilename": "portfolio/zengrowth/logo.png",
             "title": "ZenGrowth",
             "link": "/portfolio/zengrowth",
             "description": "Scalable Marketing",
@@ -1018,7 +1038,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "cleu-hero.png"
+                  "imageFileName": "portfolio/zengrowth/hero.png"
                 }
               },
               {
@@ -1087,149 +1107,6 @@
                       "data": "By partnering with Softup on the technology front, ZenGrowth can now go back and focus on serving their clients with what they really excel at; marketing and growth strategy."
                     }
                   ]
-                }
-              }
-            ]
-          },
-          {
-            "iconFilename": "cleu.png",
-            "title": "SAMPLE",
-            "link": "/portfolio/sample",
-            "description": "Bright startup ...",
-            "content": [
-              {
-                "component": "headerImage",
-                "data": {
-                  "imageFileName": "cleu-hero.png"
-                }
-              },
-              {
-                "component": "quickDescription",
-                "data": {
-                  "title": "The morning alarm clock",
-                  "description": "Cleu is the social and emotional learning complement for today’s classroom tools. Used by K-12 students as their daily alarm clock, students start the day more focused and alert. Using Cleu leads to higher grit, perseverance, and class attendance."
-                }
-              },
-              {
-                "component": "namedDivider",
-                "data": {
-                  "title": "CLIENT"
-                }
-              },
-              {
-                "component": "clientName",
-                "data": {
-                  "name": "CLEU Inc"
-                }
-              },
-              {
-                "component": "quickFacts",
-                "data": [
-                  {
-                    "title": "WHAT WE DID",
-                    "type": "list",
-                    "items": [
-                      "Concept",
-                      "UI /UX",
-                      "Rapid Prototyping",
-                      "AI/ML Development"
-                    ]
-                  },
-                  {
-                    "title": "TECHNOLOGIES WE USED",
-                    "type": "list",
-                    "items": [
-                      "AWS",
-                      "React",
-                      "Node.js"
-                    ]
-                  },
-                  {
-                    "title": "INCREASE IN BETA USERS",
-                    "type": "fact",
-                    "description": "250%"
-                  },
-                  {
-                    "title": "Hour GAP analysis",
-                    "type": "fact",
-                    "description": "48h"
-                  }
-                ]
-              },
-              {
-                "component": "namedDivider",
-                "data": {
-                  "title": "THE CHALLENGE"
-                }
-              },
-              {
-                "component": "commonParagraph",
-                "data": {
-                  "title": "Fix most of the pressing issues and bugs",
-                  "type": "horizontal",
-                  "paragraphs": [
-                    "Cleu founder, Uzair had fallen into the common trap of outsourcing the app development of his idea to a low-cost agency, in order to “fit” it into his limited budget.",
-                    "The result was a mobile app that was a slow, unresponsive and bug prone app. He contacted Softup with the hope to fix most of the pressing issues and bugs."
-                  ]
-                }
-              },
-              {
-                "component": "namedDivider",
-                "data": {
-                  "title": "THE SOLUTION"
-                }
-              },
-              {
-                "component": "commonParagraph",
-                "data": {
-                  "title": "some time",
-                  "type": "list",
-                  "paragraphs": [
-                    "One of our senior consultants quickly got to work and delivered within 48 hours a list of issues some known but most of them unknown, that needed to be handled right away for the app to be presentable in front of potential customers and investors.",
-                    "All the issues were fixed in the next two weeks and shortly after Cleu was able to get a new batch of Beta users to the platform.",
-                    "The founder would decide to work exclusively with Softup going forward in order to maintain the high performance and reliability of the mobile app. He scaled his development team at Softup with 3 developers working full time in order to make Cleu the most promising product in its niche."
-                  ]
-                }
-              },
-              {
-                "component": "paragraphAndImage",
-                "data": {
-                  "title": "Fixed issues",
-                  "imageName": "alarm-mobile.png",
-                  "imagePosition": "right",
-                  "content": [
-                    {
-                      "component": "markdownDisplay",
-                      "data": "One of our senior consultants quickly got to work and delivered within 48 hours a list of issues some known but most of them unknown, that needed to be handled right away for the app to be presentable in front of potential customers and investors.\n\nAll the issues were fixed in the next two weeks and shortly after Cleu was able to get a new batch of Beta users to the platform.\n\nThe founder would decide to work exclusively with Softup going forward in order to maintain the high performance and reliability of the mobile app. He scaled his development team at Softup with 3 developers working full time in order to make Cleu the most promising product in its niche."
-                    }
-                  ]
-                }
-              },
-              {
-                "component": "paragraphAndImage",
-                "data": {
-                  "title": "Fixed issues",
-                  "imageName": "alarm-mobile.png",
-                  "imagePosition": "left",
-                  "content": [
-                    {
-                      "component": "markdownDisplay",
-                      "data": "One of our senior consultants quickly got to work and delivered within 48 hours a list of issues some known but most of them unknown, that needed to be handled right away for the app to be presentable in front of potential customers and investors.\n\nAll the issues were fixed in the next two weeks and shortly after Cleu was able to get a new batch of Beta users to the platform.\n\nThe founder would decide to work exclusively with Softup going forward in order to maintain the high performance and reliability of the mobile app. He scaled his development team at Softup with 3 developers working full time in order to make Cleu the most promising product in its niche."
-                    }
-                  ]
-                }
-              },
-              {
-                "component": "namedDivider",
-                "data": {
-                  "title": "TESTIMONIALS"
-                }
-              },
-              {
-                "component": "testimonial",
-                "data": {
-                  "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam consectetuer de adipiscing elit, consectetuer adipiscing elit sed diam.",
-                  "author": "LOREM IPSUM"
                 }
               }
             ]
