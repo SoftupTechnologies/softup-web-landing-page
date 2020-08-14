@@ -28,7 +28,7 @@ export const WideTabs = ({ data }) => {
 
   const itemToBeRendered = data.find(item => item.slug === windowLocHash)
   const tabTitles = (
-    <div  className={"tabTitlesContainer"}>
+    <div className={"tabTitlesContainer"}>
       <div className={"displayWithGrid"}>
         <div className={"tabTitles"} id={itemToBeRendered.slug}>
           {data.map((item, index) => {

@@ -262,111 +262,112 @@
         }
       ]
     },
-    "content": [{
-      "component": "normalParagraph",
-      "data": [
-        {
-          "title": "Web",
-          "content": [
-            {
-              "component": "markdownDisplay",
-              "data": "- Typescript _(or JS when 'forced')_\n - React\n - Apollo Client (<3 GraphQL)\n - Less Redux, more Context API + Hooks\n - Webpack\n - SASS, CSS, LESS..."
-            }
-          ]
-        },
-        {
-          "title": "Mobile",
-          "content": [
-            {
-              "component": "markdownDisplay",
-              "data": "- React Native with Typescript\n - Swift or Kotlin\n - Fastlane\n - Testflight\n - Expo"
-            }
-          ]
-        },
-        {
-          "title": "Backend",
-          "content": [
-            {
-              "component": "markdownDisplay",
-              "data": "- Node.JS with Typescript\n - GraphQL\n - Apollo Server\n - Swagger for documentation\n - Ruby on Rails\n - C# & .NET Core\n - PHP"
-            }
-          ]
-        },
-        {
-          "title": "Data Storage",
-          "content": [
-            {
-              "component": "markdownDisplay",
-              "data": "- SQL (PostgreSQL, MySQL, MSSQL)\n - NoSQL (MongoDB, DynamoDB)\n - Caching (Redis)\n - Elasticsearch"
-            }
-          ]
-        },
-        {
-          "title": "Testing",
-          "content": [
-            {
-              "component": "markdownDisplay",
-              "data": "- Depends on programming language / framework - but we write tests! That's how we ensure maintanability and longevity of our products."
-            }
-          ]
-        },
-        {
-          "title": "Architecture",
-          "content": [
-            {
-              "component": "markdownDisplay",
-              "data": "- Monolith (small projects)\n - Microservices\n - Function as a Service AKA Serverless :)"
-            }
-          ]
-        },
-        {
-          "title": "Monitoring & Logging",
-          "content": [
-            {
-              "component": "markdownDisplay",
-              "data": "- Grafana\n - Prometheus\n - Datadog\n - Sentry\n - Cloudwatch\n - List goes on..."
-            }
-          ]
-        },
-        {
-          "title": "Infrastructure",
-          "slug": "infrastructure",
-          "content": [
-            {
-              "component": "markdownDisplay",
-              "data": "- AWS, AWS, AWS (container based or serverless)\n - Digitalocean, Heroku\n - Local machine. What? No!"
-            }
-          ]
-        },
-        {
-          "title": "Orchestration",
-          "content": [
-            {
-              "component": "markdownDisplay",
-              "data": "- Docker with Docker-Compose on AWS EC2\n - Docker on AWS ECS"
-            }
-          ]
-        },
-        {
-          "title": "Collaboration",
-          "content": [
-            {
-              "component": "markdownDisplay",
-              "data": "- Bitbucket\n - Slack\n - JIRA / Trello\n - You name it..."
-            }
-          ]
-        },
-        {
-          "title": "CI / CD",
-          "content": [
-            {
-              "component": "markdownDisplay",
-              "data": "- Bitbucket Pipelines\n - Github Actions\n - CircleCI"
-            }
-          ]
-        }
-      ]
-    }
+    "content": [
+      {
+        "component": "normalParagraph",
+        "data": [
+          {
+            "title": "Web",
+            "content": [
+              {
+                "component": "markdownDisplay",
+                "data": "- Typescript _(or JS when 'forced')_\n - React\n - Apollo Client (<3 GraphQL)\n - Less Redux, more Context API + Hooks\n - Webpack\n - SASS, CSS, LESS..."
+              }
+            ]
+          },
+          {
+            "title": "Mobile",
+            "content": [
+              {
+                "component": "markdownDisplay",
+                "data": "- React Native with Typescript\n - Swift or Kotlin\n - Fastlane\n - Testflight\n - Expo"
+              }
+            ]
+          },
+          {
+            "title": "Backend",
+            "content": [
+              {
+                "component": "markdownDisplay",
+                "data": "- Node.JS with Typescript\n - GraphQL\n - Apollo Server\n - Swagger for documentation\n - Ruby on Rails\n - C# & .NET Core\n - PHP"
+              }
+            ]
+          },
+          {
+            "title": "Data Storage",
+            "content": [
+              {
+                "component": "markdownDisplay",
+                "data": "- SQL (PostgreSQL, MySQL, MSSQL)\n - NoSQL (MongoDB, DynamoDB)\n - Caching (Redis)\n - Elasticsearch"
+              }
+            ]
+          },
+          {
+            "title": "Testing",
+            "content": [
+              {
+                "component": "markdownDisplay",
+                "data": "- Depends on programming language / framework - but we write tests! That's how we ensure maintanability and longevity of our products."
+              }
+            ]
+          },
+          {
+            "title": "Architecture",
+            "content": [
+              {
+                "component": "markdownDisplay",
+                "data": "- Monolith (small projects)\n - Microservices\n - Function as a Service AKA Serverless :)"
+              }
+            ]
+          },
+          {
+            "title": "Monitoring & Logging",
+            "content": [
+              {
+                "component": "markdownDisplay",
+                "data": "- Grafana\n - Prometheus\n - Datadog\n - Sentry\n - Cloudwatch\n - List goes on..."
+              }
+            ]
+          },
+          {
+            "title": "Infrastructure",
+            "slug": "infrastructure",
+            "content": [
+              {
+                "component": "markdownDisplay",
+                "data": "- AWS, AWS, AWS (container based or serverless)\n - Digitalocean, Heroku\n - Local machine. What? No!"
+              }
+            ]
+          },
+          {
+            "title": "Orchestration",
+            "content": [
+              {
+                "component": "markdownDisplay",
+                "data": "- Docker with Docker-Compose on AWS EC2\n - Docker on AWS ECS"
+              }
+            ]
+          },
+          {
+            "title": "Collaboration",
+            "content": [
+              {
+                "component": "markdownDisplay",
+                "data": "- Bitbucket\n - Slack\n - JIRA / Trello\n - You name it..."
+              }
+            ]
+          },
+          {
+            "title": "CI / CD",
+            "content": [
+              {
+                "component": "markdownDisplay",
+                "data": "- Bitbucket Pipelines\n - Github Actions\n - CircleCI"
+              }
+            ]
+          }
+        ]
+      }
     ]
   },
   {
@@ -411,7 +412,8 @@
                         "data": "- Manage: buildings, units and facilities\n - Manage contracts for each tenant (fees, ratings)\n - Monitor contract changes in real time\n - Start / end dates for rent contracts\n - Oversee revenues and expenses for each unit and building\n - Compare financial performance between units and buildings in your portfolio\n - Track the status and condition of your buildings and units\n - Create Profit & Loss statements from your portfolio\n - Track utilization of units\n - Make data-driven investment decisions\n - Calculate tax and additional living costs (Nebenkosten)"
                       }
                     ]
-                  }, {
+                  },
+                  {
                     "title": "Reporting",
                     "content": [
                       {
@@ -419,7 +421,8 @@
                         "data": "- Draw conclusions based on data with just a few clicks\n - Aggregate massive amount of data into a single place\n - Use filters to draw meaningful insights\n - Access a large amount of data quickly and conventiently"
                       }
                     ]
-                  }, {
+                  },
+                  {
                     "title": "Open API",
                     "content": [
                       {
@@ -427,7 +430,8 @@
                         "data": "- API First platform, build apps on top of the platform\n - Integrate with single modules\n - Detailed API Documentation, test & integrate quickly\n - Easy integration to the platform"
                       }
                     ]
-                  }, {
+                  },
+                  {
                     "title": "Why choose us?",
                     "content": [
                       {
@@ -693,12 +697,7 @@
                   {
                     "title": "TECHNOLOGIES WE USED",
                     "type": "list",
-                    "items": [
-                      "AWS",
-                      "React",
-                      "Node.js",
-                      "Firebase"
-                    ]
+                    "items": ["AWS", "React", "Node.js", "Firebase"]
                   },
                   {
                     "title": "INCREASE IN BETA USERS",
@@ -802,19 +801,12 @@
                   {
                     "title": "WHAT WE DID",
                     "type": "list",
-                    "items": [
-                      "Frontend Development",
-                      "UI / UX"
-                    ]
+                    "items": ["Frontend Development", "UI / UX"]
                   },
                   {
                     "title": "TECHNOLOGIES WE USED",
                     "type": "list",
-                    "items": [
-                      "React.JS",
-                      "SASS",
-                      "AWS S3"
-                    ]
+                    "items": ["React.JS", "SASS", "AWS S3"]
                   },
                   {
                     "title": "FIRST DRAFT",
@@ -1030,7 +1022,7 @@
                       "component": "markdownDisplay",
                       "data": "ZenGrowth is a Munich based growth agency that helps tech companies reach a new level of growth. ZenGrowth takes advantage of expert growth hackers in order to produce hyper growth for its clients."
                     }
-                  ] 
+                  ]
                 }
               },
               {
@@ -1138,11 +1130,7 @@
                   {
                     "title": "TECHNOLOGIES WE USED",
                     "type": "list",
-                    "items": [
-                      "AWS",
-                      "React",
-                      "Node.js"
-                    ]
+                    "items": ["AWS", "React", "Node.js"]
                   },
                   {
                     "title": "INCREASE IN BETA USERS",
