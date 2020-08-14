@@ -56,7 +56,6 @@ export const ContactUs = () => {
       }}
     >
       {props => (
-        console.log(props.status),
         (
           <div className={"contactUsDiv"}>
             <div className={"question"}>
