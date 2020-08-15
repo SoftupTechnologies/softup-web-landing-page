@@ -42,7 +42,7 @@
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "- SME’s who have want to launch a new product without being distracted from core business.\n - Corporates with Innovation Labs who are testing new ideas and want to move fast in the market.\n - Serial entrepreneurs looking for the next challenge."
+                        "data": "- SME’s who want to launch a new product without being distracted from core business.\n - Corporates with Innovation Labs who are testing new ideas and want to move fast in the market.\n - Serial entrepreneurs looking for the next challenge."
                       }
                     ]
                   },
@@ -55,7 +55,7 @@
                       }, 
                       {
                         "component": "markdownDisplay",
-                        "data": "- This will distract your core team from current roadmap.\n - Shuffling resources back and fourth leads to unhappy developers..\n - Avoid management overhead (career path, compensation etc)..\n - Hiring one developer takes months. Hiring a team takes quarters."
+                        "data": "- This will distract your core team from current roadmap.\n - Shuffling resources back and fourth leads to unhappy developers.\n - Avoid management overhead (career path, compensation etc).\n - Hiring one developer takes months. Hiring a team takes quarters."
                       },
                       {
                         "component": "markdownDisplay",
@@ -72,11 +72,11 @@
                       }, 
                       {
                         "component": "markdownDisplay",
-                        "data": "- Have you ever spent time with a provider who delivered codebase that you had to throw away?.\n - Did you have to spent days / weeks investigating the codebase due to the lack of proper documentation?\n - Did you ever get a deliverable without a proper handover?"
+                        "data": "- Have you ever spent time with a provider who delivered codebase that you had to throw away?\n - Did you have to spent days / weeks investigating the codebase due to the lack of proper documentation?\n - Did you ever get a deliverable without a proper handover?"
                       },
                       {
                         "component": "markdownDisplay",
-                        "data": "**Start within days, not months.** Avoid the overhead and hiring struggles."
+                        "data": "We’ll give you a maintainable product that is properly documented and a detailed handover to your team. I know it doesn’t sound fancy, but it is much harder to achieve in real world ;)"
                       }
                     ]
                   },
