@@ -24,8 +24,9 @@
       text-align: right;
 
       .sectionTitle {
-        font-family: "Bebas Neue", sans-serif;
-        font-size: 1.3rem;
+        font-family: "Comfortaa", sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
         color: #ffffff;
         border-right: 1px solid #ffffff;
         padding-right: 10px;
@@ -38,17 +39,17 @@
         a:link,
         a:visited,
         a:active {
-          color: #ffffff;
+          color: #7d7d7d;
           pointer-events: visible;
           cursor: pointer;
           text-decoration: none;
         }
         a:hover {
-          color: #7d7d7d;
+          color: #b4b4b4;
         }
         padding-top: 5px;
         padding-bottom: 5px;
-        color: #ffffff;
+        color: #7d7d7d;
         font-family: "Comfortaa", sans-serif;
         font-size: 0.8rem;
       }
