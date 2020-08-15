@@ -14,15 +14,15 @@ const CompanyNumber = ({ number, category }) => {
 export const CompanyNumbers = () => {
   const companyBenchmark = [
     {
-      category: "EMPLOYEES",
+      category: "makers.",
       number: "20",
     },
     {
-      category: "PROJECTS",
+      category: "projects.",
       number: "45",
     },
     {
-      category: "CLIENTS",
+      category: "clients.",
       number: "30",
     },
   ]

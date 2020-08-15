@@ -38,66 +38,58 @@
                 "component": "numberedParagraph",
                 "data": [
                   {
-                    "title": "Innovate towards the future",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "Do you have a disruptive idea? Do you think that speed and agility are key factors to succeed? We think the same. Our team has over 20 years of experience helping DAX companies innovate and launch new products and business lines. We will guide your company through all the steps of the product development cycle from the idea generation, concept development, feasibility study, customer validation and testing, all the way to market launch."
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Optimize your business",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "Innovation is disrupting many industries and businesses. Software can help you increase efficiency and quality of your processes and provide KPI metrics that support better decision making. It can help better understand your customers and by leveraging the power of data it gives you **the edge** needed to succeed.\n\nWe can help you on your journey towards digitalisation by building software that is secure, reliable and most importantly adds value to your company."
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Transparent costs",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "Our cost structure is based on person days. We provide a detailed estimation for the planned phase of the project in terms of time and will recommend the budget based on that.\n\nProjects typically run for 20 - 60 person days."
-                      }
-                    ]
-                  },
-                  {
                     "title": "Ideal for",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "SMEs and corporations who are looking to innovate and launch new digital products."
+                        "data": "- SME’s who have want to launch a new product without being distracted from core business.\n - Corporates with Innovation Labs who are testing new ideas and want to move fast in the market.\n - Serial entrepreneurs looking for the next challenge."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Don’t waste time",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Hiring internal team for short term projects might not be worth your time and effort. Developers market is very competitive. We know that from experience."
+                      }, 
+                      {
+                        "component": "markdownDisplay",
+                        "data": "- This will distract your core team from current roadmap.\n - Shuffling resources back and fourth leads to unhappy developers..\n - Avoid management overhead (career path, compensation etc)..\n - Hiring one developer takes months. Hiring a team takes quarters."
+                      },
+                      {
+                        "component": "markdownDisplay",
+                        "data": "**Start within days, not months.** Avoid the overhead and hiring struggles."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Get a testable and maintainable product",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "One of the main reasons for not working with external providers is the fear of getting an unmaintable messy product that seems to be working on the surface."
+                      }, 
+                      {
+                        "component": "markdownDisplay",
+                        "data": "- Have you ever spent time with a provider who delivered codebase that you had to throw away?.\n - Did you have to spent days / weeks investigating the codebase due to the lack of proper documentation?\n - Did you ever get a deliverable without a proper handover?"
+                      },
+                      {
+                        "component": "markdownDisplay",
+                        "data": "**Start within days, not months.** Avoid the overhead and hiring struggles."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Timeline",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Development typically runs from **2 - 6 months**. Get in touch for a detailed estimation and budget."
                       }
                     ]
                   }
                 ]
-              },
-              {
-                "component": "process",
-                "data": {
-                  "title": "Process",
-                  "items": [
-                    {
-                      "title": "Introduction",
-                      "description": "We will set up a call to learn more about your idea. In the next 24 hours, we’ll perform a feasibility research and get back to you with timeline and costs. We will also discuss about the next steps in details."
-                    },
-                    {
-                      "title": "Workshop",
-                      "description": "We’ll organise a workshop to discuss about further project requirements and define the scope (the backlog) for a Minimum Viable Product. In this workshop, we’ll prepare the user flows, low fidelity mockups, technical architecture and cost estimation."
-                    },
-                    {
-                      "title": "Implementation",
-                      "description": "We will start the implementation process with all the items (user stories) in the backlog. Our lean process allows you to update the backlog or reprioritize the user stories. A communication channel is established with the client, typically using Slack.\n\n\nWe report the progress every week and release the software continuously to test environment and gather feedback."
-                    },
-                    {
-                      "title": "Maintenance",
-                      "description": "Our software development process that is focused on writing quality code, cover testing scenarios and rigorous code reviews results in less maintenance needed after release.\n\nNevertheless, we offer a maintenance package that includes bug fixes, small changes and updates (security, libraries). Projects without active development usually require 2 - 3 days booked for maintenance."
-                    }
-                  ]
-                }
               },
               {
                 "component": "caseStudies",
@@ -128,6 +120,15 @@
               {
                 "component": "numberedParagraph",
                 "data": [
+                  {
+                    "title": "Ideal for",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "- Companies with existing core teams that need more development power.\n - Non-technical founders who want to build and lead a team of engineers. \n- Companies with a tight deadline that need to onboard developers quickly."
+                      }
+                    ]
+                  },
                   {
                     "title": "Save time",
                     "content": [
@@ -172,15 +173,6 @@
                         "data": "You will not only have access to the developers you are working directly with but to Softup’s whole brain power. If your developer needs support implementing a complex solution, he/she can ask support from other colleagues. That way  your project will never get stuck."
                       }
                     ]
-                  },
-                  {
-                    "title": "Ideal for",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "Established startups and SME with existing core teams that want to ramp up development speed quickly."
-                      }
-                    ]
                   }
                 ]
               },
@@ -220,11 +212,20 @@
                 "component": "numberedParagraph",
                 "data": [
                   {
+                    "title": "Ideal for",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Startups / founders that want to build something from scratch and have limited budgets."
+                      }
+                    ]
+                  },
+                  {
                     "title": "Move fast",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "What if you could find the product-market fit in 10 days? Finding a product-market fit is always a long and complicated process. The earlier you can find it, the less money you will burn. We develop quick, light-weight prototypes (MVPs) of your ideal solution in 10 days so you can go out there and validate your product with real customer feedback."
+                        "data": "Finding a product-market fit is always a long and complicated process. The earlier you can find it, the less money you will burn. We develop quick, light-weight prototypes (MVPs) of your ideal solution in 10 days so you can go out there and validate your product with real customer feedback."
                       }
                     ]
                   },
@@ -242,16 +243,7 @@
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "No budget overrun. Don’t waste time and money building the wrong product.The service has a flat fee of **€3,500**. The fee covers meetings, workshops and implementation."
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Ideal for",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "Early stage entrepreneurs / startups that want to build something from scratch. You have a vision and an idea, we help you bring that into reality."
+                        "data": "No budget overrun. Don’t waste time and money building the wrong product. This service starts from **€3,000**."
                       }
                     ]
                   }
@@ -404,8 +396,8 @@
               "name": "PROPTECH"
             },
             {
-              "link": "/expertise#human-resources",
-              "name": "HUMAN RESOURCES"
+              "link": "/expertise#enterprise-tools",
+              "name": "ENTERPRISE TOOLS"
             }
           ]
         }
@@ -423,11 +415,20 @@
                 "component": "normalParagraph",
                 "data": [
                   {
+                    "title": "Why work with us?",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "- Translate business requirements into features in real estate.\n - Expertise in real estate standards world-wide.\n - We can understand the business logic behind the real estate use case and move along faster.\n - Bring the vision into reality with a Dynamic API as a scalable product.\n - We know the data model and business model of the real estate industry.\n - Since we worked in the industry for more than 2 years, we can move faster. No learning curve needed.\n - We understand how real estate companies manage and treat data.\n Deal with complex real estate business cases."
+                      }
+                    ]
+                  },
+                  {
                     "title": "Rent Management",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "- Manage: buildings, units and facilities\n - Manage contracts for each tenant (fees, ratings)\n - Monitor contract changes in real time\n - Start / end dates for rent contracts\n - Oversee revenues and expenses for each unit and building\n - Compare financial performance between units and buildings in your portfolio\n - Track the status and condition of your buildings and units\n - Create Profit & Loss statements from your portfolio\n - Track utilization of units\n - Make data-driven investment decisions\n - Calculate tax and additional living costs (Nebenkosten)"
+                        "data": "- Manage: buildings, units and facilities.\n - Manage contracts for each tenant (fees, ratings).\n - Monitor contract changes in real time.\n - Start / end dates for rent contracts.\n - Oversee revenues and expenses for each unit and building.\n - Compare financial performance between units and buildings in your portfolio.\n - Track the status and condition of your buildings and units.\n - Create Profit & Loss statements from your portfolio.\n - Track utilization of units.\n - Make data-driven investment decisions.\n - Calculate tax and additional living costs (Nebenkosten)."
                       }
                     ]
                   },
@@ -436,7 +437,7 @@
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "- Draw conclusions based on data with just a few clicks\n - Aggregate massive amount of data into a single place\n - Use filters to draw meaningful insights\n - Access a large amount of data quickly and conventiently"
+                        "data": "- Draw conclusions based on data with just a few clicks.\n - Aggregate massive amount of data into a single place.\n - Use filters to draw meaningful insights.\n - Access a large amount of data quickly and conventiently."
                       }
                     ]
                   },
@@ -445,16 +446,7 @@
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "- API First platform, build apps on top of the platform\n - Integrate with single modules\n - Detailed API Documentation, test & integrate quickly\n - Easy integration to the platform"
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Why choose us?",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "- Translate business requirements into features in real estate\n - Expertise in real estate standards world-wide\n - We can understand the business logic behind the real estate use case and move along faster\n - Bring the vision into reality with a Dynamic API as a scalable product\n - We know the data model and business model of the real estate industry\n - We have over X amounts of units and buildings integrated to the platform\n - As we have expertise in the area, we can move faster. No learning curve needed\n - We understand how real estate companies manage and treat data.\n Deal with complex real estate business cases."
+                        "data": "- API First platform, build apps on top of the platform.\n - Integrate with single modules.\n - Detailed API Documentation, test & integrate quickly.\n - Easy integration to the platform."
                       }
                     ]
                   }
@@ -463,22 +455,68 @@
             ]
           },
           {
-            "tabName": "human resources.",
-            "slug": "human-resources",
+            "tabName": "enterprise tools.",
+            "slug": "enterprise-tools",
             "content": [
               {
-                "component": "normalParagraph",
-                "data": [
-                  {
-                    "title": "We have experience implementing",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "- Time Tracking\n - Absence Management\n - Employee Digital File\n - Analytics\n - Employee Performance\n - Revenue Perdictor (for agencies)\n - Invoice and Payroll Management\n - Employee Self-Service\n - Integration: Slack, Toggle, JIRA"
-                      }
-                    ]
-                  }
-                ]
+                "component": "paragraphAndImage",
+                "data":
+                {
+                  "title": "Time Tracking",
+                  "imageName": "enterprise-tools/time-tracking.png",
+                  "imagePosition": "left",
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "- Track your time based on the projects you work.\n - Track based on a particular module or feature your worked.\n - Distinguish between billable and non-billable hours.\n - Export time logs and share with client."
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "paragraphAndImage",
+                "data":
+                {
+                  "title": "Absence Management",
+                  "imageName": "enterprise-tools/leave-request.png",
+                  "imagePosition": "right",
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "- Absence management for your team.\n - Configure approval processes based on your company policies.\n - Allocate resources based on their availability."
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "paragraphAndImage",
+                "data":
+                {
+                  "title": "Invoices",
+                  "imageName": "enterprise-tools/invoices.png",
+                  "imagePosition": "left",
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "- Issue invoices directly from billable tracked hours.\n - Track invoice payments.\n - Configure and automate reminders."
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "paragraphAndImage",
+                "data":
+                {
+                  "title": "Analytics",
+                  "imageName": "enterprise-tools/analytics.png",
+                  "imagePosition": "right",
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "- Detailed financial overviews.\n - Forecast revenues and expenses based on AI.\n - Make business decisions based on real data."
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -556,7 +594,7 @@
                     ]
                   },
                   {
-                    "title": "TECHNOLOGIES WE USED",
+                    "title": "TECHNOLOGIES",
                     "type": "list",
                     "items": [
                       "React.JS",
@@ -711,7 +749,7 @@
                     ]
                   },
                   {
-                    "title": "TECHNOLOGIES WE USED",
+                    "title": "TECHNOLOGIES",
                     "type": "list",
                     "items": ["AWS", "React", "Node.js", "Firebase"]
                   },
@@ -820,7 +858,7 @@
                     "items": ["Frontend Development", "UI / UX"]
                   },
                   {
-                    "title": "TECHNOLOGIES WE USED",
+                    "title": "TECHNOLOGIES",
                     "type": "list",
                     "items": ["React.JS", "SASS", "AWS S3"]
                   },
@@ -927,7 +965,7 @@
                     ]
                   },
                   {
-                    "title": "TECHNOLOGIES WE USED",
+                    "title": "TECHNOLOGIES",
                     "type": "list",
                     "items": [
                       "React.JS",
@@ -938,9 +976,9 @@
                     ]
                   },
                   {
-                    "title": "Developers involved",
+                    "title": "Team",
                     "type": "fact",
-                    "description": "2 - 4 devs"
+                    "description": "4 devs"
                   },
                   {
                     "title": "Collaboration",

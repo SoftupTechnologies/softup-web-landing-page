@@ -18,7 +18,7 @@ export const ParagraphAndImage = ({ data }) => {
         <div className={"pImage"}>
           <Image filename={data.imageName} />
         </div>
-        <div>
+        <div className={data.imagePosition === 'left' ? 'pContentLeft': 'pContentRight'}>
           <div className={"title"}>{data.title}</div>
           <div className={"content"}>{generateContent(data.content)}</div>
         </div>

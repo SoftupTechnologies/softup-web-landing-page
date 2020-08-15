@@ -31,12 +31,17 @@
   }
 
   .pImage {
-    padding-left: 5vw;
-    padding-right: 5vw;
     padding-top: 20px;
     max-height: 100%;
-    min-width: 280px;
-    max-width: 300px;
+    min-width: 60%;
+  }
+
+  .pContentLeft {
+    padding-left: 5vh;
+  }
+
+  .pContentRight {
+    padding-right: 5vh;
   }
 }
 

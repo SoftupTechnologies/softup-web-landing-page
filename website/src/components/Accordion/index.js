@@ -89,8 +89,8 @@ export const Accordion = () => {
 export const DesktopAccordionMenu = () => {
   return (
     <div className={"accordionMenuContainer"}>
-      <CompanyNumbers />
       <Accordion />
+      <CompanyNumbers />
     </div>
   )
 }
