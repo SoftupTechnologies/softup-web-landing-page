@@ -1,12 +1,12 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import { CompanyNumbers } from "../CompanyNumbers"
-import { Link } from "gatsby"
-import { useTranslation } from "react-i18next"
-import navData from "../../../content/page-data.json"
-import classNames from "classnames"
-import { generateContent } from "../helpers"
-import "./mobile.scss"
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { CompanyNumbers } from "../CompanyNumbers";
+import { Link } from "gatsby";
+import { useTranslation } from "react-i18next";
+import navData from "../../../content/page-data.json";
+import classNames from "classnames";
+import { generateContent } from "../helpers";
+import "./mobile.scss";
 
 export const MobileAccordionSlide = ({
   link,
@@ -18,27 +18,27 @@ export const MobileAccordionSlide = ({
   componentId,
   content,
 }) => {
-  const { t } = useTranslation()
-  const slideIsActive = slideInfo.activeSlideNumber === componentId
-  const uninitializedSlides = slideInfo.activeSlideNumber === null
+  const { t } = useTranslation();
+  const slideIsActive = slideInfo.activeSlideNumber === componentId;
+  const uninitializedSlides = slideInfo.activeSlideNumber === null;
 
   let sliderDivClasses = classNames({
     mobileSlideContainer: true,
     inactive: !slideIsActive,
     uninitialized: uninitializedSlides,
-  })
+  });
 
   let titleClasses = classNames({
     title: true,
     active: slideIsActive,
     inactive: !slideIsActive,
-  })
+  });
 
   const toggleAccordion = () => {
     setSlideInfo({
       activeSlideNumber: componentId,
-    })
-  }
+    });
+  };
 
   return (
     <div onClick={toggleAccordion} className={sliderDivClasses}>
@@ -55,11 +55,11 @@ export const MobileAccordionSlide = ({
       </div>
       <div className={"number"}>{number}</div>
     </div>
-  )
-}
+  );
+};
 
 const MobileAccordion = () => {
-  const [slideInfo, setSlideInfo] = useState({ activeSlideNumber: null })
+  const [slideInfo, setSlideInfo] = useState({ activeSlideNumber: null });
 
   return (
     <div className={"mobileAccordionContainer"}>
@@ -79,8 +79,8 @@ const MobileAccordion = () => {
           />
         ))}
     </div>
-  )
-}
+  );
+};
 
 export const MobileAccordionMenu = () => {
   return (
@@ -88,8 +88,8 @@ export const MobileAccordionMenu = () => {
       <MobileAccordion />
       <CompanyNumbers />
     </div>
-  )
-}
+  );
+};
 
 MobileAccordionSlide.propTypes = {
   link: PropTypes.string,
@@ -100,4 +100,4 @@ MobileAccordionSlide.propTypes = {
   setSlideInfo: PropTypes.func,
   componentId: PropTypes.number,
   content: PropTypes.array,
-}
+};

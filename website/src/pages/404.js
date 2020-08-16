@@ -1,7 +1,7 @@
-import React from "react"
-import SEO from "../components/seo"
-import PageLayout from "../components/PageLayout"
-import { Link } from "gatsby"
+import React from "react";
+import SEO from "../components/seo";
+import PageLayout from "../components/PageLayout";
+import { Link } from "gatsby";
 
 const NotFoundPage = () => (
   <PageLayout>
@@ -20,6 +20,6 @@ const NotFoundPage = () => (
       <Link to={"/"}>Back to Homepage</Link>
     </div>
   </PageLayout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

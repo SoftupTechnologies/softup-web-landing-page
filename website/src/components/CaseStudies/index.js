@@ -1,13 +1,13 @@
-import { useTranslation } from "react-i18next"
-import React from "react"
-import PropTypes from "prop-types"
-import { Image } from "../image"
-import "./caseStudies.scss"
-import SubmitButton from "../../images/submit.svg"
-import { Link } from "gatsby"
+import { useTranslation } from "react-i18next";
+import React from "react";
+import PropTypes from "prop-types";
+import { Image } from "../image";
+import "./caseStudies.scss";
+import SubmitButton from "../../images/submit.svg";
+import { Link } from "gatsby";
 
 export const CaseStudies = ({ data }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <>
@@ -35,12 +35,12 @@ export const CaseStudies = ({ data }) => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 CaseStudies.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string,
     items: PropTypes.arrayOf(PropTypes.object),
   }),
-}
+};

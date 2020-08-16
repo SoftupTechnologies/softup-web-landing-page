@@ -1,11 +1,11 @@
-import { useTranslation } from "react-i18next"
-import React from "react"
-import { generateContent } from "../helpers"
-import PropTypes from "prop-types"
-import "./normal-paragraph.scss"
+import { useTranslation } from "react-i18next";
+import React from "react";
+import { generateContent } from "../helpers";
+import PropTypes from "prop-types";
+import "./normal-paragraph.scss";
 
 export const NormalParagraph = ({ data }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   return (
     <div className={"displayWithGrid"}>
       <div className={"normalParagraphDiv"}>
@@ -19,13 +19,13 @@ export const NormalParagraph = ({ data }) => {
                 </div>
               </div>
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
 NormalParagraph.propTypes = {
   data: PropTypes.array,
-}
+};

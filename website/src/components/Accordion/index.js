@@ -1,12 +1,12 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import { CompanyNumbers } from "../CompanyNumbers"
-import { Link } from "gatsby"
-import { useTranslation } from "react-i18next"
-import navData from "../../../content/page-data.json"
-import classNames from "classnames"
-import { generateContent } from "../helpers"
-import "./accordion.scss"
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { CompanyNumbers } from "../CompanyNumbers";
+import { Link } from "gatsby";
+import { useTranslation } from "react-i18next";
+import navData from "../../../content/page-data.json";
+import classNames from "classnames";
+import { generateContent } from "../helpers";
+import "./accordion.scss";
 
 export const AccordionSlide = ({
   link,
@@ -18,28 +18,28 @@ export const AccordionSlide = ({
   componentId,
   content,
 }) => {
-  const { t } = useTranslation()
-  const slideIsActive = slideInfo.activeSlideNumber === componentId
-  const uninitializedSlides = slideInfo.activeSlideNumber === null
+  const { t } = useTranslation();
+  const slideIsActive = slideInfo.activeSlideNumber === componentId;
+  const uninitializedSlides = slideInfo.activeSlideNumber === null;
 
   let sliderDivClasses = classNames({
     slideContainer: true,
     inactive: !slideIsActive,
     active: slideIsActive,
     uninitialized: uninitializedSlides,
-  })
+  });
 
   let titleClasses = classNames({
     title: true,
     active: slideIsActive,
     inactive: !slideIsActive,
-  })
+  });
 
   const toggleAccordion = () => {
     setSlideInfo({
       activeSlideNumber: componentId,
-    })
-  }
+    });
+  };
 
   return (
     <div onClick={toggleAccordion} className={sliderDivClasses}>
@@ -56,15 +56,15 @@ export const AccordionSlide = ({
         ) : null}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export const Accordion = () => {
-  const [slideInfo, setSlideInfo] = useState({ activeSlideNumber: null })
+  const [slideInfo, setSlideInfo] = useState({ activeSlideNumber: null });
   let accordionContainerClasses = classNames({
     accordionContainer: true,
     uninitialized: slideInfo.activeSlideNumber === null,
-  })
+  });
   return (
     <div className={accordionContainerClasses}>
       {navData
@@ -83,8 +83,8 @@ export const Accordion = () => {
           />
         ))}
     </div>
-  )
-}
+  );
+};
 
 export const DesktopAccordionMenu = () => {
   return (
@@ -92,8 +92,8 @@ export const DesktopAccordionMenu = () => {
       <Accordion />
       <CompanyNumbers />
     </div>
-  )
-}
+  );
+};
 
 AccordionSlide.propTypes = {
   link: PropTypes.string,
@@ -104,4 +104,4 @@ AccordionSlide.propTypes = {
   setSlideInfo: PropTypes.func,
   componentId: PropTypes.number,
   content: PropTypes.array,
-}
+};

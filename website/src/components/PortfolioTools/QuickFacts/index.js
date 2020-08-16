@@ -1,6 +1,6 @@
-import React from "react"
-import "./quick-facts.scss"
-import PropTypes from "prop-types"
+import React from "react";
+import "./quick-facts.scss";
+import PropTypes from "prop-types";
 
 export const QuickFacts = ({ data }) => {
   return (
@@ -24,8 +24,8 @@ export const QuickFacts = ({ data }) => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 QuickFacts.propTypes = {
   data: PropTypes.arrayOf(
@@ -34,4 +34,4 @@ QuickFacts.propTypes = {
       description: PropTypes.string,
     })
   ),
-}
+};

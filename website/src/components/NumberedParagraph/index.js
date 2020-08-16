@@ -1,11 +1,11 @@
-import { useTranslation } from "react-i18next"
-import React from "react"
-import { formatNumber, generateContent } from "../helpers"
-import PropTypes from "prop-types"
-import "./numbered-paragraph.scss"
+import { useTranslation } from "react-i18next";
+import React from "react";
+import { formatNumber, generateContent } from "../helpers";
+import PropTypes from "prop-types";
+import "./numbered-paragraph.scss";
 
 export const NumberedParagraph = ({ data }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   return (
     <div className={"displayWithGrid"}>
       <div className={"paragraphDiv"}>
@@ -20,13 +20,13 @@ export const NumberedParagraph = ({ data }) => {
                 </div>
               </div>
             </div>
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
 NumberedParagraph.propTypes = {
   data: PropTypes.array,
-}
+};

@@ -1,6 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import "./testimonial.scss"
+import React from "react";
+import PropTypes from "prop-types";
+import "./testimonial.scss";
 
 export const Testimonial = ({ data }) => {
   return (
@@ -16,12 +16,12 @@ export const Testimonial = ({ data }) => {
         <div className={"quotes"}>”</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Testimonial.propTypes = {
   data: PropTypes.shape({
     content: PropTypes.string,
     author: PropTypes.string,
   }),
-}
+};

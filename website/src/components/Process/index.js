@@ -1,11 +1,11 @@
-import { useTranslation } from "react-i18next"
-import React from "react"
-import PropTypes from "prop-types"
-import "./process.scss"
+import { useTranslation } from "react-i18next";
+import React from "react";
+import PropTypes from "prop-types";
+import "./process.scss";
 
 export const Process = ({ data }) => {
-  const { t } = useTranslation()
-  const items = data?.items.length - 1
+  const { t } = useTranslation();
+  const items = data?.items.length - 1;
 
   return (
     <div>
@@ -38,9 +38,9 @@ export const Process = ({ data }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Process.propTypes = {
   data: PropTypes.object,
-}
+};

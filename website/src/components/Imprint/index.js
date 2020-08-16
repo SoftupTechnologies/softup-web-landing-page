@@ -1,5 +1,5 @@
-import React from "react"
-import "./imprint.scss"
+import React from "react";
+import "./imprint.scss";
 
 export const Imprint = () => {
   return (
@@ -61,5 +61,5 @@ export const Imprint = () => {
         </p>
       </div>
     </div>
-  )
-}
+  );
+};

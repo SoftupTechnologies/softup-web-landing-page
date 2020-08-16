@@ -1,11 +1,11 @@
-import "./landing.scss"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
-import BurgerMenuIcon from "../../images/burger-desktop.svg"
-import React from "react"
-import PropTypes from "prop-types"
+import "./landing.scss";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+import BurgerMenuIcon from "../../images/burger-desktop.svg";
+import React from "react";
+import PropTypes from "prop-types";
 // import { LanguageMenu } from "../LangSwitch"
-import { Link } from "../../../.cache/gatsby-browser-entry"
-import SoftupLogoSvg from "../../images/softup-logo.svg"
+import { Link } from "../../../.cache/gatsby-browser-entry";
+import SoftupLogoSvg from "../../images/softup-logo.svg";
 
 export const Slogan = ({ slogan, description }) => {
   return (
@@ -16,16 +16,16 @@ export const Slogan = ({ slogan, description }) => {
       </h1>
       <div className="sloganDesc">{description}</div>
     </div>
-  )
-}
+  );
+};
 
 const SoftupLogo = () => {
   return (
     <Link to={"/"} className="logo">
       <SoftupLogoSvg />
     </Link>
-  )
-}
+  );
+};
 
 export const MenuHeader = () => {
   return (
@@ -36,10 +36,10 @@ export const MenuHeader = () => {
         <BurgerMenuIcon />
       </AnchorLink>
     </div>
-  )
-}
+  );
+};
 
 Slogan.propTypes = {
   slogan: PropTypes.string,
   description: PropTypes.string,
-}
+};

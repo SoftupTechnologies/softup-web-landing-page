@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby";
 
 export const getMediumArticles = () => {
   return useStaticQuery(graphql`
@@ -15,5 +15,5 @@ export const getMediumArticles = () => {
         }
       }
     }
-  `)
-}
+  `);
+};

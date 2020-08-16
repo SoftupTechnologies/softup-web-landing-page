@@ -1,6 +1,6 @@
-import React from "react"
-import "./named-divider.scss"
-import PropTypes from "prop-types"
+import React from "react";
+import "./named-divider.scss";
+import PropTypes from "prop-types";
 
 export const NamedDivider = ({ data }) => {
   return (
@@ -10,11 +10,11 @@ export const NamedDivider = ({ data }) => {
         <div className={"separator"} />
       </div>
     </div>
-  )
-}
+  );
+};
 
 NamedDivider.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.string,
   }),
-}
+};

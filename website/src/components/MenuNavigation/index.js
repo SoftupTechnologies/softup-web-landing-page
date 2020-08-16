@@ -1,22 +1,22 @@
-import React from "react"
-import SoftupLogoSvg from "../../images/softup-logo.svg"
-import "./menu-navigation.scss"
-import { Link } from "gatsby"
-import { useTranslation } from "react-i18next"
-import PropTypes from "prop-types"
+import React from "react";
+import SoftupLogoSvg from "../../images/softup-logo.svg";
+import "./menu-navigation.scss";
+import { Link } from "gatsby";
+import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 
-import MobileNavigation from "./mobile"
+import MobileNavigation from "./mobile";
 
 const SoftupLogo = () => {
   return (
     <Link to={"/"} className={"logo"}>
       <SoftupLogoSvg />
     </Link>
-  )
-}
+  );
+};
 
 const MenuLinks = ({ menuItems }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   return (
     <div className={"menuLinkDiv"}>
       {menuItems?.map((item, index) => {
@@ -33,11 +33,11 @@ const MenuLinks = ({ menuItems }) => {
           >
             {t(item.title)}
           </Link>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
 const MenuNavigation = ({
   menuItems,
@@ -59,8 +59,8 @@ const MenuNavigation = ({
         {/* <LanguageMenu gridColumnStart={"4"} /> */}
       </div>
     </React.Fragment>
-  )
-}
+  );
+};
 
 MenuLinks.propTypes = {
   menuItems: PropTypes.arrayOf(
@@ -70,7 +70,7 @@ MenuLinks.propTypes = {
     })
   ),
   activeMenuItem: PropTypes.string,
-}
+};
 
 MenuNavigation.propTypes = {
   menuItems: PropTypes.arrayOf(
@@ -83,6 +83,6 @@ MenuNavigation.propTypes = {
   menuType: PropTypes.object,
   setMenuType: PropTypes.func,
   activeMenuItem: PropTypes.string,
-}
+};
 
-export default MenuNavigation
+export default MenuNavigation;

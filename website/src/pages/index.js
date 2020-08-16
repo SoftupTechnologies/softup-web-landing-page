@@ -1,10 +1,10 @@
-import React from "react"
-import PageLayout from "../components/PageLayout"
-import { MobileAccordionMenu } from "../components/Accordion/mobile"
-import { Landing } from "../components/Landing"
-import { DesktopAccordionMenu } from "../components/Accordion"
-import { Footer } from "../components/Footer"
-import { ContactUs } from "../components/Contact"
+import React from "react";
+import PageLayout from "../components/PageLayout";
+import { MobileAccordionMenu } from "../components/Accordion/mobile";
+import { Landing } from "../components/Landing";
+import { DesktopAccordionMenu } from "../components/Accordion";
+import { Footer } from "../components/Footer";
+import { ContactUs } from "../components/Contact";
 
 const IndexPage = () => (
   <PageLayout>
@@ -21,6 +21,6 @@ const IndexPage = () => (
     <ContactUs />
     <Footer />
   </PageLayout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

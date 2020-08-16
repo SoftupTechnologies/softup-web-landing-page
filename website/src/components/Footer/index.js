@@ -1,15 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
-import SoftupLogoSvg from "../../images/softup-logo.svg"
-import "./footer.scss"
+import React from "react";
+import { Link } from "gatsby";
+import SoftupLogoSvg from "../../images/softup-logo.svg";
+import "./footer.scss";
 
 const SoftupLogo = () => {
   return (
     <Link to={"/"} className={"footerLogo"}>
       <SoftupLogoSvg />
     </Link>
-  )
-}
+  );
+};
 
 export const Footer = () => {
   return (
@@ -55,5 +55,5 @@ export const Footer = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

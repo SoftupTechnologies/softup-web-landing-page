@@ -1,6 +1,6 @@
-import React from "react"
-import "./company-numbers.scss"
-import PropTypes from "prop-types"
+import React from "react";
+import "./company-numbers.scss";
+import PropTypes from "prop-types";
 
 const CompanyNumber = ({ number, category }) => {
   return (
@@ -8,8 +8,8 @@ const CompanyNumber = ({ number, category }) => {
       <div className="benchmarkNumber">{number}</div>
       <div className="benchmarkCategory">{category}</div>
     </div>
-  )
-}
+  );
+};
 
 export const CompanyNumbers = () => {
   const companyBenchmark = [
@@ -25,7 +25,7 @@ export const CompanyNumbers = () => {
       category: "clients.",
       number: "30",
     },
-  ]
+  ];
   return (
     <div id="company-numbers" className="companyNumContainer">
       <div className="companyNumbers">
@@ -34,10 +34,10 @@ export const CompanyNumbers = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 CompanyNumber.propTypes = {
   number: PropTypes.string,
   category: PropTypes.string,
-}
+};

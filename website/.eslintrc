@@ -9,7 +9,9 @@
   "rules": {
     "strict": 0,
     "no-unused-vars": "warn",
-    "no-console": "warn"
+    "no-console": "warn",
+    "semi": ["error", "always"],
+    "quotes": ["error", "double"]
   },
   "extends": [
     "eslint:recommended",

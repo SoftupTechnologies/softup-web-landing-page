@@ -1,7 +1,7 @@
-import React from "react"
-import { Image } from "../../image"
-import "./header-image.scss"
-import PropTypes from "prop-types"
+import React from "react";
+import { Image } from "../../image";
+import "./header-image.scss";
+import PropTypes from "prop-types";
 
 export const HeaderImage = ({ data }) => {
   return (
@@ -10,11 +10,11 @@ export const HeaderImage = ({ data }) => {
         <Image filename={data.imageFileName} />
       </div>
     </div>
-  )
-}
+  );
+};
 
 HeaderImage.propTypes = {
   data: PropTypes.shape({
     imageFileName: PropTypes.string,
   }),
-}
+};

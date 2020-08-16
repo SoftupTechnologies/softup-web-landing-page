@@ -1,7 +1,7 @@
-import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image/index"
-import PropTypes from "prop-types"
-import React from "react"
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image/index";
+import PropTypes from "prop-types";
+import React from "react";
 
 export const Image = props => (
   <StaticQuery
@@ -24,10 +24,10 @@ export const Image = props => (
     `}
     render={data => {
       const image = data.images.edges.find(n => {
-        return n.node.relativePath.includes(props.filename)
-      })
+        return n.node.relativePath.includes(props.filename);
+      });
       if (!image) {
-        return null
+        return null;
       }
       return (
         <Img
@@ -35,13 +35,13 @@ export const Image = props => (
           alt={props.alt}
           fluid={image.node.childImageSharp.fluid}
         />
-      )
+      );
     }}
   />
-)
+);
 
 Image.propTypes = {
   filename: PropTypes.string,
   alt: PropTypes.string,
   highQuality: PropTypes.bool,
-}
+};

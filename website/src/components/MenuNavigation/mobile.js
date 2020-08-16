@@ -1,31 +1,31 @@
-import React from "react"
-import SoftupLogoSvg from "../../images/softup-logo.svg"
-import "./mobile.scss"
-import { Link } from "gatsby"
-import { useTranslation } from "react-i18next"
-import PropTypes from "prop-types"
-import classNames from "classnames"
-import Burger from "../../images/burger.svg"
-import Close from "../../images/close.svg"
+import React from "react";
+import SoftupLogoSvg from "../../images/softup-logo.svg";
+import "./mobile.scss";
+import { Link } from "gatsby";
+import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
+import classNames from "classnames";
+import Burger from "../../images/burger.svg";
+import Close from "../../images/close.svg";
 
 const SoftupLogo = () => {
   return (
     <Link to={"/"} className={"mobileSoftupLogo"}>
       <SoftupLogoSvg />
     </Link>
-  )
-}
+  );
+};
 
 const NumberUnderlined = ({ number, isActive }) => {
   let classes = classNames({
     mobileMenuNumber: true,
     mobileMenuNumberActive: isActive,
-  })
-  return <span className={classes}>{number}</span>
-}
+  });
+  return <span className={classes}>{number}</span>;
+};
 
 const MobileMenuLinks = ({ menuItems, activeMenuItem }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   return (
     <div className={"centerLinks"}>
       <div className={"mobileMenuLinksDiv"}>
@@ -33,7 +33,7 @@ const MobileMenuLinks = ({ menuItems, activeMenuItem }) => {
           let classes = classNames({
             link: true,
             enabledMenuItem: item.title === activeMenuItem,
-          })
+          });
           return (
             <Link
               className={classes}
@@ -51,12 +51,12 @@ const MobileMenuLinks = ({ menuItems, activeMenuItem }) => {
               />
               {t(item.title)}
             </Link>
-          )
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
 const MobileNavigation = ({
   menuItems,
@@ -92,13 +92,13 @@ const MobileNavigation = ({
         />
       ) : null}
     </div>
-  )
-}
+  );
+};
 
 NumberUnderlined.propTypes = {
   number: PropTypes.string,
   isActive: PropTypes.bool,
-}
+};
 
 MobileMenuLinks.propTypes = {
   menuItems: PropTypes.arrayOf(
@@ -108,7 +108,7 @@ MobileMenuLinks.propTypes = {
     })
   ),
   activeMenuItem: PropTypes.string,
-}
+};
 
 MobileNavigation.propTypes = {
   menuItems: PropTypes.arrayOf(
@@ -121,6 +121,6 @@ MobileNavigation.propTypes = {
   menuType: PropTypes.object,
   setMenuType: PropTypes.func,
   activeMenuItem: PropTypes.string,
-}
+};
 
-export default MobileNavigation
+export default MobileNavigation;

@@ -1,19 +1,19 @@
-import React, { useState } from "react"
-import { useTranslation } from "react-i18next"
-import langSwitchStyles from "./lang-switch.module.css"
-import PropTypes from "prop-types"
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import langSwitchStyles from "./lang-switch.module.css";
+import PropTypes from "prop-types";
 
 export const LanguageMenu = ({ gridColumnStart }) => {
-  const { i18n } = useTranslation()
-  const lang = i18n.languages[0]
+  const { i18n } = useTranslation();
+  const lang = i18n.languages[0];
 
   const [values, setValues] = useState({
     language: lang,
-  })
+  });
 
   async function handleChange(lang) {
-    await i18n.changeLanguage(lang)
-    setValues({ language: lang })
+    await i18n.changeLanguage(lang);
+    setValues({ language: lang });
   }
 
   return (
@@ -44,9 +44,9 @@ export const LanguageMenu = ({ gridColumnStart }) => {
         DE
       </div>
     </div>
-  )
-}
+  );
+};
 
 LanguageMenu.propTypes = {
   gridColumnStart: PropTypes.string,
-}
+};

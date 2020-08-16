@@ -1,23 +1,23 @@
-import React, { useState } from "react"
-import PropTypes from "prop-types"
-import MenuNavigation from "../components/MenuNavigation"
-import { useTranslation } from "react-i18next"
-import "./site.scss"
-import { Footer } from "../components/Footer"
-import { ContactUs } from "../components/Contact"
-import { generateContent } from "../components/helpers"
-import SEO from "../components/seo"
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import MenuNavigation from "../components/MenuNavigation";
+import { useTranslation } from "react-i18next";
+import "./site.scss";
+import { Footer } from "../components/Footer";
+import { ContactUs } from "../components/Contact";
+import { generateContent } from "../components/helpers";
+import SEO from "../components/seo";
 
 const BasicTemplate = ({ pageContext }) => {
-  const { t } = useTranslation()
-  const [menuType, setMenuType] = useState({ showMobileMenu: false })
+  const { t } = useTranslation();
+  const [menuType, setMenuType] = useState({ showMobileMenu: false });
   return (
     <div id="top">
       {pageContext?.accordionSlugs?.map((slug, index) => {
         // This exists because otherwise the browser will scroll to the anchor
         // meaning, after every click or redirection it will scroll you down
         // to the tab name. This is a workaround
-        return <div key={index} id={slug} />
+        return <div key={index} id={slug} />;
       })}
       <MenuNavigation
         menuItems={pageContext.menuItems}
@@ -41,11 +41,11 @@ const BasicTemplate = ({ pageContext }) => {
         </React.Fragment>
       ) : null}
     </div>
-  )
-}
+  );
+};
 
 BasicTemplate.propTypes = {
   pageContext: PropTypes.object,
-}
+};
 
-export default BasicTemplate
+export default BasicTemplate;

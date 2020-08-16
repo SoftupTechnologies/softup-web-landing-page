@@ -1,8 +1,8 @@
-import React from "react"
-import PropTypes from "prop-types"
-import "./common-paragraph.scss"
-import { isMobile } from "react-device-detect"
-import { generateContent } from "../../helpers"
+import React from "react";
+import PropTypes from "prop-types";
+import "./common-paragraph.scss";
+import { isMobile } from "react-device-detect";
+import { generateContent } from "../../helpers";
 
 export const CommonParagraph = ({ data }) => {
   return (
@@ -19,8 +19,8 @@ export const CommonParagraph = ({ data }) => {
         <div className={"content"}>{generateContent(data.content)}</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 CommonParagraph.propTypes = {
   data: PropTypes.shape({
@@ -28,4 +28,4 @@ CommonParagraph.propTypes = {
     type: PropTypes.oneOf(["horizontal", "vertical"]),
     content: PropTypes.arrayOf(PropTypes.object),
   }),
-}
+};

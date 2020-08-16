@@ -1,7 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
-import "./privacyPolicy.scss"
-import { Link } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import "./privacyPolicy.scss";
+import { Link } from "gatsby";
 
 export const PrivacyPolicy = ({ data }) => {
   return (
@@ -153,11 +153,11 @@ export const PrivacyPolicy = ({ data }) => {
         </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
 PrivacyPolicy.propTypes = {
   data: PropTypes.shape({
     links: PropTypes.object,
   }),
-}
+};

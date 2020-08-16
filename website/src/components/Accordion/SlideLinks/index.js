@@ -1,12 +1,12 @@
-import React from "react"
-import PropTypes from "prop-types"
-import "./slide-links.scss"
-import { Link } from "gatsby"
-import { getMediumArticles } from "../../queries"
-import { Button } from "../../Button"
+import React from "react";
+import PropTypes from "prop-types";
+import "./slide-links.scss";
+import { Link } from "gatsby";
+import { getMediumArticles } from "../../queries";
+import { Button } from "../../Button";
 
 export const SlideLinks = ({ data }) => {
-  const { allMediumPost } = getMediumArticles()
+  const { allMediumPost } = getMediumArticles();
 
   return (
     <div className={"slideLinksDiv"}>
@@ -38,9 +38,9 @@ export const SlideLinks = ({ data }) => {
         </React.Fragment>
       )}
     </div>
-  )
-}
+  );
+};
 
 SlideLinks.propTypes = {
   data: PropTypes.array,
-}
+};

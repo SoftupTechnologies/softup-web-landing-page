@@ -1,8 +1,8 @@
-import React from "react"
-import "./presentation-tiles.scss"
-import PropTypes from "prop-types"
-import { Image } from "../image"
-import { Link } from "../../../.cache/gatsby-browser-entry"
+import React from "react";
+import "./presentation-tiles.scss";
+import PropTypes from "prop-types";
+import { Image } from "../image";
+import { Link } from "../../../.cache/gatsby-browser-entry";
 
 export const PresentationTiles = ({ data }) => {
   const items = data.map((item, index) => {
@@ -15,8 +15,8 @@ export const PresentationTiles = ({ data }) => {
         <div className={"companyName"}>{item.title}</div>
         <div className={"companyDescription"}>{item.description}</div>
       </Link>
-    )
-  })
+    );
+  });
 
   return (
     <div className={"displayWithGrid"}>
@@ -24,8 +24,8 @@ export const PresentationTiles = ({ data }) => {
         <div className={"presentationItemsDiv"}>{items}</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 PresentationTiles.propTypes = {
   data: PropTypes.arrayOf(
@@ -35,4 +35,4 @@ PresentationTiles.propTypes = {
       description: PropTypes.string,
     })
   ),
-}
+};
