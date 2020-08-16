@@ -4,41 +4,17 @@ import { Code, Function, Runtime } from "@aws-cdk/aws-lambda"
 import { Cors, LambdaIntegration, RestApi } from "@aws-cdk/aws-apigateway"
 import * as s3Deployment from "@aws-cdk/aws-s3-deployment"
 import { Effect, PolicyStatement } from "@aws-cdk/aws-iam"
-// import { CloudFrontWebDistribution } from '@aws-cdk/aws-cloudfront'
-
 
 export class InfrastructureStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props)
 
-    const websiteBucket = new s3.Bucket(this, "softup-website-v3-bucket", {
-      publicReadAccess: true,
-      removalPolicy: cdk.RemovalPolicy.DESTROY,
-      websiteIndexDocument: "index.html",
-      websiteErrorDocument: "404/index.html"
-    })
+    const websiteBucket = s3.Bucket.fromBucketName(this, 'SoftupBucket', 'softup.co');
 
     new s3Deployment.BucketDeployment(this, "deployStaticWebsite", {
       sources: [s3Deployment.Source.asset("../website/public")],
       destinationBucket: websiteBucket
     })
-
-/*  const certificateArn = '';
-
-    const distribution = new CloudFrontWebDistribution(this, 'softupWebCFrontDist', {
-      originConfigs: [
-        {
-          s3OriginSource: {
-            s3BucketSource: websiteBucket
-          },
-          behaviors : [ {isDefaultBehavior: true}]
-        }
-      ],
-      aliasConfiguration: {
-        acmCertRef: certificateArn,
-        names: ['softup.co']
-      }
-    });*/
 
     const formSubmitFunction = new Function(this, "formSubmitFunction", {
       runtime: Runtime.NODEJS_12_X,
