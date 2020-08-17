@@ -48,7 +48,9 @@ export const MobileAccordionSlide = ({
     <div onClick={toggleAccordion} className={sliderDivClasses}>
       <div className={"contentAndTitle"}>
         <div className={titleClasses}>
-          <Link to={link}>{t(title)}</Link>
+          <Link to={link} onClick={e => e.stopPropagation()}>
+            {t(title)}
+          </Link>
         </div>
         {slideIsActive ? (
           <React.Fragment>
