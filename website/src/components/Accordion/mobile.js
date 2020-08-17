@@ -35,6 +35,10 @@ export const MobileAccordionSlide = ({
   });
 
   const toggleAccordion = () => {
+    if (slideIsActive) {
+      componentId = null;
+    }
+
     setSlideInfo({
       activeSlideNumber: componentId,
     });
