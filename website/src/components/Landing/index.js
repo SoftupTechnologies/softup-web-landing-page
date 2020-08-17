@@ -13,10 +13,14 @@ export const Landing = () => {
       <div className="landing">
         <SEO title="Home" />
         <MenuHeader />
-        <Slogan
-          description={t("sloganDescription")}
-          slogan={t("sloganTitle")}
-        />
+        <div className="displayWithGrid">
+          <div className="slogan-wrapper">
+            <Slogan
+              description={t("sloganDescription")}
+              slogan={t("sloganTitle")}
+            />
+          </div>
+        </div>
       </div>
     </PageLayout>
   );

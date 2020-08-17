@@ -1,12 +1,11 @@
+.accordion-wrapper {
+  grid-column-start: 2;
+  // margin: 50px 0;
+}
+
 .mobileAccordionMenuContainer {
   display: flex;
   flex-direction: column;
-}
-
-@media (min-width: 768px) {
-  .mobileAccordionMenuContainer {
-    display: none;
-  }
 }
 
 .mobileAccordionContainer {
@@ -89,5 +88,11 @@
         cursor: default;
       }
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .mobileAccordionMenuContainer {
+    display: none;
   }
 }
