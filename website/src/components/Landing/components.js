@@ -21,7 +21,7 @@ export const Slogan = ({ slogan, description }) => {
 
 const SoftupLogo = () => {
   return (
-    <Link to={"/"} className="logo">
+    <Link to={"/"} className="logoIcon">
       <SoftupLogoSvg />
     </Link>
   );
