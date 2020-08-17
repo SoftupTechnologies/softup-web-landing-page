@@ -1,6 +1,7 @@
 import "./landing.scss";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-import BurgerMenuIcon from "../../images/burger-desktop.svg";
+import BurgerDesktop from "../../images/burger-desktop.svg";
+import BurgerMobile from "../../images/burger.svg";
 import React from "react";
 import PropTypes from "prop-types";
 // import { LanguageMenu } from "../LangSwitch"
@@ -33,7 +34,12 @@ export const MenuHeader = () => {
       <SoftupLogo />
       {/* <LanguageMenu gridColumnStart={"3"} /> */}
       <AnchorLink offset="100" to="/#accordion-menu" className="burgerIcon">
-        <BurgerMenuIcon />
+        <div className="desktop">
+          <BurgerDesktop />
+        </div>
+        <div className="mobile">
+          <BurgerMobile />
+        </div>
       </AnchorLink>
     </div>
   );

@@ -121,5 +121,17 @@
       max-width: 70px;
       max-height: 70px;
     }
+
+    .desktop {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .menuHeader {
+    .mobile {
+      display: none;
+    }
   }
 }
