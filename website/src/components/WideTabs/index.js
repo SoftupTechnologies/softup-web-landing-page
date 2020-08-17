@@ -28,28 +28,28 @@ export const WideTabs = ({ data }) => {
 
   const itemToBeRendered = data.find(item => item.slug === windowLocHash);
   const tabTitles = (
-    <div className={"tabTitlesContainer"}>
-      <div className={"displayWithGrid"}>
-        <div className={"tabTitles"} id={itemToBeRendered.slug}>
-          {data.map((item, index) => {
-            let classes = classNames({
-              tabName: true,
-              enabledTitle: item.slug === windowLocHash,
-            });
-            return (
-              <div
-                onClick={() => {
-                  window.location.hash = "#" + item.slug;
-                }}
-                key={index}
-                className={classes}
-              >
-                {breakLongWords(t(item.tabName))}
-              </div>
-            );
-          })}
-        </div>
+    <div className="tabTitlesContainer">
+      {/* <div className={"displayWithGrid"}> */}
+      <div className="tabTitles" id={itemToBeRendered.slug}>
+        {data.map((item, index) => {
+          let classes = classNames({
+            tabName: true,
+            enabledTitle: item.slug === windowLocHash,
+          });
+          return (
+            <div
+              onClick={() => {
+                window.location.hash = "#" + item.slug;
+              }}
+              key={index}
+              className={classes}
+            >
+              {breakLongWords(t(item.tabName))}
+            </div>
+          );
+        })}
       </div>
+      {/* </div> */}
     </div>
   );
 
