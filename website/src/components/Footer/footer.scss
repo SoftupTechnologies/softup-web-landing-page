@@ -109,11 +109,13 @@
         .header {
           display: inline-block;
           font-size: 20px;
+          border-left: 1px solid #ffffff;
+          border-right: none;
+          padding: 0 0 0 10px;
         }
 
         .item {
           padding: 5px 0;
-          // line-height: 1.6;
         }
       }
 
