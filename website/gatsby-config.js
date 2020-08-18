@@ -9,6 +9,13 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "enterpriseTools",
+        path: `${__dirname}/src/images/enterprise-tools`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "images",
         path: `${__dirname}/src/images`,
       },
@@ -25,8 +32,6 @@ module.exports = {
     },
     "gatsby-plugin-sass",
     "gatsby-plugin-anchor-links",
-    // "gatsby-plugin-sharp",
-    // "gatsby-transformer-sharp",
     "gatsby-plugin-eslint",
     {
       resolve: "gatsby-plugin-s3",
