@@ -27,9 +27,8 @@ export const Footer = () => {
             <a href="mailto:info@softup.co">info@softup.co</a>
           </div>
           <div className="item">
-            Buschingstraße 22, 81677
-            <br />
-            München
+            Buschingstraße 22,
+            <br /> 81677 München
           </div>
         </div>
 
@@ -71,8 +70,8 @@ export const Footer = () => {
           <Link to={"/imprint"}>Imprint</Link>
         </div>
         <div className="general">
-          &#169; {new Date().getFullYear()} Softup Technologies GmbH All Rights
-          reserved
+          &#169; {new Date().getFullYear()} Softup Technologies GmbH &ndash; All
+          Rights reserved
         </div>
       </div>
     </div>
