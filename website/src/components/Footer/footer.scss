@@ -1,80 +1,158 @@
-.email {
-  color: #19a0ff;
-}
+// .email {
+//   color: #19a0ff;
+// }
 
 .footerGrid {
   border-top: solid 1px #333333;
   display: grid;
   grid-template-columns: minmax(30px, 1fr) minmax(0, 1000px) minmax(30px, 1fr);
+
   .footerDiv {
     grid-column-start: 2;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 10vh 0 10vh 0;
+    padding: 10vh 0;
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    font-family: Bebas Neue;
+    color: #ffffff;
 
-    .footerLogo {
+    a,
+    a:link,
+    a:visited,
+    a:active {
+      color: #7d7d7d;
+      pointer-events: visible;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #b4b4b4;
+    }
+
+    .header {
+      border-right: 1px solid #ffffff;
+      padding-right: 10px;
+      font-size: 25px;
+      line-height: 1.2;
+    }
+
+    .item {
+      font-family: Comfortaa;
+      font-size: 12px;
+      color: #7d7d7d;
+      padding: 5px 0;
+    }
+
+    .logo {
       width: 70px;
       min-width: 30px;
       align-self: center;
     }
 
-    .footerSection {
-      align-self: self-start;
+    .contact,
+    .about {
       text-align: right;
+      display: flex;
+      flex-direction: column;
+    }
 
-      .sectionTitle {
-        font-family: "Bebas Neue";
-        font-size: 1rem;
-        font-weight: bold;
-        color: #ffffff;
-        border-right: 1px solid #ffffff;
-        padding-right: 10px;
-        padding-top: 4px;
-        padding-bottom: 4px;
-      }
+    .social {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
 
-      .sectionRow {
-        a,
-        a:link,
-        a:visited,
-        a:active {
-          color: #7d7d7d;
-          pointer-events: visible;
-          cursor: pointer;
-          text-decoration: none;
-        }
-        a:hover {
-          color: #b4b4b4;
-        }
-        padding-top: 5px;
-        padding-bottom: 5px;
-        color: #7d7d7d;
-        font-family: "Bebas Neue", sans-serif;
-        font-size: 0.8rem;
+      .icon {
+        padding: 0 5px;
       }
     }
+
+    .privacy-imprint {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 2;
+      grid-row-end: 2;
+      margin-top: 50px;
+    }
+
+    .general {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 3;
+      grid-row-end: 3;
+    }
+
+    .privacy-imprint,
+    .general {
+      font-family: Comfortaa;
+      color: #7d7d7d;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    // .footerLogo {
+    //   width: 70px;
+    //   min-width: 30px;
+    //   align-self: center;
+    // }
+
+    // .footerSection {
+    //   align-self: self-start;
+    //   text-align: right;
+
+    //   .sectionTitle {
+    //     font-family: "Bebas Neue";
+    //     font-size: 1rem;
+    //     font-weight: bold;
+    //     color: #ffffff;
+    //     border-right: 1px solid #ffffff;
+    //     padding-right: 10px;
+    //     padding-top: 4px;
+    //     padding-bottom: 4px;
+    //   }
+
+    //   .sectionRow {
+    //     a,
+    //     a:link,
+    //     a:visited,
+    //     a:active {
+    //       color: #7d7d7d;
+    //       pointer-events: visible;
+    //       cursor: pointer;
+    //       text-decoration: none;
+    //     }
+    //     a:hover {
+    //       color: #b4b4b4;
+    //     }
+    //     padding-top: 5px;
+    //     padding-bottom: 5px;
+    //     color: #7d7d7d;
+    //     font-family: "Bebas Neue", sans-serif;
+    //     font-size: 0.8rem;
+    //   }
+    // }
   }
 }
 
 @media (max-width: 768px) {
   .footerGrid {
-    .footerLogo {
-      display: none;
-    }
+    // .footerLogo {
+    //   display: none;
+    // }
     .footerDiv {
-      padding: 5vh 0 5vh 0;
+      padding: 5vh;
       flex-direction: column;
-      .footerSection {
-        padding-top: 3vh;
-        .sectionTitle {
-          padding-left: 10px;
-          border-left: 1px solid #ffffff;
-          border-right: none;
-        }
-        align-self: self-start;
-        text-align: left;
-      }
+      // .footerSection {
+      //   padding-top: 3vh;
+      //   .sectionTitle {
+      //     padding-left: 10px;
+      //     border-left: 1px solid #ffffff;
+      //     border-right: none;
+      //   }
+      //   align-self: self-start;
+      //   text-align: left;
+      // }
     }
   }
 }
