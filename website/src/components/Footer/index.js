@@ -5,7 +5,7 @@ import "./footer.scss";
 
 const SoftupLogo = () => {
   return (
-    <Link to={"/"} className={"footerLogo"}>
+    <Link to={"/"} className="footerLogo">
       <SoftupLogoSvg />
     </Link>
   );
@@ -23,10 +23,8 @@ export const Footer = () => {
           <div className="header">Contact</div>
           <div className="item">Phone: +49 172 7166148</div>
           <div className="item">
-            E-mail:
-            <a className={"email"} href="mailto:info@softup.co">
-              info@softup.co
-            </a>
+            E-mail:&nbsp;
+            <a href="mailto:info@softup.co">info@softup.co</a>
           </div>
           <div className="item">
             Buschingstraße 22, 81677
@@ -56,9 +54,17 @@ export const Footer = () => {
         </div>
 
         <div className="social">
-          <div className="icon">FB</div>
-          <div className="icon">LN</div>
-          <div className="icon">GH</div>
+          <div className="icon">
+            <Link to={"https://www.facebook.com/SoftupTechnologies/"}>FB</Link>
+          </div>
+          <div className="icon">
+            <Link to={"https://www.linkedin.com/company/softuptechnologies/"}>
+              LN
+            </Link>
+          </div>
+          <div className="icon">
+            <Link to={"https://github.com/SoftupTechnologies"}>GH</Link>
+          </div>
         </div>
         <div className="privacy-imprint">
           <Link to={"/privacy-policy"}>Privacy Policy</Link>&nbsp;&#124;&nbsp;
