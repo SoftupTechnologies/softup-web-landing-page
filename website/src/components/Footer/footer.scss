@@ -1,7 +1,3 @@
-// .email {
-//   color: #19a0ff;
-// }
-
 .footerGrid {
   border-top: solid 1px #333333;
   display: grid;
@@ -25,6 +21,7 @@
       cursor: pointer;
       text-decoration: none;
     }
+
     a:hover {
       color: #b4b4b4;
     }
@@ -90,69 +87,45 @@
       align-items: center;
       justify-content: center;
     }
-
-    // .footerLogo {
-    //   width: 70px;
-    //   min-width: 30px;
-    //   align-self: center;
-    // }
-
-    // .footerSection {
-    //   align-self: self-start;
-    //   text-align: right;
-
-    //   .sectionTitle {
-    //     font-family: "Bebas Neue";
-    //     font-size: 1rem;
-    //     font-weight: bold;
-    //     color: #ffffff;
-    //     border-right: 1px solid #ffffff;
-    //     padding-right: 10px;
-    //     padding-top: 4px;
-    //     padding-bottom: 4px;
-    //   }
-
-    //   .sectionRow {
-    //     a,
-    //     a:link,
-    //     a:visited,
-    //     a:active {
-    //       color: #7d7d7d;
-    //       pointer-events: visible;
-    //       cursor: pointer;
-    //       text-decoration: none;
-    //     }
-    //     a:hover {
-    //       color: #b4b4b4;
-    //     }
-    //     padding-top: 5px;
-    //     padding-bottom: 5px;
-    //     color: #7d7d7d;
-    //     font-family: "Bebas Neue", sans-serif;
-    //     font-size: 0.8rem;
-    //   }
-    // }
   }
 }
 
 @media (max-width: 768px) {
   .footerGrid {
-    // .footerLogo {
-    //   display: none;
-    // }
     .footerDiv {
-      padding: 5vh;
-      flex-direction: column;
-      // .footerSection {
-      //   padding-top: 3vh;
-      //   .sectionTitle {
-      //     padding-left: 10px;
-      //     border-left: 1px solid #ffffff;
-      //     border-right: none;
-      //   }
-      //   align-self: self-start;
-      //   text-align: left;
-      // }
+      display: block;
+      padding: 5vh 0;
+
+      .logo {
+        display: none;
+      }
+
+      .contact,
+      .about {
+        text-align: start;
+        display: block;
+        padding: 10px 0;
+
+        .header {
+          display: inline-block;
+          font-size: 20px;
+        }
+
+        .item {
+          padding: 5px 0;
+          // line-height: 1.6;
+        }
+      }
+
+      .social {
+        justify-content: flex-start;
+        padding: 10px 0;
+      }
+
+      .privacy-imprint,
+      .general {
+        font-size: 10px;
+      }
     }
   }
 }

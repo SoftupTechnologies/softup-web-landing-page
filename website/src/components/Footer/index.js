@@ -61,12 +61,8 @@ export const Footer = () => {
           <div className="icon">GH</div>
         </div>
         <div className="privacy-imprint">
-          <div>
-            <Link to={"/privacy-policy"}>Privacy Policy</Link>&nbsp;&#124;&nbsp;
-          </div>
-          <div>
-            <Link to={"/imprint"}>Imprint</Link>
-          </div>
+          <Link to={"/privacy-policy"}>Privacy Policy</Link>&nbsp;&#124;&nbsp;
+          <Link to={"/imprint"}>Imprint</Link>
         </div>
         <div className="general">
           &#169; {new Date().getFullYear()} Softup Technologies GmbH All Rights
