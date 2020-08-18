@@ -50,7 +50,7 @@
 
 .sloganTitle {
   letter-spacing: 1.05pt;
-  text-align: left;
+  text-align: center;
   font-family: Comfortaa, sans-serif;
   font-size: calc(3rem + 1.8vw);
   font-weight: bold;
@@ -72,7 +72,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 768px;
-  text-align: left;
+  text-align: center;
   font-family: Comfortaa, sans-serif;
   font-weight: 300;
   font-size: calc(1.5rem);
@@ -110,10 +110,12 @@
   .sloganTitle {
     font-size: calc(2rem + 1.8vw);
     width: 100%;
+    text-align: left;
   }
 
   .sloganDesc {
     width: 100%;
+    text-align: left;
   }
 
   .menuHeader {

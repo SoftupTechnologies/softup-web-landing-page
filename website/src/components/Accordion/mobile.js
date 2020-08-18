@@ -46,20 +46,24 @@ export const MobileAccordionSlide = ({
 
   return (
     <div onClick={toggleAccordion} className={sliderDivClasses}>
-      <div className={"contentAndTitle"}>
-        <div className={titleClasses}>
-          <Link to={link} onClick={e => e.stopPropagation()}>
-            {t(title)}
-          </Link>
+      <div className="displayWithGrid">
+        <div className="accordion-wrapper">
+          <div className="contentAndTitle">
+            <div className={titleClasses}>
+              <Link to={link} onClick={e => e.stopPropagation()}>
+                {t(title)}
+              </Link>
+            </div>
+            {slideIsActive ? (
+              <React.Fragment>
+                <div className={"slideContent"}>{description}</div>
+                {generateContent(content)}
+              </React.Fragment>
+            ) : null}
+          </div>
+          <div className={"number"}>{number}</div>
         </div>
-        {slideIsActive ? (
-          <React.Fragment>
-            <div className={"slideContent"}>{description}</div>
-            {generateContent(content)}
-          </React.Fragment>
-        ) : null}
       </div>
-      <div className={"number"}>{number}</div>
     </div>
   );
 };
@@ -90,13 +94,9 @@ const MobileAccordion = () => {
 
 export const MobileAccordionMenu = () => {
   return (
-    <div className="displayWithGrid">
-      <div className="accordion-wrapper">
-        <div className="mobileAccordionMenuContainer">
-          <MobileAccordion />
-          <CompanyNumbers />
-        </div>
-      </div>
+    <div className="mobileAccordionMenuContainer">
+      <MobileAccordion />
+      <CompanyNumbers />
     </div>
   );
 };
