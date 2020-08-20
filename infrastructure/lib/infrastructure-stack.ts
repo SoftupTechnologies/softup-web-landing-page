@@ -57,7 +57,7 @@ export class GhostServerStack extends cdk.Stack {
 
     const vpc = new MyVpc(this, 'GhostVpc', {
       vpcCidr: '10.0.0.0/16',
-      maxAzs: 1,
+      maxAzs: 2,
       publicSubnetsNo: 1,
     });
 
@@ -80,10 +80,18 @@ export class GhostServerStack extends cdk.Stack {
       publicAccessible: true,
       dbPort: 3306,
       ingressSgs: [dbSg],
+      multiAz: false,
     });
 
     new GhostServerInstance(this, 'GhostServer', {
       vpc: vpc.vpc,
     });
+
+    new cdk.CfnOutput(this, 'DbHost', {
+      exportName: 'DbHost',
+      value: ghostDb.instance.secret?.secretValueFromJson('host').toString() || '',
+    });
+
+
   }
 }
