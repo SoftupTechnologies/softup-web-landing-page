@@ -22,7 +22,10 @@
   },
   "dependencies": {
     "@aws-cdk/aws-apigateway": "^1.59.0",
+    "@aws-cdk/aws-ec2": "^1.59.0",
+    "@aws-cdk/aws-rds": "^1.59.0",
     "@aws-cdk/aws-s3": "^1.59.0",
+    "@aws-cdk/aws-s3-assets": "^1.59.0",
     "@aws-cdk/aws-s3-deployment": "^1.59.0",
     "@aws-cdk/core": "1.59.0",
     "aws-sdk": "^2.734.0",
