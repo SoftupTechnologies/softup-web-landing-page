@@ -83,15 +83,20 @@ export class GhostServerStack extends cdk.Stack {
       multiAz: false,
     });
 
-    new GhostServerInstance(this, 'GhostServer', {
+    const ghostServer = new GhostServerInstance(this, 'GhostServer', {
       vpc: vpc.vpc,
     });
 
+    const dbHost = ghostDb.instance.secret?.secretValueFromJson('host').toString() || '';
+
     new cdk.CfnOutput(this, 'DbHost', {
       exportName: 'DbHost',
-      value: ghostDb.instance.secret?.secretValueFromJson('host').toString() || '',
+      value: dbHost,
     });
 
-
+    new cdk.CfnOutput(this, 'ServerDomainName', {
+      exportName: 'ServerDomainName',
+      value: ghostServer.cfDistribution.domainName,
+    });
   }
 }
