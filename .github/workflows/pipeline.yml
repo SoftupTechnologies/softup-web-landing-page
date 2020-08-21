@@ -61,7 +61,7 @@ jobs:
           region: 'eu-central-1'
           image: 485652621123.dkr.ecr.eu-central-1.amazonaws.com/ghost-server:latest
 
-  copy file:
+  copy-file:
     runs-on: ubuntu-latest
 
     steps:
