@@ -93,14 +93,18 @@ jobs:
       - name: give permissions to .pem file
         run: chmod 400 ./ghost-cms-key-pair.pem
 
-      - name: copy docker compose
-        uses: appleboy/scp-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key_path: ghost-cms-key-pair.pem
-          source: docker-compose.yml
-          target: .
+      # - name: copy docker compose
+      #   uses: appleboy/scp-action@master
+      #   with:
+      #     host: ${{ secrets.HOST }}
+      #     username: ${{ secrets.USERNAME }}
+      #     key_path: ghost-cms-key-pair.pem
+      #     source: docker-compose.yml
+      #     target: .
+
+      - name: copy docker compose to ec2
+        run: |
+          scp -i ghost-cms-key-pair.pem ./docker-compose.yml ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/docker-compose.yml
 
       - name: build docker compose
         uses: garygrossgarten/github-action-ssh@release
