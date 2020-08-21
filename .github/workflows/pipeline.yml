@@ -81,7 +81,7 @@ jobs:
       #     secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       #     account_id: ${{ secrets.AWS_ACCOUNT_ID }}
       #     repo: ghost-server
-      #     region: "eu-central-1"
+      #     region: 'eu-central-1'
       #     tags: latest
 
   publish:
@@ -131,7 +131,7 @@ jobs:
       - name: build docker compose
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: docker-compose up --build
+          command: docker-compose up
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           privateKey: ghost-cms-key-pair.pem
