@@ -56,6 +56,8 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
+      - run: ls
+
       - name: build docker image
         run: docker build -t 485652621123.dkr.ecr.eu-central-1.amazonaws.com/ghost-server:latest .
 
