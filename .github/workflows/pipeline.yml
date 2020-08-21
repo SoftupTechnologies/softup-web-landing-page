@@ -13,6 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: verify aws credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -55,8 +58,6 @@ jobs:
       - name: login to aws ecr
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
-
-      - run: ls
 
       - name: build docker image
         run: docker build -t 485652621123.dkr.ecr.eu-central-1.amazonaws.com/ghost-server:latest .
