@@ -1,21 +1,10 @@
-version: "3"
+version: '3'
 services:
   ghost:
-    # image: ghost:3-alpine
-    build: .
-    # dockerfile: Dockerfile
-
+    image: 485652621123.dkr.ecr.eu-central-1.amazonaws.com/ghost-server:latest
     container_name: softup-blog
     restart: always
     ports:
-      - 3001:2368
+      - 80:2368
     env_file:
       - web-variables.env
-    # volumes:
-    #   - ./blog/content/themes/casper:/var/lib/ghost/content/themes/casper
-  db:
-    image: mysql:5.7
-    container_name: softup-blog-db
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: example
