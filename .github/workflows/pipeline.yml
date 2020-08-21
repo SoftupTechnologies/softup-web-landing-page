@@ -12,8 +12,9 @@ jobs:
   deploy-ghost-theme:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: TryGhost/action-deploy-theme@v1.0.0
+      - uses: actions/checkout@v2
+      - name: Deploy Ghost Theme
+        uses: TryGhost/action-deploy-theme@v1.4.0
         with:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
@@ -31,28 +32,28 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: "eu-central-1"
+          aws-region: 'eu-central-1'
 
       - name: cdk diff
         uses: youyo/aws-cdk-github-actions@v1
         with:
-          cdk_subcommand: "diff"
+          cdk_subcommand: 'diff'
           actions_comment: true
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: "eu-central-1"
+          AWS_DEFAULT_REGION: 'eu-central-1'
 
       - name: cdk deploy
         uses: youyo/aws-cdk-github-actions@v1
         with:
-          cdk_subcommand: "deploy"
+          cdk_subcommand: 'deploy'
           actions_comment: false
-          args: "--require-approval never"
+          args: '--require-approval never'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: "eu-central-1"
+          AWS_DEFAULT_REGION: 'eu-central-1'
 
   setup:
     runs-on: ubuntu-latest
@@ -67,7 +68,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: "eu-central-1"
+          aws-region: 'eu-central-1'
 
       - name: login to aws ecr
         id: login-ecr
@@ -96,7 +97,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: "eu-central-1"
+          aws-region: 'eu-central-1'
 
       - name: download .pem from s3
         run: |
