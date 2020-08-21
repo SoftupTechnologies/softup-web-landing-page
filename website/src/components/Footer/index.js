@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "gatsby";
 import SoftupLogoSvg from "../../images/softup-logo.svg";
 import "./footer.scss";
+import Facebook from "../../images/facebook.svg";
+import Linkedin from "../../images/linkedin.svg";
+import Github from "../../images/github.svg";
 
 const SoftupLogo = () => {
   return (
@@ -54,15 +57,19 @@ export const Footer = () => {
 
         <div className="social">
           <div className="icon">
-            <Link to={"https://www.facebook.com/SoftupTechnologies/"}>FB</Link>
-          </div>
-          <div className="icon">
-            <Link to={"https://www.linkedin.com/company/softuptechnologies/"}>
-              LN
+            <Link to={"https://www.facebook.com/SoftupTechnologies/"}>
+              <Facebook />
             </Link>
           </div>
           <div className="icon">
-            <Link to={"https://github.com/SoftupTechnologies"}>GH</Link>
+            <Link to={"https://www.linkedin.com/company/softuptechnologies/"}>
+              <Linkedin />
+            </Link>
+          </div>
+          <div className="icon">
+            <Link to={"https://github.com/SoftupTechnologies"}>
+              <Github />
+            </Link>
           </div>
         </div>
         <div className="privacy-imprint">
