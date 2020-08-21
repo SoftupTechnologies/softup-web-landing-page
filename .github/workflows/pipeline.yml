@@ -47,14 +47,14 @@ jobs:
 
   ecr:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: .
+    # defaults:
+    #   run:
+    #     shell: bash
+    #     working-directory: .
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      # - name: Checkout code
+      #   uses: actions/checkout@v2
 
       - name: verify aws credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -67,17 +67,41 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
-      - name: build docker image
-        run: docker build -t 485652621123.dkr.ecr.eu-central-1.amazonaws.com/ghost-server:latest .
+      # - name: build docker image
+      #   run: docker build -t 485652621123.dkr.ecr.eu-central-1.amazonaws.com/ghost-server:latest .
 
-      - name: push docker image to ecr
-        id: push-image-ecr
-        uses: jwalton/gh-ecr-push@v1
+      #   - name    build-and-push:
+      # runs-on: ubuntu-latest
+      # steps:
+      # - uses: kciter/aws-ecr-action@master
+      #   with:
+      #     access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     account_id: ${{ secrets.AWS_ACCOUNT_ID }}
+      #     repo: docker/repo
+      #     region: ap-northeast-2
+      #     tags: latest,${{ github.sha }}
+      #     create_repo: true
+
+      - name: build and push docker image to ecr
+        uses: kciter/aws-ecr-action@master
         with:
-          access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          secrets-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          account_id: ${{ secrets.AWS_ACCOUNT_ID }}
+          repo: 485652621123.dkr.ecr.eu-central-1.amazonaws.com/ghost-server
           region: 'eu-central-1'
-          image: 485652621123.dkr.ecr.eu-central-1.amazonaws.com/ghost-server:latest
+          tags: latest
+          # create_repo: true
+
+      # - name: push docker image to ecr
+      #   id: push-image-ecr
+      #   uses: jwalton/gh-ecr-push@v1
+      #   with:
+      #     access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     secrets-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     region: 'eu-central-1'
+      #     image: 485652621123.dkr.ecr.eu-central-1.amazonaws.com/ghost-server:latest
 
   copy-file:
     runs-on: ubuntu-latest
