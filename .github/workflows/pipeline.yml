@@ -9,74 +9,45 @@ on:
     branches: [dev]
 
 jobs:
-  # deployment:
-  #   runs-on: ubuntu-latest
-  #   defaults:
-  #     run:
-  #       shell: bash
-  #       working-directory: .
-
-  #   steps:
-  #     - name: verify aws credentials
-  #       uses: aws-actions/configure-aws-credentials@v1
-  #       with:
-  #         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #         aws-region: 'eu-central-1'
-
-  #     - name: cdk diff
-  #       uses: youyo/aws-cdk-github-actions@v1
-  #       with:
-  #         cdk_subcommand: 'diff'
-  #         actions_comment: true
-  #       env:
-  #         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #         AWS_DEFAULT_REGION: 'eu-central-1'
-
-  #     - name: cdk deploy
-  #       uses: youyo/aws-cdk-github-actions@v1
-  #       with:
-  #         cdk_subcommand: 'deploy'
-  #         actions_comment: false
-  #         args: '--require-approval never'
-  #       env:
-  #         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #         AWS_DEFAULT_REGION: 'eu-central-1'
-
-  # setup:
-  #   runs-on: ubuntu-latest
-  #   needs: deployment
-
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v2
-
-  #     - name: verify aws credentials
-  #       uses: aws-actions/configure-aws-credentials@v1
-  #       with:
-  #         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #         aws-region: 'eu-central-1'
-
-  #     - name: login to aws ecr
-  #       id: login-ecr
-  #       uses: aws-actions/amazon-ecr-login@v1
-
-  #     - name: build and push docker image to ecr
-  #       uses: kciter/aws-ecr-action@master
-  #       with:
-  #         access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #         secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #         account_id: ${{ secrets.AWS_ACCOUNT_ID }}
-  #         repo: ghost-server
-  #         region: 'eu-central-1'
-  #         tags: latest
-
-  publish:
+  deployment:
     runs-on: ubuntu-latest
-    # needs: [deployment, setup]
+    defaults:
+      run:
+        shell: bash
+        working-directory: .
+
+    steps:
+      - name: verify aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: "eu-central-1"
+
+      - name: cdk diff
+        uses: youyo/aws-cdk-github-actions@v1
+        with:
+          cdk_subcommand: "diff"
+          actions_comment: true
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: "eu-central-1"
+
+      - name: cdk deploy
+        uses: youyo/aws-cdk-github-actions@v1
+        with:
+          cdk_subcommand: "deploy"
+          actions_comment: false
+          args: "--require-approval never"
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: "eu-central-1"
+
+  setup:
+    runs-on: ubuntu-latest
+    needs: deployment
 
     steps:
       - name: Checkout code
@@ -87,7 +58,36 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: 'eu-central-1'
+          aws-region: "eu-central-1"
+
+      - name: login to aws ecr
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: build and push docker image to ecr
+        uses: kciter/aws-ecr-action@master
+        with:
+          access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          account_id: ${{ secrets.AWS_ACCOUNT_ID }}
+          repo: ghost-server
+          region: "eu-central-1"
+          tags: latest
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: [deployment, setup]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: verify aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: "eu-central-1"
 
       - name: download .pem from s3
         run: |
