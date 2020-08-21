@@ -10,21 +10,24 @@ import {
   SecurityPolicyProtocol,
 } from '@aws-cdk/aws-cloudfront';
 import * as route53 from '@aws-cdk/aws-route53';
+import * as iam from '@aws-cdk/aws-iam';
 import path = require("path");
 
-interface GhostServerInstanceProps {
+interface GhostServerResourcesProps {
   vpc: ec2.Vpc;
 }
 
-export class GhostServerInstance extends cdk.Construct {
+export class GhostServerResources extends cdk.Construct {
   public readonly ghostServerSecurityGroup: ec2.SecurityGroup;
   public readonly ghostServerInstance: ec2.Instance;
   public readonly cfDistribution: CloudFrontWebDistribution;
 
-  constructor(scope: cdk.Construct, id: string, props: GhostServerInstanceProps) {
+  constructor(scope: cdk.Construct, id: string, props: GhostServerResourcesProps) {
     super(scope, id);
 
     const { vpc } = props;
+
+    /* Security group */
 
     this.ghostServerSecurityGroup = new ec2.SecurityGroup(this, 'GhostSg', {
       vpc,
@@ -35,6 +38,42 @@ export class GhostServerInstance extends cdk.Construct {
     this.ghostServerSecurityGroup.addIngressRule(ec2.Peer.anyIpv4(), ec2.Port.tcp(22), 'SSH from anywhere');
     this.ghostServerSecurityGroup.addIngressRule(ec2.Peer.anyIpv4(), ec2.Port.tcp(80), 'HTTP from anywhere');
     this.ghostServerSecurityGroup.addIngressRule(ec2.Peer.anyIpv4(), ec2.Port.tcp(443), 'HTTPS from anywhere');
+
+    /* EC2 role and permissions */
+
+    const assumeRole = new iam.ServicePrincipal('ec2.amazonaws.com');
+
+    const instanceEcrPolicy = new iam.PolicyDocument();
+
+    instanceEcrPolicy.addStatements(
+      new iam.PolicyStatement({
+        effect: iam.Effect.ALLOW,
+        actions: [
+          'ecr:GetAuthorizationToken',
+          'ecr:BatchCheckLayerAvailability',
+          'ecr:GetDownloadUrlForLayer',
+          'ecr:GetRepositoryPolicy',
+          'ecr:DescribeRepositories',
+          'ecr:ListImages',
+          'ecr:DescribeImages',
+          'ecr:BatchGetImage',
+          'ecr:GetLifecyclePolicy',
+          'ecr:GetLifecyclePolicyPreview',
+          'ecr:ListTagsForResource',
+          'ecr:DescribeImageScanFindings',
+        ],
+        resources: ['*'],
+      })
+    );
+
+    const instanceRole = new iam.Role(this, 'InstanceRole', {
+      assumedBy: assumeRole,
+      inlinePolicies: {
+        'ecr-full-read-access': instanceEcrPolicy,
+      }
+    });
+
+    /* Instance */
 
     this.ghostServerInstance = new ec2.Instance(this, 'GhostServerInstance', {
       instanceName: 'ghost server',
@@ -48,7 +87,8 @@ export class GhostServerInstance extends cdk.Construct {
       keyName: 'ghost-cms-key-pair',
       vpcSubnets: {
         subnets: vpc.publicSubnets,
-      }
+      },
+      role: instanceRole,
     });
 
     const userDataAsset = new Asset(this, 'UserDataAsset', {
@@ -63,6 +103,8 @@ export class GhostServerInstance extends cdk.Construct {
     this.ghostServerInstance.userData.addExecuteFileCommand({
       filePath: localPath,
     });
+
+    /* CF distribution */
 
     this.cfDistribution = new CloudFrontWebDistribution(this, 'CfDistribution', {
       originConfigs: [

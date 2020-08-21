@@ -6,7 +6,8 @@ import * as s3Deployment from "@aws-cdk/aws-s3-deployment"
 import { Effect, PolicyStatement } from "@aws-cdk/aws-iam"
 import * as rds from '@aws-cdk/aws-rds';
 import * as ec2 from '@aws-cdk/aws-ec2';
-import { GhostServerInstance } from './ghost_server';
+import * as ecr from '@aws-cdk/aws-ecr';
+import { GhostServerResources } from './ghost_server';
 
 import { MyVpc } from './vpc';
 import { RdsInfrastructure } from './rds';
@@ -61,6 +62,14 @@ export class GhostServerStack extends cdk.Stack {
       publicSubnetsNo: 1,
     });
 
+    const privateKeyBucket = new s3.Bucket(this, 'PrivateKeyBucket', {
+      bucketName: 'ghost-server-keys',
+      accessControl: s3.BucketAccessControl.PRIVATE,
+      removalPolicy: cdk.RemovalPolicy.RETAIN,
+      blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
+      encryption: s3.BucketEncryption.S3_MANAGED,
+    });
+
     const dbSg = new ec2.SecurityGroup(this, 'OpenSg', {
       vpc: vpc.vpc,
       securityGroupName: 'Connections from outside',
@@ -83,20 +92,32 @@ export class GhostServerStack extends cdk.Stack {
       multiAz: false,
     });
 
-    const ghostServer = new GhostServerInstance(this, 'GhostServer', {
-      vpc: vpc.vpc,
+    const ecrImageRepository = new ecr.Repository(this, 'GhostServerImageRepository', {
+      repositoryName: 'ghost-server',
     });
 
-    const dbHost = ghostDb.instance.secret?.secretValueFromJson('host').toString() || '';
-
-    new cdk.CfnOutput(this, 'DbHost', {
-      exportName: 'DbHost',
-      value: dbHost,
+    const ghostServer = new GhostServerResources(this, 'GhostServer', {
+      vpc: vpc.vpc,
     });
 
     new cdk.CfnOutput(this, 'ServerDomainName', {
       exportName: 'ServerDomainName',
       value: ghostServer.cfDistribution.domainName,
+    });
+
+    new cdk.CfnOutput(this, 'GhostImageRepoName', {
+      exportName: 'GhostImageRepoName',
+      value: ecrImageRepository.repositoryName,
+    });
+
+    new cdk.CfnOutput(this, 'GhostImageRepoURI', {
+      exportName: 'GhostImageRepoURI',
+      value: ecrImageRepository.repositoryUri,
+    });
+
+    new cdk.CfnOutput(this, 'GhostKeysBucketName', {
+      exportName: 'GhostKeysBucketName',
+      value: privateKeyBucket.bucketName,
     });
   }
 }
