@@ -1,7 +1,15 @@
 import * as cdk from '@aws-cdk/core'
 import * as ec2 from '@aws-cdk/aws-ec2';
 import { Asset } from '@aws-cdk/aws-s3-assets';
-import { CloudFrontWebDistribution, CloudFrontAllowedMethods, OriginProtocolPolicy, ViewerProtocolPolicy, PriceClass } from '@aws-cdk/aws-cloudfront'
+import {
+  CloudFrontWebDistribution,
+  CloudFrontAllowedMethods,
+  OriginProtocolPolicy,
+  ViewerProtocolPolicy,
+  PriceClass,
+  SecurityPolicyProtocol,
+} from '@aws-cdk/aws-cloudfront';
+import * as route53 from '@aws-cdk/aws-route53';
 import path = require("path");
 
 interface GhostServerInstanceProps {
@@ -75,17 +83,27 @@ export class GhostServerInstance extends cdk.Construct {
           ],
           customOriginSource: {
             domainName: this.ghostServerInstance.instancePublicDnsName,
-            originProtocolPolicy: OriginProtocolPolicy.MATCH_VIEWER,
+            originProtocolPolicy: OriginProtocolPolicy.HTTP_ONLY,
           },
         }
       ],
       aliasConfiguration: {
+        securityPolicy: SecurityPolicyProtocol.TLS_V1,
         acmCertRef: 'arn:aws:acm:us-east-1:485652621123:certificate/d525a59b-d9a4-465a-b992-616af47bd817',
         names: ['blog.softup.co'],     
       },
       viewerProtocolPolicy: ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
       defaultRootObject: '',
       priceClass: PriceClass.PRICE_CLASS_ALL,
+    });
+
+    new route53.CnameRecord(this, 'GhostCnameRecord', {
+      domainName: this.cfDistribution.domainName,
+      zone: route53.HostedZone.fromHostedZoneAttributes(this, 'SoftupHZ', {
+        zoneName: 'softup.co',
+        hostedZoneId: 'Z20J3TBSZRCEJG',
+      }),
+      recordName: 'blog.softup.co',
     });
 
     userDataAsset.grantRead(this.ghostServerInstance.role);
