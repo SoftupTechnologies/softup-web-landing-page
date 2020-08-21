@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: CI/CD
 
 on:
   push:
@@ -45,8 +45,9 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'eu-central-1'
 
-  ecr:
+  setup:
     runs-on: ubuntu-latest
+    needs: deployment
 
     steps:
       - name: Checkout code
@@ -73,8 +74,9 @@ jobs:
           region: 'eu-central-1'
           tags: latest
 
-  copy-file:
+  publish:
     runs-on: ubuntu-latest
+    needs: [deployment, setup]
 
     steps:
       - name: download .pem from s3
