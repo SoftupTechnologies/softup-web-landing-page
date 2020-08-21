@@ -62,6 +62,14 @@ export class GhostServerStack extends cdk.Stack {
       publicSubnetsNo: 1,
     });
 
+    const privateKeyBucket = new s3.Bucket(this, 'PrivateKeyBucket', {
+      bucketName: 'ghost-server-keys',
+      accessControl: s3.BucketAccessControl.PRIVATE,
+      removalPolicy: cdk.RemovalPolicy.RETAIN,
+      blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
+      encryption: s3.BucketEncryption.S3_MANAGED,
+    });
+
     const dbSg = new ec2.SecurityGroup(this, 'OpenSg', {
       vpc: vpc.vpc,
       securityGroupName: 'Connections from outside',
@@ -92,13 +100,6 @@ export class GhostServerStack extends cdk.Stack {
       vpc: vpc.vpc,
     });
 
-    const dbHost = ghostDb.instance.secret?.secretValueFromJson('host').toString() || '';
-
-    new cdk.CfnOutput(this, 'DbHost', {
-      exportName: 'DbHost',
-      value: dbHost,
-    });
-
     new cdk.CfnOutput(this, 'ServerDomainName', {
       exportName: 'ServerDomainName',
       value: ghostServer.cfDistribution.domainName,
@@ -107,6 +108,16 @@ export class GhostServerStack extends cdk.Stack {
     new cdk.CfnOutput(this, 'GhostImageRepoName', {
       exportName: 'GhostImageRepoName',
       value: ecrImageRepository.repositoryName,
+    });
+
+    new cdk.CfnOutput(this, 'GhostImageRepoURI', {
+      exportName: 'GhostImageRepoURI',
+      value: ecrImageRepository.repositoryUri,
+    });
+
+    new cdk.CfnOutput(this, 'GhostKeysBucketName', {
+      exportName: 'GhostKeysBucketName',
+      value: privateKeyBucket.bucketName,
     });
   }
 }
