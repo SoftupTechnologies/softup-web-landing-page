@@ -13,16 +13,16 @@ import * as route53 from '@aws-cdk/aws-route53';
 import * as iam from '@aws-cdk/aws-iam';
 import path = require("path");
 
-interface GhostServerInstanceProps {
+interface GhostServerResourcesProps {
   vpc: ec2.Vpc;
 }
 
-export class GhostServerInstance extends cdk.Construct {
+export class GhostServerResources extends cdk.Construct {
   public readonly ghostServerSecurityGroup: ec2.SecurityGroup;
   public readonly ghostServerInstance: ec2.Instance;
   public readonly cfDistribution: CloudFrontWebDistribution;
 
-  constructor(scope: cdk.Construct, id: string, props: GhostServerInstanceProps) {
+  constructor(scope: cdk.Construct, id: string, props: GhostServerResourcesProps) {
     super(scope, id);
 
     const { vpc } = props;

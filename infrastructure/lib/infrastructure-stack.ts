@@ -6,7 +6,8 @@ import * as s3Deployment from "@aws-cdk/aws-s3-deployment"
 import { Effect, PolicyStatement } from "@aws-cdk/aws-iam"
 import * as rds from '@aws-cdk/aws-rds';
 import * as ec2 from '@aws-cdk/aws-ec2';
-import { GhostServerInstance } from './ghost_server';
+import * as ecr from '@aws-cdk/aws-ecr';
+import { GhostServerResources } from './ghost_server';
 
 import { MyVpc } from './vpc';
 import { RdsInfrastructure } from './rds';
@@ -83,7 +84,11 @@ export class GhostServerStack extends cdk.Stack {
       multiAz: false,
     });
 
-    const ghostServer = new GhostServerInstance(this, 'GhostServer', {
+    const ecrImageRepository = new ecr.Repository(this, 'GhostServerImageRepository', {
+      repositoryName: 'ghost-server',
+    });
+
+    const ghostServer = new GhostServerResources(this, 'GhostServer', {
       vpc: vpc.vpc,
     });
 
@@ -97,6 +102,11 @@ export class GhostServerStack extends cdk.Stack {
     new cdk.CfnOutput(this, 'ServerDomainName', {
       exportName: 'ServerDomainName',
       value: ghostServer.cfDistribution.domainName,
+    });
+
+    new cdk.CfnOutput(this, 'GhostImageRepoName', {
+      exportName: 'GhostImageRepoName',
+      value: ecrImageRepository.repositoryName,
     });
   }
 }
