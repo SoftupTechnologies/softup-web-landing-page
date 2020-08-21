@@ -115,7 +115,6 @@ jobs:
       - name: ecr login inside ec2
         run: |
           ssh -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST }} "$(aws ecr get-login --region eu-central-1 --no-include-email)"
-
       # - name: start containers
       #   run: ssh -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST }} "docker-compose up -d --build"
 
