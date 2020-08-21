@@ -57,7 +57,7 @@ jobs:
         uses: jwalton/gh-ecr-push@v1
         with:
           access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          secrets-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           region: 'eu-central-1'
           image: 485652621123.dkr.ecr.eu-central-1.amazonaws.com/ghost-server:latest
 
@@ -71,8 +71,8 @@ jobs:
           command: cp
           source: s3://ghost-server-keys/ghost-cms-key-pair.pem
           destination: ./ghost-cms-key-pair.pem
-          aws_access_key_id: ${{ secret.AWS_ACCESS_KEY_ID }}
-          aws_secret_access_key: ${{ secret.AWS_SECRET_ACCESS_KEY }}
+          aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: give permissions to .pem file
         run: chmod 400 ./ghost-cms-key-pair.pem
