@@ -110,13 +110,11 @@ jobs:
         run: |
           touch .env
           cat <<EOT>> .env
-          database__client: mysql
-          database__connection__host: ${{ secrets.HOST }}
-          database__connection__user: ${{ secrets.DB_USERNAME }}
-          database__connection__password: ${{ secrets.DB_PASSWORD }}
-          database__connection__database: ${{ secrets.DB_NAME }}
-          url: https://blog.softup.co/
-          NODE_ENV=production
+          database__client=mysql
+          database__connection__host=${{ secrets.HOST }}
+          database__connection__user=${{ secrets.DB_USERNAME }}
+          database__connection__password=${{ secrets.DB_PASSWORD }}
+          database__connection__database=${{ secrets.DB_NAME }}
           EOT
           scp -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no .env ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/.env
 
