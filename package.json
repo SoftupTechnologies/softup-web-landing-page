@@ -1,5 +1,0 @@
-{
-  "dependencies": {
-    "@aws-cdk/aws-route53": "^1.60.0"
-  }
-}

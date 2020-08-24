@@ -39,40 +39,6 @@ export class GhostServerResources extends cdk.Construct {
     this.ghostServerSecurityGroup.addIngressRule(ec2.Peer.anyIpv4(), ec2.Port.tcp(80), 'HTTP from anywhere');
     this.ghostServerSecurityGroup.addIngressRule(ec2.Peer.anyIpv4(), ec2.Port.tcp(443), 'HTTPS from anywhere');
 
-    /* EC2 role and permissions */
-
-    // const assumeRole = new iam.ServicePrincipal('ec2.amazonaws.com');
-
-    // const instanceEcrPolicy = new iam.PolicyDocument();
-
-    // instanceEcrPolicy.addStatements(
-    //   new iam.PolicyStatement({
-    //     effect: iam.Effect.ALLOW,
-    //     actions: [
-    //       'ecr:GetAuthorizationToken',
-    //       'ecr:BatchCheckLayerAvailability',
-    //       'ecr:GetDownloadUrlForLayer',
-    //       'ecr:GetRepositoryPolicy',
-    //       'ecr:DescribeRepositories',
-    //       'ecr:ListImages',
-    //       'ecr:DescribeImages',
-    //       'ecr:BatchGetImage',
-    //       'ecr:GetLifecyclePolicy',
-    //       'ecr:GetLifecyclePolicyPreview',
-    //       'ecr:ListTagsForResource',
-    //       'ecr:DescribeImageScanFindings',
-    //     ],
-    //     resources: ['*'],
-    //   })
-    // );
-
-    // const instanceRole = new iam.Role(this, 'InstanceRole', {
-    //   assumedBy: assumeRole,
-    //   inlinePolicies: {
-    //     'ecr-full-read-access': instanceEcrPolicy,
-    //   }
-    // });
-
     /* Instance */
 
     this.ghostServerInstance = new ec2.Instance(this, 'GhostServerInstance', {
@@ -88,7 +54,6 @@ export class GhostServerResources extends cdk.Construct {
       vpcSubnets: {
         subnets: vpc.publicSubnets,
       },
-      // role: instanceRole,
     });
 
     const userDataAsset = new Asset(this, 'UserDataAsset', {
