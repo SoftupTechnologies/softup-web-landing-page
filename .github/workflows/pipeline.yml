@@ -9,85 +9,45 @@ on:
     branches: [dev]
 
 jobs:
-  # deploy-ghost-theme:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - name: Deploy Ghost Theme
-  #       uses: TryGhost/action-deploy-theme@v1.4.0
-  #       with:
-  #         api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
-  #         api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
+  deployment:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: .
 
-  # deployment:
-  #   runs-on: ubuntu-latest
-  #   # needs: deploy-ghost-theme
-  #   defaults:
-  #     run:
-  #       shell: bash
-  #       working-directory: .
+    steps:
+      - name: verify aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: 'eu-central-1'
 
-  #   steps:
-  #     - name: verify aws credentials
-  #       uses: aws-actions/configure-aws-credentials@v1
-  #       with:
-  #         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #         aws-region: 'eu-central-1'
+      - name: cdk diff
+        uses: youyo/aws-cdk-github-actions@v1
+        with:
+          cdk_subcommand: 'diff'
+          actions_comment: true
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'eu-central-1'
 
-  #     - name: cdk diff
-  #       uses: youyo/aws-cdk-github-actions@v1
-  #       with:
-  #         cdk_subcommand: 'diff'
-  #         actions_comment: true
-  #       env:
-  #         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #         AWS_DEFAULT_REGION: 'eu-central-1'
-
-  #     - name: cdk deploy
-  #       uses: youyo/aws-cdk-github-actions@v1
-  #       with:
-  #         cdk_subcommand: 'deploy'
-  #         actions_comment: false
-  #         args: '--require-approval never'
-  #       env:
-  #         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #         AWS_DEFAULT_REGION: 'eu-central-1'
-
-  # setup:
-  #   runs-on: ubuntu-latest
-  #   needs: deployment
-
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v2
-
-  #     - name: verify aws credentials
-  #       uses: aws-actions/configure-aws-credentials@v1
-  #       with:
-  #         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #         aws-region: 'eu-central-1'
-
-  #     - name: login to aws ecr
-  #       id: login-ecr
-  #       uses: aws-actions/amazon-ecr-login@v1
-
-  # - name: build and push docker image to ecr
-  #   uses: kciter/aws-ecr-action@master
-  #   with:
-  #     access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #     secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #     account_id: ${{ secrets.AWS_ACCOUNT_ID }}
-  #     repo: ghost-server
-  #     region: 'eu-central-1'
-  #     tags: latest
+      - name: cdk deploy
+        uses: youyo/aws-cdk-github-actions@v1
+        with:
+          cdk_subcommand: 'deploy'
+          actions_comment: false
+          args: '--require-approval never'
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'eu-central-1'
 
   publish:
     runs-on: ubuntu-latest
-
+    need: deployment
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -106,34 +66,28 @@ jobs:
       - name: give permissions to .pem file
         run: chmod 400 ./ghost-cms-key-pair.pem
 
-      # - name: create env file
-      #   run: |
-      #     touch .env
-      #     cat <<EOT>> .env
-      #     database__client: mysql
-      #     database__connection__host: ${{ secrets.HOST }}
-      #     database__connection__user: ${{ secrets.DB_USERNAME }}
-      #     database__connection__password: ${{ secrets.DB_PASSWORD }}
-      #     database__connection__database: ${{ secrets.DB_NAME }}
-      #     NODE_ENV: production
-      #     url: https://blog.softup.co
-      #     EOT
-      #     scp -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no .env ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/.env
+      - name: create env file
+        run: |
+          touch .env
+          cat <<EOT>> .env
+          database__client=mysql
+          database__connection__host="${{ secrets.HOST }}"
+          database__connection__user=${{ secrets.DB_USERNAME }}
+          database__connection__password="${{ secrets.DB_PASSWORD }}"
+          database__connection__database=${{ secrets.DB_NAME }}
+          NODE_ENV=production
+          url=http://blog.softup.co
+          EOT
+          scp -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no .env ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/.env
 
       - name: copy docker compose to ec2
         run: |
           scp -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no docker-compose.yml ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/docker-compose.yml
 
-      # - name: ecr login inside ec2
-      #   run: |
-      #     ssh -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST }} "$(aws ecr get-login --region eu-central-1 --no-include-email)"
-      # - name: start containers
-      #   run: ssh -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no ${{ secrets.USERNAME }}@${{ secrets.HOST }} "docker-compose up -d --build"
-
       - name: build docker compose
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: export database__client=mysql database__connection__host="${{ secrets.HOST }}" database__connection__user=${{ secrets.DB_USERNAME }} database__connection__password="${{ secrets.DB_PASSWORD }}" database__connection__database=${{ secrets.DB_NAME }} NODE_ENV=production url=https://blog.softup.co && docker-compose up -d
+          command: docker-compose up -d --build
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           privateKey: ghost-cms-key-pair.pem
@@ -145,3 +99,13 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           privateKey: ghost-cms-key-pair.pem
+
+  deploy-ghost-theme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy Ghost Theme
+        uses: TryGhost/action-deploy-theme@v1.4.0
+        with:
+          api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
+          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
