@@ -17,6 +17,9 @@ jobs:
         working-directory: ./infrastructure
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
       - name: verify aws credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
