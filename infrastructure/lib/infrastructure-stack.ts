@@ -92,10 +92,6 @@ export class GhostServerStack extends cdk.Stack {
       multiAz: false,
     });
 
-    // const ecrImageRepository = new ecr.Repository(this, 'GhostServerImageRepository', {
-    //   repositoryName: 'ghost-server',
-    // });
-
     const ghostServer = new GhostServerResources(this, 'GhostServer', {
       vpc: vpc.vpc,
     });
@@ -104,16 +100,6 @@ export class GhostServerStack extends cdk.Stack {
       exportName: 'ServerDomainName',
       value: ghostServer.cfDistribution.domainName,
     });
-
-    // new cdk.CfnOutput(this, 'GhostImageRepoName', {
-    //   exportName: 'GhostImageRepoName',
-    //   value: ecrImageRepository.repositoryName,
-    // });
-
-    // new cdk.CfnOutput(this, 'GhostImageRepoURI', {
-    //   exportName: 'GhostImageRepoURI',
-    //   value: ecrImageRepository.repositoryUri,
-    // });
 
     new cdk.CfnOutput(this, 'GhostKeysBucketName', {
       exportName: 'GhostKeysBucketName',
