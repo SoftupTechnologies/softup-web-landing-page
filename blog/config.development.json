@@ -1,13 +1,13 @@
 {
-  "url": "http://localhost:2373/",
+  "url": "http://localhost:2368/",
   "server": {
-    "port": 2373,
+    "port": 2368,
     "host": "127.0.0.1"
   },
   "database": {
     "client": "sqlite3",
     "connection": {
-      "filename": "/Users/user/Desktop/SoftUp/SoftUp_Website/softup-web-v3/blog/content/data/ghost-local.db"
+      "filename": "/Users/softup/softup-web-landing-page/blog/content/data/ghost-local.db"
     }
   },
   "mail": {
@@ -21,6 +21,6 @@
   },
   "process": "local",
   "paths": {
-    "contentPath": "/Users/user/Desktop/SoftUp/SoftUp_Website/softup-web-v3/blog/content"
+    "contentPath": "/Users/softup/softup-web-landing-page/blog/content"
   }
 }
