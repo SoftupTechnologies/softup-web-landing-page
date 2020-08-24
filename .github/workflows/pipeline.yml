@@ -25,25 +25,27 @@ jobs:
       #     aws-region: 'eu-central-1'
 
       - name: cdk diff
-        uses: youyo/aws-cdk-github-actions@v1
+        uses: actions/checkout@v2
         with:
-          cdk_subcommand: 'diff'
-          actions_comment: true
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: 'eu-central-1'
+          fetch-depth: 1
 
-      - name: cdk deploy
-        uses: youyo/aws-cdk-github-actions@v1
+      - name: CDK Diff
+        uses: udondan/cdk-nodejs@v0.3.1
         with:
-          cdk_subcommand: 'deploy'
-          actions_comment: false
-          args: '--require-approval never'
-        env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'eu-central-1'
+          args: cdk diff
+          SUBDIR: ./infrastructure
+
+
+      - name: CDK Deploy
+        uses: udondan/cdk-nodejs@v0.3.1
+        with:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'eu-central-1'
+          SUBDIR: ./infrastructure
 
   # publish:
   #   runs-on: ubuntu-latest
