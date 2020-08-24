@@ -41,37 +41,37 @@ export class GhostServerResources extends cdk.Construct {
 
     /* EC2 role and permissions */
 
-    const assumeRole = new iam.ServicePrincipal('ec2.amazonaws.com');
+    // const assumeRole = new iam.ServicePrincipal('ec2.amazonaws.com');
 
-    const instanceEcrPolicy = new iam.PolicyDocument();
+    // const instanceEcrPolicy = new iam.PolicyDocument();
 
-    instanceEcrPolicy.addStatements(
-      new iam.PolicyStatement({
-        effect: iam.Effect.ALLOW,
-        actions: [
-          'ecr:GetAuthorizationToken',
-          'ecr:BatchCheckLayerAvailability',
-          'ecr:GetDownloadUrlForLayer',
-          'ecr:GetRepositoryPolicy',
-          'ecr:DescribeRepositories',
-          'ecr:ListImages',
-          'ecr:DescribeImages',
-          'ecr:BatchGetImage',
-          'ecr:GetLifecyclePolicy',
-          'ecr:GetLifecyclePolicyPreview',
-          'ecr:ListTagsForResource',
-          'ecr:DescribeImageScanFindings',
-        ],
-        resources: ['*'],
-      })
-    );
+    // instanceEcrPolicy.addStatements(
+    //   new iam.PolicyStatement({
+    //     effect: iam.Effect.ALLOW,
+    //     actions: [
+    //       'ecr:GetAuthorizationToken',
+    //       'ecr:BatchCheckLayerAvailability',
+    //       'ecr:GetDownloadUrlForLayer',
+    //       'ecr:GetRepositoryPolicy',
+    //       'ecr:DescribeRepositories',
+    //       'ecr:ListImages',
+    //       'ecr:DescribeImages',
+    //       'ecr:BatchGetImage',
+    //       'ecr:GetLifecyclePolicy',
+    //       'ecr:GetLifecyclePolicyPreview',
+    //       'ecr:ListTagsForResource',
+    //       'ecr:DescribeImageScanFindings',
+    //     ],
+    //     resources: ['*'],
+    //   })
+    // );
 
-    const instanceRole = new iam.Role(this, 'InstanceRole', {
-      assumedBy: assumeRole,
-      inlinePolicies: {
-        'ecr-full-read-access': instanceEcrPolicy,
-      }
-    });
+    // const instanceRole = new iam.Role(this, 'InstanceRole', {
+    //   assumedBy: assumeRole,
+    //   inlinePolicies: {
+    //     'ecr-full-read-access': instanceEcrPolicy,
+    //   }
+    // });
 
     /* Instance */
 
@@ -88,7 +88,7 @@ export class GhostServerResources extends cdk.Construct {
       vpcSubnets: {
         subnets: vpc.publicSubnets,
       },
-      role: instanceRole,
+      // role: instanceRole,
     });
 
     const userDataAsset = new Asset(this, 'UserDataAsset', {
