@@ -21,6 +21,7 @@ jobs:
 
   deployment:
     runs-on: ubuntu-latest
+    needs: deploy-ghost-theme
     defaults:
       run:
         shell: bash
@@ -86,7 +87,7 @@ jobs:
 
   publish:
     runs-on: ubuntu-latest
-    needs: [deployment, setup]
+    needs: [deploy-ghost-theme, deployment]
 
     steps:
       - name: Checkout code
