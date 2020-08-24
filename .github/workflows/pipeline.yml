@@ -7,35 +7,35 @@ on:
     branches: [dev]
 
 jobs:
-  infrastructure-deployment:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./infrastructure
+  # infrastructure-deployment:
+  #   runs-on: ubuntu-latest
+  #   defaults:
+  #     run:
+  #       shell: bash
+  #       working-directory: ./infrastructure
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 1
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
+  #       with:
+  #         fetch-depth: 1
 
-      - name: CDK Diff
-        uses: udondan/cdk-nodejs@v0.3.1
-        with:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: 'eu-central-1'
-          args: cdk diff
-          SUBDIR: ./infrastructure
+  #     - name: CDK Diff
+  #       uses: udondan/cdk-nodejs@v0.3.1
+  #       with:
+  #         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  #         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  #         AWS_DEFAULT_REGION: 'eu-central-1'
+  #         args: cdk diff
+  #         SUBDIR: ./infrastructure
 
-      - name: CDK Deploy
-        uses: udondan/cdk-nodejs@v0.3.1
-        with:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: 'eu-central-1'
-          SUBDIR: ./infrastructure
+  #     - name: CDK Deploy
+  #       uses: udondan/cdk-nodejs@v0.3.1
+  #       with:
+  #         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  #         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  #         AWS_DEFAULT_REGION: 'eu-central-1'
+  #         SUBDIR: ./infrastructure
 
   blog-deployment:
     runs-on: ubuntu-latest
@@ -68,7 +68,7 @@ jobs:
           database__connection__password="${{ secrets.DB_PASSWORD }}"
           database__connection__database=${{ secrets.DB_NAME }}
           NODE_ENV=production
-          url=http://blog.softup.co
+          url=https://blog.softup.co
           EOT
           scp -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no .env ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/.env
 
@@ -92,16 +92,16 @@ jobs:
           username: ${{ secrets.USERNAME }}
           privateKey: ghost-cms-key-pair.pem
 
-  deploy-ghost-theme:
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./blog/content/themes/Casper-master
-    steps:
-      - uses: actions/checkout@v2
-      - uses: TryGhost/action-deploy-theme@v1.2.1
-        with:
-          api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
-          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
-          theme-name: 'casper-custom-softup'
+  # deploy-ghost-theme:
+  #   runs-on: ubuntu-latest
+  #   defaults:
+  #     run:
+  #       shell: bash
+  #       working-directory: ./blog/content/themes/Casper-master
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - uses: TryGhost/action-deploy-theme@v1.2.1
+  #       with:
+  #         api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
+  #         api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
+  #         theme-name: 'casper-custom-softup'
