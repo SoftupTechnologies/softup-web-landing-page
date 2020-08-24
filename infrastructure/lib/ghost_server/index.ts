@@ -21,6 +21,7 @@ export class GhostServerResources extends cdk.Construct {
   public readonly ghostServerSecurityGroup: ec2.SecurityGroup;
   public readonly ghostServerInstance: ec2.Instance;
   public readonly cfDistribution: CloudFrontWebDistribution;
+  public readonly eip: ec2.CfnEIP;
 
   constructor(scope: cdk.Construct, id: string, props: GhostServerResourcesProps) {
     super(scope, id);
@@ -54,6 +55,14 @@ export class GhostServerResources extends cdk.Construct {
       vpcSubnets: {
         subnets: vpc.publicSubnets,
       },
+    });
+
+    /* Elastic IP */
+
+    this.eip = new ec2.CfnEIP(this, 'InstanceElasticIp', {
+      domain: this.ghostServerInstance.instancePublicDnsName,
+      instanceId: this.ghostServerInstance.instanceId,
+      tags: [new cdk.Tag('Name', 'Ghost Server EIP')],
     });
 
     const userDataAsset = new Asset(this, 'UserDataAsset', {
