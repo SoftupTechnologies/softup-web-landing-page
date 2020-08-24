@@ -1,8 +1,8 @@
-version: "3"
+version: '3'
 services:
   ghost:
     # image: 485652621123.dkr.ecr.eu-central-1.amazonaws.com/ghost-server:latest
-    image: ghost:3-alpine
+    image: ghost:latest
     container_name: softup-blog
     restart: always
     ports:
