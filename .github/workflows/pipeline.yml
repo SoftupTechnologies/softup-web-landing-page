@@ -45,67 +45,67 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'eu-central-1'
 
-  publish:
-    runs-on: ubuntu-latest
-    needs: deployment
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+  # publish:
+  #   runs-on: ubuntu-latest
+  #   needs: deployment
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v2
 
-      - name: verify aws credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: 'eu-central-1'
+  #     - name: verify aws credentials
+  #       uses: aws-actions/configure-aws-credentials@v1
+  #       with:
+  #         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  #         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  #         aws-region: 'eu-central-1'
 
-      - name: download .pem from s3
-        run: |
-          aws s3 cp s3://ghost-server-keys/ghost-cms-key-pair.pem ./ghost-cms-key-pair.pem
+  #     - name: download .pem from s3
+  #       run: |
+  #         aws s3 cp s3://ghost-server-keys/ghost-cms-key-pair.pem ./ghost-cms-key-pair.pem
 
-      - name: give permissions to .pem file
-        run: chmod 400 ./ghost-cms-key-pair.pem
+  #     - name: give permissions to .pem file
+  #       run: chmod 400 ./ghost-cms-key-pair.pem
 
-      - name: create env file
-        run: |
-          touch .env
-          cat <<EOT>> .env
-          database__client=mysql
-          database__connection__host="${{ secrets.DB_HOST }}"
-          database__connection__user=${{ secrets.DB_USERNAME }}
-          database__connection__password="${{ secrets.DB_PASSWORD }}"
-          database__connection__database=${{ secrets.DB_NAME }}
-          NODE_ENV=production
-          url=http://blog.softup.co
-          EOT
-          scp -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no .env ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/.env
+  #     - name: create env file
+  #       run: |
+  #         touch .env
+  #         cat <<EOT>> .env
+  #         database__client=mysql
+  #         database__connection__host="${{ secrets.DB_HOST }}"
+  #         database__connection__user=${{ secrets.DB_USERNAME }}
+  #         database__connection__password="${{ secrets.DB_PASSWORD }}"
+  #         database__connection__database=${{ secrets.DB_NAME }}
+  #         NODE_ENV=production
+  #         url=http://blog.softup.co
+  #         EOT
+  #         scp -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no .env ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/.env
 
-      - name: copy docker compose to ec2
-        run: |
-          scp -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no docker-compose.yml ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/docker-compose.yml
+  #     - name: copy docker compose to ec2
+  #       run: |
+  #         scp -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no docker-compose.yml ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/docker-compose.yml
 
-      - name: build docker compose
-        uses: garygrossgarten/github-action-ssh@release
-        with:
-          command: docker-compose up -d --build
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          privateKey: ghost-cms-key-pair.pem
+  #     - name: build docker compose
+  #       uses: garygrossgarten/github-action-ssh@release
+  #       with:
+  #         command: docker-compose up -d --build
+  #         host: ${{ secrets.HOST }}
+  #         username: ${{ secrets.USERNAME }}
+  #         privateKey: ghost-cms-key-pair.pem
 
-      - name: clean system
-        uses: garygrossgarten/github-action-ssh@release
-        with:
-          command: docker system prune -y
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          privateKey: ghost-cms-key-pair.pem
+  #     - name: clean system
+  #       uses: garygrossgarten/github-action-ssh@release
+  #       with:
+  #         command: docker system prune -y
+  #         host: ${{ secrets.HOST }}
+  #         username: ${{ secrets.USERNAME }}
+  #         privateKey: ghost-cms-key-pair.pem
 
-  deploy-ghost-theme:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Deploy Ghost Theme
-        uses: TryGhost/action-deploy-theme@v1.4.0
-        with:
-          api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
-          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
+  # deploy-ghost-theme:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Deploy Ghost Theme
+  #       uses: TryGhost/action-deploy-theme@v1.4.0
+  #       with:
+  #         api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
+  #         api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
