@@ -1,17 +1,15 @@
 version: '3'
 services:
   ghost:
-    # image: 485652621123.dkr.ecr.eu-central-1.amazonaws.com/ghost-server:latest
     image: ghost:latest
     container_name: softup-blog
-    restart: always
     ports:
       - 80:2368
     environment: 
-      database__client: $database__client
-      database__connection__host: $database__connection__host
-      database__connection__user: $database__connection__user
-      database__connection__password: $database__connection__password
-      database__connection__database: $database__connection__database
-      NODE_ENV: $NODE_ENV
-      url: $url
+      database__client: ${database__client}
+      database__connection__host: ${database__connection__host}
+      database__connection__user: ${database__connection__user}
+      database__connection__password: ${database__connection__password}
+      database__connection__database: ${database__connection__database}
+      NODE_ENV: ${NODE_ENV}
+      url: ${url}
