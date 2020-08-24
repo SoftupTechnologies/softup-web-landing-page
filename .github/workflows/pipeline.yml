@@ -4,7 +4,7 @@ name: CI/CD
 
 on:
   push:
-    branches: [dev]
+    branches: [infrastructure-clean-up]
   pull_request:
     branches: [dev]
 
@@ -14,7 +14,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: .
+        working-directory: ./infrastructure
 
     steps:
       - name: verify aws credentials
