@@ -135,15 +135,7 @@ jobs:
       - name: build docker compose
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: |
-            docker-compose up
-            export database__client=mysql
-            export database__connection__host=${{ secrets.HOST }}
-            export database__connection__user=${{ secrets.DB_USERNAME }}
-            export database__connection__password=${{ secrets.DB_PASSWORD }}
-            export database__connection__database=${{ secrets.DB_NAME }}
-            export NODE_ENV=production
-            export url=https://blog.softup.co
+          command: export database__client=mysql database__connection__host=${{ secrets.HOST }} database__connection__user=${{ secrets.DB_USERNAME }} database__connection__password=${{ secrets.DB_PASSWORD }} database__connection__database=${{ secrets.DB_NAME }} NODE_ENV=production url=https://blog.softup.co && docker-compose up -d
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           privateKey: ghost-cms-key-pair.pem
