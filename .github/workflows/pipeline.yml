@@ -102,10 +102,14 @@ jobs:
 
   deploy-ghost-theme:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: ./blog/content/themes/Casper-master
     steps:
       - uses: actions/checkout@v2
-      - name: Deploy Ghost Theme
-        uses: TryGhost/action-deploy-theme@v1.4.0
+      - uses: TryGhost/action-deploy-theme@v1.2.1
         with:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
           api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
+          theme-name: 'casper-master'
