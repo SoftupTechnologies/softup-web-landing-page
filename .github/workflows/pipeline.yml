@@ -108,19 +108,19 @@ jobs:
       - name: give permissions to .pem file
         run: chmod 400 ./ghost-cms-key-pair.pem
 
-      - name: create env file
-        run: |
-          touch .env
-          cat <<EOT>> .env
-          database__client: mysql
-          database__connection__host: ${{ secrets.HOST }}
-          database__connection__user: ${{ secrets.DB_USERNAME }}
-          database__connection__password: ${{ secrets.DB_PASSWORD }}
-          database__connection__database: ${{ secrets.DB_NAME }}
-          NODE_ENV: production
-          url: https://blog.softup.co
-          EOT
-          scp -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no .env ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/.env
+      # - name: create env file
+      #   run: |
+      #     touch .env
+      #     cat <<EOT>> .env
+      #     database__client: mysql
+      #     database__connection__host: ${{ secrets.HOST }}
+      #     database__connection__user: ${{ secrets.DB_USERNAME }}
+      #     database__connection__password: ${{ secrets.DB_PASSWORD }}
+      #     database__connection__database: ${{ secrets.DB_NAME }}
+      #     NODE_ENV: production
+      #     url: https://blog.softup.co
+      #     EOT
+      #     scp -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no .env ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/.env
 
       - name: copy docker compose to ec2
         run: |
@@ -135,7 +135,15 @@ jobs:
       - name: build docker compose
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: docker-compose up
+          command: |
+            docker-compose up
+            export database__client=mysql
+            export database__connection__host=${{ secrets.HOST }}
+            export database__connection__user=${{ secrets.DB_USERNAME }}
+            export database__connection__password=${{ secrets.DB_PASSWORD }}
+            export database__connection__database=${{ secrets.DB_NAME }}
+            export NODE_ENV=production
+            export url=https://blog.softup.co
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           privateKey: ghost-cms-key-pair.pem
