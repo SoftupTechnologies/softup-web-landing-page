@@ -60,19 +60,25 @@
         font-size: 1.2rem;
       }
 
-      // .link {
-      //   margin: 30px 0;
-      // }
+      .mobileMenuLinksWrapper {
+        display: grid;
+        grid-template-columns: 50px auto;
+        grid-auto-rows: 50px;
+        align-items: flex-end;
+        column-gap: 10px;
+      }
 
       .mobileMenuNumber {
-        font-size: 0.8rem;
-        margin-right: 30px;
+        width: fit-content;
         border-bottom: 1px solid #19a0ff;
         font-family: Caviar, sans-serif;
+        padding-bottom: 10px;
+        font-size: 15px;
       }
 
       .mobileMenuNumberActive {
         border-bottom: 1px solid #ffffff;
+        width: 100%;
       }
     }
   }
