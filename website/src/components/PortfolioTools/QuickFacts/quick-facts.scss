@@ -5,6 +5,7 @@
   grid-template-columns: repeat(auto-fit, 400px);
   align-items: center;
   justify-content: center;
+  font-family: Bebas Neue, sans-serif;
 }
 
 .itemContainer {
@@ -22,13 +23,13 @@
     width: 150px;
     padding: 10px;
     color: #7d7d7d;
-    font-family: "Comfortaa", sans-serif;
+    // font-family: "Comfortaa", sans-serif;
   }
   .content {
     border-left: 1px solid #19a0ff;
-    color: #ffffff;
+    color: #7d7d7d;
     padding-left: 2vw;
-    font-family: Roboto, sans-serif;
+    // font-family: Roboto, sans-serif;
     font-weight: 100;
     font-size: 16px;
     .description {
