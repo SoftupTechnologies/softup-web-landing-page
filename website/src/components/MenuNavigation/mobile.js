@@ -10,7 +10,7 @@ import Close from "../../images/close.svg";
 
 const SoftupLogo = () => {
   return (
-    <Link to={"/"} className={"mobileSoftupLogo"}>
+    <Link to={"/"} className="mobileSoftupLogo">
       <SoftupLogoSvg />
     </Link>
   );
@@ -27,8 +27,8 @@ const NumberUnderlined = ({ number, isActive }) => {
 const MobileMenuLinks = ({ menuItems, activeMenuItem }) => {
   const { t } = useTranslation();
   return (
-    <div className={"centerLinks"}>
-      <div className={"mobileMenuLinksDiv"}>
+    <div className="centerLinks">
+      <div className="mobileMenuLinksDiv">
         {menuItems?.map((item, index) => {
           let classes = classNames({
             link: true,
