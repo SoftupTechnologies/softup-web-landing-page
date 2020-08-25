@@ -43,7 +43,7 @@
   max-width: 80px;
   min-width: 80px;
   position: absolute;
-  transform: translate(162px, 150px);
+  transform: translate(152px, 150px);
   overflow: hidden;
   &:hover {
     cursor: pointer;
@@ -61,7 +61,7 @@
   font-family: Comfortaa, sans-serif;
   align-items: center;
   margin-bottom: 0;
-  padding: 20px 50px 50px;
+  padding: 20px 40px 50px;
   display: flex;
   flex-direction: column;
 }
@@ -149,7 +149,7 @@
 
 @media (max-width: 768px) {
   .submitButton {
-    max-width: 40px;
-    min-width: 40px;
+    max-width: 50px;
+    min-width: 50px;
   }
 }
