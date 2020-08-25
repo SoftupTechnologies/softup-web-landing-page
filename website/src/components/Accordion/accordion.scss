@@ -18,7 +18,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .accordionMenuContainer {
     display: none;
   }
@@ -35,7 +35,7 @@
   flex: 1;
   display: flex;
   flex-direction: row;
-  @include last-child('.slideContainer') {
+  @include last-child(".slideContainer") {
     border-right: 1px solid #333333;
   }
 }
@@ -62,7 +62,8 @@
 
     &:hover {
       cursor: pointer;
-      .contentAndTitle, div {
+      .contentAndTitle,
+      div {
         color: #19a0ff;
         .title {
           &.inactive {
