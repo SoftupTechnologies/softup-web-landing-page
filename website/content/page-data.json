@@ -576,7 +576,8 @@
               {
                 "component": "clientName",
                 "data": {
-                  "name": "Realcube GmbH"
+                  "name": "Realcube GmbH",
+                  "iconFileName": "portfolio/realcube/logo.png"
                 }
               },
               {
@@ -738,7 +739,8 @@
               {
                 "component": "clientName",
                 "data": {
-                  "name": "CLEU Inc"
+                  "name": "CLEU Inc",
+                  "iconFileName": "portfolio/cleu/logo.png"
                 }
               },
               {
@@ -860,7 +862,8 @@
               {
                 "component": "clientName",
                 "data": {
-                  "name": "Wirecard AG"
+                  "name": "Wirecard AG",
+                  "iconFileName": "portfolio/wirecard/logo.png"
                 }
               },
               {
@@ -971,7 +974,8 @@
               {
                 "component": "clientName",
                 "data": {
-                  "name": "Leva Capital Partners AG"
+                  "name": "Leva Capital Partners AG",
+                  "iconFileName": "portfolio/leva/logo.png"
                 }
               },
               {
@@ -1118,7 +1122,8 @@
               {
                 "component": "clientName",
                 "data": {
-                  "name": "ZenGrowth GmbH"
+                  "name": "ZenGrowth GmbH",
+                  "iconFileName": "portfolio/zengrowth/logo.png"
                 }
               },
               {

@@ -1,5 +1,11 @@
 .clientNameDiv {
   grid-column-start: 2;
-  color: #c2c2c2;
-  font-family: "Comfortaa", sans-serif;
+  // color: #c2c2c2;
+  // font-family: "Comfortaa", sans-serif;
+
+  .headerImage {
+    min-width: 60px;
+    width: 100px;
+    // height: 60px;
+  }
 }
