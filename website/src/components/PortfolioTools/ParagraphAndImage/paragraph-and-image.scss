@@ -1,6 +1,5 @@
 .paragraphAndImageDiv {
-  padding-top: 10px;
-  padding-bottom: 5vw;
+  padding: 70px 0;
   grid-column-start: 2;
   color: #ffffff;
   font-family: "Comfortaa", sans-serif;
@@ -15,7 +14,6 @@
   }
 
   .title {
-    padding-top: 30px;
     padding-bottom: 10px;
     margin-right: 10px;
     font-size: calc(1rem + 1vw);
@@ -31,22 +29,26 @@
   }
 
   .pImage {
-    padding-top: 20px;
     max-height: 100%;
     min-width: 60%;
   }
 
   .pContentLeft {
     padding-left: 5vh;
+    display: grid;
+    align-content: center;
   }
 
   .pContentRight {
+    display: grid;
+    align-content: center;
     padding-right: 5vh;
   }
 }
 
 @media (max-width: 768px) {
   .paragraphAndImageDiv {
+    padding: 20px 0;
     .title,
     .content {
       text-align: left;
@@ -59,10 +61,18 @@
     &.left {
       flex-direction: column;
     }
-  }
 
-  .pImage {
-    align-self: center;
-    padding: 10px;
+    .pImage {
+      align-self: center;
+      margin-bottom: 30px;
+    }
+
+    .pContentLeft {
+      padding-left: 0;
+    }
+
+    .pContentRight {
+      padding-right: 0;
+    }
   }
 }
