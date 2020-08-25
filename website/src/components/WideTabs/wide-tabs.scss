@@ -60,14 +60,17 @@
   flex-direction: column;
   justify-content: space-around;
   color: #ffffff;
+  font-weight: 300;
+  font-size: calc(0.8vw + 0.8rem);
+  height: 30vh;
 }
 
-@media (min-width: 768px) {
-  .tabName {
-    font-size: calc(0.8vw + 0.8rem);
-    height: 25vh;
-  }
-}
+// @media (min-width: 768px) {
+//   .tabName {
+//     font-size: calc(0.8vw + 0.8rem);
+//     height: 30vh;
+//   }
+// }
 
 @media (max-width: 768px) {
   .tabTitles {
