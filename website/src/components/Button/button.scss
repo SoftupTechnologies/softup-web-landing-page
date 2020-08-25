@@ -1,27 +1,32 @@
 .buttonDiv {
-    padding-top: 40px;
-    padding-bottom: 20px;
-    width: auto;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  width: auto;
+  grid-column-start: 2;
 
-    a:hover {
-      cursor: pointer;
-      background-color: #19a0ff;
-      color: white;
-    }
+  a:hover {
+    cursor: pointer;
+    background-color: #19a0ff;
+    color: white;
+  }
 
-    a,
-    a:visited,
-    a:active {
-      color: #ffffff;
-      cursor: pointer;
-      background-color: transparent;
-      margin: 0em;
-      font: 200 17px Comfortaa;
-      padding: 8px 13px;
-      border-width: 1px;
-      border-radius: 7.7px;
-      border-style: solid;
-      border-color: #19a0ff;
-      border-image: none;
-    }
+  a,
+  a:visited,
+  a:active {
+    color: #ffffff;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 0em;
+    font: 200 17px Comfortaa;
+    padding: 8px 13px;
+    border-width: 1px;
+    border-radius: 7.7px;
+    border-style: solid;
+    border-color: #19a0ff;
+    border-image: none;
+  }
+}
+
+.align-center {
+  text-align: center;
 }
