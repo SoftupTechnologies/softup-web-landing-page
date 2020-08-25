@@ -1,5 +1,5 @@
 .quickDescriptionDiv {
-  padding-top: calc(1vw + 1vh);
+  padding-top: calc(1vw + 9vh);
   grid-template-rows: auto;
   font-family: Comfortaa, sans-serif;
   color: #ffffff;
@@ -18,5 +18,11 @@
     grid-column-start: 2;
     flex: 1;
     height: max-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .quickDescriptionDiv {
+    padding-top: calc(1vw + 1vh);
   }
 }
