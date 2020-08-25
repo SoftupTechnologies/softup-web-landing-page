@@ -4,7 +4,7 @@ services:
     image: ghost:latest
     container_name: softup-blog
     ports:
-      - 443:2368
+      - 80:2368
     environment: 
       database__client: ${database__client}
       database__connection__host: ${database__connection__host}

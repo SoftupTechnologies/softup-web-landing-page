@@ -99,7 +99,7 @@ export class GhostServerResources extends cdk.Construct {
           ],
           customOriginSource: {
             domainName: this.eip.domain || this.ghostServerInstance.instancePrivateDnsName,
-            originProtocolPolicy: OriginProtocolPolicy.HTTPS_ONLY,
+            originProtocolPolicy: OriginProtocolPolicy.HTTP_ONLY,
           },
         }
       ],
