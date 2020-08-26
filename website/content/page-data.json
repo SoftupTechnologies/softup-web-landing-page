@@ -552,7 +552,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "portfolio/realcube/hero.png"
+                  "imageFileName": "portfolio/realcube/RealCube-web.jpg"
                 }
               },
               {
@@ -715,7 +715,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "portfolio/cleu/hero.png"
+                  "imageFileName": "portfolio/cleu/Cleu-web.jpg"
                 }
               },
               {
@@ -838,7 +838,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "portfolio/wirecard/hero.png"
+                  "imageFileName": "portfolio/wirecard/Wirecard-web.jpg"
                 }
               },
               {
@@ -950,7 +950,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "portfolio/leva/hero.png"
+                  "imageFileName": "portfolio/leva/Leva-web.jpg"
                 }
               },
               {
@@ -1098,7 +1098,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "portfolio/zengrowth/hero.png"
+                  "imageFileName": "portfolio/zengrowth/Zengrowth-web.jpg"
                 }
               },
               {
