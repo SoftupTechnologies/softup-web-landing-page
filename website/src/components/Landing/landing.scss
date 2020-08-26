@@ -15,9 +15,9 @@
 }
 
 .logoIcon {
-  min-width: 70px;
-  max-width: 70px;
-  max-height: 70px;
+  min-width: 100px;
+  max-width: 100px;
+  max-height: 100px;
   margin: 10px;
   justify-self: center;
   grid-row-start: 1;
@@ -76,7 +76,7 @@
   text-align: center;
   font-family: Comfortaa, sans-serif;
   font-weight: 300;
-  font-size: calc(1.5rem);
+  font-size: 1.4rem;
   line-height: 1.2;
   color: #aaaaaa;
 }
