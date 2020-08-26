@@ -3,7 +3,7 @@ import SEO from "../seo";
 import "./landing.scss";
 import { MenuHeader, Slogan } from "./components";
 import { useTranslation } from "react-i18next";
-import StyledBackgroundSection from "../background";
+// import StyledBackgroundSection from "../background";
 import PageLayout from "../PageLayout";
 
 export const Landing = () => {
