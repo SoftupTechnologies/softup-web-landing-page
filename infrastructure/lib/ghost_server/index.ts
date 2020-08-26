@@ -1,16 +1,7 @@
 import * as cdk from '@aws-cdk/core'
 import * as ec2 from '@aws-cdk/aws-ec2';
 import { Asset } from '@aws-cdk/aws-s3-assets';
-import {
-  CloudFrontWebDistribution,
-  CloudFrontAllowedMethods,
-  OriginProtocolPolicy,
-  ViewerProtocolPolicy,
-  PriceClass,
-  SecurityPolicyProtocol,
-} from '@aws-cdk/aws-cloudfront';
 import * as route53 from '@aws-cdk/aws-route53';
-import * as iam from '@aws-cdk/aws-iam';
 import path = require("path");
 
 interface GhostServerResourcesProps {
@@ -20,7 +11,6 @@ interface GhostServerResourcesProps {
 export class GhostServerResources extends cdk.Construct {
   public readonly ghostServerSecurityGroup: ec2.SecurityGroup;
   public readonly ghostServerInstance: ec2.Instance;
-  public readonly cfDistribution: CloudFrontWebDistribution;
   public readonly eip: ec2.CfnEIP;
 
   constructor(scope: cdk.Construct, id: string, props: GhostServerResourcesProps) {
@@ -78,43 +68,8 @@ export class GhostServerResources extends cdk.Construct {
       filePath: localPath,
     });
 
-    /* CF distribution */
-
-    this.cfDistribution = new CloudFrontWebDistribution(this, 'CfDistribution', {
-      originConfigs: [
-        {
-          connectionAttempts: 3,
-          behaviors: [
-            {
-              isDefaultBehavior: true,
-              allowedMethods: CloudFrontAllowedMethods.ALL,
-              forwardedValues: {
-                queryString: true,
-                cookies: {
-                  forward: 'all',
-                },
-                headers: ['*'],
-              }
-            }
-          ],
-          customOriginSource: {
-            domainName: this.eip.domain || this.ghostServerInstance.instancePrivateDnsName,
-            originProtocolPolicy: OriginProtocolPolicy.HTTP_ONLY,
-          },
-        }
-      ],
-      aliasConfiguration: {
-        securityPolicy: SecurityPolicyProtocol.TLS_V1,
-        acmCertRef: 'arn:aws:acm:us-east-1:485652621123:certificate/d525a59b-d9a4-465a-b992-616af47bd817',
-        names: ['blog.softup.co'],     
-      },
-      viewerProtocolPolicy: ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
-      defaultRootObject: '',
-      priceClass: PriceClass.PRICE_CLASS_ALL,
-    });
-
     new route53.CnameRecord(this, 'GhostCnameRecord', {
-      domainName: this.cfDistribution.domainName,
+      domainName: this.eip.domain || this.ghostServerInstance.instancePublicDnsName,
       zone: route53.HostedZone.fromHostedZoneAttributes(this, 'SoftupHZ', {
         zoneName: 'softup.co',
         hostedZoneId: 'Z20J3TBSZRCEJG',

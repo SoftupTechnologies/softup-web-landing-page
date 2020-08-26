@@ -71,7 +71,7 @@ services:
       url: ${url}
       VIRTUAL_HOST: blog.softup.co
       LETSENCRYPT_HOST: blog.softup.co
-      LETSENCRYPT_EMAIL: stivi.ndoni@softup.co
+      LETSENCRYPT_EMAIL: info@softup.co
 
   nginx-proxy:
     image: jwilder/nginx-proxy

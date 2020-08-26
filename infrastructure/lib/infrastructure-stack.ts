@@ -96,11 +96,6 @@ export class GhostServerStack extends cdk.Stack {
       vpc: vpc.vpc,
     });
 
-    new cdk.CfnOutput(this, 'ServerDomainName', {
-      exportName: 'ServerDomainName',
-      value: ghostServer.cfDistribution.domainName,
-    });
-
     new cdk.CfnOutput(this, 'GhostKeysBucketName', {
       exportName: 'GhostKeysBucketName',
       value: privateKeyBucket.bucketName,
