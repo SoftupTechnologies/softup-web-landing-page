@@ -62,15 +62,8 @@
   color: #ffffff;
   font-weight: 300;
   font-size: calc(0.8vw + 0.8rem);
-  height: 30vh;
+  height: 50vh;
 }
-
-// @media (min-width: 768px) {
-//   .tabName {
-//     font-size: calc(0.8vw + 0.8rem);
-//     height: 30vh;
-//   }
-// }
 
 @media (max-width: 768px) {
   .tabTitles {
