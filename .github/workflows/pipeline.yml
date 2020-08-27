@@ -28,7 +28,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'eu-central-1'
-          args: cdk diff InfrastructureStack
+          args: cdk diff SoftupWeb-V3
           SUBDIR: ./infrastructure
 
       - name: CDK Diff ghost server stack
@@ -37,7 +37,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'eu-central-1'
-          args: cdk diff GhostServerStack
+          args: cdk diff GhostServer	
           SUBDIR: ./infrastructure
 
       - name: CDK Deploy web stack
@@ -46,7 +46,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'eu-central-1'
-          args: cdk deploy InfrastructureStack --require-approval never
+          args: cdk deploy SoftupWeb-V3 --require-approval never
           SUBDIR: ./infrastructure
 
       - name: CDK Deploy ghost server stack
@@ -55,7 +55,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'eu-central-1'
-          args: cdk deploy GhostServerStack --require-approval never
+          args: cdk deploy GhostServer --require-approval never
           SUBDIR: ./infrastructure
 
   blog-deployment:
