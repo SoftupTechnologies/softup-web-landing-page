@@ -3,6 +3,15 @@ import "./button.scss";
 import PropTypes from "prop-types";
 
 export const Button = ({ data }) => {
+  let newTabProps = {};
+
+  if (data.openInNewPage) {
+    newTabProps = {
+      target: "_blank",
+      rel: "noreferrer"
+    };
+  }
+
   return (
     <form style={{ marginBottom: 0 }}>
       {data.align === "center" ? (
@@ -13,7 +22,7 @@ export const Button = ({ data }) => {
         </div>
       ) : (
         <div className="buttonDiv">
-          <a href={data.link}>{data.value}</a>
+          <a href={data.link} { ...newTabProps }>{data.value}</a>
         </div>
       )}
     </form>
@@ -25,5 +34,6 @@ Button.propTypes = {
     value: PropTypes.string,
     link: PropTypes.string,
     align: PropTypes.string,
+    openInNewPage: PropTypes.bool,
   }),
 };

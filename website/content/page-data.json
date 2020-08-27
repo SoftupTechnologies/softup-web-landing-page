@@ -1231,6 +1231,15 @@
         {
           "component": "slideLinks",
           "data": []
+        },
+        {
+          "component": "button",
+          "data": {
+            "link": "https://blog.softup.co/",
+            "value": "VIEW ALL POSTS",
+            "align": "left",
+            "openInNewPage": true
+          }
         }
       ]
     }
