@@ -67,7 +67,6 @@ services:
       database__connection__user: ${database__connection__user}
       database__connection__password: ${database__connection__password}
       database__connection__database: ${database__connection__database}
-      admin__url: ${admin__url}
       NODE_ENV: ${NODE_ENV}
       url: ${url}
       VIRTUAL_HOST: blog.softup.co
