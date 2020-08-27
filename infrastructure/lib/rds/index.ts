@@ -52,7 +52,7 @@ export class RdsInfrastructure extends cdk.Construct {
       instanceIdentifier: `${props.projectName}-db-instance`,
       allocatedStorage: 5,
       port: props.dbPort || 5432,
-      backupRetention: cdk.Duration.days(1),
+      backupRetention: cdk.Duration.days(7),
       vpcPlacement,
       deletionProtection: true,
       securityGroups: [defaultSg, ...ingressSgs],

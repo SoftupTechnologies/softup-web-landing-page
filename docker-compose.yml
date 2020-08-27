@@ -67,6 +67,13 @@ services:
       database__connection__user: ${database__connection__user}
       database__connection__password: ${database__connection__password}
       database__connection__database: ${database__connection__database}
+      mail__from: ${mail__from}
+      mail__transport: ${mail__transport}
+      mail__options__host: ${mail__options__host}
+      mail__options__port: ${mail__options__port}
+      mail__options__service: ${mail__options__service}
+      mail__options__auth__user: ${mail__options__auth__user}
+      mail__options__auth__pass: ${mail__options__auth__pass}
       NODE_ENV: ${NODE_ENV}
       url: ${url}
       VIRTUAL_HOST: blog.softup.co
