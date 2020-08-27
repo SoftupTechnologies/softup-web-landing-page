@@ -19,6 +19,7 @@ jobs:
       - name: Build Web content
         run: |
           cd website
+          npm install
           npm run build
 
       - name: CDK Diff web stack
