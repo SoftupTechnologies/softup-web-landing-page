@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { CompanyNumbers } from "../CompanyNumbers";
 import { Link } from "gatsby";
@@ -7,6 +7,8 @@ import navData from "../../../content/page-data.json";
 import classNames from "classnames";
 import { generateContent } from "../helpers";
 import "./mobile.scss";
+import { getBlogArticles } from "../queries";
+import { BlogContext } from "../../context";
 
 export const MobileAccordionSlide = ({
   link,
@@ -93,11 +95,19 @@ const MobileAccordion = () => {
 };
 
 export const MobileAccordionMenu = () => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    getBlogArticles(setPosts);
+  }, []);
+
   return (
-    <div className="mobileAccordionMenuContainer">
-      <CompanyNumbers />
-      <MobileAccordion />
-    </div>
+    <BlogContext.Provider value={posts}>
+      <div className="mobileAccordionMenuContainer">
+        <CompanyNumbers />
+        <MobileAccordion />
+      </div>
+    </BlogContext.Provider>
   );
 };
 

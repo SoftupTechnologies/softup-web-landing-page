@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import "./slide-links.scss";
 import { Link } from "gatsby";
-import { getMediumArticles } from "../../queries";
-import { Button } from "../../Button";
+
+import { BlogContext } from "../../../context";
 
 export const SlideLinks = ({ data }) => {
-  const { allMediumPost } = getMediumArticles();
+  const posts = useContext(BlogContext);
 
   return (
     <div className={"slideLinksDiv"}>
@@ -19,22 +19,18 @@ export const SlideLinks = ({ data }) => {
         ))
       ) : (
         <React.Fragment>
-          {allMediumPost.edges.map(({ node }, index) => (
-            <Link
+          {posts.map((post, index) => (
+            <a
               key={index}
-              to={`https://medium.com/softup-technologies/${node.uniqueSlug}`}
+              href={post.url}
               className={"slideItemLink"}
+              target="_blank"
+              rel="noreferrer"
             >
-              {node.title.toUpperCase()}
-              {node.title ? <span className={"arrow"}>→</span> : null}
-            </Link>
+              {post.title.toUpperCase()}
+              {post.title ? <span className={"arrow"}>→</span> : null}
+            </a>
           ))}
-          <Button
-            data={{
-              link: "https://medium.com/softup-technologies/",
-              value: "VIEW ALL POSTS"
-            }}
-          />
         </React.Fragment>
       )}
     </div>
