@@ -10,7 +10,7 @@ import Close from "../../images/close.svg";
 
 const SoftupLogo = () => {
   return (
-    <Link to={"/"} className={"mobileSoftupLogo"}>
+    <Link to={"/"} className="mobileSoftupLogo">
       <SoftupLogoSvg />
     </Link>
   );
@@ -21,14 +21,14 @@ const NumberUnderlined = ({ number, isActive }) => {
     mobileMenuNumber: true,
     mobileMenuNumberActive: isActive,
   });
-  return <span className={classes}>{number}</span>;
+  return <div className={classes}>{number}</div>;
 };
 
 const MobileMenuLinks = ({ menuItems, activeMenuItem }) => {
   const { t } = useTranslation();
   return (
-    <div className={"centerLinks"}>
-      <div className={"mobileMenuLinksDiv"}>
+    <div className="centerLinks">
+      <div className="mobileMenuLinksDiv">
         {menuItems?.map((item, index) => {
           let classes = classNames({
             link: true,
@@ -36,20 +36,20 @@ const MobileMenuLinks = ({ menuItems, activeMenuItem }) => {
           });
           return (
             <Link
-              className={classes}
               key={index}
+              className={classes}
               to={item.link}
               getProps={({ isPartiallyCurrent }) =>
-                isPartiallyCurrent
-                  ? { className: "link enabledMenuItem" }
-                  : { className: "link" }
+                isPartiallyCurrent && { className: "enabledMenuItem" }
               }
             >
-              <NumberUnderlined
-                number={item.number}
-                isActive={item.title === activeMenuItem}
-              />
-              {t(item.title)}
+              <div className="mobileMenuLinksWrapper">
+                <NumberUnderlined
+                  number={item.number}
+                  isActive={item.title === activeMenuItem}
+                />
+                <div className="description">{t(item.title)}</div>
+              </div>
             </Link>
           );
         })}

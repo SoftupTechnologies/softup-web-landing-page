@@ -1,0 +1,120 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI/CD
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  infrastructure-deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+
+      - name: Build Web content
+        run: |
+          cd website
+          npm run build
+
+      - name: CDK Diff web stack
+        uses: udondan/cdk-nodejs@v0.3.1
+        with:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'eu-central-1'
+          args: cdk diff InfrastructureStack
+          SUBDIR: ./infrastructure
+
+      - name: CDK Diff ghost server stack
+        uses: udondan/cdk-nodejs@v0.3.1
+        with:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'eu-central-1'
+          args: cdk diff GhostServerStack
+          SUBDIR: ./infrastructure
+
+      - name: CDK Deploy web stack
+        uses: udondan/cdk-nodejs@v0.3.1
+        with:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'eu-central-1'
+          args: cdk deploy InfrastructureStack --require-approval never
+          SUBDIR: ./infrastructure
+
+      - name: CDK Deploy ghost server stack
+        uses: udondan/cdk-nodejs@v0.3.1
+        with:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: 'eu-central-1'
+          args: cdk deploy GhostServerStack --require-approval never
+          SUBDIR: ./infrastructure
+
+  blog-deployment:
+    runs-on: ubuntu-latest
+    needs: infrastructure-deployment
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: verify aws credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: 'eu-central-1'
+
+      - name: download .pem from s3
+        run: |
+          aws s3 cp s3://ghost-server-keys/ghost-cms-key-pair.pem ./ghost-cms-key-pair.pem
+
+      - name: give permissions to .pem file
+        run: chmod 400 ./ghost-cms-key-pair.pem
+
+      - name: create env file
+        run: |
+          touch .env
+          cat <<EOT>> .env
+          database__client=mysql
+          database__connection__host="${{ secrets.DB_HOST }}"
+          database__connection__user=${{ secrets.DB_USERNAME }}
+          database__connection__password="${{ secrets.DB_PASSWORD }}"
+          database__connection__database=${{ secrets.DB_NAME }}
+          NODE_ENV=production
+          url=https://blog.softup.co
+          mail__from=info@softup.co
+          mail__transport=SMTP
+          mail__options__host="${{ secrets.AWS_SES_HOST }}"
+          mail__options__port=465
+          mail__options__service=SES
+          mail__options__auth__user="${{ secrets.AWS_SES_SMTP_USERNAME }}"
+          mail__options__auth__pass="${{ secrets.AWS_SES_SMTP_PASS }}"
+          EOT
+          scp -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no .env ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/.env
+
+      - name: copy docker compose to ec2
+        run: |
+          scp -i ghost-cms-key-pair.pem -o StrictHostKeyChecking=no docker-compose.yml ${{ secrets.USERNAME }}@${{ secrets.HOST }}:/home/${{ secrets.USERNAME }}/docker-compose.yml
+
+      - name: build docker compose
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: docker-compose up -d --build
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          privateKey: ghost-cms-key-pair.pem
+
+      - name: clean system
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: docker system prune -y
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          privateKey: ghost-cms-key-pair.pem

@@ -23,19 +23,19 @@
 
   .paragraphTitle {
     font-size: 1.4rem;
-    font-weight: 500;
+    font-weight: bold;
     color: #19a0ff;
   }
 
   .paragraphContent {
     padding-top: 1vh;
-    font-size: 18px;
+    font-size: 14px;
     color: #c2c2c2;
 
     strong {
       font-weight: bolder;
       color: #e6e6e6;
-    }    
+    }
   }
 }
 
@@ -50,7 +50,7 @@
       transform: translate(0, -35px);
 
       .paragraphTitle {
-        text-align: left;
+        text-align: center;
       }
 
       .paragraphContent {

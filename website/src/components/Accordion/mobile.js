@@ -95,8 +95,8 @@ const MobileAccordion = () => {
 export const MobileAccordionMenu = () => {
   return (
     <div className="mobileAccordionMenuContainer">
-      <MobileAccordion />
       <CompanyNumbers />
+      <MobileAccordion />
     </div>
   );
 };

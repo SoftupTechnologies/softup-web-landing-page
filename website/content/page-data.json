@@ -52,7 +52,7 @@
                       {
                         "component": "markdownDisplay",
                         "data": "Hiring internal team for short term projects might not be worth your time and effort. Developers market is very competitive. We know that from experience."
-                      }, 
+                      },
                       {
                         "component": "markdownDisplay",
                         "data": "- This will distract your core team from current roadmap.\n - Shuffling resources back and fourth leads to unhappy developers.\n - Avoid management overhead (career path, compensation etc).\n - Hiring one developer takes months. Hiring a team takes quarters."
@@ -69,7 +69,7 @@
                       {
                         "component": "markdownDisplay",
                         "data": "One of the main reasons for not working with external providers is the fear of getting an unmaintable messy product that seems to be working on the surface."
-                      }, 
+                      },
                       {
                         "component": "markdownDisplay",
                         "data": "- Have you ever spent time with a provider who delivered codebase that you had to throw away?\n - Did you have to spent days / weeks investigating the codebase due to the lack of proper documentation?\n - Did you ever get a deliverable without a proper handover?"
@@ -267,7 +267,8 @@
           "component": "button",
           "data": {
             "link": "/technologies",
-            "value": "LEARN MORE"
+            "value": "LEARN MORE",
+            "align": "left"
           }
         }
       ]
@@ -460,8 +461,7 @@
             "content": [
               {
                 "component": "paragraphAndImage",
-                "data":
-                {
+                "data": {
                   "title": "Time Tracking",
                   "imageName": "enterprise-tools/time-tracking.png",
                   "imagePosition": "left",
@@ -475,8 +475,7 @@
               },
               {
                 "component": "paragraphAndImage",
-                "data":
-                {
+                "data": {
                   "title": "Absence Management",
                   "imageName": "enterprise-tools/leave-request.png",
                   "imagePosition": "right",
@@ -490,8 +489,7 @@
               },
               {
                 "component": "paragraphAndImage",
-                "data":
-                {
+                "data": {
                   "title": "Invoices",
                   "imageName": "enterprise-tools/invoices.png",
                   "imagePosition": "left",
@@ -505,8 +503,7 @@
               },
               {
                 "component": "paragraphAndImage",
-                "data":
-                {
+                "data": {
                   "title": "Analytics",
                   "imageName": "enterprise-tools/analytics.png",
                   "imagePosition": "right",
@@ -536,7 +533,8 @@
           "component": "button",
           "data": {
             "link": "/portfolio",
-            "value": "GO TO PORTFOLIO"
+            "value": "GO TO PORTFOLIO",
+            "align": "left"
           }
         }
       ]
@@ -554,7 +552,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "portfolio/realcube/hero.png"
+                  "imageFileName": "portfolio/realcube/RealCube-web.jpg"
                 }
               },
               {
@@ -578,7 +576,8 @@
               {
                 "component": "clientName",
                 "data": {
-                  "name": "Realcube GmbH"
+                  "name": "Realcube GmbH",
+                  "iconFileName": "portfolio/realcube/logo.png"
                 }
               },
               {
@@ -696,6 +695,14 @@
                   "content": "In 2017, REALCUBE GmbH started a viable partnership with Softup Technologies for high quality and efficient Frontend development projects. We especially appreciate the professional work stream from our functional specifications given, development of UI design guidelines to the completion and testing of our apps. Highly recommended partners!",
                   "author": "Uwe Forgber"
                 }
+              },
+              {
+                "component": "button",
+                "data": {
+                  "link": "/portfolio",
+                  "value": "PROJECTS",
+                  "align": "center"
+                }
               }
             ]
           },
@@ -708,7 +715,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "portfolio/cleu/hero.png"
+                  "imageFileName": "portfolio/cleu/Cleu-web.jpg"
                 }
               },
               {
@@ -732,7 +739,8 @@
               {
                 "component": "clientName",
                 "data": {
-                  "name": "CLEU Inc"
+                  "name": "CLEU Inc",
+                  "iconFileName": "portfolio/cleu/logo.png"
                 }
               },
               {
@@ -810,6 +818,14 @@
                     }
                   ]
                 }
+              },
+              {
+                "component": "button",
+                "data": {
+                  "link": "/portfolio",
+                  "value": "PROJECTS",
+                  "align": "center"
+                }
               }
             ]
           },
@@ -822,7 +838,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "portfolio/wirecard/hero.png"
+                  "imageFileName": "portfolio/wirecard/Wirecard-web.jpg"
                 }
               },
               {
@@ -846,7 +862,8 @@
               {
                 "component": "clientName",
                 "data": {
-                  "name": "Wirecard AG"
+                  "name": "Wirecard AG",
+                  "iconFileName": "portfolio/wirecard/logo.png"
                 }
               },
               {
@@ -913,6 +930,14 @@
                     }
                   ]
                 }
+              },
+              {
+                "component": "button",
+                "data": {
+                  "link": "/portfolio",
+                  "value": "PROJECTS",
+                  "align": "center"
+                }
               }
             ]
           },
@@ -925,7 +950,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "portfolio/leva/hero.png"
+                  "imageFileName": "portfolio/leva/Leva-web.jpg"
                 }
               },
               {
@@ -949,7 +974,8 @@
               {
                 "component": "clientName",
                 "data": {
-                  "name": "Leva Capital Partners AG"
+                  "name": "Leva Capital Partners AG",
+                  "iconFileName": "portfolio/leva/logo.png"
                 }
               },
               {
@@ -1052,6 +1078,14 @@
                     }
                   ]
                 }
+              },
+              {
+                "component": "button",
+                "data": {
+                  "link": "/portfolio",
+                  "value": "PROJECTS",
+                  "align": "center"
+                }
               }
             ]
           },
@@ -1064,7 +1098,7 @@
               {
                 "component": "headerImage",
                 "data": {
-                  "imageFileName": "portfolio/zengrowth/hero.png"
+                  "imageFileName": "portfolio/zengrowth/Zengrowth-web.jpg"
                 }
               },
               {
@@ -1088,7 +1122,8 @@
               {
                 "component": "clientName",
                 "data": {
-                  "name": "ZenGrowth GmbH"
+                  "name": "ZenGrowth GmbH",
+                  "iconFileName": "portfolio/zengrowth/logo.png"
                 }
               },
               {
@@ -1133,6 +1168,14 @@
                       "data": "By partnering with Softup on the technology front, ZenGrowth can now go back and focus on serving their clients with what they really excel at; marketing and growth strategy."
                     }
                   ]
+                }
+              },
+              {
+                "component": "button",
+                "data": {
+                  "link": "/portfolio",
+                  "value": "PROJECTS",
+                  "align": "center"
                 }
               }
             ]

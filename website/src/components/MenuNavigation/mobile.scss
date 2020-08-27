@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Caviar";
+  src: url("../../fonts/caviar_dreams/CaviarDreams.ttf");
+}
+
 .mobile {
   @keyframes fadeIn {
     0% {
@@ -37,8 +42,6 @@
 
     .mobileMenuLinksDiv {
       animation: fadeIn 0.5s;
-      padding-top: 5vh;
-      padding-bottom: 5vh;
       height: 70vh;
       display: flex;
       flex-direction: column;
@@ -57,18 +60,25 @@
         font-size: 1.2rem;
       }
 
-      .link {
-        padding: 1vw;
+      .mobileMenuLinksWrapper {
+        display: grid;
+        grid-template-columns: 50px auto;
+        grid-auto-rows: 50px;
+        align-items: flex-end;
+        column-gap: 10px;
       }
 
       .mobileMenuNumber {
-        font-size: 0.9rem;
-        margin-right: 20px;
+        width: fit-content;
         border-bottom: 1px solid #19a0ff;
+        font-family: Caviar, sans-serif;
+        padding-bottom: 10px;
+        font-size: 15px;
       }
 
       .mobileMenuNumberActive {
         border-bottom: 1px solid #ffffff;
+        width: 100%;
       }
     }
   }
