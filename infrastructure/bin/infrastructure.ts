@@ -9,9 +9,9 @@ const env = {
 }
 
 const app = new cdk.App();
-// new InfrastructureStack(app, 'SoftupWeb-V3', {
-//   env,
-// });
+new InfrastructureStack(app, 'SoftupWeb-V3', {
+  env,
+});
 
 new GhostServerStack(app, 'GhostServer', {
   env,
