@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "LightFont";
+  src: url("../../fonts/light_font/TheLightFont.ttf");
+}
+
 .companyNumContainer {
   border-top: 1px solid #333333;
   display: flex;
@@ -11,8 +16,8 @@
 }
 
 .benchmarkGroup {
-  margin-top: 2vh;
-  margin-bottom: 2vh;
+  margin-top: 6vh;
+  margin-bottom: 6vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,12 +30,13 @@
   font-size: calc(1vw + 1.2vh);
   border-bottom: 1px solid #19a0ff;
   padding-bottom: 5px;
+  text-transform: uppercase;
 }
 
 .benchmarkNumber {
   margin-left: -15px;
-  font-family: Comfortaa, sans-serif;
-  font-size: calc(2vw + 1.8vh);
+  font-family: LightFont, sans-serif;
+  font-size: calc(4vw + 1.8vh);
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -42,6 +48,13 @@
 
 .benchmarkNumber:before {
   content: "\002B";
-  font-size: calc(1.8vw + 1vh);
+  font-size: calc(3.5vw + 2.2vh);
   margin-right: 4px;
+}
+
+@media (max-width: 768px) {
+  .benchmarkGroup {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
 }

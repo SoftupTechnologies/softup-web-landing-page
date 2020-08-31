@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { CompanyNumbers } from "../CompanyNumbers";
 import { Link } from "gatsby";
@@ -7,6 +7,8 @@ import navData from "../../../content/page-data.json";
 import classNames from "classnames";
 import { generateContent } from "../helpers";
 import "./accordion.scss";
+import { getBlogArticles } from "../queries";
+import { BlogContext } from "../../context";
 
 export const AccordionSlide = ({
   link,
@@ -18,6 +20,12 @@ export const AccordionSlide = ({
   componentId,
   content,
 }) => {
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    getBlogArticles(setPosts);
+  }, []);
+
   const { t } = useTranslation();
   const slideIsActive = slideInfo.activeSlideNumber === componentId;
   const uninitializedSlides = slideInfo.activeSlideNumber === null;
@@ -42,20 +50,22 @@ export const AccordionSlide = ({
   };
 
   return (
-    <div onClick={toggleAccordion} className={sliderDivClasses}>
-      <div className={"number"}>{number}</div>
-      <div className={"contentAndTitle"}>
-        <div className={titleClasses}>
-          <Link to={link}>{t(title)}</Link>
+    <BlogContext.Provider value={posts}>
+      <div onClick={toggleAccordion} className={sliderDivClasses}>
+        <div className={"number"}>{number}</div>
+        <div className={"contentAndTitle"}>
+          <div className={titleClasses}>
+            <Link to={link}>{t(title)}</Link>
+          </div>
+          {slideIsActive ? (
+            <React.Fragment>
+              <div className={"slideContent"}>{description}</div>
+              {generateContent(content)}
+            </React.Fragment>
+          ) : null}
         </div>
-        {slideIsActive ? (
-          <React.Fragment>
-            <div className={"slideContent"}>{description}</div>
-            {generateContent(content)}
-          </React.Fragment>
-        ) : null}
       </div>
-    </div>
+    </BlogContext.Provider>
   );
 };
 
@@ -89,8 +99,8 @@ export const Accordion = () => {
 export const DesktopAccordionMenu = () => {
   return (
     <div className={"accordionMenuContainer"}>
-      <Accordion />
       <CompanyNumbers />
+      <Accordion />
     </div>
   );
 };

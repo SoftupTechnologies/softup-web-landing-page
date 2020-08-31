@@ -1,0 +1,99 @@
+# version: '3.5'
+
+# services:
+#   ghost:
+#     image: ghost:latest
+#     ports:
+#       - 2368
+#     # restart: always
+#     environment:
+#       database__client: ${database__client}
+#       database__connection__host: ${database__connection__host}
+#       database__connection__user: ${database__connection__user}
+#       database__connection__password: ${database__connection__password}
+#       database__connection__database: ${database__connection__database}
+#       NODE_ENV: ${NODE_ENV}
+#       url: ${url}
+#       VIRTUAL_HOST: blog.softup.co
+#       LETSENCRYPT_HOST: blog.softup.co
+#       LETSENCRYPT_EMAIL: stivi.ndoni@softup.co
+#       VIRTUAL_PROTO: https
+#       VIRTUAL_PORT: 443
+#     depends_on:
+#       - nginx-proxy
+
+#   nginx-proxy:
+#     image: jwilder/nginx-proxy
+#     container_name: nginx-proxy
+#     ports:
+#       - "80:80"
+#       - "443:443"
+#     volumes:
+#       - html:/usr/share/nginx/html
+#       - dhparam:/etc/nginx/dhparam
+#       - vhost:/etc/nginx/vhost.d
+#       - certs:/etc/nginx/certs:ro
+#       - /var/run/docker.sock:/tmp/docker.sock:ro
+#     labels:
+#       - "com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy"
+
+#   letsencrypt:
+#     image: jrcs/letsencrypt-nginx-proxy-companion
+#     container_name: nginx-proxy-lets-encrypt
+#     depends_on:
+#       - nginx-proxy
+#     volumes:
+#       - certs:/etc/nginx/certs:rw
+#       - vhost:/etc/nginx/vhost.d
+#       - html:/usr/share/nginx/html
+#       - /var/run/docker.sock:/var/run/docker.sock:ro
+
+# volumes:
+#   certs:
+#   html:
+#   vhost:
+#   dhparam:
+
+version: '2'
+
+services:
+
+  ghost:
+    image: ghost:latest
+    restart: always
+    environment:
+      database__client: ${database__client}
+      database__connection__host: ${database__connection__host}
+      database__connection__user: ${database__connection__user}
+      database__connection__password: ${database__connection__password}
+      database__connection__database: ${database__connection__database}
+      mail__from: ${mail__from}
+      mail__transport: ${mail__transport}
+      mail__options__host: ${mail__options__host}
+      mail__options__port: ${mail__options__port}
+      mail__options__service: ${mail__options__service}
+      mail__options__auth__user: ${mail__options__auth__user}
+      mail__options__auth__pass: ${mail__options__auth__pass}
+      NODE_ENV: ${NODE_ENV}
+      url: ${url}
+      VIRTUAL_HOST: blog.softup.co
+      LETSENCRYPT_HOST: blog.softup.co
+      LETSENCRYPT_EMAIL: info@softup.co
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "/etc/nginx/vhost.d"
+      - "/usr/share/nginx/html"
+      - "/var/run/docker.sock:/tmp/docker.sock:ro"
+      - "/etc/nginx/certs"
+
+  letsencrypt-nginx-proxy-companion:
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    volumes_from:
+      - "nginx-proxy"

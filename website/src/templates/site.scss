@@ -1,18 +1,35 @@
 .bodyTitleDiv {
   align-items: center;
   font-family: Comfortaa, sans-serif;
-  font-size: 2rem;
   display: grid;
-  grid-template-columns: minmax(30px, 1fr) minmax(max-content, 1000px) minmax(30px, 1fr);
-  height: 15vh;
-  padding-bottom: 2vh;
+  grid-template-columns: minmax(30px, 1fr) minmax(max-content, 1000px) minmax(
+      30px,
+      1fr
+    );
+  height: 40vh;
+  font-size: 80px;
+  border-bottom: solid 1px #333333;
+
   .title {
     color: #ffffff;
-    text-decoration: underline;
-    text-decoration-color: #19a0ff;
     grid-column-start: 2;
+    padding-bottom: 40px;
+    width: fit-content;
+    position: relative;
   }
-  border-bottom: solid 1px #333333;
+
+  .title::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background: #19a0ff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 1px solid #19a0ff;
+    border-radius: 2px;
+  }
 }
 
 .pageTemplate {
@@ -22,9 +39,17 @@
   padding-bottom: 10vh;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .bodyTitleDiv {
-    height: 25vh;
-    font-size: 3rem;
+    height: 12vh;
+    font-size: 2rem;
+
+    .title {
+      padding-bottom: 10px;
+    }
+
+    .title::after {
+      height: 3px;
+    }
   }
 }

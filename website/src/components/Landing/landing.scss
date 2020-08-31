@@ -1,7 +1,7 @@
 .landing {
   height: 100vh;
   display: grid;
-  grid-template-rows: 30% 40% 30%;
+  // grid-template-rows: 30% 40% 30%;
 }
 
 .menuHeader {
@@ -15,9 +15,9 @@
 }
 
 .logoIcon {
-  min-width: 60px;
-  max-width: 70px;
-  max-height: 70px;
+  min-width: 100px;
+  max-width: 100px;
+  max-height: 100px;
   margin: 10px;
   justify-self: center;
   grid-row-start: 1;
@@ -49,13 +49,14 @@
 }
 
 .sloganTitle {
-  letter-spacing: 1.05pt;
+  // letter-spacing: 1.05pt;
   text-align: center;
   font-family: Comfortaa, sans-serif;
-  font-size: calc(3rem + 1.8vw);
+  font-size: calc(3rem + 1vw);
   font-weight: bold;
   line-height: 1;
   color: #ffffff;
+  margin-bottom: 0;
 }
 
 .point {
@@ -75,7 +76,7 @@
   text-align: center;
   font-family: Comfortaa, sans-serif;
   font-weight: 300;
-  font-size: calc(1.5rem);
+  font-size: 1.4rem;
   line-height: 1.2;
   color: #aaaaaa;
 }

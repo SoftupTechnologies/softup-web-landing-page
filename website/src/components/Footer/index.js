@@ -41,7 +41,7 @@ export const Footer = () => {
             <Link to={"/portfolio"}>Portfolio</Link>
           </div>
           <div className="item">
-            <Link to={"https://medium.com/softup-technologies"}>Blog</Link>
+            <Link to={"https://blog.softup.co"}>Blog</Link>
           </div>
           <div className="item">
             Join us&nbsp;&ndash;

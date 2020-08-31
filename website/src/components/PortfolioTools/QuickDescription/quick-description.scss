@@ -1,22 +1,28 @@
 .quickDescriptionDiv {
-    padding-top: calc(1vw + 1vh);;
-    grid-template-rows: auto;
-    font-family: Comfortaa, sans-serif;
-    color: #ffffff;
+  padding-top: calc(1vw + 9vh);
+  grid-template-rows: auto;
+  font-family: Comfortaa, sans-serif;
+  color: #ffffff;
 
-    .title {
-        padding-top: calc(2vw + 2vh);
-        padding-bottom: calc(1vw + 2vh);
-        grid-column-start: 2;
-        font-size: calc(1.2rem + 1.2vw);
-        white-space: nowrap;
-    }
+  .title {
+    padding-top: calc(4vw + 4vh);
+    padding-bottom: calc(1vw + 2vh);
+    grid-column-start: 2;
+    font-size: calc(1.2rem + 1.2vw);
+    white-space: nowrap;
+  }
 
-    .description {
-        padding-top: 10px;
-        color: #7d7d7d;
-        grid-column-start: 2;
-        flex: 1;
-        height: max-content;
-    }
+  .description {
+    padding-top: 10px;
+    color: #7d7d7d;
+    grid-column-start: 2;
+    flex: 1;
+    height: max-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .quickDescriptionDiv {
+    padding-top: calc(1vw + 1vh);
+  }
 }
