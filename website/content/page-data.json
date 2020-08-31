@@ -463,7 +463,7 @@
                 "component": "paragraphAndImage",
                 "data": {
                   "title": "Time Tracking",
-                  "imageName": "enterprise-tools/time-tracking.png",
+                  "imageName": "enterprise-tools/time-tracking.jpg",
                   "imagePosition": "left",
                   "content": [
                     {
@@ -477,7 +477,7 @@
                 "component": "paragraphAndImage",
                 "data": {
                   "title": "Absence Management",
-                  "imageName": "enterprise-tools/leave-request.png",
+                  "imageName": "enterprise-tools/leave-request.jpg",
                   "imagePosition": "right",
                   "content": [
                     {
@@ -491,7 +491,7 @@
                 "component": "paragraphAndImage",
                 "data": {
                   "title": "Invoices",
-                  "imageName": "enterprise-tools/invoices.png",
+                  "imageName": "enterprise-tools/invoices.jpg",
                   "imagePosition": "left",
                   "content": [
                     {
@@ -505,7 +505,7 @@
                 "component": "paragraphAndImage",
                 "data": {
                   "title": "Analytics",
-                  "imageName": "enterprise-tools/analytics.png",
+                  "imageName": "enterprise-tools/analytics.jpg",
                   "imagePosition": "right",
                   "content": [
                     {
