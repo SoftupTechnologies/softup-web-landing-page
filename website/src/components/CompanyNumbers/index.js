@@ -42,4 +42,4 @@ CompanyNumber.propTypes = {
   category: PropTypes.string,
 };
 
-// Test commit
+// Test commit!
