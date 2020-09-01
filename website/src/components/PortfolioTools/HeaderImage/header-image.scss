@@ -1,19 +1,8 @@
-.headerImageDiv {
-  max-height: 500px;
-  // display: grid;
-  //grid-template-columns:  minmax(50px, 1fr) minmax(0, 1000px) minmax(50px, 1fr);
-}
-
 .headerImage {
   max-height: 500px;
-  //grid-column-start: 2;
 }
 
 @media (max-width: 768px) {
-  .headerImageDiv {
-    max-height: 400px;
-  }
-
   .headerImage {
     max-height: 400px;
   }

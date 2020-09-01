@@ -5,10 +5,8 @@ import PropTypes from "prop-types";
 
 export const HeaderImage = ({ data }) => {
   return (
-    <div className={"headerImageDiv"}>
-      <div className={"headerImage"}>
-        <Image filename={data.imageFileName} />
-      </div>
+    <div className="headerImage">
+      <Image filename={data.imageFileName} />
     </div>
   );
 };
