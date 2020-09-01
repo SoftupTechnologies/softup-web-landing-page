@@ -46,7 +46,13 @@
     padding-top: 4vh;
     .title {
       width: 100px;
+      min-width: 100px;
       padding: 5px;
+    }
+    .content {
+      .description {
+        font-size: 35px;
+      }
     }
   }
 }
