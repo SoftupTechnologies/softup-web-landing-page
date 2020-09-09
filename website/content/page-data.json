@@ -1185,10 +1185,196 @@
     ]
   },
   {
-    "link": "https://www.notion.so/Ready-for-a-Challenge-78fa9cdfe3774736bbd848a91419ac6e",
+    "link": "/career",
     "menu": true,
     "number": "05",
     "title": "career.",
+    "content": [
+      {
+        "component": "horizontalTabs",
+        "data": [
+          {
+            "tabName": "who are we?",
+            "slug": "who-we-are",
+            "content": [
+              {
+                "component": "numberedParagraph",
+                "data": [
+                  {
+                    "title": "Yesterday",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "In 2016, our tech co-founder Kristi was working for various remote clients (USA, UK) as Software Engineer. While thousands of km away, Daniel was struggling to find a tech co-founder for his business idea.\n After a summer re-union, they got together & realised that they could help a lot of startups & entrepreneurs worldwide to launch their ideas in the market by exposing the local talent of developers to the international market. "
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Today",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "We are a team of 15 tech enthusiast who work tirelessly to build amazing digital products. Even though we have grown significantly in the last year, this is **only the beginning**."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Tomorrow",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Our vision is to create opportunities for the untapped local talent by connecting them with exciting projects worldwide."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tabName": "why join \n us?",
+            "slug": "why-join-us",
+            "content": [
+              {
+                "component": "numberedParagraph",
+                "data": [
+                  {
+                    "title": "Defined career path",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Before you join us, you will have a defined career path. You will know what you need to achieve and what to expect in terms of technical skills, leadership skills and salary."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Competitive salary",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "We hire only top performers and that's why pay high salaries!"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Opportunities",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "In fast-growing environments, you have the opportunity to get more responsibilities."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Cool office",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Our office space is cool, but when you feel to do home-office, that is fine as well :)"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Gadgets",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "You will get the latest MacBook Pro and whatever tech gadget you need."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Continuous Learning",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Whatever helps you to grow, we'll support you. Books, workshops, conferences, you name it."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Travelling",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Our clients might require you to meet them on-site (ie for on-boarding sessions)."
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tabName": "our interview #insertnewline#process.",
+            "slug": "our-interview-process",
+            "content": [
+              {
+                "component": "quickDescription",
+                "data": {
+                  "no_padding": true,
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "Since transparency is one of our most important values, we have applied it to our interview process. Below, you will find the quick and easy steps that make up our interview process:"
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "numberedParagraph",
+                "data": [
+                  {
+                    "title": "HR Call",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "This phase is a get-to-know phase, where you will learn more about us and we will learn more about you. It doesn't last more than 30 minutes. After the call, if we think that we might be a good fit, we will send you a technical task to evaluate your coding style/capabilities. The technical task should not last more than 4 hours."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Technical Interview",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "Interview is done on our HQ office in Tirana or remote. Be prepared to book 1 - 3 hours. It will consist of:"
+                      },
+                      {
+                        "component": "markdownDisplay",
+                        "data": "- Technical questions to learn more about your technical skills.\n - Algorithmic questions.\n - Implementation of a use-case."
+                      }
+                    ]
+                  },
+                  {
+                    "title": "Final Interview",
+                    "content": [
+                      {
+                        "component": "markdownDisplay",
+                        "data": "The final step of the interview process is done with one of our partners (or both). It will be done on Skype and it should last up to 2 hours."
+                      }
+                    ]
+                  }
+                  
+                ]
+              },
+              {
+                "component": "quickDescription",
+                "data": {
+                  "no_padding": true,
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "We value your time and commitment you show to get to know us, that is why we are very flexible toward your availability for interviews. The whole process, from introduction to the final offer, lasts **3 weeks** in total."
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
     "accordionContent": {
       "description": "Ready for a Challenge? We are glad that you are interested to learn more about opportunities that we have at Softup Technologies. We are growing pretty fast, and we need your help. You can start by learning more about who we are.",
       "content": [
@@ -1196,19 +1382,15 @@
           "component": "slideLinks",
           "data": [
             {
-              "link": "https://www.notion.so/Who-are-we-3dd9374b683d49f0858bdcd8eea55de9",
+              "link": "/career#who-we-are",
               "name": "WHO WE ARE?"
             },
             {
-              "link": "https://www.notion.so/Technology-Stack-5b870086e876460bba0f4f09f3e6d009",
-              "name": "TECHNOLOGY STACK"
-            },
-            {
-              "link": "https://www.notion.so/Benefits-Why-join-us-c4074149161e4fc7a9573588c1aca07e",
+              "link": "/career#why-join-us",
               "name": "BENEFITS - WHY JOIN US?"
             },
             {
-              "link": "https://www.notion.so/Our-interview-process-39aa5fb136704bde9e81911409f71be5",
+              "link": "/career#our-interview-process",
               "name": "OUR INTERVIEW PROCESS"
             },
             {
