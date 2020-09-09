@@ -1228,6 +1228,15 @@
                     ]
                   }
                 ]
+              },
+              {
+                "component": "button",
+                "data": {
+                  "link": "https://www.notion.so/Open-job-positions-216572e2b7134ccd95520d066b8d5f76",
+                  "align": "center",
+                  "value": "SEE OPEN POSITIONS",
+                  "openInNewPage": true
+                }
               }
             ]
           },
@@ -1302,6 +1311,15 @@
                     ]
                   }
                 ]
+              },
+              {
+                "component": "button",
+                "data": {
+                  "link": "https://www.notion.so/Open-job-positions-216572e2b7134ccd95520d066b8d5f76",
+                  "align": "center",
+                  "value": "SEE OPEN POSITIONS",
+                  "openInNewPage": true
+                }
               }
             ]
           },
@@ -1319,6 +1337,12 @@
                       "data": "Since transparency is one of our most important values, we have applied it to our interview process. Below, you will find the quick and easy steps that make up our interview process:"
                     }
                   ]
+                }
+              },
+              {
+                "component": "namedDivider",
+                "data": {
+                  "title": "INTERVIEW"
                 }
               },
               {
@@ -1359,15 +1383,12 @@
                 ]
               },
               {
-                "component": "quickDescription",
+                "component": "button",
                 "data": {
-                  "no_padding": true,
-                  "content": [
-                    {
-                      "component": "markdownDisplay",
-                      "data": "We value your time and commitment you show to get to know us, that is why we are very flexible toward your availability for interviews. The whole process, from introduction to the final offer, lasts **3 weeks** in total."
-                    }
-                  ]
+                  "link": "https://www.notion.so/Open-job-positions-216572e2b7134ccd95520d066b8d5f76",
+                  "align": "center",
+                  "value": "SEE OPEN POSITIONS",
+                  "openInNewPage": true
                 }
               }
             ]
