@@ -17,14 +17,14 @@ export const Button = ({ data }) => {
       {data.align === "center" ? (
         <div className="displayWithGrid">
           <div className="buttonDiv align-center">
-            <a href={data.link}>{data.value}</a>
+            <a href={data.link} {...newTabProps}>{data.value}</a>
           </div>
         </div>
       ) : (
-        <div className="buttonDiv">
-          <a href={data.link} { ...newTabProps }>{data.value}</a>
-        </div>
-      )}
+          <div className="buttonDiv">
+            <a href={data.link} {...newTabProps}>{data.value}</a>
+          </div>
+        )}
     </form>
   );
 };
