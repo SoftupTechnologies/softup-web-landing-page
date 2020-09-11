@@ -22,6 +22,13 @@ jobs:
           npm install
           npm run build
 
+      - name: Deploy web content
+        uses: reggionick/s3-deploy@v2
+        with:
+          folder: build
+          bucket: ${{ secrets.S3_BUCKET }}
+          dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+
       - name: CDK Diff web stack
         uses: udondan/cdk-nodejs@v0.3.1
         with:
