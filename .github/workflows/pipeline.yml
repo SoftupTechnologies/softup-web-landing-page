@@ -28,7 +28,7 @@ jobs:
       - name: Deploy web content
         uses: reggionick/s3-deploy@v2
         with:
-          folder: public
+          folder: website/public
           bucket: ${{ secrets.S3_BUCKET }}
           dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
           invalidation: /
