@@ -9,7 +9,10 @@ on:
 jobs:
   infrastructure-deployment:
     runs-on: ubuntu-latest
-
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -28,6 +31,8 @@ jobs:
           folder: public
           bucket: ${{ secrets.S3_BUCKET }}
           dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          invalidation: /
+          delete-removed: true
 
       - name: CDK Diff web stack
         uses: udondan/cdk-nodejs@v0.3.1
