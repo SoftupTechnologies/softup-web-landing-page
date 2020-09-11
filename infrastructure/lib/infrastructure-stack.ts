@@ -16,13 +16,6 @@ export class InfrastructureStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props)
 
-    const websiteBucket = s3.Bucket.fromBucketName(this, 'SoftupBucket', 'softup.co');
-
-    new s3Deployment.BucketDeployment(this, "deployStaticWebsite", {
-      sources: [s3Deployment.Source.asset("../website/public")],
-      destinationBucket: websiteBucket
-    })
-
     const formSubmitFunction = new Function(this, "formSubmitFunction", {
       runtime: Runtime.NODEJS_12_X,
       handler: "index.handler",

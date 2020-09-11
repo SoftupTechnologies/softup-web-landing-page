@@ -17,17 +17,18 @@ export const ContactUs = () => {
         phone: "",
       }}
       onSubmit={async (values, actions) => {
+        console.log(values);
         try {
           actions.setStatus({ success: false, started: true, ended: false })
           const resp = await fetch(
-            "https://s67z3we37e.execute-api.eu-central-1.amazonaws.com/prod/",
+            "https://dfqbuvatoh.execute-api.eu-central-1.amazonaws.com/prod/",
             {
               method: "POST",
               headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify(values),
+              body: values,
             }
           )
           if (resp.status !== 200) {
@@ -38,6 +39,7 @@ export const ContactUs = () => {
           await timeout(2000)
           actions.resetForm()
         } catch (e) {
+          console.log(e);
           actions.setStatus({ error: true, message: e, ended: true })
           await timeout(3000)
         }
