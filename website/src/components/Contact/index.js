@@ -83,7 +83,6 @@ export const ContactUs = () => {
             }
           >
             <span style={{ textAlign: "center" }}>
-              <p>Thanks for your message.</p>
               <p>Well get back to you within 48 hours.</p>
             </span>
           </div>
