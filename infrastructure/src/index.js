@@ -27,7 +27,7 @@ exports.handler = async (event, context) => {
 
     const params = {
       Destination: {
-        ToAddresses: ["info@softup.co"]
+        ToAddresses: ["klajdi.budlla@softup.co"]
       },
       Message: {
         Body: {
@@ -48,8 +48,6 @@ exports.handler = async (event, context) => {
 
     const data = await sendPromise
 
-    console.log(data)
-
     return {
       statusCode: 200,
       headers: {
@@ -58,7 +56,6 @@ exports.handler = async (event, context) => {
       }
     }
   } catch (e) {
-    console.log(e)
     return {
       statusCode: 500,
       headers: {
