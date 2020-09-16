@@ -28,7 +28,7 @@ export const ContactUs = () => {
                 Accept: "application/json",
                 "Content-Type": "application/json",
               },
-              body: values,
+              body: JSON.stringify(values),
             }
           )
           if (resp.status !== 200) {

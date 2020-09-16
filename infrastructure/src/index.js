@@ -2,8 +2,7 @@ const AWS = require("aws-sdk")
 
 exports.handler = async (event, context) => {
   try {
-    console.log(event)
-    const info = event.body;
+    const info = JSON.parse(event.body);
 
     const htmlBody = `
     <!DOCTYPE html>
@@ -27,7 +26,7 @@ exports.handler = async (event, context) => {
 
     const params = {
       Destination: {
-        ToAddresses: ["klajdi.budlla@softup.co"]
+        ToAddresses: ["info@softup.co"]
       },
       Message: {
         Body: {
@@ -48,6 +47,8 @@ exports.handler = async (event, context) => {
 
     const data = await sendPromise
 
+    console.log(data)
+
     return {
       statusCode: 200,
       headers: {
@@ -56,6 +57,7 @@ exports.handler = async (event, context) => {
       }
     }
   } catch (e) {
+    console.log(e)
     return {
       statusCode: 500,
       headers: {
