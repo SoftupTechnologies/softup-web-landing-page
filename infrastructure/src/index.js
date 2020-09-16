@@ -2,8 +2,7 @@ const AWS = require("aws-sdk")
 
 exports.handler = async (event, context) => {
   try {
-    console.log(event)
-    const info = event.body;
+    const info = JSON.parse(event.body);
 
     const htmlBody = `
     <!DOCTYPE html>

@@ -28,7 +28,7 @@ export const ContactUs = () => {
                 Accept: "application/json",
                 "Content-Type": "application/json",
               },
-              body: values,
+              body: JSON.stringify(values),
             }
           )
           if (resp.status !== 200) {
@@ -85,7 +85,7 @@ export const ContactUs = () => {
             }
           >
             <span style={{ textAlign: "center" }}>
-              <p>Well get back to you within 48 hours.</p>
+              <p>We will get back to you within 48 hours!</p>
             </span>
           </div>
           <div
