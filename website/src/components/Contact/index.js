@@ -85,7 +85,7 @@ export const ContactUs = () => {
             }
           >
             <span style={{ textAlign: "center" }}>
-              <p>Well get back to you within 48 hours.</p>
+              <p>We will get back to you within 48 hours!</p>
             </span>
           </div>
           <div
