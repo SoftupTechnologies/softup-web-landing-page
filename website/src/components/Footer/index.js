@@ -50,7 +50,7 @@ export const Footer = () => {
                 "https://www.notion.so/Ready-for-a-Challenge-78fa9cdfe3774736bbd848a91419ac6e"
               }
             >
-              &nbsp;We&#39;re hiring!
+              <span>&nbsp;We&#39;re hiring!</span>
             </Link>
           </div>
         </div>
