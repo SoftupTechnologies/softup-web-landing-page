@@ -32,13 +32,29 @@
       .separatorMd {
         border-top: 1px solid #7d7d7d;
         max-width: 100px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
       }
       .mdContent {
+        line-height: 17px;
+        font-size: 13px;
         color: #7d7d7d;
-        font-size: 12px;
         max-width: 400px;
+        ul {
+          list-style-type: none;
+        }
+
+        ul li:before {
+          content: '\002D';
+          position: absolute;
+          margin-left: -10px;
+        }
+        ul {
+          margin: 0 0 1rem 0.6rem;
+        }
+        li {
+          margin-bottom: 0;
+        }
       }
     }
 
