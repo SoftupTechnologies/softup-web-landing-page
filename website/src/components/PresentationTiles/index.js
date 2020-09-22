@@ -32,6 +32,7 @@ PresentationTiles.propTypes = {
     PropTypes.shape({
       iconFilename: PropTypes.string,
       title: PropTypes.string,
+      link: PropTypes.string,
       description: PropTypes.string,
     })
   ),
