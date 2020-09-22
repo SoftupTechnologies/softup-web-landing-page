@@ -18,6 +18,7 @@ import { PrivacyPolicy } from "./PrivacyPolicy";
 import { Imprint } from "./Imprint";
 import { MarkdownDisplay } from "./MarkdownDisplay";
 import { Button } from "./Button";
+import { PresentationTilesMd } from "./PresentationTilesMd";
 
 export const formatNumber = num => {
   const stringNum = parseInt(num, 10).toString();
@@ -33,6 +34,7 @@ let componentContainer = {
   normalParagraph: NormalParagraph,
   slideLinks: SlideLinks,
   presentationTiles: PresentationTiles,
+  presentationTilesMarkdown: PresentationTilesMd,
   headerImage: HeaderImage,
   quickDescription: QuickDescription,
   namedDivider: NamedDivider,
