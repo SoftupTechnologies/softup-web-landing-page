@@ -275,107 +275,47 @@
     },
     "content": [
       {
-        "component": "normalParagraph",
+        "component": "presentationTilesMarkdown",
         "data": [
           {
-            "title": "Web",
-            "content": [
-              {
-                "component": "markdownDisplay",
-                "data": "- Typescript _(or JS when 'forced')_\n - React\n - Apollo Client (<3 GraphQL)\n - Less Redux, more Context API + Hooks\n - Webpack\n - SASS, CSS, LESS..."
-              }
-            ]
+            "title": "WEB",
+            "markdown": "- Typescript (or JS when 'forced')\n- React\n- Apollo Client (<3 GraphQL)\n- Less Redux, more Context API + Hooks\n- Webpack\n- SASS, CSS, LESS...\n"
           },
           {
-            "title": "Mobile",
-            "content": [
-              {
-                "component": "markdownDisplay",
-                "data": "- React Native with Typescript\n - Swift or Kotlin\n - Fastlane\n - Testflight\n - Expo"
-              }
-            ]
+            "title": "MOBILE",
+            "markdown": "- React Native with Typescript\n- Swift or Kotlin\n- Fastlane\n- Testflight\n- Expo"
           },
           {
-            "title": "Backend",
-            "content": [
-              {
-                "component": "markdownDisplay",
-                "data": "- Node.JS with Typescript\n - GraphQL\n - Apollo Server\n - Swagger for documentation\n - Ruby on Rails\n - C# & .NET Core\n - PHP"
-              }
-            ]
+            "title": "BACKEND",
+            "markdown": "- Node.JS with Typescript\n- GraphQL\n- Apollo Server\n- Swagger for documentation\n- Ruby on Rails\n- C# & .NET Core\n- PHP"
           },
           {
-            "title": "Data Storage",
-            "content": [
-              {
-                "component": "markdownDisplay",
-                "data": "- SQL (PostgreSQL, MySQL, MSSQL)\n - NoSQL (MongoDB, DynamoDB)\n - Caching (Redis)\n - Elasticsearch"
-              }
-            ]
+            "title": "DATA STORAGE",
+            "markdown": "- SQL (PostgreSQL, MySQL, MSSQL)\n- NoSQL (MongoDB, DynamoDB)\n- Caching (Redis)\n- Elasticsearch"
           },
           {
-            "title": "Testing",
-            "content": [
-              {
-                "component": "markdownDisplay",
-                "data": "- Depends on programming language / framework - but we write tests! That's how we ensure maintanability and longevity of our products."
-              }
-            ]
+            "title": "TESTING",
+            "markdown": "Depends on programming language /\nframework - but we write tests! That's\nhow we ensure maintainability and\nlongevity of our products.\n"
           },
           {
-            "title": "Architecture",
-            "content": [
-              {
-                "component": "markdownDisplay",
-                "data": "- Monolith (small projects)\n - Microservices\n - Function as a Service AKA Serverless :)"
-              }
-            ]
+            "title": "ARCHITECTURE",
+            "markdown": "- Monolith (small projects)\n- Microservices\n- Function as a Service AKA Serverless :)"
           },
           {
-            "title": "Monitoring & Logging",
-            "content": [
-              {
-                "component": "markdownDisplay",
-                "data": "- Grafana\n - Prometheus\n - Datadog\n - Sentry\n - Cloudwatch\n - List goes on..."
-              }
-            ]
+            "title": "MONITORING & LOGGING",
+            "markdown": "- Grafana\n- Prometheus\n- Datadog\n- Sentry\n- Cloudwatch\n- List goes on..."
           },
           {
-            "title": "Infrastructure",
-            "slug": "infrastructure",
-            "content": [
-              {
-                "component": "markdownDisplay",
-                "data": "- AWS, AWS, AWS (container based or serverless)\n - Digitalocean, Heroku\n - Local machine. What? No!"
-              }
-            ]
+            "title": "INFRASTRUCTURE",
+            "markdown": "- AWS, AWS, AWS (container based\nor serverless)\n- Digitalocean, Heroku\n- Local machine. What? No!"
           },
           {
-            "title": "Orchestration",
-            "content": [
-              {
-                "component": "markdownDisplay",
-                "data": "- Docker with Docker-Compose on AWS EC2\n - Docker on AWS ECS"
-              }
-            ]
+            "title": "ORCHESTRATION",
+            "markdown": "- Docker with Docker-Compose\non AWS EC2\n- Docker on AWS ECS"
           },
           {
-            "title": "Collaboration",
-            "content": [
-              {
-                "component": "markdownDisplay",
-                "data": "- Bitbucket\n - Slack\n - JIRA / Trello\n - You name it..."
-              }
-            ]
-          },
-          {
-            "title": "CI / CD",
-            "content": [
-              {
-                "component": "markdownDisplay",
-                "data": "- Bitbucket Pipelines\n - Github Actions\n - CircleCI"
-              }
-            ]
+            "title": "COLLABORATION",
+            "markdown": "- Bitbucket\n- Slack\n- JIRA / Trello\n- You name it..."
           }
         ]
       }
@@ -759,7 +699,12 @@
                   {
                     "title": "TECHNOLOGIES",
                     "type": "list",
-                    "items": ["AWS", "React", "Node.js", "Firebase"]
+                    "items": [
+                      "AWS",
+                      "React",
+                      "Node.js",
+                      "Firebase"
+                    ]
                   },
                   {
                     "title": "INCREASE IN BETA USERS",
@@ -872,12 +817,19 @@
                   {
                     "title": "WHAT WE DID",
                     "type": "list",
-                    "items": ["Frontend Development", "UI / UX"]
+                    "items": [
+                      "Frontend Development",
+                      "UI / UX"
+                    ]
                   },
                   {
                     "title": "TECHNOLOGIES",
                     "type": "list",
-                    "items": ["React.JS", "SASS", "AWS S3"]
+                    "items": [
+                      "React.JS",
+                      "SASS",
+                      "AWS S3"
+                    ]
                   },
                   {
                     "title": "FIRST DRAFT",
@@ -1379,7 +1331,6 @@
                       }
                     ]
                   }
-                  
                 ]
               },
               {
