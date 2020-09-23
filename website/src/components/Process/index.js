@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import React from "react";
 import PropTypes from "prop-types";
 import "./process.scss";
-import {MarkdownDisplay} from "../MarkdownDisplay";
+import { MarkdownDisplay } from "../MarkdownDisplay";
 
 export const Process = ({ data }) => {
   const { t } = useTranslation();
@@ -24,9 +24,9 @@ export const Process = ({ data }) => {
                     </div>
                   </div>
                 </div>
-                  <div className="process-article-description">
-                      <MarkdownDisplay data={t(item.description)} />
-                  </div>
+                <div className="process-article-description">
+                  <MarkdownDisplay data={t(item.description)} />
+                </div>
               </div>
             </div>
           ))}

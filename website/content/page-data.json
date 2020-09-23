@@ -1268,9 +1268,10 @@
             "slug": "why-join-us",
             "content": [
               {
-                "component": "numberedParagraph",
+                "component": "iconParagraphs",
                 "data": [
                   {
+                    "iconFilename": "icons/rectangle-219.png",
                     "title": "Defined career path",
                     "content": [
                       {
@@ -1281,6 +1282,7 @@
                   },
                   {
                     "title": "Competitive salary",
+                    "iconFilename": "icons/rectangle-220.png",
                     "content": [
                       {
                         "component": "markdownDisplay",
@@ -1289,6 +1291,7 @@
                     ]
                   },
                   {
+                    "iconFilename": "icons/rectangle-221.png",
                     "title": "Opportunities",
                     "content": [
                       {
@@ -1298,6 +1301,7 @@
                     ]
                   },
                   {
+                    "iconFilename": "icons/rectangle-222.png",
                     "title": "Cool office",
                     "content": [
                       {
@@ -1307,6 +1311,7 @@
                     ]
                   },
                   {
+                    "iconFilename": "icons/rectangle-223.png",
                     "title": "Gadgets",
                     "content": [
                       {
@@ -1316,6 +1321,7 @@
                     ]
                   },
                   {
+                    "iconFilename": "icons/rectangle-224.png",
                     "title": "Continuous Learning",
                     "content": [
                       {
@@ -1325,6 +1331,7 @@
                     ]
                   },
                   {
+                    "iconFilename": "icons/rectangle-225.png",
                     "title": "Travelling",
                     "content": [
                       {
