@@ -19,6 +19,7 @@ import { Imprint } from "./Imprint";
 import { MarkdownDisplay } from "./MarkdownDisplay";
 import { Button } from "./Button";
 import { PresentationTilesMd } from "./PresentationTilesMd";
+import { IconParagraphs } from "./IconParagraphs";
 
 export const formatNumber = num => {
   const stringNum = parseInt(num, 10).toString();
@@ -28,7 +29,7 @@ export const formatNumber = num => {
   return stringNum;
 };
 
-let componentContainer = {
+const componentContainer = {
   horizontalTabs: WideTabs,
   numberedParagraph: NumberedParagraph,
   normalParagraph: NormalParagraph,
@@ -49,6 +50,7 @@ let componentContainer = {
   imprint: Imprint,
   markdownDisplay: MarkdownDisplay,
   button: Button,
+  iconParagraphs: IconParagraphs,
 };
 
 export const generateContent = pageContent => {

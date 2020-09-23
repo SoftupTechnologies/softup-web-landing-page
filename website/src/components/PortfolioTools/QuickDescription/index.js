@@ -5,9 +5,17 @@ import { generateContent } from "../../helpers";
 
 export const QuickDescription = ({ data }) => {
   return (
-    <div className={data.no_padding ?"quickDescriptionDiv displayWithGrid no-padding" :"quickDescriptionDiv displayWithGrid"}>
+    <div
+      className={
+        data.no_padding
+          ? "quickDescriptionDiv displayWithGrid no-padding"
+          : "quickDescriptionDiv displayWithGrid"
+      }
+    >
       {data.title && <div className={"title"}>{data.title}</div>}
-      <div className={data.no_padding ? "new-description" : "description" }>{generateContent(data.content)}</div>
+      <div className={data.no_padding ? "new-description" : "description"}>
+        {generateContent(data.content)}
+      </div>
     </div>
   );
 };

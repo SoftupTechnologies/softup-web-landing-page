@@ -647,6 +647,101 @@
             ]
           },
           {
+            "iconFilename": "portfolio/uptodate/logo.png",
+            "title": "uptodate Ventures GmbH",
+            "link": "/portfolio/uptodate",
+            "description": "We need someone yesterday",
+            "content": [
+              {
+                "component": "headerImage",
+                "data": {
+                  "imageFileName": "portfolio/uptodate/uptodate-web.jpg"
+                }
+              },
+              {
+                "component": "quickDescription",
+                "data": {
+                  "title": "Intro",
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "uptodate is an e-commerce smart devices platform for your smart home. The enterprise uses different tools for managing the business, from e-commerce shop provider to warehouse management for handling operations, supply chain etc. As business grew, the team needed a simple way to have clear metrics about the business health, progress and goals."
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "namedDivider",
+                "data": {
+                  "title": "CLIENT"
+                }
+              },
+              {
+                "component": "clientName",
+                "data": {
+                  "name": "uptodate Ventures GmbH",
+                  "iconFileName": "portfolio/uptodate/logo.png"
+                }
+              },
+              {
+                "component": "namedDivider",
+                "data": {
+                  "title": "THE CHALLENGE"
+                }
+              },
+              {
+                "component": "commonParagraph",
+                "data": {
+                  "type": "list",
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "uptodate was struggling to hit their targets as the original platform was built on technology that was not scalable."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "They had been looking for months for experts to bring onboard to solve these problems and they had a few good leads, they could simply not wait for their notice period in order to start."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "That is when they turned their attention to Softup. Our team has deep knowledge in cloud technologies along with experience in building complex scalable products. We assigned one of our software developers to join the uptodate tech team onsite for a period of 6 months. The extended team helped uptodate reach their target goals required within first 3 months, and eventually the planned investment round went through successfully."
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "namedDivider",
+                "data": {
+                  "title": "THE SOLUTION"
+                }
+              },
+              {
+                "component": "commonParagraph",
+                "data": {
+                  "type": "list",
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "The solution relies completely on Amazon Web Services, where we used different services such as Lambda (>40 functions), API Gateway, SQS, RDS, DynamoDB, Cloudwatch etc. For infrastructure provisioning we used Cloudformation. CI / CD we used Bitbucket pipelines. Lambda functions were written all in Typescript. To display beautiful charts and metrics we used Grafana."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "We also implemented different internal application that served different functionalities. For example, we implemented a product information management that is used to enrich product related data points. Tech stack used is React.JS for building the frontend and GraphQL for the backend. The frontend is stored in AWS S3 and served through Cloudfront CDN. Backend is implemented as a GraphQL lambda function. To handle authentication and authorization we decided to give AWS Cognito a try. To provide authentication for our clients and lambda functions we used two authentication flows: Client Side Authentication Flow and Server Side Authentication Flow."
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "button",
+                "data": {
+                  "link": "/portfolio",
+                  "value": "PROJECTS",
+                  "align": "center"
+                }
+              }
+            ]
+          },
+          {
             "iconFilename": "portfolio/cleu/logo.png",
             "title": "CLEU",
             "link": "/portfolio/cleu",
@@ -699,12 +794,7 @@
                   {
                     "title": "TECHNOLOGIES",
                     "type": "list",
-                    "items": [
-                      "AWS",
-                      "React",
-                      "Node.js",
-                      "Firebase"
-                    ]
+                    "items": ["AWS", "React", "Node.js", "Firebase"]
                   },
                   {
                     "title": "INCREASE IN BETA USERS",
@@ -817,19 +907,12 @@
                   {
                     "title": "WHAT WE DID",
                     "type": "list",
-                    "items": [
-                      "Frontend Development",
-                      "UI / UX"
-                    ]
+                    "items": ["Frontend Development", "UI / UX"]
                   },
                   {
                     "title": "TECHNOLOGIES",
                     "type": "list",
-                    "items": [
-                      "React.JS",
-                      "SASS",
-                      "AWS S3"
-                    ]
+                    "items": ["React.JS", "SASS", "AWS S3"]
                   },
                   {
                     "title": "FIRST DRAFT",
@@ -1150,36 +1233,24 @@
             "slug": "who-we-are",
             "content": [
               {
-                "component": "numberedParagraph",
-                "data": [
-                  {
-                    "title": "Yesterday",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "In 2016, our tech co-founder Kristi was working for various remote clients (USA, UK) as Software Engineer. While thousands of km away, Daniel was struggling to find a tech co-founder for his business idea.\n After a summer re-union, they got together & realised that they could help a lot of startups & entrepreneurs worldwide to launch their ideas in the market by exposing the local talent of developers to the international market. "
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Today",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "We are a team of 15 tech enthusiast who work tirelessly to build amazing digital products. Even though we have grown significantly in the last year, this is **only the beginning**."
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Tomorrow",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "Our vision is to create opportunities for the untapped local talent by connecting them with exciting projects worldwide."
-                      }
-                    ]
-                  }
-                ]
+                "component": "process",
+                "data": {
+                  "title": "Yesterday",
+                  "items": [
+                    {
+                      "title": "yesterday",
+                      "description": "In 2016, our tech co-founder Kristi was working for various remote clients (USA, UK) as Software Engineer. While thousands of km away, Daniel was struggling to find a tech co-founder for his business idea.\n After a summer re-union, they got together & realised that they could help a lot of startups & entrepreneurs worldwide to launch their ideas in the market by exposing the local talent of developers to the international market. "
+                    },
+                    {
+                      "title": "today",
+                      "description": "We are a team of 15 tech enthusiast who work tirelessly to build amazing digital products. Even though we have grown significantly in the last year, **this is only the beginning**."
+                    },
+                    {
+                      "title": "tomorrow",
+                      "description": "Our vision is to create opportunities for the untapped local talent by connecting them with exciting projects worldwide."
+                    }
+                  ]
+                }
               },
               {
                 "component": "button",
@@ -1197,9 +1268,10 @@
             "slug": "why-join-us",
             "content": [
               {
-                "component": "numberedParagraph",
+                "component": "iconParagraphs",
                 "data": [
                   {
+                    "iconFilename": "icons/rectangle-219.png",
                     "title": "Defined career path",
                     "content": [
                       {
@@ -1210,6 +1282,7 @@
                   },
                   {
                     "title": "Competitive salary",
+                    "iconFilename": "icons/rectangle-220.png",
                     "content": [
                       {
                         "component": "markdownDisplay",
@@ -1218,6 +1291,7 @@
                     ]
                   },
                   {
+                    "iconFilename": "icons/rectangle-221.png",
                     "title": "Opportunities",
                     "content": [
                       {
@@ -1227,6 +1301,7 @@
                     ]
                   },
                   {
+                    "iconFilename": "icons/rectangle-222.png",
                     "title": "Cool office",
                     "content": [
                       {
@@ -1236,6 +1311,7 @@
                     ]
                   },
                   {
+                    "iconFilename": "icons/rectangle-223.png",
                     "title": "Gadgets",
                     "content": [
                       {
@@ -1245,6 +1321,7 @@
                     ]
                   },
                   {
+                    "iconFilename": "icons/rectangle-224.png",
                     "title": "Continuous Learning",
                     "content": [
                       {
@@ -1254,6 +1331,7 @@
                     ]
                   },
                   {
+                    "iconFilename": "icons/rectangle-225.png",
                     "title": "Travelling",
                     "content": [
                       {
