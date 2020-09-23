@@ -647,6 +647,101 @@
             ]
           },
           {
+            "iconFilename": "portfolio/uptodate/logo.png",
+            "title": "uptodate Ventures GmbH",
+            "link": "/portfolio/uptodate",
+            "description": "We need someone yesterday",
+            "content": [
+              {
+                "component": "headerImage",
+                "data": {
+                  "imageFileName": "portfolio/uptodate/uptodate-web.jpg"
+                }
+              },
+              {
+                "component": "quickDescription",
+                "data": {
+                  "title": "Intro",
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "uptodate is an e-commerce smart devices platform for your smart home. The enterprise uses different tools for managing the business, from e-commerce shop provider to warehouse management for handling operations, supply chain etc. As business grew, the team needed a simple way to have clear metrics about the business health, progress and goals."
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "namedDivider",
+                "data": {
+                  "title": "CLIENT"
+                }
+              },
+              {
+                "component": "clientName",
+                "data": {
+                  "name": "uptodate Ventures GmbH",
+                  "iconFileName": "portfolio/uptodate/logo.png"
+                }
+              },
+              {
+                "component": "namedDivider",
+                "data": {
+                  "title": "THE CHALLENGE"
+                }
+              },
+              {
+                "component": "commonParagraph",
+                "data": {
+                  "type": "list",
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "uptodate was struggling to hit their targets as the original platform was built on technology that was not scalable."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "They had been looking for months for experts to bring onboard to solve these problems and they had a few good leads, they could simply not wait for their notice period in order to start."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "That is when they turned their attention to Softup. Our team has deep knowledge in cloud technologies along with experience in building complex scalable products. We assigned one of our software developers to join the uptodate tech team onsite for a period of 6 months. The extended team helped uptodate reach their target goals required within first 3 months, and eventually the planned investment round went through successfully."
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "namedDivider",
+                "data": {
+                  "title": "THE SOLUTION"
+                }
+              },
+              {
+                "component": "commonParagraph",
+                "data": {
+                  "type": "list",
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "The solution relies completely on Amazon Web Services, where we used different services such as Lambda (>40 functions), API Gateway, SQS, RDS, DynamoDB, Cloudwatch etc. For infrastructure provisioning we used Cloudformation. CI / CD we used Bitbucket pipelines. Lambda functions were written all in Typescript. To display beautiful charts and metrics we used Grafana."
+                    },
+                    {
+                      "component": "markdownDisplay",
+                      "data": "We also implemented different internal application that served different functionalities. For example, we implemented a product information management that is used to enrich product related data points. Tech stack used is React.JS for building the frontend and GraphQL for the backend. The frontend is stored in AWS S3 and served through Cloudfront CDN. Backend is implemented as a GraphQL lambda function. To handle authentication and authorization we decided to give AWS Cognito a try. To provide authentication for our clients and lambda functions we used two authentication flows: Client Side Authentication Flow and Server Side Authentication Flow."
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "button",
+                "data": {
+                  "link": "/portfolio",
+                  "value": "PROJECTS",
+                  "align": "center"
+                }
+              }
+            ]
+          },
+          {
             "iconFilename": "portfolio/cleu/logo.png",
             "title": "CLEU",
             "link": "/portfolio/cleu",
