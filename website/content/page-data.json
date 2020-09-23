@@ -794,12 +794,7 @@
                   {
                     "title": "TECHNOLOGIES",
                     "type": "list",
-                    "items": [
-                      "AWS",
-                      "React",
-                      "Node.js",
-                      "Firebase"
-                    ]
+                    "items": ["AWS", "React", "Node.js", "Firebase"]
                   },
                   {
                     "title": "INCREASE IN BETA USERS",
@@ -912,19 +907,12 @@
                   {
                     "title": "WHAT WE DID",
                     "type": "list",
-                    "items": [
-                      "Frontend Development",
-                      "UI / UX"
-                    ]
+                    "items": ["Frontend Development", "UI / UX"]
                   },
                   {
                     "title": "TECHNOLOGIES",
                     "type": "list",
-                    "items": [
-                      "React.JS",
-                      "SASS",
-                      "AWS S3"
-                    ]
+                    "items": ["React.JS", "SASS", "AWS S3"]
                   },
                   {
                     "title": "FIRST DRAFT",

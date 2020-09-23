@@ -10,21 +10,21 @@ export const Landing = () => {
   const { t } = useTranslation();
 
   return (
-      // <StyledBackgroundSection>
-      <PageLayout>
-        <div className="landing">
-          <SEO title="Home" />
-          <MenuHeader />
-          <div className="displayWithGrid">
-            <div className="slogan-wrapper">
-              <Slogan
-                description={t("sloganDescription")}
-                slogan={t("sloganTitle")}
-              />
-            </div>
+    // <StyledBackgroundSection>
+    <PageLayout>
+      <div className="landing">
+        <SEO title="Home" />
+        <MenuHeader />
+        <div className="displayWithGrid">
+          <div className="slogan-wrapper">
+            <Slogan
+              description={t("sloganDescription")}
+              slogan={t("sloganTitle")}
+            />
           </div>
         </div>
-      </PageLayout>
-  // </StyledBackgroundSection>
+      </div>
+    </PageLayout>
+    // </StyledBackgroundSection>
   );
 };
