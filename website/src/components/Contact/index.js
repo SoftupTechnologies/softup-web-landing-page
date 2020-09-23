@@ -1,13 +1,13 @@
 /* eslint-disable */
-import React from "react"
-import "./contact.scss"
-import SubmitButton from "../../images/submit.svg"
-import { useTranslation } from "react-i18next"
-import { ErrorMessage, Field, Form, Formik } from "formik"
-import { timeout } from "../helpers"
+import React from "react";
+import "./contact.scss";
+import SubmitButton from "../../images/submit.svg";
+import { useTranslation } from "react-i18next";
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import { timeout } from "../helpers";
 
 export const ContactUs = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <Formik
@@ -19,7 +19,7 @@ export const ContactUs = () => {
       onSubmit={async (values, actions) => {
         console.log(values);
         try {
-          actions.setStatus({ success: false, started: true, ended: false })
+          actions.setStatus({ success: false, started: true, ended: false });
           const resp = await fetch(
             "https://dfqbuvatoh.execute-api.eu-central-1.amazonaws.com/prod/",
             {
@@ -30,31 +30,31 @@ export const ContactUs = () => {
               },
               body: JSON.stringify(values),
             }
-          )
+          );
           if (resp.status !== 200) {
-            actions.setStatus({ error: true, ended: true })
+            actions.setStatus({ error: true, ended: true });
           } else {
-            actions.setStatus({ success: true, started: true, ended: true })
+            actions.setStatus({ success: true, started: true, ended: true });
           }
-          await timeout(2000)
-          actions.resetForm()
+          await timeout(2000);
+          actions.resetForm();
         } catch (e) {
           console.log(e);
-          actions.setStatus({ error: true, message: e, ended: true })
-          await timeout(3000)
+          actions.setStatus({ error: true, message: e, ended: true });
+          await timeout(3000);
         }
-        actions.setSubmitting(false)
+        actions.setSubmitting(false);
       }}
       validate={values => {
-        const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
-        const errors = {}
+        const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+        const errors = {};
         if (!values.name.length) {
-          errors.name = "Name Required"
+          errors.name = "Name Required";
         }
         if (!values.email || !emailRegex.test(values.email)) {
-          errors.email = "Valid Email Required"
+          errors.email = "Valid Email Required";
         }
-        return errors
+        return errors;
       }}
     >
       {props => (
@@ -138,5 +138,5 @@ export const ContactUs = () => {
         </div>
       )}
     </Formik>
-  )
-}
+  );
+};

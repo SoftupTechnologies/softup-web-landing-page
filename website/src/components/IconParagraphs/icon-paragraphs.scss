@@ -1,0 +1,41 @@
+.paragraphsWrapper {
+  grid-column-start: 2;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  padding: 0 calc(5vw);
+  max-width: 790px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .paragraph {
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .iconDiv {
+      padding-right: 10px;
+      border-right: 1px solid #19a0ff;
+      min-width: 100px;
+      height: auto;
+    }
+
+    .contentDiv {
+      padding-left: 30px;
+
+      .title {
+        font-family: Comfortaa, sans-serif;
+        font-size: 20px;
+        font-weight: 300;
+      }
+
+      p {
+        margin-bottom: 0;
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        font-weight: 100;
+      }
+    }
+  }
+}
