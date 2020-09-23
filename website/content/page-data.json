@@ -1233,36 +1233,24 @@
             "slug": "who-we-are",
             "content": [
               {
-                "component": "numberedParagraph",
-                "data": [
-                  {
-                    "title": "Yesterday",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "In 2016, our tech co-founder Kristi was working for various remote clients (USA, UK) as Software Engineer. While thousands of km away, Daniel was struggling to find a tech co-founder for his business idea.\n After a summer re-union, they got together & realised that they could help a lot of startups & entrepreneurs worldwide to launch their ideas in the market by exposing the local talent of developers to the international market. "
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Today",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "We are a team of 15 tech enthusiast who work tirelessly to build amazing digital products. Even though we have grown significantly in the last year, this is **only the beginning**."
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Tomorrow",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "Our vision is to create opportunities for the untapped local talent by connecting them with exciting projects worldwide."
-                      }
-                    ]
-                  }
-                ]
+                "component": "process",
+                "data": {
+                  "title": "Yesterday",
+                  "items": [
+                    {
+                      "title": "yesterday",
+                      "description": "In 2016, our tech co-founder Kristi was working for various remote clients (USA, UK) as Software Engineer. While thousands of km away, Daniel was struggling to find a tech co-founder for his business idea.\n After a summer re-union, they got together & realised that they could help a lot of startups & entrepreneurs worldwide to launch their ideas in the market by exposing the local talent of developers to the international market. "
+                    },
+                    {
+                      "title": "today",
+                      "description": "We are a team of 15 tech enthusiast who work tirelessly to build amazing digital products. Even though we have grown significantly in the last year, **this is only the beginning**."
+                    },
+                    {
+                      "title": "tomorrow",
+                      "description": "Our vision is to create opportunities for the untapped local talent by connecting them with exciting projects worldwide."
+                    }
+                  ]
+                }
               },
               {
                 "component": "button",

@@ -3,26 +3,12 @@
   src: url("../../fonts/caviar_dreams/CaviarDreams.ttf");
 }
 
-.process-title {
-  font-family: Comfortaa, sans-serif;
-  font-size: 26px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.2;
-  letter-spacing: normal;
-  text-align: left;
-  color: #19a0ff;
-  text-align: center;
-  margin-top: 10px;
-}
-
 .process-hr {
-  border-top: solid 1px #333333;
   margin-bottom: 50px;
 }
 
 .process-wrapper {
+  padding-top: calc(20px + 4vh);
   grid-column-start: 2;
 }
 
@@ -45,8 +31,9 @@
 
 .process-article {
   display: flex;
+  flex-flow: column;
   justify-content: space-between;
-  padding-bottom: 100px;
+  padding-bottom: 40px;
 }
 
 .left {
@@ -57,56 +44,36 @@
   justify-content: flex-end;
 }
 
-.process-article-title {
-  height: 120px;
-  display: flex;
+.process-article-description {
   align-items: center;
-  max-width: 42%;
   width: 100%;
-  padding: 0 25px;
+  padding: 14px 25px;
+  display: flex;
+  justify-content: flex-start;
 
   p {
-    font-size: 30px;
-    font-weight: 300;
+    max-width: 476.5px;
+    font-size: 16px;
+    font-weight: 100;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.2;
     letter-spacing: normal;
     color: #ffffff;
-    font-family: Comfortaa, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
     margin-bottom: 0;
-  }
-}
-
-.process-article-description {
-  align-items: center;
-  max-width: 42%;
-  width: 100%;
-  padding: 0 25px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  p {
-    font-size: 18px;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.2;
-    letter-spacing: normal;
-    color: #7f7f7f;
-    font-family: Comfortaa, sans-serif;
-    text-align: left;
-    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 .outer-circle {
-  position: absolute;
+  position: relative;
   left: 50%;
-  height: 120px;
-  width: 120px;
-  margin-left: -60px;
+  height: 160px;
+  width: 160px;
+  margin-left: -80px;
   border-radius: 50%;
   border: solid 2px #173b57;
   background-color: #173b57;
@@ -116,35 +83,35 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 106px;
-  width: 106px;
+  height: 136px;
+  width: 136px;
   border: solid 2px #1b6eac;
   background-color: #1b6eac;
   border-radius: 50%;
-  margin: -53px 0px 0px -53px;
+  margin: -68px 0px 0px -68px;
 }
 
 .second-inner-circle {
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 90px;
-  width: 90px;
+  height: 116px;
+  width: 116px;
   border: solid 2px #19a0ff;
   background-color: #19a0ff;
   border-radius: 50%;
-  margin: -45px 0px 0px -45px;
+  margin: -58px 0px 0px -58px;
 }
 
 .third-inner-circle {
   position: absolute;
   background: #0f0f0f;
   border-radius: 50%;
-  height: 84px;
-  width: 84px;
+  height: 110px;
+  width: 110px;
   top: 50%;
   left: 50%;
-  margin: -42px 0px 0px -42px;
+  margin: -55px 0px 0px -55px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,37 +121,18 @@
   font-family: Caviar, sans-serif;
   font-weight: normal;
   font-stretch: normal;
-  line-height: 1.2;
   letter-spacing: normal;
-  font-size: 45px;
-  line-height: 40px;
-  text-align: left;
-  color: #333333;
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(-2px);
+  color: #19a0ff;
 }
 
 // Mobile Design
 @media (max-width: 768px) {
-  .process-title {
-    color: #7f7f7f;
-  }
-
   .process {
     .process-center-line {
       display: none;
-    }
-  }
-
-  .process-article-title {
-    height: auto;
-    margin-top: 20px;
-    width: 100%;
-    max-width: 100%;
-    display: block;
-    order: 2;
-
-    p {
-      font-size: 20px;
-      font-weight: bold;
     }
   }
 
@@ -198,51 +146,45 @@
 
   .process-article-description {
     height: auto;
-    width: 100%;
-    max-width: 100%;
     order: 3;
 
     p {
-      text-align: center;
-      font-size: 15px;
+      font-size: 16px;
     }
   }
 
   .process-article {
     padding-bottom: 60px;
-    display: flex;
-    flex-flow: column;
   }
 
   .outer-circle {
-    position: relative;
     order: 1;
-    height: 100px;
-    width: 100px;
-    margin-left: -50px;
+    height: 120px;
+    width: 120px;
+    margin-left: -60px;
   }
 
   .inner-circle {
-    height: 86px;
-    width: 86px;
-    margin: -43px 0px 0px -43px;
+    height: 100px;
+    width: 100px;
+    margin: -50px 0px 0px -50px;
   }
 
   .second-inner-circle {
-    height: 70px;
-    width: 70px;
-    margin: -35px 0px 0px -35px;
+    height: 84px;
+    width: 84px;
+    margin: -42px 0px 0px -42px;
   }
 
   .third-inner-circle {
-    height: 64px;
-    width: 64px;
-    margin: -32px 0px 0px -32px;
+    height: 78px;
+    width: 78px;
+    margin: -39px 0px 0px -39px;
   }
 
   .process-number {
     color: white;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 15px;
   }
 }
