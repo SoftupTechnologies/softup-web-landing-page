@@ -6,7 +6,6 @@ import { MarkdownDisplay } from "../MarkdownDisplay";
 
 export const Process = ({ data }) => {
   const { t } = useTranslation();
-  const items = data?.items?.length - 1;
 
   return (
     <div>
