@@ -1230,7 +1230,7 @@
         "data": [
           {
             "tabName": "who are we?",
-            "slug": "who-we-are",
+            "slug": "who-are-we",
             "content": [
               {
                 "component": "process",
@@ -1432,8 +1432,8 @@
           "component": "slideLinks",
           "data": [
             {
-              "link": "/career#who-we-are",
-              "name": "WHO WE ARE?"
+              "link": "/career#who-are-we",
+              "name": "WHO ARE WE?"
             },
             {
               "link": "/career#why-join-us",

@@ -9,7 +9,7 @@ const TabContent = ({ itemToBeRendered }) => {
   return (
     // <div className={"displayWithGrid"}>
     <div className={"tabContent"} key={Math.random()}>
-      {generateContent(itemToBeRendered.content)}
+      {generateContent(itemToBeRendered?.content)}
     </div>
     // </div>
   );
@@ -30,7 +30,7 @@ export const WideTabs = ({ data }) => {
   const tabTitles = (
     <div className="tabTitlesContainer">
       {/* <div className={"displayWithGrid"}> */}
-      <div className="tabTitles" id={itemToBeRendered.slug}>
+      <div className="tabTitles" id={itemToBeRendered?.slug}>
         {data.map((item, index) => {
           let classes = classNames({
             tabName: true,
