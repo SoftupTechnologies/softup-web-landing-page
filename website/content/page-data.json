@@ -363,35 +363,50 @@
                         "data": "- Translate business requirements into features in real estate.\n - Expertise in real estate standards world-wide.\n - We can understand the business logic behind the real estate use case and move along faster.\n - Bring the vision into reality with a Dynamic API as a scalable product.\n - We know the data model and business model of the real estate industry.\n - Since we worked in the industry for more than 2 years, we can move faster. No learning curve needed.\n - We understand how real estate companies manage and treat data.\n Deal with complex real estate business cases."
                       }
                     ]
-                  },
-                  {
-                    "title": "Rent Management",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "- Manage: buildings, units and facilities.\n - Manage contracts for each tenant (fees, ratings).\n - Monitor contract changes in real time.\n - Start / end dates for rent contracts.\n - Oversee revenues and expenses for each unit and building.\n - Compare financial performance between units and buildings in your portfolio.\n - Track the status and condition of your buildings and units.\n - Create Profit & Loss statements from your portfolio.\n - Track utilization of units.\n - Make data-driven investment decisions.\n - Calculate tax and additional living costs (Nebenkosten)."
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Reporting",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "- Draw conclusions based on data with just a few clicks.\n - Aggregate massive amount of data into a single place.\n - Use filters to draw meaningful insights.\n - Access a large amount of data quickly and conventiently."
-                      }
-                    ]
-                  },
-                  {
-                    "title": "Open API",
-                    "content": [
-                      {
-                        "component": "markdownDisplay",
-                        "data": "- API First platform, build apps on top of the platform.\n - Integrate with single modules.\n - Detailed API Documentation, test & integrate quickly.\n - Easy integration to the platform."
-                      }
-                    ]
                   }
                 ]
+              },
+              {
+                "component": "paragraphAndImage",
+                "data": {
+                  "title": "Rent Management",
+                  "imageName": "proptech/proptech-rent.jpg",
+                  "imagePosition": "right",
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "- Manage: buildings, units and facilities.\n - Manage contracts for each tenant (fees, ratings).\n - Monitor contract changes in real time.\n - Start / end dates for rent contracts.\n - Oversee revenues and expenses for each unit and building.\n - Compare financial performance between units and buildings in your portfolio.\n - Track the status and condition of your buildings and units.\n - Create Profit & Loss statements from your portfolio.\n - Track utilization of units.\n - Make data-driven investment decisions.\n - Calculate tax and additional living costs (Nebenkosten)."
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "paragraphAndImage",
+                "data": {
+                  "imageName": "proptech/proptech-reports.jpg",
+                  "imagePosition": "left",
+                  "title": "Reporting",
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "- Draw conclusions based on data with just a few clicks.\n - Aggregate massive amount of data into a single place.\n - Use filters to draw meaningful insights.\n - Access a large amount of data quickly and conventiently."
+                    }
+                  ]
+                }
+              },
+              {
+                "component": "paragraphAndImage",
+                "data": {
+                  "imageName": "proptech/proptech-openapi.png",
+                  "imagePosition": "right",
+                  "title": "Open API",
+                  "content": [
+                    {
+                      "component": "markdownDisplay",
+                      "data": "- API First platform, build apps on top of the platform.\n - Integrate with single modules.\n - Detailed API Documentation, test & integrate quickly.\n - Easy integration to the platform."
+                    }
+                  ]
+                }
               }
             ]
           },
@@ -794,7 +809,12 @@
                   {
                     "title": "TECHNOLOGIES",
                     "type": "list",
-                    "items": ["AWS", "React", "Node.js", "Firebase"]
+                    "items": [
+                      "AWS",
+                      "React",
+                      "Node.js",
+                      "Firebase"
+                    ]
                   },
                   {
                     "title": "INCREASE IN BETA USERS",
@@ -907,12 +927,19 @@
                   {
                     "title": "WHAT WE DID",
                     "type": "list",
-                    "items": ["Frontend Development", "UI / UX"]
+                    "items": [
+                      "Frontend Development",
+                      "UI / UX"
+                    ]
                   },
                   {
                     "title": "TECHNOLOGIES",
                     "type": "list",
-                    "items": ["React.JS", "SASS", "AWS S3"]
+                    "items": [
+                      "React.JS",
+                      "SASS",
+                      "AWS S3"
+                    ]
                   },
                   {
                     "title": "FIRST DRAFT",
