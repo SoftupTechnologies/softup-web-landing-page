@@ -19,8 +19,8 @@
               "name": "EXTENDED TEAM"
             },
             {
-              "link": "/services#mvp-in-10-days",
-              "name": "MVP IN 10 DAYS"
+              "link": "/services#pay-if-satisfied",
+              "name": "Pay-if-Satisfied"
             }
           ]
         }
@@ -205,45 +205,49 @@
             ]
           },
           {
-            "tabName": "mvp in#insertnewline#10 days.",
-            "slug": "mvp-in-10-days",
+            "tabName": "pay-if-satisfied.",
+            "slug": "pay-if-satisfied",
             "content": [
               {
                 "component": "numberedParagraph",
                 "data": [
                   {
-                    "title": "Ideal for",
+                    "title": "Get in touch",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "Startups / founders that want to build something from scratch and have limited budgets."
+                        "data": "_We will have a meeting to discuss your needs and define shippable milestones for the next 1 – 3 months. Each milestone must be delivered within a 2-week sprint._"
                       }
                     ]
                   },
                   {
-                    "title": "Move fast",
+                    "title": "You Choose",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "Finding a product-market fit is always a long and complicated process. The earlier you can find it, the less money you will burn. We develop quick, light-weight prototypes (MVPs) of your ideal solution in 10 days so you can go out there and validate your product with real customer feedback."
+                        "data": "At the end of each sprint you can decide the following:"
+                      },
+                      {
+                        "component": "markdownDisplay",
+                        "data": "- To pay for the deliverable, if it meets your needs.\n - Not pay for the deliverable, because you don’t think it meets your needs / quality standards."
                       }
                     ]
                   },
                   {
-                    "title": "Listen to the market",
+                    "title": "Risk-free Approach",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "We will build you a quick and low-cost prototype, so that you can learn and gather feedback from real customers before jumping into full coding mode."
+                        "data": "If we both think the deliverable is close but not quite there yet, we can work a few extra days to adjust to your needs.\n\nIf you are still not satisfied, we  will simply ship you whatever we build, **for free**, and you can take that code base and proceed to finding a new provider. This way you can remove the risk from outsourcing software development."
                       }
                     ]
                   },
                   {
-                    "title": "Save thousands of euros",
+                    "title": "Repeat",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "No budget overrun. Don’t waste time and money building the wrong product. This service starts from **€3,000**."
+                        "data": "If satisfied, we can repeat the process above for each consequent sprint until the final product is ready for launch."
                       }
                     ]
                   }
