@@ -1,0 +1,14 @@
+.logos-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  .item-wrapper {
+    display: inline-block;
+    width: 150px;
+    height: auto;
+    margin: 10px 5%;
+  }
+}

@@ -1243,6 +1243,26 @@
             ]
           }
         ]
+      },
+      {
+        "component": "logosSection",
+        "data": [
+          {
+            "name": "Staffboard",
+            "url": "https://staffboard.com/",
+            "logo": "logos/staffboard-logo.png"
+          },
+          {
+            "name": "Aula",
+            "url": "https://aula.education/",
+            "logo": "logos/aula-logo.png"
+          },
+          {
+            "name": "Salt",
+            "url": "https://salt.al/",
+            "logo": "logos/salt-logo.png"
+          }
+        ]
       }
     ]
   },
