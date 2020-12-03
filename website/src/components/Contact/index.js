@@ -14,7 +14,6 @@ export const ContactUs = () => {
       initialValues={{
         name: "",
         email: "",
-        phone: "",
       }}
       onSubmit={async (values, actions) => {
         console.log(values);
@@ -123,12 +122,6 @@ export const ContactUs = () => {
               />
               {/* eslint-disable-next-line react/prop-types */}
               <ErrorMessage className={"validationError"} name="email" />
-              <ErrorMessage className={"validationError"} name="phone" />
-              <Field
-                className={"inputField"}
-                placeholder={t("phone number")}
-                name="phone"
-              />
               <label className={"submitButton"}>
                 <input type="submit" style={{ display: "none" }} />
                 <SubmitButton />
