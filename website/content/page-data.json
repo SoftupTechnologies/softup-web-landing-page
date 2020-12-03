@@ -19,8 +19,8 @@
               "name": "EXTENDED TEAM"
             },
             {
-              "link": "/services#pay-if-satisfied",
-              "name": "Pay-if-Satisfied"
+              "link": "/services#risk-free-software-development",
+              "name": "RISK-FREE SOFTWARE DEVELOPMENT"
             }
           ]
         }
@@ -205,8 +205,8 @@
             ]
           },
           {
-            "tabName": "pay-if-satisfied.",
-            "slug": "pay-if-satisfied",
+            "tabName": "risk-free software development.",
+            "slug": "risk-free-software-development",
             "content": [
               {
                 "component": "numberedParagraph",
