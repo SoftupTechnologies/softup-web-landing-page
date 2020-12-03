@@ -21,6 +21,7 @@ import { Button } from "./Button";
 import { PresentationTilesMd } from "./PresentationTilesMd";
 import { IconParagraphs } from "./IconParagraphs";
 import { LogosSection } from "./LogosSection";
+import { ColumnParagraphs } from "./ColumnParagraphs";
 
 export const formatNumber = num => {
   const stringNum = parseInt(num, 10).toString();
@@ -53,6 +54,7 @@ const componentContainer = {
   button: Button,
   iconParagraphs: IconParagraphs,
   logosSection: LogosSection,
+  columnParagraphs: ColumnParagraphs,
 };
 
 export const generateContent = pageContent => {

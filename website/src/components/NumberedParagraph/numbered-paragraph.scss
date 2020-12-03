@@ -3,6 +3,15 @@
   src: url("../../fonts/caviar_dreams/CaviarDreams.ttf");
 }
 
+.paragraph-header {
+  font-family: Comfortaa, sans-serif;
+  margin: 50px 0 30px 0;
+  grid-column-start: 2;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #19a0ff;
+}
+
 .paragraphDiv {
   grid-column-start: 2;
 

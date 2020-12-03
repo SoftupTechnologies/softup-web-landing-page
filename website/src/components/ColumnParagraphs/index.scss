@@ -1,0 +1,27 @@
+.columns {
+  grid-column-start: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));;
+  column-gap: 50px;
+  margin-top: 30px;
+
+  .column-paragraphs-item {
+    .column-title, .column-content {
+      font-family: Comfortaa, sans-serif;
+    }
+
+    .column-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #19a0ff;
+      line-height: 130%;
+      min-height: 100px;
+    }
+
+    .column-content {
+      font-size: 14px;
+      color: #c2c2c2;
+      line-height: 150%;
+    }
+  }
+}
