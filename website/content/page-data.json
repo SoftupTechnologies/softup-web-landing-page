@@ -11,16 +11,16 @@
           "component": "slideLinks",
           "data": [
             {
-              "link": "/services#product-development",
-              "name": "PRODUCT DEVELOPMENT"
+              "link": "/services#risk-free-software-development",
+              "name": "RISK-FREE SOFTWARE DEVELOPMENT"
             },
             {
               "link": "/services#extended-team",
               "name": "EXTENDED TEAM"
             },
             {
-              "link": "/services#risk-free-software-development",
-              "name": "RISK-FREE SOFTWARE DEVELOPMENT"
+              "link": "/services#product-development",
+              "name": "PRODUCT DEVELOPMENT"
             }
           ]
         }
@@ -31,85 +31,53 @@
         "component": "horizontalTabs",
         "data": [
           {
-            "tabName": "product development.",
-            "slug": "product-development",
+            "tabName": "risk-free software development.",
+            "slug": "risk-free-software-development",
             "content": [
               {
                 "component": "numberedParagraph",
                 "data": [
                   {
-                    "title": "Ideal for",
+                    "title": "Get in touch",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "- SME’s who want to launch a new product without being distracted from core business.\n - Corporates with Innovation Labs who are testing new ideas and want to move fast in the market.\n - Serial entrepreneurs looking for the next challenge."
+                        "data": "_We will have a meeting to discuss your needs and define shippable milestones for the next 1 – 3 months. Each milestone must be delivered within a 2-week sprint._"
                       }
                     ]
                   },
                   {
-                    "title": "Don’t waste time",
+                    "title": "You Choose",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "Hiring internal team for short term projects might not be worth your time and effort. Developers market is very competitive. We know that from experience."
+                        "data": "At the end of each sprint you can decide the following:"
                       },
                       {
                         "component": "markdownDisplay",
-                        "data": "- This will distract your core team from current roadmap.\n - Shuffling resources back and fourth leads to unhappy developers.\n - Avoid management overhead (career path, compensation etc).\n - Hiring one developer takes months. Hiring a team takes quarters."
-                      },
-                      {
-                        "component": "markdownDisplay",
-                        "data": "**Start within days, not months.** Avoid the overhead and hiring struggles."
+                        "data": "- To pay for the deliverable, if it meets your needs.\n - Not pay for the deliverable, because you don’t think it meets your needs / quality standards."
                       }
                     ]
                   },
                   {
-                    "title": "Get a testable and maintainable product",
+                    "title": "Risk-free Approach",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "One of the main reasons for not working with external providers is the fear of getting an unmaintable messy product that seems to be working on the surface."
-                      },
-                      {
-                        "component": "markdownDisplay",
-                        "data": "- Have you ever spent time with a provider who delivered codebase that you had to throw away?\n - Did you have to spent days / weeks investigating the codebase due to the lack of proper documentation?\n - Did you ever get a deliverable without a proper handover?"
-                      },
-                      {
-                        "component": "markdownDisplay",
-                        "data": "We’ll give you a maintainable product that is properly documented and a detailed handover to your team. I know it doesn’t sound fancy, but it is much harder to achieve in real world ;)"
+                        "data": "If we both think the deliverable is close but not quite there yet, we can work a few extra days to adjust to your needs.\n\nIf you are still not satisfied, we  will simply ship you whatever we build, **for free**, and you can take that code base and proceed to finding a new provider. This way you can remove the risk from outsourcing software development."
                       }
                     ]
                   },
                   {
-                    "title": "Timeline",
+                    "title": "Repeat",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "Development typically runs from **2 - 6 months**. Get in touch for a detailed estimation and budget."
+                        "data": "If satisfied, we can repeat the process above for each consequent sprint until the final product is ready for launch."
                       }
                     ]
                   }
                 ]
-              },
-              {
-                "component": "caseStudies",
-                "data": {
-                  "title": "Case studies.",
-                  "items": [
-                    {
-                      "iconFilename": "portfolio/wirecard/logo.png",
-                      "title": "Wirecard",
-                      "link": "/portfolio/wirecard",
-                      "description": "Meet your deadline"
-                    },
-                    {
-                      "iconFilename": "portfolio/cleu/logo.png",
-                      "title": "Cleu",
-                      "link": "/portfolio/cleu",
-                      "description": "Trust the Experts"
-                    }
-                  ]
-                }
               }
             ]
           },
@@ -205,53 +173,85 @@
             ]
           },
           {
-            "tabName": "risk-free software development.",
-            "slug": "risk-free-software-development",
+            "tabName": "product development.",
+            "slug": "product-development",
             "content": [
               {
                 "component": "numberedParagraph",
                 "data": [
                   {
-                    "title": "Get in touch",
+                    "title": "Ideal for",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "_We will have a meeting to discuss your needs and define shippable milestones for the next 1 – 3 months. Each milestone must be delivered within a 2-week sprint._"
+                        "data": "- SME’s who want to launch a new product without being distracted from core business.\n - Corporates with Innovation Labs who are testing new ideas and want to move fast in the market.\n - Serial entrepreneurs looking for the next challenge."
                       }
                     ]
                   },
                   {
-                    "title": "You Choose",
+                    "title": "Don’t waste time",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "At the end of each sprint you can decide the following:"
+                        "data": "Hiring internal team for short term projects might not be worth your time and effort. Developers market is very competitive. We know that from experience."
                       },
                       {
                         "component": "markdownDisplay",
-                        "data": "- To pay for the deliverable, if it meets your needs.\n - Not pay for the deliverable, because you don’t think it meets your needs / quality standards."
+                        "data": "- This will distract your core team from current roadmap.\n - Shuffling resources back and fourth leads to unhappy developers.\n - Avoid management overhead (career path, compensation etc).\n - Hiring one developer takes months. Hiring a team takes quarters."
+                      },
+                      {
+                        "component": "markdownDisplay",
+                        "data": "**Start within days, not months.** Avoid the overhead and hiring struggles."
                       }
                     ]
                   },
                   {
-                    "title": "Risk-free Approach",
+                    "title": "Get a testable and maintainable product",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "If we both think the deliverable is close but not quite there yet, we can work a few extra days to adjust to your needs.\n\nIf you are still not satisfied, we  will simply ship you whatever we build, **for free**, and you can take that code base and proceed to finding a new provider. This way you can remove the risk from outsourcing software development."
+                        "data": "One of the main reasons for not working with external providers is the fear of getting an unmaintable messy product that seems to be working on the surface."
+                      },
+                      {
+                        "component": "markdownDisplay",
+                        "data": "- Have you ever spent time with a provider who delivered codebase that you had to throw away?\n - Did you have to spent days / weeks investigating the codebase due to the lack of proper documentation?\n - Did you ever get a deliverable without a proper handover?"
+                      },
+                      {
+                        "component": "markdownDisplay",
+                        "data": "We’ll give you a maintainable product that is properly documented and a detailed handover to your team. I know it doesn’t sound fancy, but it is much harder to achieve in real world ;)"
                       }
                     ]
                   },
                   {
-                    "title": "Repeat",
+                    "title": "Timeline",
                     "content": [
                       {
                         "component": "markdownDisplay",
-                        "data": "If satisfied, we can repeat the process above for each consequent sprint until the final product is ready for launch."
+                        "data": "Development typically runs from **2 - 6 months**. Get in touch for a detailed estimation and budget."
                       }
                     ]
                   }
                 ]
+              },
+              {
+                "component": "caseStudies",
+                "data": {
+                  "title": "Case studies.",
+                  "items": [
+                    {
+                      "iconFilename": "portfolio/wirecard/logo.png",
+                      "title": "Wirecard",
+                      "link": "/portfolio/wirecard",
+                      "description": "Meet your deadline"
+                    },
+                    {
+                      "iconFilename": "portfolio/cleu/logo.png",
+                      "title": "Cleu",
+                      "link": "/portfolio/cleu",
+                      "description": "Trust the Experts"
+                    }
+                  ]
+                }
               }
             ]
           }
