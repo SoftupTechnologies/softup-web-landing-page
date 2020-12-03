@@ -57,7 +57,7 @@ export const ContactUs = () => {
       }}
     >
       {props => (
-        <div className={"contactUsDiv"}>
+        <div id="contact-us" className={"contactUsDiv"}>
           <div className={"question"}>
             <div>
               Want to start a <br />
