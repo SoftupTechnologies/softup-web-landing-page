@@ -1293,6 +1293,16 @@
             "name": "Salt",
             "url": "https://salt.al/",
             "logo": "logos/salt-logo.png"
+          },
+          {
+            "name": "Wirecard",
+            "url": "https://www.wirecard.com/",
+            "logo": "logos/wirecard-logo.png"
+          },
+          {
+            "name": "UNDP",
+            "url": "http://scvet.al/",
+            "logo": "logos/undp-logo.png"
           }
         ]
       }
