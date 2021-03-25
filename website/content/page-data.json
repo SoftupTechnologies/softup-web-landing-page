@@ -1599,5 +1599,15 @@
         "component": "imprint"
       }
     ]
+  },
+  {
+    "link": "/estimator",
+    "menu": false,
+    "title": "Project Estimator",
+    "content": [
+      {
+        "component": "estimator"
+      }
+    ]
   }
 ]
