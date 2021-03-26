@@ -101,7 +101,37 @@
   margin-top: 5px;
 }
 
+.homeButtonContainer {
+  border-top: none;
+}
+
+.homeButtonsGroup {
+  justify-content: normal;
+  margin: auto;
+}
+
+.homeButtons {
+  margin: 0 20px;
+}
+
 @media (max-width: 768px) {
+
+  .homeButtonsGroup {
+    display: block;
+  }
+
+  .homeButtonsGroup {
+    margin: 0;
+  }
+
+  .homeButtons {
+    max-height: 7vh;
+  }
+
+  .homeButtons {
+    margin: 0;
+  }
+
   .diamond-punctuation {
     width: 8px;
     height: 8px;

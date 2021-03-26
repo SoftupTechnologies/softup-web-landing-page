@@ -20,12 +20,12 @@ export const Slogan = ({ slogan, description }) => {
             </h1>
             <div className="sloganDesc">{description}</div>
         </div>
-        <div id="company-numbers" className="companyNumContainer">
-            <div className="companyNumbers">
-                <div className="benchmarkGroup">
+        <div id="company-numbers" className="companyNumContainer homeButtonContainer">
+            <div className="companyNumbers homeButtonsGroup">
+                <div className="homeButtons">
                     <Button data={{openInNewPage:false, link:"mailto:info@softup.co", value:"Reach out to us"}}/>
                 </div>
-                <div className="benchmarkGroup">
+                <div className="homeButtons">
                     <Button data={{openInNewPage:false, link:"/estimator", value:"Estimate your project"}}/>
                 </div>
             </div>
