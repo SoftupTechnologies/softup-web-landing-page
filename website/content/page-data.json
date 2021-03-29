@@ -401,6 +401,7 @@
               {
                 "component": "paragraphAndImage",
                 "data": {
+                  "name": "proptech",
                   "title": "Rent Management",
                   "imageName": "proptech/proptech-rent.jpg",
                   "imagePosition": "right",
@@ -415,6 +416,7 @@
               {
                 "component": "paragraphAndImage",
                 "data": {
+                  "name": "proptech",
                   "imageName": "proptech/proptech-reports.jpg",
                   "imagePosition": "left",
                   "title": "Reporting",
@@ -429,6 +431,7 @@
               {
                 "component": "paragraphAndImage",
                 "data": {
+                  "name": "proptech",
                   "imageName": "proptech/proptech-openapi.png",
                   "imagePosition": "right",
                   "title": "Open API",
@@ -449,6 +452,7 @@
               {
                 "component": "paragraphAndImage",
                 "data": {
+                  "name": "enterprise-tools",
                   "title": "Time Tracking",
                   "imageName": "enterprise-tools/time-tracking.jpg",
                   "imagePosition": "left",
@@ -463,6 +467,7 @@
               {
                 "component": "paragraphAndImage",
                 "data": {
+                  "name": "enterprise-tools",
                   "title": "Absence Management",
                   "imageName": "enterprise-tools/leave-request.jpg",
                   "imagePosition": "right",
@@ -477,6 +482,7 @@
               {
                 "component": "paragraphAndImage",
                 "data": {
+                  "name": "enterprise-tools",
                   "title": "Invoices",
                   "imageName": "enterprise-tools/invoices.jpg",
                   "imagePosition": "left",
@@ -491,6 +497,7 @@
               {
                 "component": "paragraphAndImage",
                 "data": {
+                  "name": "enterprise-tools",
                   "title": "Analytics",
                   "imageName": "enterprise-tools/analytics.jpg",
                   "imagePosition": "right",

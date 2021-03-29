@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 // import { LanguageMenu } from "../LangSwitch"
 import { Link } from "../../../.cache/gatsby-browser-entry";
 import SoftupLogoSvg from "../../images/softup-logo.svg";
-import {Image} from "../image";
+// import {Image} from "../image";
 import { Button } from "../Button";
 
 export const Slogan = ({ slogan, description }) => {
