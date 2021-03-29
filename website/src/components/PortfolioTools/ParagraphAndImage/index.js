@@ -17,17 +17,19 @@ export const ParagraphAndImage = ({ data }) => {
 
   const [isOpen, setIsOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
+  const name = data.name;
 
   const photos = useStaticQuery(graphql`
     {
       allFile(
-        filter: { sourceInstanceName: { eq: "enterpriseTools" } }
+        filter: { sourceInstanceName: { eq: "expertise" } }
         sort: { fields: name, order: DESC }
       ) {
         edges {
           node {
             publicURL
             name
+            relativeDirectory
           }
         }
       }
@@ -37,7 +39,9 @@ export const ParagraphAndImage = ({ data }) => {
   const images = [];
 
   photos.allFile.edges.map(file => {
-    images.push(file.node.publicURL);
+    if (file.node.relativeDirectory === name) {
+      images.push(file.node.publicURL);
+    }
   });
 
   return (
@@ -84,6 +88,7 @@ export const ParagraphAndImage = ({ data }) => {
 
 ParagraphAndImage.propTypes = {
   data: PropTypes.shape({
+    name: PropTypes.string,
     title: PropTypes.string,
     imageName: PropTypes.string,
     imagePosition: PropTypes.oneOf(["left", "right"]),

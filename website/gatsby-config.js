@@ -9,8 +9,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "enterpriseTools",
-        path: `${__dirname}/src/images/enterprise-tools`,
+        name: "expertise",
+        path: `${__dirname}/src/images/expertise`,
       },
     },
     {
