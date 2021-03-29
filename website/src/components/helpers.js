@@ -22,6 +22,7 @@ import { PresentationTilesMd } from "./PresentationTilesMd";
 import { IconParagraphs } from "./IconParagraphs";
 import { LogosSection } from "./LogosSection";
 import { ColumnParagraphs } from "./ColumnParagraphs";
+import {Estimator} from "./Estimator";
 
 export const formatNumber = num => {
   const stringNum = parseInt(num, 10).toString();
@@ -50,6 +51,7 @@ const componentContainer = {
   caseStudies: CaseStudies,
   privacyPolicy: PrivacyPolicy,
   imprint: Imprint,
+  estimator: Estimator,
   markdownDisplay: MarkdownDisplay,
   button: Button,
   iconParagraphs: IconParagraphs,
