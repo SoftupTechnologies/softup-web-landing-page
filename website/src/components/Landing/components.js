@@ -13,23 +13,28 @@ import { Button } from "../Button";
 export const Slogan = ({ slogan, description }) => {
   return (
     <div>
-        <div className="slogan">
-            <h1 className="sloganTitle">
-                {slogan}
-                <div className="diamond-punctuation"></div>
-            </h1>
-            <div className="sloganDesc">{description}</div>
+      <div className="slogan">
+        <h1 className="sloganTitle">
+          {slogan}
+          <div className="diamond-punctuation"></div>
+        </h1>
+        <div className="sloganDesc">{description}</div>
+      </div>
+      <div id="company-numbers" className="companyNumContainer homeButtonContainer">
+        <div className="companyNumbers homeButtonsGroup">
+          <div className="homeButtons">
+            <Button
+              data={{
+                openInNewPage: true,
+                link: "https://calendly.com/danielkazani/chat-with-daniel",
+                value: "Talk to an Expert"
+              }} />
+          </div>
+          <div className="homeButtons">
+            <Button data={{ openInNewPage: false, link: "/estimator", value: "Estimate your project" }} />
+          </div>
         </div>
-        <div id="company-numbers" className="companyNumContainer homeButtonContainer">
-            <div className="companyNumbers homeButtonsGroup">
-                <div className="homeButtons">
-                    <Button data={{openInNewPage:false, link:"mailto:info@softup.co", value:"Reach out to us"}}/>
-                </div>
-                <div className="homeButtons">
-                    <Button data={{openInNewPage:false, link:"/estimator", value:"Estimate your project"}}/>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
   );
 };
