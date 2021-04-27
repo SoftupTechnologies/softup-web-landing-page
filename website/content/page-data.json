@@ -40,17 +40,21 @@
                   "columns": [
                     {
                       "title": "Here is a list of things \nyou SHOULD NOT PAY for \nin software development:",
-                      "content": [{
-                        "component": "markdownDisplay",
-                        "data": "- Spaghetti code\n - Wrong implementation\n - Additional re-work due to bad planning\n - Execution of features without foresight\n - Requirements not followed as defined\n - Cost overruns\n - Bad documentation\n - Vague management & maintenance costs"
-                      }]
+                      "content": [
+                        {
+                          "component": "markdownDisplay",
+                          "data": "- Spaghetti code\n - Wrong implementation\n - Additional re-work due to bad planning\n - Execution of features without foresight\n - Requirements not followed as defined\n - Cost overruns\n - Bad documentation\n - Vague management & maintenance costs"
+                        }
+                      ]
                     },
                     {
                       "title": "Here is a list of things \nyou SHOULD PAY for \nin software development:",
-                      "content": [{
-                        "component": "markdownDisplay",
-                        "data": "- Value added to your business"
-                      }]
+                      "content": [
+                        {
+                          "component": "markdownDisplay",
+                          "data": "- Value added to your business"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -1347,6 +1351,10 @@
                     }
                   ]
                 }
+              },
+              {
+                "component": "youtubeEmbed",
+                "data": ["Wh-veNzF_PI", "AspTuQ9_1Bg"]
               },
               {
                 "component": "button",

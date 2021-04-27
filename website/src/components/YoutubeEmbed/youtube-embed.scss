@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Caviar";
+  src: url("../../fonts/caviar_dreams/CaviarDreams.ttf");
+}
+.youtube-embed {
+  padding-top: calc(10px + 4vh);
+  grid-column-start: 2;
+  position: relative;
+  max-width: 90%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.video-responsive {
+  padding-top: calc(10px + 2vh);
+}
