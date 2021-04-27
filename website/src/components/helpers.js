@@ -22,7 +22,8 @@ import { PresentationTilesMd } from "./PresentationTilesMd";
 import { IconParagraphs } from "./IconParagraphs";
 import { LogosSection } from "./LogosSection";
 import { ColumnParagraphs } from "./ColumnParagraphs";
-import {Estimator} from "./Estimator";
+import { Estimator } from "./Estimator";
+import { YoutubeEmbed } from "./YoutubeEmbed";
 
 export const formatNumber = num => {
   const stringNum = parseInt(num, 10).toString();
@@ -57,6 +58,7 @@ const componentContainer = {
   iconParagraphs: IconParagraphs,
   logosSection: LogosSection,
   columnParagraphs: ColumnParagraphs,
+  youtubeEmbed: YoutubeEmbed,
 };
 
 export const generateContent = pageContent => {
