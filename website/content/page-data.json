@@ -1359,7 +1359,7 @@
               {
                 "component": "button",
                 "data": {
-                  "link": "https://www.notion.so/Open-job-positions-216572e2b7134ccd95520d066b8d5f76",
+                  "link": "https://jobs.softup.co",
                   "align": "center",
                   "value": "SEE OPEN POSITIONS",
                   "openInNewPage": true
@@ -1449,7 +1449,7 @@
               {
                 "component": "button",
                 "data": {
-                  "link": "https://www.notion.so/Open-job-positions-216572e2b7134ccd95520d066b8d5f76",
+                  "link": "https://jobs.softup.co",
                   "align": "center",
                   "value": "SEE OPEN POSITIONS",
                   "openInNewPage": true
@@ -1520,7 +1520,7 @@
               {
                 "component": "button",
                 "data": {
-                  "link": "https://www.notion.so/Open-job-positions-216572e2b7134ccd95520d066b8d5f76",
+                  "link": "https://jobs.softup.co",
                   "align": "center",
                   "value": "SEE OPEN POSITIONS",
                   "openInNewPage": true
@@ -1550,7 +1550,7 @@
               "name": "OUR INTERVIEW PROCESS"
             },
             {
-              "link": "https://www.notion.so/Open-job-positions-216572e2b7134ccd95520d066b8d5f76",
+              "link": "https://jobs.softup.co",
               "name": "OPEN POSITIONS"
             }
           ]
