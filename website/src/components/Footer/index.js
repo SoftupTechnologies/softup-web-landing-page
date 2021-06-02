@@ -47,7 +47,7 @@ export const Footer = () => {
             Join us&nbsp;&ndash;
             <Link
               to={
-                "https://www.notion.so/Ready-for-a-Challenge-78fa9cdfe3774736bbd848a91419ac6e"
+                "https://jobs.softup.co/"
               }
             >
               <span>&nbsp;We&#39;re hiring!</span>
